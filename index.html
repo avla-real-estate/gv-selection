@@ -1970,6 +1970,26 @@ document.querySelectorAll('.chip[data-subregion]').forEach(chip => {
   });
 });
 
+
+// Group-head h3 + group-tag tıklaması: ilgili chip'i tetikle (filter + scroll)
+const groupToChipMap = {'pire':'pire','aegina':'aegina','merkez':'merkez','riviera':'riviera','kuzey':'kifisia','bati':'peristeri'};
+document.querySelectorAll('.group-head').forEach(gh => {
+  const groupName = gh.dataset.group;
+  const chipKey = groupToChipMap[groupName];
+  if (!chipKey) return;
+  const chip = document.querySelector(`.chip[data-subregion="${chipKey}"]`);
+  if (!chip) return;
+  ['h3', '.group-tag'].forEach(sel => {
+    const el = gh.querySelector(sel);
+    if (!el) return;
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', (e) => {
+      // <small>'daki text için de tetiklensin ama küçük yazı çok bilgi verdiği için mahalle olarak ele alma; direct chip tıkla
+      chip.click();
+    });
+  });
+});
+
 // Default: Berkay selection
 applyFilter('berkay');
 updateRegionChips();
