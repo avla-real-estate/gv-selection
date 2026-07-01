@@ -1934,11 +1934,19 @@ function updateRegionChips() {
 document.querySelectorAll('.chip[data-subregion]').forEach(chip => {
   chip.addEventListener('click', () => {
     if (chip.getAttribute('aria-disabled') === 'true') return;
-    const first = document.querySelector(`.property[data-subregion="${chip.dataset.subregion}"]:not(.hidden)`);
-    if (!first) return;
+    const sr = chip.dataset.subregion;
     const headerH = document.querySelector('header')?.offsetHeight || 67;
     const filterH = document.querySelector('.filters-bar')?.offsetHeight || 60;
-    const y = first.getBoundingClientRect().top + window.pageYOffset - headerH - filterH - 16;
+    // Section-level chip: subregion adı bir group-head data-group'una eşitse section'ın kendine scroll
+    const sectionHead = document.querySelector(`.group-head[data-group="${sr}"]`);
+    let target;
+    if (sectionHead) {
+      target = sectionHead;
+    } else {
+      target = document.querySelector(`.property[data-subregion="${sr}"]:not(.hidden)`);
+    }
+    if (!target) return;
+    const y = target.getBoundingClientRect().top + window.pageYOffset - headerH - filterH - 16;
     window.scrollTo({ top: y, behavior: 'smooth' });
   });
 });
