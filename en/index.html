@@ -906,6 +906,28 @@ footer .footer-cta a.athena-name:hover {
   .logo-tag-wrap .logo-tag { font-size: 0.5rem; letter-spacing: 0.18em; }
 }
 
+
+/* Glifada Lansman video CTA (yeşil, hero altı) */
+.glifada-cta-section{background:linear-gradient(135deg, #1A2D2A 0%, #243D38 60%, #345548 100%);padding:0 24px 56px;margin-top:-1px}
+.glifada-cta{
+  display:block;position:relative;max-width:1080px;margin:0 auto;
+  min-height:220px;border-radius:12px;overflow:hidden;
+  text-decoration:none;color:#fff;
+  border:1px solid rgba(201,182,138,.3);
+  transition:transform .25s ease, box-shadow .25s ease;
+  box-shadow:0 8px 30px rgba(0,0,0,.35);
+}
+.glifada-cta:hover{transform:translateY(-3px);box-shadow:0 14px 44px rgba(0,0,0,.5)}
+.glifada-cta-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .5s ease}
+.glifada-cta:hover .glifada-cta-bg{transform:scale(1.03)}
+.glifada-cta-overlay{position:absolute;inset:0;background:linear-gradient(120deg, rgba(26,45,42,.92) 0%, rgba(36,61,56,.6) 55%, rgba(26,45,42,.88) 100%)}
+.glifada-cta-text{position:relative;display:flex;flex-direction:column;justify-content:center;padding:42px 48px;min-height:220px}
+.glifada-cta-label{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#F08025;font-weight:700;margin-bottom:12px}
+.glifada-cta-title{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(28px,3.2vw,44px);line-height:1.1;color:#fff;margin:0}
+.glifada-cta-title em{font-style:italic;color:#C9B68A}
+.glifada-cta-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(16px,1.7vw,20px);color:rgba(255,255,255,.82);margin-top:12px;line-height:1.45;max-width:620px}
+.glifada-cta-arrow{margin-top:18px;font-size:15px;letter-spacing:.08em;color:#C9B68A;font-weight:600}
+@media(max-width:640px){.glifada-cta-text{padding:32px 24px}}
 </style>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -970,6 +992,21 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
     </div>
   </div>
 </section>
+
+<!-- BEGIN: Glyfada Launch CTA -->
+<section class="glifada-cta-section">
+  <a class="glifada-cta" href="https://www.youtube.com/shorts/VePiB5xxm-g" target="_blank" rel="noopener">
+    <div class="glifada-cta-bg" style="background-image:url('glifada-lansman-thumb.jpg')"></div>
+    <div class="glifada-cta-overlay"></div>
+    <div class="glifada-cta-text">
+      <div class="glifada-cta-label">Glyfada Launch · Surprise</div>
+      <h3 class="glifada-cta-title">Glyfada <em>By the Sea</em></h3>
+      <div class="glifada-cta-sub">This month's guest — Zafido Holding Hellas' launch, exclusive to our meeting</div>
+      <div class="glifada-cta-arrow">Watch the teaser →</div>
+    </div>
+  </a>
+</section>
+<!-- END: Glyfada Launch CTA -->
 <div class="filters-bar">
   <div class="container">
     <div class="filters">
