@@ -1,0 +1,466 @@
+<title>BMU Fon Raporu — 2026'nın Getiri Şampiyonu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --page: #f7f7f4;
+    --surface: #fcfcfb;
+    --ink: #16150f;
+    --ink-2: #52514e;
+    --muted: #898781;
+    --grid: #e1e0d9;
+    --baseline: #c3c2b7;
+    --border: rgba(11,11,11,0.10);
+    --s1: #2a78d6;        /* BMU */
+    --s2: #1baf7a;        /* PHE */
+    --s3: #eda100;        /* TLY */
+    --neg: #e34948;       /* negatif ay */
+    --bench: #898781;     /* endeks / makro kıyas */
+    --wash-s1: rgba(42,120,214,0.10);
+    --good: #006300;
+    --bad: #b02a2a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page: #0d0d0d;
+      --surface: #1a1a19;
+      --ink: #ffffff;
+      --ink-2: #c3c2b7;
+      --muted: #898781;
+      --grid: #2c2c2a;
+      --baseline: #383835;
+      --border: rgba(255,255,255,0.10);
+      --s1: #3987e5;
+      --s2: #199e70;
+      --s3: #c98500;
+      --neg: #e66767;
+      --wash-s1: rgba(57,135,229,0.12);
+      --good: #0ca30c;
+      --bad: #e66767;
+    }
+  }
+  :root[data-theme="light"] {
+    --page: #f7f7f4; --surface: #fcfcfb; --ink: #16150f; --ink-2: #52514e;
+    --muted: #898781; --grid: #e1e0d9; --baseline: #c3c2b7; --border: rgba(11,11,11,0.10);
+    --s1: #2a78d6; --s2: #1baf7a; --s3: #eda100; --neg: #e34948; --bench: #898781;
+    --wash-s1: rgba(42,120,214,0.10); --good: #006300; --bad: #b02a2a;
+  }
+  :root[data-theme="dark"] {
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7;
+    --muted: #898781; --grid: #2c2c2a; --baseline: #383835; --border: rgba(255,255,255,0.10);
+    --s1: #3987e5; --s2: #199e70; --s3: #c98500; --neg: #e66767; --bench: #898781;
+    --wash-s1: rgba(57,135,229,0.12); --good: #0ca30c; --bad: #e66767;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--page); color: var(--ink);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 20px 72px; }
+
+  .eyebrow {
+    font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-2); font-weight: 600;
+  }
+  h1 {
+    font-size: clamp(28px, 5vw, 42px); line-height: 1.12; letter-spacing: -0.02em;
+    margin: 10px 0 8px; text-wrap: balance; font-weight: 750;
+  }
+  .lede { color: var(--ink-2); max-width: 62ch; margin: 0 0 6px; }
+  .stamp { font-size: 13px; color: var(--muted); }
+
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 28px 0 8px; }
+  .tile {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .tile .lbl { font-size: 12.5px; color: var(--ink-2); }
+  .tile .val { font-size: 27px; font-weight: 650; letter-spacing: -0.01em; margin-top: 2px; }
+  .tile .sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .val.up { color: var(--good); }
+  .val.down { color: var(--bad); }
+
+  h2 { font-size: 21px; letter-spacing: -0.01em; margin: 44px 0 6px; text-wrap: balance; }
+  h3 { font-size: 16.5px; margin: 26px 0 6px; }
+  p  { max-width: 68ch; margin: 10px 0; }
+  .note { font-size: 13px; color: var(--muted); max-width: 76ch; }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 18px 18px 12px; margin: 14px 0;
+  }
+  .card .ctitle { font-weight: 650; font-size: 15.5px; }
+  .card .csub { font-size: 13px; color: var(--ink-2); margin: 2px 0 10px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; color: var(--ink-2); margin: 2px 0 6px; }
+  .legend .key { display: inline-flex; align-items: center; gap: 6px; }
+  .swatch { width: 14px; height: 4px; border-radius: 2px; display: inline-block; }
+  .swatch.dot { width: 9px; height: 9px; border-radius: 50%; }
+  .chart-scroll { overflow-x: auto; }
+  svg { display: block; }
+  svg text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+
+  details { margin: 4px 0 8px; }
+  summary { cursor: pointer; font-size: 13px; color: var(--ink-2); }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; margin: 10px 0; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+  th { font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-2); font-weight: 600; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .table-scroll { overflow-x: auto; }
+
+  .riskgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; margin: 14px 0; }
+  .risk { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--s1); border-radius: 8px; padding: 12px 14px; }
+  .risk.hi { border-left-color: var(--neg); }
+  .risk b { display: block; font-size: 14.5px; margin-bottom: 3px; }
+  .risk span { font-size: 13.5px; color: var(--ink-2); }
+
+  .verdict { border-left: 3px solid var(--s1); padding: 4px 0 4px 16px; margin: 18px 0; }
+  .verdict p { margin: 6px 0; }
+
+  ul { max-width: 70ch; padding-left: 22px; }
+  li { margin: 5px 0; }
+  a { color: var(--s1); text-underline-offset: 2px; }
+
+  .disclaimer {
+    margin-top: 40px; padding: 14px 16px; border: 1px solid var(--border); border-radius: 10px;
+    font-size: 13px; color: var(--ink-2); background: var(--surface);
+  }
+
+  #tip {
+    position: fixed; pointer-events: none; z-index: 10; display: none;
+    background: var(--ink); color: var(--page); font-size: 12.5px; line-height: 1.45;
+    padding: 7px 10px; border-radius: 7px; max-width: 260px;
+    font-variant-numeric: tabular-nums;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .risk, .tile, .card { transition: border-color 120ms ease; }
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Fon Araştırma Raporu · Türkiye · 6 Temmuz 2026</div>
+    <h1>BMU: 2026'nın açık ara getiri şampiyonu</h1>
+    <p class="lede">Bulls Portföy Mutlak Getiri Hedefli Hisse Senedi Serbest Fon (TEFAS kodu: <strong>BMU</strong>),
+    2026'nın ilk yarısında <strong>%307,22</strong> getiriyle Türkiye'de işlem gören yaklaşık 990 menkul kıymet
+    yatırım fonu arasında birinci oldu — aynı dönemde BIST 100'ün getirisi %25,4, yıllık enflasyon %32,1.</p>
+    <div class="stamp">Veriler: TEFAS dönem getirileri, KAP bildirimleri ve basında yayımlanan fon sıralamaları. Ayrıntılı kaynak listesi raporun sonundadır.</div>
+  </header>
+
+  <div class="tiles">
+    <div class="tile"><div class="lbl">2026 ilk yarı getirisi</div><div class="val up">+%307,22</div><div class="sub">1 Oca – 30 Haz 2026</div></div>
+    <div class="tile"><div class="lbl">En güçlü ay (Mayıs)</div><div class="val up">+%125,83</div><div class="sub">tek ayda, TEFAS birincisi</div></div>
+    <div class="tile"><div class="lbl">BIST 100 (aynı dönem)</div><div class="val">+%25,4</div><div class="sub">30 Haz kapanış: 14.121,83</div></div>
+    <div class="tile"><div class="lbl">Yıllık enflasyon (Haz'26)</div><div class="val">%32,11</div><div class="sub">TÜİK, TÜFE yıllık</div></div>
+  </div>
+
+  <h2>Fon kimliği</h2>
+  <p><strong>BMU</strong>, Bulls Portföy Yönetimi A.Ş. (Yönetim Kurulu Başkanı ve Genel Müdür: Gökay Yılmaz)
+  tarafından kurulan ve yönetilen, hisse senedi yoğun bir <strong>serbest fon</strong>dur. Stratejisi; Borsa
+  İstanbul'da işlem gören pay, varant ve VİOP türev sözleşmelerindeki fiyat uyumsuzluklarından
+  <strong>istatistiksel arbitraj</strong> ve <strong>yüksek frekanslı algoritmik işlem</strong> yoluyla mutlak
+  getiri üretmektir. Fon long-short pozisyon alabilir, türev araçlarla kaldıraç kullanabilir ve aktif sektör
+  rotasyonu yapar.</p>
+
+  <div class="card">
+    <div class="ctitle">Künye: BMU ve en yakın takipçisi PHE</div>
+    <div class="csub">PHE (Pusula Portföy Hisse Senedi Fonu), ilk yarının ikincisi ve nitelikli yatırımcı şartı aramayan en yüksek getirili fon.</div>
+    <div class="table-scroll">
+    <table>
+      <tr><th></th><th>BMU · Bulls Portföy Mutlak Getiri</th><th>PHE · Pusula Portföy Hisse Senedi</th></tr>
+      <tr><td>Tür</td><td>Serbest fon (hisse senedi yoğun)</td><td>Hisse senedi yoğun fon</td></tr>
+      <tr><td>Kurucu / yönetici</td><td>Bulls Portföy Yönetimi A.Ş.</td><td>Pusula Portföy Yönetimi A.Ş.</td></tr>
+      <tr><td>2026 ilk yarı getirisi</td><td class="num">+%307,22</td><td class="num">+%157,43</td></tr>
+      <tr><td>Son 1 yıl getirisi</td><td class="num">yayımlanmadı*</td><td class="num">+%206,25</td></tr>
+      <tr><td>Son fiyat</td><td class="num">2,9649 TL (4 Haz)</td><td class="num">3,7489 TL (3 Tem)</td></tr>
+      <tr><td>Yıllık yönetim ücreti</td><td class="num">%1,00</td><td class="num">%2,50</td></tr>
+      <tr><td>Risk değeri (1–7)</td><td class="num">7 (serbest fon)</td><td class="num">6</td></tr>
+      <tr><td>Kimler alabilir?</td><td>Yalnızca <strong>nitelikli yatırımcılar</strong>; TEFAS'ta yüksek asgari pay şartı var</td><td>Tüm yatırımcılar (TEFAS)</td></tr>
+      <tr><td>Şeffaflık</td><td>Portföy dağılımı KAP'ta aylık, gecikmeli</td><td>Aylık portföy raporu, standart</td></tr>
+    </table>
+    </div>
+    <div class="note">* BMU'nun 1 yıllık bileşik getirisi taranan kaynaklarda tek rakam olarak yayımlanmamıştır; fonun güncel değeri TEFAS/KAP üzerinden teyit edilmelidir. PHE verileri 3 Temmuz 2026 itibarıyladır.</div>
+  </div>
+
+  <h2>Grafik 1 · 2026 performansı: BMU, PHE ve BIST 100</h2>
+  <div class="card">
+    <div class="ctitle">Birikimli getiri endeksi (31 Aralık 2025 = 100)</div>
+    <div class="csub">Mayıs ayı tek başına fonun yılını belirledi: +%125,8'lik ay, endeksi 188'den 425'e taşıdı.</div>
+    <div class="legend">
+      <span class="key"><span class="swatch" style="background:var(--s1)"></span>BMU</span>
+      <span class="key"><span class="swatch" style="background:var(--s2)"></span>PHE</span>
+      <span class="key"><span class="swatch" style="background:var(--bench)"></span>BIST 100</span>
+    </div>
+    <div class="chart-scroll"><div id="chart-line"></div></div>
+    <details><summary>Veri tablosu</summary>
+      <table>
+        <tr><th>Tarih</th><th class="num">BMU</th><th class="num">PHE</th><th class="num">BIST 100</th></tr>
+        <tr><td>31 Ara 2025</td><td class="num">100,0</td><td class="num">100,0</td><td class="num">100,0</td></tr>
+        <tr><td>31 Mar 2026</td><td class="num">150,5°</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>30 Nis 2026</td><td class="num">188,1</td><td class="num">194,7</td><td class="num">—</td></tr>
+        <tr><td>31 May 2026</td><td class="num">424,7</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>30 Haz 2026</td><td class="num">407,2</td><td class="num">257,4</td><td class="num">125,4</td></tr>
+      </table>
+    </details>
+    <div class="note">° işaretli değerler, açıklanan dönem getirilerinden (Oca–Nis %88,05; Mayıs %125,83; Nis–Haz %170,65; ilk yarı %307,22) türetilmiş hesaplamadır. Ara noktalar doğrusal bağlanmıştır; fonun gün içi seyri gösterilmemektedir.</div>
+  </div>
+
+  <h2>Grafik 2 · BMU'nun dönemsel getirileri</h2>
+  <div class="card">
+    <div class="ctitle">2026 içinde dönem dönem getiri (%)</div>
+    <div class="csub">Getirinin neredeyse tamamı tek bir aydan geldi; Haziran hafif eksiyle kapandı.</div>
+    <div class="chart-scroll"><div id="chart-bar"></div></div>
+    <details><summary>Veri tablosu</summary>
+      <table>
+        <tr><th>Dönem</th><th class="num">Getiri</th><th>Kaynak</th></tr>
+        <tr><td>1. çeyrek (Oca–Mar)</td><td class="num">+%50,5</td><td>hesaplanan°</td></tr>
+        <tr><td>Nisan</td><td class="num">+%25,0</td><td>hesaplanan°</td></tr>
+        <tr><td>Mayıs</td><td class="num">+%125,8</td><td>TEFAS aylık sıralama</td></tr>
+        <tr><td>Haziran</td><td class="num">−%4,1</td><td>hesaplanan°</td></tr>
+      </table>
+    </details>
+    <div class="note">° Açıklanan birikimli dönem getirilerinin birbirine bölünmesiyle türetilmiştir.</div>
+  </div>
+
+  <h2>Grafik 3 · İlk yarı: fonlar ve klasik yatırım araçları</h2>
+  <div class="card">
+    <div class="ctitle">1 Oca – 30 Haz 2026 getirisi (%)</div>
+    <div class="csub">İlk üç fon; endeks, döviz ve altınla aynı ölçekte.</div>
+    <div class="chart-scroll"><div id="chart-hbar"></div></div>
+    <div class="note">Dolar/TL ~42,99'dan ~45,5'e (%≈6); gram altın 5.952,89 TL'den 6.040,50 TL'ye (%1,5). Yıllık TÜFE %32,11 olduğundan altın ve döviz ilk yarıda reel olarak kaybettirdi.</div>
+  </div>
+
+  <h2>Getirinin kaynağı: bu %307 nereden geliyor?</h2>
+  <p>BMU'nun getirisi klasik bir "borsa yükseldi, fon da yükseldi" hikâyesi değil. Aynı dönemde BIST 100 %25,4
+  kazandırırken fonun %307 üretmesi, getirinin <strong>piyasa betasından değil, kaldıraçlı ve yoğunlaştırılmış
+  strateji pozisyonlarından</strong> geldiğini gösteriyor. Kamuya açık bilgilerden okunabilen üç bileşen:</p>
+  <ul>
+    <li><strong>İstatistiksel arbitraj + algoritmik işlem:</strong> Fon izahnamesine göre BIST pay ve VİOP
+    türevlerindeki fiyat uyumsuzlukları, yüksek hızlı algoritmalarla alınıp satılıyor. Bu strateji yatay
+    piyasada da getiri üretebilir; nitekim fon Ocak–Nisan'da endeksin belirgin üzerinde (%88) getiri sağladı.</li>
+    <li><strong>Türev kaldıracı:</strong> Serbest fon statüsü, VİOP üzerinden kaldıraç ve açığa satış (short)
+    kullanımına izin veriyor. Mayıs ayındaki +%125,8'lik tek aylık getiri, kaldıraçsız bir hisse portföyüyle
+    matematiksel olarak açıklanamaz — o ay endeksin en iyi hisseleri bile bu seviyenin çok altında kaldı.</li>
+    <li><strong>Tema seçimi:</strong> 2026 ilk yarısında sıralamanın tepesindeki fonlar teknoloji, yarı iletken
+    ve halka arz temalarında yoğunlaştı. Bulls Portföy, Türkiye'nin makro döngüsünde ve şirket kârlılığında
+    yukarı yönlü potansiyel gördüğünü, piyasa momentumunu para piyasası enstrümanlarıyla birlikte aktif
+    kullandığını açıklıyor.</li>
+  </ul>
+
+  <h2>Temel analiz: riskler ve sürdürülebilirlik</h2>
+  <div class="riskgrid">
+    <div class="risk hi"><b>Tek aya bağımlılık</b><span>%307'lik yılın ~%126 puanı tek aydan (Mayıs) geldi. Haziran eksi kapandı. Bu dağılım, getirinin istikrarlı bir "alfa makinesinden" çok, doğru zamanda tutan büyük ve kaldıraçlı pozisyonlardan geldiğine işaret eder.</span></div>
+    <div class="risk hi"><b>Kaldıraç = çift yönlü bıçak</b><span>Aynı mekanizma ters yönde çalıştığında aylık kayıplar da benzer ölçekte olabilir. Serbest fonlarda SPK'nın standart fonlara uyguladığı portföy sınırlamaları geçerli değildir; risk değeri ölçeğin tepesindedir (7/7).</span></div>
+    <div class="risk hi"><b>Kapasite sorunu</b><span>İstatistiksel arbitraj stratejileri ölçek büyüdükçe zayıflar: fiyat uyumsuzlukları sığdır. Şöhretle birlikte gelen para girişi, stratejinin gelecekteki getirisini kendiliğinden aşağı çeker.</span></div>
+    <div class="risk"><b>Erişim engeli</b><span>BMU yalnızca nitelikli yatırımcılara açıktır ve TEFAS'ta yüksek asgari pay adedi şartı vardır. Küçük yatırımcı bu fona doğrudan giremez; erişilebilir en yakın alternatif, ilk yarının ikincisi PHE'dir (o da 6/7 risk taşır).</span></div>
+    <div class="risk"><b>Şeffaflık sınırı</b><span>Serbest fonlar portföylerini gecikmeli ve özet biçimde açıklar. Mayıs getirisini hangi pozisyonun ürettiği kamuya açık veriden tam olarak doğrulanamaz — bu rapor dahil hiçbir dış analiz bunu kesin söyleyemez.</span></div>
+    <div class="risk"><b>Geçmiş getiri yanılgısı</b><span>Fon sıralamalarında zirve her yıl el değiştirir: 2025'in şampiyonu kıymetli maden fonlarıydı (ortalama +%97,9); 2026'da aynı kategori sıralamanın dibinde. Zirvedeki fonu geçmiş getirisine bakarak almak, sistematik olarak pahalı giriş demektir.</span></div>
+  </div>
+
+  <div class="verdict">
+    <p><strong>Sonuç:</strong> BMU 2026'nın tartışmasız performans lideri ve stratejisi (arbitraj + kaldıraç)
+    bu tür uç getirileri <em>mümkün</em> kılan tek fon yapısı. Ancak aynı yapı, getirinin tekrarlanabilirliğini
+    değil oynaklığını garanti eder. +%126'lık bir ayın istatistiksel beklentisi "gelecek yıl yine olur" değildir;
+    ortalamaya dönüş, kapasite baskısı ve kaldıraç riski birlikte düşünüldüğünde bu performansın aynı ölçekte
+    sürmesi düşük olasılıktır. Nitelikli yatırımcı için portföyün küçük, kaybedilebilir bir dilimiyle taşınacak
+    bir "uydu" pozisyon; bireysel yatırımcı için ise doğrudan erişilemeyen, ancak fon seçiminde "getiri nereden
+    geliyor?" sorusunun neden şart olduğunu gösteren bir vaka çalışmasıdır.</p>
+  </div>
+
+  <h2>Kaynaklar</h2>
+  <ul class="note" style="font-size:13.5px">
+    <li><a href="https://www.borsagundem.com.tr/ilk-6-ayin-fon-sampiyonlari-belli-oldu">Borsa Gündem — İlk 6 ayın fon şampiyonları (BMU %307,22; PHE %157,43; TLY %138,81)</a></li>
+    <li><a href="https://www.yatirimx.com.tr/ekonomi/2026-basindan-bu-yana-en-cok-kazandiran-yatirim-fonlari-belli-oldu/19984">Yatırımx — 1 Ocak–30 Nisan 2026 sıralaması (PHE %94,69; BMU %88,05)</a></li>
+    <li><a href="https://www.borsagundem.com.tr/mayis-ayinin-en-cok-kazandiran-fonlari">Borsa Gündem — Mayıs 2026'nın en çok kazandıran fonları (BMU +%125,83)</a></li>
+    <li><a href="https://www.fortuneturkey.com/yatirimci-rotasini-teknolojiye-cevirdi-uc-ayin-en-cok-kazandiran-fonlari">Fortune Türkiye — Üç ayın (Nis–Haz) şampiyonu BMU +%170,65</a></li>
+    <li><a href="https://bullsportfoy.com/bmu-bulls-portfoy-mutlak-getiri-hedefli-hisse-senedi-serbest-fon-hisse-senedi-yogun-fon">Bulls Portföy — BMU fon sayfası ve strateji</a></li>
+    <li><a href="https://kap.org.tr/tr/fon-bilgileri/ozet/bmu-bulls-portfoy-mutlak-getiri-hedefli-hisse-senedi-serbest-fon-hisse-senedi-yogun-fon">KAP — BMU fon bilgileri ve portföy dağılım raporları</a></li>
+    <li><a href="https://fintables.com/fonlar/PHE">Fintables — PHE fon analizi (1 yıl +%206,25; risk 6/7; yönetim ücreti %2,5)</a></li>
+    <li><a href="https://www.memurlar.net/haber/1171743/borsada-yilin-ilk-yarisinda-21-sektor-yatirimcisina-kazandirdi.html">Memurlar.net — BIST 100 ilk yarı: +%25,4, kapanış 14.121,83</a></li>
+    <li><a href="https://www.sozcu.com.tr/son-dakika-tuik-haziran-enflasyonunu-acikladi-p333358">Sözcü — TÜİK Haziran 2026: aylık %0,99, yıllık %32,11</a></li>
+    <li><a href="https://www.turkiyegazetesi.com.tr/ekonomi/97den-fazla-getiri-sagladi-iste-2025in-en-cok-kazandiran-fonlari-1763998">Türkiye Gazetesi — 2025'in şampiyonu kıymetli maden fonları (+%97,94)</a></li>
+    <li><a href="https://spk.gov.tr/data/61e34f9a1b41c61270320792/Serbest%20Yat%C4%B1r%C4%B1m%20Fonlar%C4%B1.pdf">SPK — Serbest yatırım fonları yatırımcı bilgilendirme kitapçığı</a></li>
+  </ul>
+
+  <div class="disclaimer">
+    <strong>Yasal uyarı:</strong> Bu rapor yalnızca bilgilendirme amaçlıdır; yatırım danışmanlığı kapsamında
+    değildir ve alım-satım tavsiyesi içermez. Getiri verileri kamuya açık kaynaklardan derlenmiştir; "hesaplanan"
+    işaretli değerler açıklanan dönem getirilerinden türetilmiştir ve fonun resmî kayıtlarıyla küçük farklar
+    gösterebilir. Geçmiş getiri, gelecek dönem getirisi için gösterge değildir. Serbest fonlar yüksek risk içerir
+    ve yalnızca nitelikli yatırımcılara uygundur. Karar öncesinde fon izahnamesini ve KAP bildirimlerini inceleyin.
+  </div>
+</div>
+
+<div id="tip" role="tooltip"></div>
+
+<script>
+(function () {
+  var css = getComputedStyle(document.documentElement);
+  function v(name) { return css.getPropertyValue(name).trim(); }
+  var tip = document.getElementById('tip');
+  function showTip(html, x, y) {
+    tip.innerHTML = html; tip.style.display = 'block';
+    var pad = 14, w = tip.offsetWidth, h = tip.offsetHeight;
+    var left = x + pad, top = y - h - pad;
+    if (left + w > innerWidth - 8) left = x - w - pad;
+    if (top < 8) top = y + pad;
+    tip.style.left = left + 'px'; tip.style.top = top + 'px';
+  }
+  function hideTip() { tip.style.display = 'none'; }
+  function fmt(n, d) { return n.toLocaleString('tr-TR', { minimumFractionDigits: d == null ? 1 : d, maximumFractionDigits: d == null ? 1 : d }); }
+  function el(name, attrs, parent) {
+    var e = document.createElementNS('http://www.w3.org/2000/svg', name);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+
+  /* ---- Grafik 1: birikimli endeks ---- */
+  (function () {
+    var W = 860, H = 380, m = { t: 18, r: 128, b: 34, l: 46 };
+    var pw = W - m.l - m.r, ph = H - m.t - m.b;
+    // x: gün/181 (31 Ara=0 … 30 Haz=181)
+    var stops = [
+      { d: 0,   lbl: '31 Ara' },
+      { d: 90,  lbl: '31 Mar' },
+      { d: 120, lbl: '30 Nis' },
+      { d: 151, lbl: '31 May' },
+      { d: 181, lbl: '30 Haz' }
+    ];
+    var series = [
+      { name: 'BMU',      color: 'var(--s1)', pts: [[0,100],[90,150.5],[120,188.1],[151,424.7],[181,407.2]], end: '+%307' },
+      { name: 'PHE',      color: 'var(--s2)', pts: [[0,100],[120,194.7],[181,257.4]], end: '+%157' },
+      { name: 'BIST 100', color: 'var(--bench)', pts: [[0,100],[181,125.4]], dash: '5 5', end: '+%25' }
+    ];
+    var ymin = 80, ymax = 450;
+    function X(d) { return m.l + pw * d / 181; }
+    function Y(val) { return m.t + ph * (1 - (val - ymin) / (ymax - ymin)); }
+
+    var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, width: '100%', 'aria-label': 'BMU, PHE ve BIST 100 birikimli getiri endeksi, 2026 ilk yarı' });
+    svg.style.minWidth = '640px';
+    [100, 200, 300, 400].forEach(function (t) {
+      el('line', { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: 'var(--grid)', 'stroke-width': 1 }, svg);
+      el('text', { x: m.l - 8, y: Y(t) + 4, 'text-anchor': 'end', 'font-size': 12, fill: 'var(--muted)' }, svg).textContent = t;
+    });
+    el('line', { x1: m.l, x2: W - m.r, y1: Y(ymin) + 0.5, y2: Y(ymin) + 0.5, stroke: 'var(--baseline)', 'stroke-width': 1 }, svg);
+    stops.forEach(function (s) {
+      el('text', { x: X(s.d), y: H - 10, 'text-anchor': 'middle', 'font-size': 12, fill: 'var(--muted)' }, svg).textContent = s.lbl;
+    });
+    // area wash for BMU
+    var bmu = series[0];
+    var dPath = bmu.pts.map(function (p, i) { return (i ? 'L' : 'M') + X(p[0]) + ' ' + Y(p[1]); }).join(' ');
+    el('path', { d: dPath + ' L' + X(181) + ' ' + Y(ymin) + ' L' + X(0) + ' ' + Y(ymin) + ' Z', fill: bmu.color, opacity: 0.10 }, svg);
+    series.forEach(function (s) {
+      var d = s.pts.map(function (p, i) { return (i ? 'L' : 'M') + X(p[0]) + ' ' + Y(p[1]); }).join(' ');
+      var attrs = { d: d, fill: 'none', stroke: s.color, 'stroke-width': 2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' };
+      if (s.dash) attrs['stroke-dasharray'] = s.dash;
+      el('path', attrs, svg);
+      s.pts.forEach(function (p) {
+        el('circle', { cx: X(p[0]), cy: Y(p[1]), r: 6, fill: 'var(--surface)' }, svg);
+        el('circle', { cx: X(p[0]), cy: Y(p[1]), r: 4, fill: s.color }, svg);
+      });
+      var last = s.pts[s.pts.length - 1];
+      var t = el('text', { x: X(last[0]) + 10, y: Y(last[1]) + 4, 'font-size': 12.5, 'font-weight': 600, fill: 'var(--ink-2)' }, svg);
+      t.textContent = s.name + ' ' + s.end;
+    });
+    // crosshair: snap to nearest stop
+    var cross = el('line', { y1: m.t, y2: m.t + ph, stroke: 'var(--baseline)', 'stroke-width': 1, opacity: 0 }, svg);
+    var hit = el('rect', { x: m.l, y: m.t, width: pw, height: ph, fill: 'transparent' }, svg);
+    hit.addEventListener('mousemove', function (ev) {
+      var r = svg.getBoundingClientRect();
+      var px = (ev.clientX - r.left) * (W / r.width);
+      var best = stops[0], bd = 1e9;
+      stops.forEach(function (s) { var d = Math.abs(X(s.d) - px); if (d < bd) { bd = d; best = s; } });
+      cross.setAttribute('x1', X(best.d)); cross.setAttribute('x2', X(best.d)); cross.setAttribute('opacity', 1);
+      var rows = ['<strong>' + best.lbl + ' 2026</strong>'];
+      series.forEach(function (s) {
+        var p = s.pts.filter(function (q) { return q[0] === best.d; })[0];
+        if (p) rows.push(s.name + ': ' + fmt(p[1]) + ' (' + (p[1] >= 100 ? '+' : '−') + '%' + fmt(Math.abs(p[1] - 100)) + ')');
+      });
+      showTip(rows.join('<br>'), ev.clientX, ev.clientY);
+    });
+    hit.addEventListener('mouseleave', function () { cross.setAttribute('opacity', 0); hideTip(); });
+    document.getElementById('chart-line').appendChild(svg);
+  })();
+
+  /* ---- Grafik 2: dönemsel getiriler ---- */
+  (function () {
+    var data = [
+      { lbl: '1. çeyrek', val: 50.5, calc: true },
+      { lbl: 'Nisan', val: 25.0, calc: true },
+      { lbl: 'Mayıs', val: 125.8, calc: false },
+      { lbl: 'Haziran', val: -4.1, calc: true }
+    ];
+    var W = 860, H = 320, m = { t: 26, r: 20, b: 34, l: 46 };
+    var pw = W - m.l - m.r, ph = H - m.t - m.b;
+    var ymin = -20, ymax = 140;
+    function Y(val) { return m.t + ph * (1 - (val - ymin) / (ymax - ymin)); }
+    var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, width: '100%', 'aria-label': 'BMU dönemsel getirileri 2026' });
+    svg.style.minWidth = '560px';
+    [0, 50, 100].forEach(function (t) {
+      el('line', { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: t === 0 ? 'var(--baseline)' : 'var(--grid)', 'stroke-width': 1 }, svg);
+      el('text', { x: m.l - 8, y: Y(t) + 4, 'text-anchor': 'end', 'font-size': 12, fill: 'var(--muted)' }, svg).textContent = '%' + t;
+    });
+    var bw = 24, slot = pw / data.length;
+    data.forEach(function (d, i) {
+      var cx = m.l + slot * (i + 0.5);
+      var y0 = Y(0), y1 = Y(d.val);
+      var top = Math.min(y0, y1), hgt = Math.max(2, Math.abs(y0 - y1));
+      var col = d.val >= 0 ? 'var(--s1)' : 'var(--neg)';
+      var r = 4;
+      var up = d.val >= 0;
+      var path = up
+        ? 'M' + (cx - bw / 2) + ' ' + y0 + ' V' + (top + r) + ' Q' + (cx - bw / 2) + ' ' + top + ' ' + (cx - bw / 2 + r) + ' ' + top + ' H' + (cx + bw / 2 - r) + ' Q' + (cx + bw / 2) + ' ' + top + ' ' + (cx + bw / 2) + ' ' + (top + r) + ' V' + y0 + ' Z'
+        : 'M' + (cx - bw / 2) + ' ' + y0 + ' V' + (top + hgt - r) + ' Q' + (cx - bw / 2) + ' ' + (top + hgt) + ' ' + (cx - bw / 2 + r) + ' ' + (top + hgt) + ' H' + (cx + bw / 2 - r) + ' Q' + (cx + bw / 2) + ' ' + (top + hgt) + ' ' + (cx + bw / 2) + ' ' + (top + hgt - r) + ' V' + y0 + ' Z';
+      var bar = el('path', { d: path, fill: col }, svg);
+      var vt = el('text', { x: cx, y: up ? top - 7 : top + hgt + 15, 'text-anchor': 'middle', 'font-size': 12.5, 'font-weight': 600, fill: 'var(--ink-2)' }, svg);
+      vt.textContent = (d.val >= 0 ? '+%' : '−%') + fmt(Math.abs(d.val));
+      el('text', { x: cx, y: H - 10, 'text-anchor': 'middle', 'font-size': 12.5, fill: 'var(--muted)' }, svg).textContent = d.lbl;
+      var hitr = el('rect', { x: cx - slot / 2 + 4, y: m.t, width: slot - 8, height: ph, fill: 'transparent' }, svg);
+      hitr.addEventListener('mousemove', function (ev) {
+        showTip('<strong>' + d.lbl + ' 2026</strong><br>Getiri: ' + (d.val >= 0 ? '+' : '−') + '%' + fmt(Math.abs(d.val)) + (d.calc ? '<br><em>hesaplanan değer</em>' : '<br>kaynak: TEFAS sıralaması'), ev.clientX, ev.clientY);
+      });
+      hitr.addEventListener('mouseleave', hideTip);
+    });
+    document.getElementById('chart-bar').appendChild(svg);
+  })();
+
+  /* ---- Grafik 3: ilk yarı karşılaştırma ---- */
+  (function () {
+    var data = [
+      { lbl: 'BMU (serbest fon)', val: 307.2, col: 'var(--s1)' },
+      { lbl: 'PHE (hisse fonu)', val: 157.4, col: 'var(--s2)' },
+      { lbl: 'TLY (serbest fon)', val: 138.8, col: 'var(--s3)' },
+      { lbl: 'BIST 100', val: 25.4, col: 'var(--bench)' },
+      { lbl: 'Dolar/TL', val: 6.0, col: 'var(--bench)' },
+      { lbl: 'Gram altın', val: 1.5, col: 'var(--bench)' }
+    ];
+    var W = 860, rowH = 44, m = { t: 8, r: 90, b: 26, l: 160 };
+    var H = m.t + rowH * data.length + m.b;
+    var pw = W - m.l - m.r;
+    var xmax = 320;
+    function X(val) { return m.l + pw * val / xmax; }
+    var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, width: '100%', 'aria-label': '2026 ilk yarı getiri karşılaştırması' });
+    svg.style.minWidth = '560px';
+    [0, 100, 200, 300].forEach(function (t) {
+      el('line', { x1: X(t), x2: X(t), y1: m.t, y2: H - m.b, stroke: t === 0 ? 'var(--baseline)' : 'var(--grid)', 'stroke-width': 1 }, svg);
+      el('text', { x: X(t), y: H - 8, 'text-anchor': 'middle', 'font-size': 12, fill: 'var(--muted)' }, svg).textContent = '%' + t;
+    });
+    data.forEach(function (d, i) {
+      var cy = m.t + rowH * (i + 0.5);
+      var bh = 22, r = 4;
+      var x1 = X(d.val);
+      el('text', { x: m.l - 10, y: cy + 4, 'text-anchor': 'end', 'font-size': 13, fill: 'var(--ink-2)' }, svg).textContent = d.lbl;
+      var path = 'M' + X(0) + ' ' + (cy - bh / 2) + ' H' + Math.max(X(0) + r, x1 - r) + ' Q' + x1 + ' ' + (cy - bh / 2) + ' ' + x1 + ' ' + (cy - bh / 2 + r) + ' V' + (cy + bh / 2 - r) + ' Q' + x1 + ' ' + (cy + bh / 2) + ' ' + Math.max(X(0) + r, x1 - r) + ' ' + (cy + bh / 2) + ' H' + X(0) + ' Z';
+      el('path', { d: path, fill: d.col }, svg);
+      el('text', { x: x1 + 8, y: cy + 4, 'font-size': 12.5, 'font-weight': 600, fill: 'var(--ink-2)' }, svg).textContent = '+%' + fmt(d.val);
+      var hitr = el('rect', { x: m.l, y: cy - rowH / 2 + 2, width: pw + m.r - 10, height: rowH - 4, fill: 'transparent' }, svg);
+      hitr.addEventListener('mousemove', function (ev) {
+        showTip('<strong>' + d.lbl + '</strong><br>1 Oca – 30 Haz 2026: +%' + fmt(d.val), ev.clientX, ev.clientY);
+      });
+      hitr.addEventListener('mouseleave', hideTip);
+    });
+    document.getElementById('chart-hbar').appendChild(svg);
+  })();
+})();
+</script>
