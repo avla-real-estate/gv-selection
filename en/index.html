@@ -983,10 +983,10 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
   <div class="container hero-content">
     <div class="hero-eyebrow">Avla Real Estate · 15 Projects · Piraeus · City Center · Riviera · Kifisia / Nea Erythraia</div>
     <h1>Athens Golden Visa <em>Master Selection</em></h1>
-    <p class="lead"><strong>15 curated Golden Visa projects</strong> across the east-west axis of Athens — in the broad €250-450K budget range, from Piraeus to the Riviera, from Akademia Platonos to Agios Dimitrios — the Avla portfolio spans 6 main regions. Detailed brochures, regional reports, and feasibility studies are provided for every project.</p>
+    <p class="lead"><strong><span data-auto="proje-total">15</span> curated Golden Visa projects</strong> across the east-west axis of Athens — in the broad €250-450K budget range, from Piraeus to the Riviera, from Akademia Platonos to Agios Dimitrios — the Avla portfolio spans 6 main regions. Detailed brochures, regional reports, and feasibility studies are provided for every project.</p>
     <div class="hero-stats">
-      <div class="hero-stat"><div class="num"><span class="m-berkay">19</span><span class="m-avla">22</span></div><div class="lbl">Projects</div></div>
-      <div class="hero-stat"><div class="num"><span class="m-berkay">14</span><span class="m-avla">6</span></div><div class="lbl"><span class="m-berkay">Districts</span><span class="m-avla">Regions</span></div></div>
+      <div class="hero-stat"><div class="num"><span class="m-berkay" data-auto="proje-berkay">19</span><span class="m-avla" data-auto="proje-total">22</span></div><div class="lbl">Projects</div></div>
+      <div class="hero-stat"><div class="num"><span class="m-berkay" data-auto="mahalle">14</span><span class="m-avla" data-auto="bolge">6</span></div><div class="lbl"><span class="m-berkay">Districts</span><span class="m-avla">Regions</span></div></div>
       <div class="hero-stat"><div class="num"><span class="m-berkay">€250-450K</span><span class="m-avla">€250-450K</span></div><div class="lbl">Budget</div></div>
       <div class="hero-stat"><div class="num"><span class="m-berkay">Ready — Q4 2028</span><span class="m-avla">Ready — Q4 2028</span></div><div class="lbl">Delivery Range</div></div>
     </div>
@@ -1010,7 +1010,7 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
 <div class="filters-bar">
   <div class="container">
     <div class="filters">
-      <button class="filter active" data-filter="berkay">Avla GV Selection <span class="filter-count">(19)</span></button>
+      <button class="filter active" data-filter="berkay">Avla GV Selection <span class="filter-count" data-auto="chip-berkay">(19)</span></button>
       
       <a class="filter filter-external" href="https://www.avlarealestate.com/en/property-status/golden-visa#anchors-lu0ztkov3" target="_blank" rel="noopener">Avla GV Listings ↗</a>
     </div>
@@ -1032,9 +1032,9 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
 <section class="map-section">
   <div class="container">
     <div class="map-head">
-      <div class="hero-eyebrow"><span class="m-berkay">Avla's Athens Golden Visa Master Selection · 15 Projects</span><span class="m-avla">View 22 Avla selections on map · ★ Athena's curated picks</span></div>
+      <div class="hero-eyebrow"><span class="m-berkay">Avla's Athens Golden Visa Master Selection · <span data-auto="proje-berkay">15</span> Projects</span><span class="m-avla">View <span data-auto="proje-total">22</span> Avla selections on map · ★ Athena's curated picks</span></div>
       <h2><span class="m-berkay">From <em>Piraeus</em> to Riviera</span><span class="m-avla">From <em>Piraeus</em> to Riviera</span></h2>
-      <p class="map-sub"><span class="m-berkay">22 projects · Piraeus · Renti · Mikrolimano · Ampelokipi · Pangrati · Moschato · Agios Dimitrios · Akademia Platonos · Elliniko · Glyfada — click pin for details.</span><span class="m-avla">All 22 Avla projects — click pin for details.</span></p>
+      <p class="map-sub"><span class="m-berkay"><span data-auto="proje-total">22</span> projects · Piraeus · Renti · Mikrolimano · Ampelokipi · Pangrati · Moschato · Agios Dimitrios · Akademia Platonos · Elliniko · Glyfada — click pin for details.</span><span class="m-avla">All <span data-auto="proje-total">22</span> Avla projects — click pin for details.</span></p>
     </div>
     <div id="avla-map"></div>
     <div class="map-legend">
@@ -1893,6 +1893,109 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
 
   </div>
 </section>
+
+<!-- ═══ GV CTA BAND ═══ -->
+<style>
+.gv-cta-band{background:linear-gradient(135deg,#243D38 0%,#2e4a44 55%,#3a5a52 100%);padding:2.6rem 1.2rem;margin-top:3.5rem}
+.gv-cta-inner{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.6rem;flex-wrap:wrap}
+.gv-cta-text h3{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:#F0EAD9;font-weight:600;margin:0 0 .35rem}
+.gv-cta-text p{color:rgba(232,220,200,.85);font-size:.86rem;max-width:520px;margin:0;line-height:1.6}
+.gv-cta-actions{display:flex;gap:.7rem;flex-wrap:wrap}
+.gv-btn{display:inline-block;padding:.85rem 1.5rem;border-radius:50px;font-family:'Inter',sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.03em;text-decoration:none;cursor:pointer;border:1.5px solid transparent;transition:all .2s}
+.gv-btn-gold{background:#C6B58C;color:#243D38}
+.gv-btn-gold:hover{background:#d8c9a4}
+.gv-btn-line{background:transparent;color:#E8DCC8;border-color:rgba(232,220,200,.55)}
+.gv-btn-line:hover{background:rgba(232,220,200,.12)}
+#gv-modal{position:fixed;inset:0;background:rgba(20,30,27,.66);backdrop-filter:blur(4px);z-index:9999;display:none;align-items:center;justify-content:center;padding:18px}
+#gv-modal.open{display:flex}
+.gv-box{background:#F7F4EC;border-radius:18px;max-width:480px;width:100%;max-height:92vh;overflow:auto;padding:30px 28px;position:relative;box-shadow:0 22px 70px rgba(0,0,0,.35)}
+.gv-box h4{font-family:'Cormorant Garamond',serif;font-size:1.55rem;color:#243D38;font-weight:600;margin:0 0 .3rem}
+.gv-box .gv-sub{font-size:.8rem;color:#6a7268;margin-bottom:1.1rem;line-height:1.5}
+.gv-x{position:absolute;top:14px;right:16px;background:none;border:none;font-size:1.5rem;color:#8a8f86;cursor:pointer;line-height:1}
+.gv-f label{display:block;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7c8278;margin:.8rem 0 .3rem}
+.gv-f input,.gv-f select{width:100%;padding:.7rem .85rem;border:1px solid #d8d2c2;border-radius:9px;background:#fff;font-family:'Inter',sans-serif;font-size:.9rem;color:#243D38}
+.gv-f input:focus,.gv-f select:focus{outline:none;border-color:#C6B58C;box-shadow:0 0 0 3px rgba(198,181,140,.25)}
+.gv-row{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.gv-send{width:100%;margin-top:1.2rem;padding:.9rem;border:none;border-radius:50px;background:#243D38;color:#F0EAD9;font-family:'Inter',sans-serif;font-size:.92rem;font-weight:600;cursor:pointer}
+.gv-send:hover{background:#2e4a44}
+.gv-send:disabled{opacity:.6;cursor:wait}
+.gv-msg{display:none;margin-top:.9rem;padding:.75rem .9rem;border-radius:9px;font-size:.82rem;line-height:1.5}
+.gv-msg.ok{display:block;background:#e8f2e4;color:#2f5d33}
+.gv-msg.err{display:block;background:#f7e6e2;color:#8a3a2c}
+@media(max-width:640px){.gv-cta-inner{justify-content:center;text-align:center}.gv-row{grid-template-columns:1fr}}
+</style>
+<section class="gv-cta-band">
+  <div class="gv-cta-inner">
+    <div class="gv-cta-text"><h3>Start your Golden Visa journey</h3><p>Fill in the form — the Avla team will call you within 24 hours; or browse our full Golden Visa portfolio on our website.</p></div>
+    <div class="gv-cta-actions">
+      <button class="gv-btn gv-btn-gold" type="button" onclick="document.getElementById('gv-modal').classList.add('open')">✉ Golden Visa Application Form</button>
+      <a class="gv-btn gv-btn-line" href="https://www.avlarealestate.com/property-status/golden-visa" target="_blank" rel="noopener">🏛 Full Golden Visa Portfolio</a>
+    </div>
+  </div>
+</section>
+<div id="gv-modal" role="dialog" aria-modal="true">
+  <div class="gv-box">
+    <button class="gv-x" type="button" onclick="document.getElementById('gv-modal').classList.remove('open')">×</button>
+    <h4>Golden Visa Application Form</h4>
+    <div class="gv-sub">Leave your details and your advisor will get back within 24 hours.</div>
+    <form class="gv-f" id="gv-form" novalidate>
+      <div class="gv-row">
+        <div><label>First name *</label><input name="firstname" required></div>
+        <div><label>Last name *</label><input name="lastname" required></div>
+      </div>
+      <label>Email *</label><input name="email" type="email" required>
+      <label>Phone (WhatsApp) *</label><input name="phone" type="tel" required>
+      <div class="gv-row">
+        <div><label>Budget</label><select name="budget"><option value="">Select</option><option>€ 250-300 K</option><option>€ 300-350 K</option><option>€ 350-400 K</option><option>+ € 400 K</option></select></div>
+        <div><label>Timeline</label><select name="timing"><option value="">Select</option><option value="Önümüzdeki 1-2 ay içinde">Önümüzdeki 1-2 ay içinde</option><option value="3-4 ay arası">3-4 ay arası</option><option value="6-12 ay içinde">6-12 ay içinde</option><option value="1 yıldan uzun">1 yıldan uzun</option></select></div>
+      </div>
+      <button class="gv-send" type="submit">Submit</button>
+      <div class="gv-msg" id="gv-msg"></div>
+    </form>
+  </div>
+</div>
+<script>
+(function(){
+  var cards=Array.prototype.slice.call(document.querySelectorAll('.property.has-photo'));
+  var total=cards.length;
+  var berkay=document.querySelectorAll('.property.has-photo[data-berkay-selection]').length;
+  var mah={},bol={};
+  cards.forEach(function(c){
+    var el=c.querySelector('.property-location');
+    if(el){var t=el.textContent.split('·')[0].trim().replace(/^(Atina|Athens)\s+/i,'');
+      if(/^(city centre|şehir merkezi)$/i.test(t)) t='Merkez';
+      if(t) mah[t]=1;}
+    var r=c.getAttribute('data-region'); if(r) bol[r]=1;
+  });
+  function fill(k,v){Array.prototype.forEach.call(document.querySelectorAll('[data-auto="'+k+'"]'),function(e){e.textContent=String(v);});}
+  fill('proje-total',total); fill('proje-berkay',berkay);
+  fill('mahalle',Object.keys(mah).length); fill('bolge',Object.keys(bol).length);
+  Array.prototype.forEach.call(document.querySelectorAll('[data-auto="chip-berkay"]'),function(e){e.textContent='('+berkay+')';});
+  var modal=document.getElementById('gv-modal');
+  modal.addEventListener('click',function(e){if(e.target===modal)modal.classList.remove('open');});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')modal.classList.remove('open');});
+  var f=document.getElementById('gv-form'), msg=document.getElementById('gv-msg');
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var btn=f.querySelector('.gv-send');
+    var req=['firstname','lastname','email','phone'];
+    for(var i=0;i<req.length;i++){ if(!f.elements[req[i]].value.trim()){ msg.className='gv-msg err'; msg.textContent='Could not send — *'; f.elements[req[i]].focus(); return; } }
+    btn.disabled=true; var ol=btn.textContent; btn.textContent='Sending…'; msg.className='gv-msg';
+    var fields=[]; ['firstname','lastname','email','phone','budget','timing'].forEach(function(n){ var v=f.elements[n].value.trim(); if(v)fields.push({name:n,value:v}); });
+    var ctx={pageUri:location.href,pageName:document.title};
+    try{var m=document.cookie.match(/hubspotutk=([^;]+)/); if(m)ctx.hutk=m[1];}catch(e){}
+    fetch('https://api.hsforms.com/submissions/v3/integration/submit/145141452/6602f22f-ef64-4465-a564-5f698bf7918d',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({fields:fields,context:ctx})
+    }).then(function(r){
+      if(r.ok){ msg.className='gv-msg ok'; msg.textContent='Thank you! We received your application — we will get back within 24 hours.'; f.reset(); btn.textContent=ol; btn.disabled=false;
+        setTimeout(function(){modal.classList.remove('open'); msg.className='gv-msg';},3200);
+      } else { throw new Error('http '+r.status); }
+    }).catch(function(){ msg.className='gv-msg err'; msg.textContent='Could not send. Please try again or WhatsApp us at +90 532 282 26 57.'; btn.textContent=ol; btn.disabled=false; });
+  });
+})();
+</script>
+
 <footer>
   <a class="footer-brand" href="https://www.avlarealestate.com/en/property-status/golden-visa#anchors-lu0ztkov3" target="_blank" rel="noopener" aria-label="Avla Gayrimenkul · Golden Visa portföyü">
     <img class="footer-logo-img" src="../avla-logo.png" alt="Avla logosu">
