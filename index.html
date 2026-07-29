@@ -1975,9 +1975,10 @@ src="https://www.facebook.com/tr?id=263544950122179&ev=PageView&noscript=1"
       <label>E-posta *</label><input name="email" type="email" required>
       <label>Telefon (WhatsApp) *</label><input name="phone" type="tel" required>
       <div class="gv-row">
-        <div><label>Bütçe</label><select name="budget"><option value="">Seçiniz</option><option>€ 250-300 K</option><option>€ 300-350 K</option><option>€ 350-400 K</option><option>+ € 400 K</option></select></div>
-        <div><label>Zamanlama</label><select name="timing"><option value="">Seçiniz</option><option value="Önümüzdeki 1-2 ay içinde">Önümüzdeki 1-2 ay içinde</option><option value="3-4 ay arası">3-4 ay arası</option><option value="6-12 ay içinde">6-12 ay içinde</option><option value="1 yıldan uzun">1 yıldan uzun</option></select></div>
+        <div><label>Bütçe</label><select name="gv_yatrm_butcesi_web"><option value="">Seçiniz</option><option>€ 250-300 K</option><option>€ 300-350 K</option><option>€ 350-400 K</option><option>+ € 400 K</option></select></div>
+        <div><label>Zamanlama</label><select name="gv_yatrm_zamanlamas_web"><option value="">Seçiniz</option><option value="Önümüzdeki 1-2 ay içinde">Önümüzdeki 1-2 ay içinde</option><option value="3-4 ay arası">3-4 ay arası</option><option value="6-12 ay içinde">6-12 ay içinde</option><option value="1 yıldan uzun">1 yıldan uzun</option></select></div>
       </div>
+      <label style="display:flex;gap:9px;align-items:flex-start;font-size:12px;color:#5a6472;line-height:1.5;margin-top:14px;cursor:pointer"><input type="checkbox" name="gv_kvkk_onay_web" required style="width:17px;height:17px;accent-color:#A88B55;flex:0 0 auto;margin-top:1px"><span>Kişisel verilerimin, talebimle ilgili iletişim amacıyla işlenmesini kabul ediyorum. *</span></label>
       <button class="gv-send" type="submit">Gönder</button>
       <div class="gv-msg" id="gv-msg"></div>
     </form>
@@ -2010,7 +2011,8 @@ src="https://www.facebook.com/tr?id=263544950122179&ev=PageView&noscript=1"
     var req=['firstname','lastname','email','phone'];
     for(var i=0;i<req.length;i++){ if(!f.elements[req[i]].value.trim()){ msg.className='gv-msg err'; msg.textContent='Gönderilemedi — *'; f.elements[req[i]].focus(); return; } }
     btn.disabled=true; var ol=btn.textContent; btn.textContent='Gönderiliyor…'; msg.className='gv-msg';
-    var fields=[]; ['firstname','lastname','email','phone','budget','timing'].forEach(function(n){ var v=f.elements[n].value.trim(); if(v)fields.push({name:n,value:v}); });
+    var fields=[]; ['firstname','lastname','email','phone','gv_yatrm_butcesi_web','gv_yatrm_zamanlamas_web'].forEach(function(n){ var v=f.elements[n].value.trim(); if(v)fields.push({name:n,value:v}); });
+    if(f.elements['gv_kvkk_onay_web']&&f.elements['gv_kvkk_onay_web'].checked)fields.push({name:'gv_kvkk_onay_web',value:'true'});
     var ctx={pageUri:location.href,pageName:document.title};
     try{var m=document.cookie.match(/hubspotutk=([^;]+)/); if(m)ctx.hutk=m[1];}catch(e){}
     fetch('https://api.hsforms.com/submissions/v3/integration/submit/145141452/6602f22f-ef64-4465-a564-5f698bf7918d',{
