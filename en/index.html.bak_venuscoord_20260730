@@ -1696,7 +1696,7 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
           <div class="yorum-content" id="yorum-venus-athens-riviera" data-rank="13" hidden>Venus Athens Riviera — Elliniko district, Athens Riviera. A flagship launch project minutes from the new metro stations and The Ellinikon mega-project. Modern architecture, premium finishes. Multiple unit types from studios to 3+1, with sea/park views from upper floors. Rapid sellout pace driven by proximity to OTE/Vodafone HQ, OAKA and Glyfada. Strong rental yield and exit-strategy capital appreciation. Highly recommended for Golden Visa entry combined with capital growth.</div>
           <div class="actions">
             <a class="btn btn-primary" href="../brochures/16_venus_athens_riviera.pdf" target="_blank">Brochure</a>
-            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=37.895%2C23.749" target="_blank">Location</a>
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=37.895%2C23.733" target="_blank">Location</a>
             <button type="button" class="btn btn-yorum yorum-btn" data-yorum-target="yorum-venus-athens-riviera">Notes</button>
             <a class="btn btn-info" href="https://www.avlarealestate.com/en/properties/venus-athens-riviera-elliniko-golden-visa" target="_blank" rel="noopener">Listing</a>
             <a class="btn btn-bolge" href="https://www.avlarealestate.com/en/post/athens-piraeus-glyfada-real-estate-guide-turkish-investors-2026" target="_blank" rel="noopener">Region</a>
@@ -2223,7 +2223,7 @@ updateGroupHeads();
     {"code": "AV-VAK-03", "name": "The Hera Athens ★", "region": "merkez", "color": "#85a505", "lat": 37.997, "lng": 23.71, "addr": "Irous 13, Akadimia Platonos, Athens", "brochure": "09_hera_athens.pdf", "bg": true},
     {"code": "AV-SOU-01", "name": "South Moschato ★", "region": "merkez", "color": "#6a8a65", "lat": 37.9498, "lng": 23.6786, "addr": "Eleftheriou Venizelou 90, Moschato", "brochure": "18_south_moschato.pdf", "bg": true},
     {"code": "AV-EUR-01", "name": "Aenaon Park Residences ★", "region": "riviera", "color": "#a05230", "lat": 37.9395, "lng": 23.6798, "addr": "Neo Faliro, Faliro 18547, Athens Riviera", "brochure": "15_aenaon_park_residences.pdf", "bg": true},
-    {"code": "AV-ZAF-02", "name": "Venus Athens Riviera ★", "region": "riviera", "color": "#a05230", "lat": 37.895, "lng": 23.749, "addr": "Afroditis 24, Elliniko", "brochure": "16_venus_athens_riviera.pdf", "bg": true},
+    {"code": "AV-ZAF-02", "name": "Venus Athens Riviera ★", "region": "riviera", "color": "#a05230", "lat": 37.895, "lng": 23.733, "addr": "Afroditis 24, Elliniko", "brochure": "16_venus_athens_riviera.pdf", "bg": true},
     {"code": "AV-OIK-04", "name": "THE ONE Glyfada ★", "region": "riviera", "color": "#a05230", "lat": 37.8807, "lng": 23.7552, "addr": "Vouliagmenis Ave, Glyfada, Athens", "brochure": "17_the_one_glyfada.pdf", "bg": true},
     {"code": "AV-RNT-01", "name": "The North Village ★", "region": "kuzey", "color": "#6d5a9c", "lat": 38.0867773, "lng": 23.8051991, "addr": "Ethnikis Antistaseos 33, Nea Erythraia, Kifisia", "brochure": "20_the_north_village.pdf", "bg": true},
     {"code": "AV-PER-01", "name": "Terrace Heights ★", "region": "bati", "color": "#6a8a65", "lat": 38.0186, "lng": 23.6960, "addr": "Peristeri, West Athens", "ilan": "https://www.avlarealestate.com/en/properties/terrace-heights-peristeri-west-athens-golden-visa", "bg": true},
