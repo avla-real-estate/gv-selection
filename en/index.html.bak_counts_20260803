@@ -970,7 +970,7 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
     </a>
     <div class="header-right">
       <div class="header-meta">
-        <strong>Master Selection</strong> · 23 Projects · 30 June 2026
+        <strong>Master Selection</strong> · 20 Projects · 30 June 2026
       </div>
       <div class="lang-switch" aria-label="Language selector">
         <a href="/" hreflang="tr" title="Türkçe sürüm">TR</a>
@@ -981,7 +981,7 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
 </header>
 <section class="hero">
   <div class="container hero-content">
-    <div class="hero-eyebrow">Avla Real Estate · 23 Projects · Piraeus · City Center · Riviera · Kifisia / Nea Erythraia</div>
+    <div class="hero-eyebrow">Avla Real Estate · 15 Projects · Piraeus · City Center · Riviera · Kifisia / Nea Erythraia</div>
     <h1>Athens Golden Visa <em>Master Selection</em></h1>
     <p class="lead"><strong><span data-auto="proje-total">15</span> curated Golden Visa projects</strong> across the east-west axis of Athens — in the broad €250-450K budget range, from Piraeus to the Riviera, from Akademia Platonos to Agios Dimitrios — the Avla portfolio spans 6 main regions. Detailed brochures, regional reports, and feasibility studies are provided for every project.</p>
     <div class="hero-stats">
@@ -1251,7 +1251,7 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
       </div>
     </div>
     <div class="group-head" data-group="merkez">
-      <h3>City Center <small>Pangrati · Ampelokipi · Akademia Platonos · Moschato · Kallithea · 11 Projects</small></h3>
+      <h3>City Center <small>Pangrati · Ampelokipi · Akademia Platonos · Moschato · 11 Projects</small></h3>
       <span class="group-tag">CITY CENTER</span>
     </div>
     <div class="property-grid">
