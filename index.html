@@ -997,41 +997,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-T4JQ2XVT');</script>
 
 <!-- Microsoft Clarity (direkt, GTM-bağımsız fallback) -->
-
-<!-- PostHog (EU Cloud — KVKK uyumlu) -->
+<!-- Meta Pixel: init + PageView artık YALNIZCA GTM üzerinden (satır içi blok 2026-08-09'da
+     kaldırıldı; ikisi birden çalışınca "Duplicate Pixel ID" ve çift PageView oluşuyordu).
+     Sayfaya özel ViewContent olayı, GTM pixel'i hazır olur olmaz gönderilir. -->
 <script>
-!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
-    api_host: 'https://eu.i.posthog.com',
-    person_profiles: 'identified_only',
-    capture_pageview: true,
-    capture_pageleave: true,
-    session_recording: { maskAllInputs: false }
-});
+(function(){
+  var g=0, t=setInterval(function(){
+    g+=200;
+    if(window.fbq){ clearInterval(t);
+      try{ fbq('track','ViewContent',{content_name:'GV Selection',content_category:'Golden Visa'}); }catch(e){}
+    } else if(g>10000){ clearInterval(t); }
+  },200);
+})();
 </script>
-
-
-<!-- Meta Pixel Code (Avla Real Estate - Meta Pikseli) -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '263544950122179');
-fbq('track', 'PageView');
-fbq('track', 'ViewContent', {
-  content_name: 'GV Selection',
-  content_category: 'Golden Visa - 7 Haziran Etkinlik'
-});
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=263544950122179&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"RealEstateAgent","@id":"https://www.avlarealestate.com/#organization","name":"Avla Gayrimenkul A.Ş.","alternateName":["Avla Real Estate","Avla"],"url":"https://www.avlarealestate.com","logo":"https://static.wixstatic.com/media/34bb09_5eef637c30b14c0997ad8f2689842317~mv2.jpg","description":"Türk yatırımcılara Yunanistan Golden Visa danışmanlığı veren İstanbul merkezli ihtisas firması. 2014'ten beri.","email":"realestate@avla.com.tr","telephone":"+90 532 282 2657","sameAs":["https://www.wikidata.org/wiki/Q140042281","https://www.linkedin.com/company/avla-real-estate","https://twitter.com/avlugayrimenkul","https://www.instagram.com/avla.real.estate/","https://www.facebook.com/Avla.Re/"],"identifier":{"@type":"PropertyValue","propertyID":"Wikidata","value":"Q140042281"},"areaServed":[{"@type":"Country","name":"Yunanistan"},{"@type":"Country","name":"Türkiye"}],"knowsAbout":["Greek Golden Visa","Yunanistan Golden Visa","Greek Golden Visa for Turkish investors","Athens Real Estate","αλλαγή χρήσης","€250.000 threshold","Investment Migration Greece"]},{"@type":"ItemList","@id":"https://gv.selection.avlarealestate.com/#itemlist","name":"Avla Atina Golden Visa Master Seçki","description":"Atina Golden Visa için seçilmiş 24 proje · €250.000-€450.000 bandında · Pire, Şehir Merkezi, Akademia Platonos, Moschato, Agios Dimitrios ve Atina Riviera akslarında. Tüm projeler Avla bağımsız Yunan hukuk partnerliği ile doğrulanmıştır.","numberOfItems":24,"itemListOrder":"https://schema.org/ItemListOrderAscending","provider":{"@id":"https://www.avlarealestate.com/#organization"},"about":["Yunanistan Golden Visa","€250.000 αλλαγή χρήσης (kullanım değişikliği)","€400.000 Zone B residential","Türk yatırımcılar için Atina property portföyü"],"inLanguage":"tr","url":"https://gv.selection.avlarealestate.com/"},{"@type":"Service","@id":"https://gv.selection.avlarealestate.com/#service","name":"Atina Golden Visa Mülk Seçki Danışmanlığı","provider":{"@id":"https://www.avlarealestate.com/#organization"},"areaServed":{"@type":"Country","name":"Yunanistan"},"serviceType":"Real Estate Investment Advisory","description":"€250-450K Atina Golden Visa mülk seçki danışmanlığı. 24 doğrulanmış proje, αλλαγή χρήσης ve Zone B eşikleri için detaylı broşür ve fizibilite raporları."},{"@type":"FAQPage","@id":"https://gv.selection.avlarealestate.com/#faq","mainEntity":[{"@type":"Question","name":"Avla Atina Golden Visa Master Seçkisi nedir?","acceptedAnswer":{"@type":"Answer","text":"Avla Gayrimenkul A.Ş.'nin Atina'daki 24 doğrulanmış Golden Visa-uygun projesinin küratör seçkisi. Fiyat bandı €250.000-€450.000. Pire, Şehir Merkezi, Akademia Platonos, Moschato, Agios Dimitrios ve Atina Riviera akslarında konumlanır."}},{"@type":"Question","name":"€250.000'dan başlayan projeler hangileri?","acceptedAnswer":{"@type":"Answer","text":"Master seçkisinde €250.000 başlangıç fiyatlı projeler αλλαγή χρήσης (kullanım değişikliği) kategorisinde yer alır — ticari/endüstriyel mülkün belgelendirilmiş konuta dönüşümü sonrası Golden Visa €250K eşiğinde uygundur. Detaylar her proje broşüründe."}},{"@type":"Question","name":"Bu seçki nasıl belirlendi?","acceptedAnswer":{"@type":"Answer","text":"Avla'nın bağımsız Yunan hukuk partnerliği her projeyi 4 paralel kontrolden geçirir: tapu zinciri, kadastro, vergi temizliği, takyidat. Sadece dört kontrolden de temiz çıkan projeler seçkiye dahil edilir."}},{"@type":"Question","name":"Türk yatırımcı için bu seçki neden uygun?","acceptedAnswer":{"@type":"Answer","text":"Avla Türk vatandaşlarına özel ihtisas firmasıdır — Türkçe-İngilizce-Fransızca-Yunanca dört dilli uçtan uca süreç (TCMB sermaye ihracı, apostil, AFM, Yunan banka, tapu, GV başvurusu). Seçkideki her proje Türk yatırımcı profili için filtrelenmiştir."}},{"@type":"Question","name":"Detaylı broşür ve fizibilite raporlarına nasıl ulaşırım?","acceptedAnswer":{"@type":"Answer","text":"İletişim: realestate@avla.com.tr veya WhatsApp +90 532 282 2657. Avla ekibi profilinize uygun 2-3 projeyi seçer, detaylı broşür ve fizibilite raporlarını gönderir, ardından Atina ziyaret turu organizasyonu yapar."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Avla Gayrimenkul A.Ş.","item":"https://www.avlarealestate.com"},{"@type":"ListItem","position":2,"name":"Yunanistan Golden Visa","item":"https://www.avlarealestate.com/yunanistan-golden-visa"},{"@type":"ListItem","position":3,"name":"Atina Master Seçki","item":"https://gv.selection.avlarealestate.com/"}]}]}
