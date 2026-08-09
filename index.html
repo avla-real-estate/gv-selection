@@ -1042,7 +1042,7 @@ src="https://www.facebook.com/tr?id=263544950122179&ev=PageView&noscript=1"
 <style>
 .wa-fab{
   /* sag kenar, ekranin alt ucte birinde — Athena sag alt kosede kaliyor */
-  position:fixed; right:1.2rem; bottom:33.33%; z-index:400;
+  position:fixed; right:1.2rem; bottom:19%; z-index:400;
   display:inline-flex; align-items:center; justify-content:center;
   width:58px; height:58px; padding:0; border-radius:50%;
   background:#25D366; color:#fff; text-decoration:none;
@@ -1082,7 +1082,7 @@ src="https://www.facebook.com/tr?id=263544950122179&ev=PageView&noscript=1"
 </hea<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" media="print" onload="this.media='all';this.onload=null">
 <noscript><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""></noscript>
 <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-d>
+</head>
 <body>
 <header>
   <div class="container">
@@ -2165,10 +2165,10 @@ d>
         <div><label>Soyad *</label><input name="lastname" required></div>
       </div>
       <label>E-posta *</label><input name="email" type="email" required>
-      <label>Telefon (WhatsApp) *</label><input name="phone" type="tel" required>
+      <label>Telefon (WhatsApp) *</label><input name="phone" type="tel" required><label>Yaşadığınız Şehir</label><input name="city" type="text" placeholder="Örn. İstanbul" autocomplete="address-level2">
       <div class="gv-row">
-        <div><label>Bütçe</label><select name="gv_yatrm_butcesi_web"><option value="">Seçiniz</option><option>€ 250-300 K</option><option>€ 300-350 K</option><option>€ 350-400 K</option><option>+ € 400 K</option></select></div>
-        <div><label>Zamanlama</label><select name="gv_yatrm_zamanlamas_web"><option value="">Seçiniz</option><option value="Önümüzdeki 1-2 ay içinde">Önümüzdeki 1-2 ay içinde</option><option value="3-4 ay arası">3-4 ay arası</option><option value="6-12 ay içinde">6-12 ay içinde</option><option value="1 yıldan uzun">1 yıldan uzun</option></select></div>
+        <div><label>Bütçe *</label><select name="gv_yatrm_butcesi_web"><option value="">Seçiniz</option><option>€ 250-300 K</option><option>€ 300-350 K</option><option>€ 350-400 K</option><option>+ € 400 K</option></select></div>
+        <div><label>Zamanlama *</label><select name="gv_yatrm_zamanlamas_web"><option value="">Seçiniz</option><option value="Önümüzdeki 1-2 ay içinde">Önümüzdeki 1-2 ay içinde</option><option value="3-4 ay arası">3-4 ay arası</option><option value="6-12 ay içinde">6-12 ay içinde</option><option value="1 yıldan uzun">1 yıldan uzun</option></select></div>
       </div>
       <label style="display:flex;gap:9px;align-items:flex-start;font-size:12px;color:#5a6472;line-height:1.5;margin-top:14px;cursor:pointer"><input type="checkbox" name="gv_kvkk_onay_web" required style="width:17px;height:17px;accent-color:#A88B55;flex:0 0 auto;margin-top:1px"><span>Kişisel verilerimin, talebimle ilgili iletişim amacıyla işlenmesini kabul ediyorum. *</span></label>
       <button class="gv-send" type="submit">Gönder</button>
@@ -2200,10 +2200,10 @@ d>
   f.addEventListener('submit',function(ev){
     ev.preventDefault();
     var btn=f.querySelector('.gv-send');
-    var req=['firstname','lastname','email','phone'];
+    var req=['firstname','lastname','email','phone','gv_yatrm_butcesi_web','gv_yatrm_zamanlamas_web'];
     for(var i=0;i<req.length;i++){ if(!f.elements[req[i]].value.trim()){ msg.className='gv-msg err'; msg.textContent='Gönderilemedi — *'; f.elements[req[i]].focus(); return; } }
     btn.disabled=true; var ol=btn.textContent; btn.textContent='Gönderiliyor…'; msg.className='gv-msg';
-    var fields=[]; ['firstname','lastname','email','phone','gv_yatrm_butcesi_web','gv_yatrm_zamanlamas_web'].forEach(function(n){ var v=f.elements[n].value.trim(); if(v)fields.push({name:n,value:v}); });
+    var fields=[]; ['firstname','lastname','email','phone','city','gv_yatrm_butcesi_web','gv_yatrm_zamanlamas_web'].forEach(function(n){ var v=f.elements[n].value.trim(); if(v)fields.push({name:n,value:v}); });
     if(f.elements['gv_kvkk_onay_web']&&f.elements['gv_kvkk_onay_web'].checked)fields.push({name:'gv_kvkk_onay_web',value:'true'});
     var ctx={pageUri:location.href,pageName:document.title};
     try{var m=document.cookie.match(/hubspotutk=([^;]+)/); if(m)ctx.hutk=m[1];}catch(e){}
@@ -2232,7 +2232,7 @@ d>
   </div>
   <div class="footer-wa">
     <a href="https://wa.me/905322822657?text=Merhaba%2C%20Atina%20Golden%20Visa%20master%20se%C3%A7kisini%20inceledim.%20Bilgi%20almak%20istiyorum." target="_blank" rel="noopener" data-wa="footer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.42 9.42 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.24-9.43 9.44-9.43 2.52 0 4.89.98 6.67 2.77a9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.24 9.43-9.44 9.43zM20.5 3.49A11.82 11.82 0 0 0 12.04 0C5.5 0 .18 5.32.18 11.86c0 2.09.55 4.13 1.59 5.93L.08 24l6.36-1.67a11.83 11.83 0 0 0 5.6 1.43h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.15-3.41-8.41z"/></svg>
-      <span>Doğrudan bilgi al</span><span class="sep">·</span><span>WhatsApp</span></a>
+      <span>Doğrudan bilgi al</span></a>
   </div>
   <div class="footer-cta">
     Tüm Avla Golden Visa portföyünü görmek için
@@ -2414,7 +2414,7 @@ document.querySelectorAll('.group-head').forEach(gh => {
 });
 
 // Default: Berkay selection
-applyFilter('berkay');
+applyFilter('all');
 updateRegionChips();
 updateGroupHeads();
 </script>
@@ -2684,5 +2684,49 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
   }, true);
 })();
 </script>
+
+<!-- gv-cekmece-v1: form cekmecesi (sagdan kayar) + sag kenar pinli sekme -->
+<style>
+/* modal -> sagdan kayan cekmece */
+#gv-modal{align-items:stretch;justify-content:flex-end;padding:0;
+  opacity:0;transition:opacity .28s ease}
+#gv-modal.open{opacity:1}
+#gv-modal .gv-box{
+  max-width:452px;width:100%;max-height:100vh;height:100vh;
+  border-radius:0;padding:44px 30px 34px;
+  box-shadow:-26px 0 70px rgba(0,0,0,.34);
+  transform:translateX(100%);transition:transform .38s cubic-bezier(.22,.75,.3,1);
+  overflow-y:auto;-webkit-overflow-scrolling:touch;
+}
+#gv-modal.open .gv-box{transform:translateX(0)}
+@media (prefers-reduced-motion:reduce){
+  #gv-modal .gv-box{transition:none}
+}
+@media (max-width:520px){
+  #gv-modal .gv-box{max-width:100%;padding:40px 20px 28px}
+}
+
+/* sag kenara pinli sekme */
+.gv-pin{
+  position:fixed; right:0; top:50%; transform:translateY(-50%);
+  z-index:399; display:flex; align-items:center; gap:.5rem;
+  padding:1.05rem .58rem; border:0; cursor:pointer;
+  border-radius:10px 0 0 10px;
+  background:linear-gradient(180deg,#A88B55,#8d7345); color:#FFFDF8;
+  font-family:'Inter',-apple-system,sans-serif;
+  font-size:.66rem; font-weight:700; letter-spacing:.19em;
+  writing-mode:vertical-rl; text-orientation:mixed;
+  box-shadow:-6px 0 20px rgba(26,35,50,.26);
+  transition:padding-right .2s ease, background .2s ease;
+}
+.gv-pin:hover,.gv-pin:focus-visible{padding-right:.95rem;background:linear-gradient(180deg,#b89a63,#9a7f4d)}
+.gv-pin .gv-pin-ok{writing-mode:horizontal-tb;font-size:.8rem;opacity:.85}
+@media (max-width:640px){
+  .gv-pin{font-size:.6rem;letter-spacing:.14em;padding:.85rem .5rem}
+}
+@media print{.gv-pin{display:none}}
+</style>
+<button class="gv-pin" type="button" aria-label="GOLDEN VISA BAŞVURUSU"
+  onclick="document.getElementById('gv-modal').classList.add('open')"><span class="gv-pin-ok">‹</span>GOLDEN VISA BAŞVURUSU</button>
 </body>
 </html>
