@@ -1052,7 +1052,10 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
 .footer-wa svg{width:16px;height:16px;flex:0 0 auto;fill:currentColor}
 .footer-wa .sep{opacity:.5}
 </style>
-</head>
+</<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" media="print" onload="this.media='all';this.onload=null">
+<noscript><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""></noscript>
+<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+head>
 <body>
 <header>
   <div class="container">
@@ -2483,51 +2486,11 @@ function AVLA_HARITA_INIT(){
   // Default: Berkay's 4 only
   setTimeout(() => window.AvlaMap.showBerkay(), 150);
 }
+
+/* defer'li leaflet DOMContentLoaded'dan once hazir olur */
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',function(){AVLA_HARITA_INIT();});}else{AVLA_HARITA_INIT();}
 </script>
-<script>
-/* Leaflet tembel yukleme (2026-08-09, v2): render'i bloklamaz ama harita MUTLAKA yuklenir.
-   Tetikleyiciler: (1) harita gorunur olmaya yaklasinca, (2) sayfa load + 1.2sn,
-   (3) ilk kullanici etkilesimi. Hangisi once olursa. */
-(function(){
-  var basladi=false;
-  function kutuphaneYukle(hazir){
-    if(window.L) return hazir();
-    var css=document.createElement('link');
-    css.rel='stylesheet'; css.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-    css.integrity='sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY='; css.crossOrigin='';
-    document.head.appendChild(css);
-    var s=document.createElement('script');
-    s.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
-    s.integrity='sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo='; s.crossOrigin='';
-    s.onload=hazir;
-    s.onerror=function(){ console.warn('leaflet yuklenemedi'); };
-    document.head.appendChild(s);
-  }
-  function calistir(){
-    if(basladi) return; basladi=true;
-    kutuphaneYukle(function(){
-      try{ AVLA_HARITA_INIT(); }catch(e){ console.warn('harita init hatasi', e); }
-    });
-  }
-  function kur(){
-    var hedef=document.querySelector('.map-section')||document.getElementById('avla-map');
-    if(hedef && 'IntersectionObserver' in window){
-      try{
-        var io=new IntersectionObserver(function(kayitlar){
-          for(var i=0;i<kayitlar.length;i++){ if(kayitlar[i].isIntersecting){ calistir(); io.disconnect(); return; } }
-        },{rootMargin:'500px 0px'});
-        io.observe(hedef);
-      }catch(e){}
-    }
-    ['scroll','pointerdown','keydown','touchstart','mousemove'].forEach(function(ev){
-      window.addEventListener(ev, calistir, {once:true, passive:true});
-    });
-    if(document.readyState==='complete'){ setTimeout(calistir,1200); }
-    else { window.addEventListener('load', function(){ setTimeout(calistir,1200); }, {once:true}); }
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',kur); else kur();
-})();
-</script>
+
 
 
 <script>
