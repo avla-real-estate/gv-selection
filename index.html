@@ -2514,8 +2514,9 @@ function AVLA_HARITA_INIT(){
 }
 </script>
 <script>
-/* Leaflet tembel yukleme (2026-08-09): harita gorunur olunca yuklenir.
-   Onceki hali render-blocking'di (CSS+JS head/govde icinde senkron). */
+/* Leaflet tembel yukleme (2026-08-09, v2): render'i bloklamaz ama harita MUTLAKA yuklenir.
+   Tetikleyiciler: (1) harita gorunur olmaya yaklasinca, (2) sayfa load + 1.2sn,
+   (3) ilk kullanici etkilesimi. Hangisi once olursa. */
 (function(){
   var basladi=false;
   function kutuphaneYukle(hazir){
@@ -2527,21 +2528,31 @@ function AVLA_HARITA_INIT(){
     var s=document.createElement('script');
     s.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
     s.integrity='sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo='; s.crossOrigin='';
-    s.onload=hazir; document.head.appendChild(s);
+    s.onload=hazir;
+    s.onerror=function(){ console.warn('leaflet yuklenemedi'); };
+    document.head.appendChild(s);
   }
   function calistir(){
     if(basladi) return; basladi=true;
-    kutuphaneYukle(function(){ try{ AVLA_HARITA_INIT(); }catch(e){ console.warn('harita init', e); } });
+    kutuphaneYukle(function(){
+      try{ AVLA_HARITA_INIT(); }catch(e){ console.warn('harita init hatasi', e); }
+    });
   }
   function kur(){
     var hedef=document.querySelector('.map-section')||document.getElementById('avla-map');
-    if(!hedef){ calistir(); return; }
-    if('IntersectionObserver' in window){
-      var io=new IntersectionObserver(function(kayitlar){
-        kayitlar.forEach(function(k){ if(k.isIntersecting){ calistir(); io.disconnect(); } });
-      },{rootMargin:'400px'});
-      io.observe(hedef);
-    } else { calistir(); }
+    if(hedef && 'IntersectionObserver' in window){
+      try{
+        var io=new IntersectionObserver(function(kayitlar){
+          for(var i=0;i<kayitlar.length;i++){ if(kayitlar[i].isIntersecting){ calistir(); io.disconnect(); return; } }
+        },{rootMargin:'500px 0px'});
+        io.observe(hedef);
+      }catch(e){}
+    }
+    ['scroll','pointerdown','keydown','touchstart','mousemove'].forEach(function(ev){
+      window.addEventListener(ev, calistir, {once:true, passive:true});
+    });
+    if(document.readyState==='complete'){ setTimeout(calistir,1200); }
+    else { window.addEventListener('load', function(){ setTimeout(calistir,1200); }, {once:true}); }
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',kur); else kur();
 })();
