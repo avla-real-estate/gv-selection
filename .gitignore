@@ -44,3 +44,8 @@ credentials.json
 .Spotlight-V100
 .Trashes
 ehthumbs_vista.db
+
+# yedekler
+index.html.bak_*
+index.html.broken_*
+*.bak_*
