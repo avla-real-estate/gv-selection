@@ -1023,12 +1023,11 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
 <!-- avla-wa-blok: WhatsApp iletisim (sol alt yuzen buton + footer linki) -->
 <style>
 .wa-fab{
-  position:fixed; left:1.2rem; bottom:1.2rem; z-index:400;
-  display:inline-flex; align-items:center; gap:.6rem;
-  padding:.72rem 1.15rem .72rem .9rem; border-radius:999px;
+  /* sag kenar, ekranin alt ucte birinde — Athena sag alt kosede kaliyor */
+  position:fixed; right:1.2rem; bottom:33.33%; z-index:400;
+  display:inline-flex; align-items:center; justify-content:center;
+  width:58px; height:58px; padding:0; border-radius:50%;
   background:#25D366; color:#fff; text-decoration:none;
-  font-family:'Inter',-apple-system,sans-serif; font-size:.84rem; font-weight:600;
-  letter-spacing:.02em; line-height:1;
   box-shadow:0 10px 28px rgba(26,35,50,.26), 0 2px 6px rgba(26,35,50,.16);
   transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
 }
@@ -1036,10 +1035,13 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
   background:#1DA851; transform:translateY(-2px);
   box-shadow:0 14px 34px rgba(26,35,50,.32), 0 3px 8px rgba(26,35,50,.2);
 }
-.wa-fab svg{width:21px;height:21px;flex:0 0 auto;fill:currentColor}
+.wa-fab svg{width:29px;height:29px;flex:0 0 auto;fill:currentColor}
+/* yazi gorunmez ama ekran okuyucuda kalir */
+.wa-fab .wa-t{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
 @media (max-width:900px){
-  .wa-fab{padding:0;width:52px;height:52px;justify-content:center;left:1rem;bottom:1rem}
-  .wa-fab .wa-t{display:none}
+  .wa-fab{width:54px;height:54px;right:1rem}
+  .wa-fab svg{width:27px;height:27px}
 }
 @media print{.wa-fab{display:none}}
 
