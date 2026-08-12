@@ -1056,6 +1056,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .footer-wa svg{width:16px;height:16px;flex:0 0 auto;fill:currentColor}
 .footer-wa .sep{opacity:.5}
+
+/* --- Şartlar & Süreç bloğu (sorgu-eşlemeli bilgi katmanı, 12 Ağu 2026) --- */
+.sartlar{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3rem 0 2.6rem}
+.sartlar-eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.5rem}
+.sartlar h2{font-size:clamp(1.45rem,3.2vw,2.05rem);margin-bottom:1rem}
+.sartlar h2 em{font-style:italic;color:var(--gold)}
+.sartlar-lead{max-width:74ch;margin-bottom:1.5rem}
+.sartlar-lead p{margin-bottom:.7rem;font-size:1.01rem}
+.sartlar-warn{border-left:3px solid var(--gold);padding-left:.9rem;color:var(--text-muted);font-size:.94rem}
+.sartlar-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:.7rem 1.4rem;align-items:start}
+.sartlar details{border:1px solid var(--border);border-radius:var(--radius);background:var(--cream-light);overflow:hidden}
+.sartlar summary{cursor:pointer;padding:.85rem 1rem;font-weight:600;font-size:.94rem;color:var(--charcoal);list-style:none;display:flex;justify-content:space-between;gap:.8rem;align-items:center}
+.sartlar summary::-webkit-details-marker{display:none}
+.sartlar summary::after{content:"+";color:var(--gold);font-size:1.25rem;line-height:1;flex:0 0 auto}
+.sartlar details[open] summary::after{content:"\2013"}
+.sartlar details[open] summary{border-bottom:1px solid var(--border)}
+.sartlar .sa-body{padding:.9rem 1rem 1.05rem;font-size:.92rem;color:var(--text)}
+.sartlar .sa-body p{margin-bottom:.6rem}
+.sartlar .sa-body p:last-child{margin-bottom:0}
+.sartlar .sa-body ul,.sartlar .sa-body ol{margin:.4rem 0 .6rem 1.15rem}
+.sartlar .sa-body li{margin-bottom:.35rem}
+.sartlar .sa-tier{margin:.5rem 0 .7rem;padding:.7rem .85rem;border-left:3px solid var(--gold-light);background:var(--white);border-radius:var(--radius)}
+.sartlar .sa-tier b{color:var(--charcoal)}
+.sartlar-foot{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+.sartlar-jump{display:inline-block;padding:.82rem 1.6rem;border-radius:999px;background:#F08025;color:#fff;font-weight:700;font-size:.9rem;letter-spacing:.02em;box-shadow:0 8px 22px rgba(240,128,37,.26);transition:background .18s ease,transform .18s ease}
+.sartlar-jump:hover,.sartlar-jump:focus-visible{background:#d96d18;color:#fff;transform:translateY(-2px)}
+.sartlar-note{font-size:.81rem;color:var(--text-muted);max-width:62ch;line-height:1.55}
+.footer-legal{max-width:760px;margin:1.4rem auto 0;padding-top:1.1rem;border-top:1px solid rgba(232,220,200,.16);text-align:center;font-size:.79rem;color:rgba(232,220,200,.62)}
+.footer-legal details{margin-bottom:.6rem}
+.footer-legal summary{cursor:pointer;color:rgba(232,220,200,.8);list-style:none}
+.footer-legal summary::-webkit-details-marker{display:none}
+.footer-legal summary::after{content:" \25BE"}
+.footer-legal details[open] summary::after{content:" \25B4"}
+.footer-legal .fl-body{padding:.7rem .4rem 0;text-align:left;line-height:1.6}
+.footer-legal .fl-body p{margin-bottom:.5rem}
+.footer-legal a{color:rgba(232,220,200,.85);text-decoration:underline}
+.footer-legal a:hover{color:var(--cream)}
+@media(max-width:640px){.sartlar{padding:2.2rem 0 1.8rem}.sartlar-grid{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
@@ -1093,6 +1131,139 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="gv-hero-cta-sub">24 saat içinde danışmanınız dönüş yapar</div>
   </div>
 </section>
+
+
+<!-- BEGIN: Şartlar & Süreç (sorgu-eşlemeli bilgi katmanı) -->
+<section class="sartlar" id="sartlar">
+  <div class="container">
+    <div class="sartlar-eyebrow">Önce kısa cevap · Sonra portföy</div>
+    <h2>Yunanistan'da <em>Ev Alarak Oturum İzni</em>: Şartlar, Süreç, Süre ve Maliyet</h2>
+
+    <div class="sartlar-lead">
+      <p><strong>Kısa cevap:</strong> Yunanistan'da belirli bir tutarın üzerinde gayrimenkul satın alan yabancı yatırımcılar, kendileri ve aileleri için <strong>5 yılda bir yenilenen oturma izni</strong> alabilir. İzin Yunanistan'da yaşama zorunluluğu getirmez, Schengen bölgesinde serbest dolaşım sağlar ve mülk elde tutulduğu sürece yenilenir. <strong>Bu bir oturma iznidir — vatandaşlık değildir.</strong></p>
+      <p class="sartlar-warn">Yatırım eşiği bölgeye göre sabit değildir: mülkün girdiği kademeye ve seçilen rotaya göre <strong>€250.000, €400.000 veya €800.000</strong> olabilir. Aşağıda hangi durumda hangisinin geçerli olduğunu açıklıyoruz — ve portföyümüzdeki her proje için bu teyidi teklif aşamasında yazılı olarak veriyoruz.</p>
+    </div>
+
+    <div class="sartlar-grid">
+
+      <details>
+        <summary>Golden Visa vatandaşlık verir mi?</summary>
+        <div class="sa-body">
+          <p><strong>Hayır — doğrudan vermez.</strong> Yatırım yoluyla alınan belge bir <em>oturma iznidir</em>. Yunan vatandaşlığı ayrı ve çok daha uzun bir başvurudur; mevzuat uzun süreli ve <strong>fiilî</strong> yasal ikamet ile dil ve entegrasyon şartları arar.</p>
+          <p>Golden Visa'nın en büyük avantajı olan “Yunanistan'da oturma zorunluluğu yok” kuralı, aynı zamanda vatandaşlık açısından en büyük sınırıdır: ülkede fiilen yaşanmadığı sürece vatandaşlık için gereken ikamet süresi işlemez.</p>
+          <p>Vatandaşlığı hedefleyen yatırımcılara tavsiyemiz, süreci baştan bir <strong>Yunan avukatla</strong> planlamalarıdır. Biz gayrimenkul tarafını yürütürüz; hukuki süreç için birlikte çalıştığımız bağımsız hukuk bürolarına yönlendiririz.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Yatırım eşiği ne kadar? Neden herkes farklı rakam söylüyor?</summary>
+        <div class="sa-body">
+          <p>Çünkü tek bir rakam yok. Mevzuat <strong>üç kademe</strong> tanımlıyor:</p>
+          <div class="sa-tier"><b>€800.000</b> — yoğun talep gören bölgeler için öngörülen üst kademe. <strong>Tek</strong> bir mülk olmalı ve <strong>en az 120 m²</strong> olmalıdır.</div>
+          <div class="sa-tier"><b>€400.000</b> — diğer bölgeler. Aynı şekilde tek mülk ve en az 120 m² şartı geçerlidir.</div>
+          <div class="sa-tier"><b>€250.000</b> — <strong>konuma bağlı bir eşik değildir.</strong> Yalnızca iki halde uygulanır: <em>(a)</em> konut dışı bir binanın <strong>kullanım değişikliği</strong> ile konuta dönüştürülmesi — dönüşüm 5 Nisan 2024'ten sonra yapılmış ve başvurudan önce tamamlanmış olmalıdır; <em>(b)</em> tescilli / koruma altındaki bir binanın restorasyonu. Bu rotada yüzölçümü şartı yoktur, ancak aynı tapuda birden fazla bağımsız konut ünitesi oluşturulamaz ve konut <strong>5 yıl boyunca kısa dönem kiralamaya</strong> (günlük / haftalık) verilemez.</div>
+          <p>Bir mülkün hangi kademeye girdiği, konumuna ve mülkün hukuki durumuna göre belirlenir ve <strong>her mülk için ayrıca teyit edilmelidir.</strong> Aşağıdaki portföyde hem standart rotaya hem kullanım değişikliği rotasına uygun projeler bulunur; kartlarda belirtilen eşik, o projenin hangi rotadan ilerlediğine göredir.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Yunanistan'da ev almanın şartları neler? (Türk vatandaşları dahil)</summary>
+        <div class="sa-body">
+          <p>Yunanistan'da yabancı gerçek kişiler konut satın alabilir. Pratikte gereken üç şey var:</p>
+          <ul>
+            <li><strong>AFM (Yunan vergi numarası)</strong> — vekâletle de alınabilir.</li>
+            <li><strong>Yunan bankasında hesap</strong> — bedelin banka kanalıyla ödendiğinin belgelenmesi gerekir.</li>
+            <li><strong>Fon kaynağının belgelenmesi</strong> — parayı nereden elde ettiğinizi gösteren belgeler.</li>
+          </ul>
+          <p>Satın alma <strong>noter huzurunda</strong> yapılır ve tapu siciline tescil edilir. Süreç boyunca Yunanistan'da bulunmanız şart değildir; vekâletname ile yürütülebilir. Sınır bölgeleri gibi bazı özel alanlarda ek izin gerekebilir — portföyümüzdeki Atina projeleri bu kapsamda değildir.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Süreç nasıl işliyor, ne kadar sürüyor?</summary>
+        <div class="sa-body">
+          <ol>
+            <li><strong>Mülk seçimi ve rezervasyon</strong> — ön sözleşme ve kapora.</li>
+            <li><strong>AFM + banka hesabı</strong> — avukat vekâletiyle açılır.</li>
+            <li><strong>Hukuki inceleme</strong> — tapu geçmişi, ipotek/haciz kontrolü, ruhsat ve iskân durumu.</li>
+            <li><strong>Noter satış sözleşmesi ve tapu tescili</strong> — mülkiyet bu aşamada geçer.</li>
+            <li><strong>Oturum izni başvurusu</strong> — biyometrik randevu ve dosya teslimi.</li>
+            <li><strong>Mavi kart</strong> — başvuru makbuzu; kart basılana kadar Yunanistan'da yasal kalma hakkı verir.</li>
+            <li><strong>Oturum kartı</strong> — teslim, ardından 5 yılda bir yenileme.</li>
+          </ol>
+          <p>Uygulamada tapu aşaması hazır bir mülkte birkaç hafta içinde tamamlanabilir; oturum kartının basılması randevu yoğunluğuna göre değişir. <strong>Kesin süre taahhüdü veren hiçbir yere itibar etmeyin</strong> — randevu takvimi idarenin elindedir. Size her aşamada gerçekleşen takvimi yazılı bildiririz.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Mülk bedeli dışında hangi masraflar var?</summary>
+        <div class="sa-body">
+          <p>Bütçenizi kurarken mülk bedelinin üzerine şu kalemleri ekleyin:</p>
+          <ul>
+            <li>Devir vergisi <em>veya</em> KDV — mülkün yeni yapı ya da ikinci el olmasına göre değişir</li>
+            <li>Noter ücreti ve tapu tescil harcı</li>
+            <li>Avukatlık ücreti (hukuki inceleme + vekâlet)</li>
+            <li>Emlak komisyonu</li>
+            <li>Oturum izni başvuru harcı ve biyometri ücreti (kişi başı)</li>
+            <li>Yıllık emlak vergisi (ENFIA) ve varsa aidat</li>
+          </ul>
+          <p>Oranlar mülkün türüne ve tutarına göre değiştiği için burada tek bir yüzde vermiyoruz. <strong>Teklif aşamasında bu kalemleri mülke özel, kalem kalem ve yazılı olarak veririz</strong> — sürpriz masraf çıkmaz.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Ailemden kimler kapsanıyor?</summary>
+        <div class="sa-body">
+          <p>Tek yatırımla aynı izinden yararlanabilecekler:</p>
+          <ul>
+            <li>Eş</li>
+            <li>21 yaşını doldurmamış çocuklar</li>
+            <li>Yatırımcının ve eşinin <strong>ebeveynleri</strong></li>
+          </ul>
+          <p>Çocuklar 21 yaşını doldurduğunda kendi izinlerine geçiş için ayrı bir başvuru gerekir; eğitim durumuna bağlı olarak süre uzatılabilir. Aile yapınızı baştan söylerseniz, bütçe planını doğru kişi sayısıyla kurarız.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Oturum izni veren başka ülkeler varken neden Yunanistan?</summary>
+        <div class="sa-body">
+          <p>Avrupa'da gayrimenkul karşılığı oturum izni veren birkaç ülke var; bazıları programını kapattı, bazıları gayrimenkul rotasını kaldırdı. Yunanistan'ı seçenlerin bize söylediği dört sebep:</p>
+          <ul>
+            <li><strong>Mülk gerçek bir varlık kalır</strong> — bağış ya da fona kilitlenen bir yatırım değil; satabilir, kiraya verebilirsiniz.</li>
+            <li><strong>Aile kapsamı geniş</strong> — ebeveynleri de kapsayan az sayıdaki programdan biri.</li>
+            <li><strong>İkamet zorunluluğu yok</strong> — hayatınızı taşımadan izne sahip olursunuz.</li>
+            <li><strong>Türkiye'ye yakınlık</strong> — Atina'ya uçuş bir saatin altında; mülkü yılda birkaç kez görmek gerçekçi.</li>
+          </ul>
+          <p>Buna karşılık dürüst olalım: Yunanistan <strong>hızlı vatandaşlık</strong> arayan biri için doğru adres değildir. Amacınız pasaportsa, bu programı tek başına çözüm olarak sunan kimseye güvenmeyin.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Mülkü kiraya verebilir miyim? Getiri ne olur?</summary>
+        <div class="sa-body">
+          <p>Evet — uzun dönem kiralama serbesttir ve izni etkilemez. <strong>İstisna:</strong> €250.000 kullanım değişikliği rotasından alınan konut, 5 yıl boyunca kısa dönem (günlük/haftalık) kiralamaya verilemez.</p>
+          <p>Portföyümüzdeki bazı projeler geliştirici tarafından <strong>garantili net kira</strong> sunuyor; bunlar kartlarda ayrıca belirtilir. Garantili getiri taahhütlerinde bakılması gereken, oranın kendisi değil <strong>taahhüdü kimin verdiği ve sözleşmenin kaç yıl olduğudur</strong> — bunu her projede sizin için ayrıca kontrol ederiz.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <div class="sartlar-foot">
+      <a class="sartlar-jump" href="#portfoy">Bütçenize uygun projeleri görün ↓</a>
+      <div class="sartlar-note">Bu sayfa bir gayrimenkul portföyüdür. Avla Gayrimenkul A.Ş. mülk seçimi, pazarlık ve satın alma sürecini yürütür; oturum izni başvurusu bağımsız Yunan avukatlar tarafından yapılır. Buradaki bilgiler genel bilgilendirme amaçlıdır, hukuki görüş değildir.</div>
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"tr","mainEntity":[
+{"@type":"Question","name":"Yunanistan Golden Visa vatandaşlık verir mi?","acceptedAnswer":{"@type":"Answer","text":"Hayır, doğrudan vermez. Yatırım yoluyla alınan belge bir oturma iznidir. Yunan vatandaşlığı ayrı bir başvurudur ve mevzuat uzun süreli, fiilî yasal ikamet ile dil ve entegrasyon şartları arar. Golden Visa'da Yunanistan'da oturma zorunluluğu bulunmadığından, izne sahip olmak tek başına vatandaşlık için gereken ikamet süresini işletmez."}},
+{"@type":"Question","name":"Yunanistan'da ev alarak oturum izni için yatırım eşiği ne kadar?","acceptedAnswer":{"@type":"Answer","text":"Tek bir rakam yoktur; mevzuat üç kademe tanımlar. €800.000 yoğun talep gören bölgeler için öngörülen üst kademedir ve tek mülk, en az 120 m² şartı vardır. €400.000 diğer bölgeler için geçerlidir, aynı tek mülk ve 120 m² şartıyla. €250.000 konuma bağlı bir eşik değildir; yalnızca konut dışı bir binanın kullanım değişikliğiyle konuta dönüştürülmesi (5 Nisan 2024'ten sonra tamamlanmış olmak kaydıyla) veya tescilli bir binanın restorasyonu rotasında uygulanır. Bir mülkün hangi kademeye girdiği her mülk için ayrıca teyit edilmelidir."}},
+{"@type":"Question","name":"Yunanistan'da ev almanın şartları nelerdir?","acceptedAnswer":{"@type":"Answer","text":"Yabancı gerçek kişiler Yunanistan'da konut satın alabilir. Pratikte gereken üç şey vardır: AFM (Yunan vergi numarası), Yunan bankasında hesap ve fon kaynağının belgelenmesi. Satın alma noter huzurunda yapılır ve tapu siciline tescil edilir. Süreç vekâletname ile yürütülebilir, alıcının Yunanistan'da bulunması şart değildir."}},
+{"@type":"Question","name":"Oturum izni ailemden kimleri kapsıyor?","acceptedAnswer":{"@type":"Answer","text":"Tek yatırımla eş, 21 yaşını doldurmamış çocuklar ve hem yatırımcının hem eşinin ebeveynleri aynı izinden yararlanabilir. Çocuklar 21 yaşını doldurduğunda kendi izinlerine geçiş için ayrı başvuru gerekir."}},
+{"@type":"Question","name":"Mülkü kiraya verebilir miyim?","acceptedAnswer":{"@type":"Answer","text":"Uzun dönem kiralama serbesttir ve oturum iznini etkilemez. İstisna olarak, €250.000 kullanım değişikliği rotasından alınan konut 5 yıl boyunca kısa dönem (günlük/haftalık) kiralamaya verilemez."}}
+]}
+</script>
+<!-- END: Şartlar & Süreç -->
 
 <!-- BEGIN: Glifada Lansman CTA -->
 <section class="glifada-cta-section">
@@ -1153,7 +1324,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </section>
 
-<section class="portfolio">
+<section class="portfolio" id="portfoy">
   <div class="container">
 
     <div class="group-head" data-group="pire">
@@ -2234,6 +2405,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="https://gv-danisman.avlarealestate.com" target="_blank" rel="noopener" class="athena-name">Athena</a>
     <a href="https://gv-danisman.avlarealestate.com" target="_blank" rel="noopener" class="beige-link">Yunanistan Golden Visa Danışmanınız</a>
     ile sohbet edebilirsiniz
+  </div>
+  <div class="footer-legal">
+    <details>
+      <summary>Gizlilik ve veri kullanımı</summary>
+      <div class="fl-body">
+        <p>Bu sayfadaki formu doldurduğunuzda adınızı, e-posta adresinizi, telefonunuzu ve ilettiğiniz notu alırız. Bu bilgileri <strong>yalnızca</strong> talebinize dönüş yapmak ve size uygun projeleri sunmak için kullanırız; üçüncü taraflara satmayız veya pazarlama amacıyla devretmeyiz. Kayıtlar Avla Gayrimenkul A.Ş.'nin müşteri yönetim sisteminde tutulur.</p>
+        <p>Kayıtlarınızın silinmesini ya da düzeltilmesini istediğinizde <a href="mailto:realestate@avla.com.tr">realestate@avla.com.tr</a> adresine yazmanız yeterlidir; talebinizi karşılar ve size yazılı olarak teyit ederiz.</p>
+        <p>Bu sayfa ziyaret istatistikleri ve reklam ölçümü için çerez kullanır. Tarayıcınızdan çerezleri engellerseniz sayfanın içeriği aynı şekilde çalışmaya devam eder.</p>
+      </div>
+    </details>
+    <a href="https://www.avlarealestate.com/contact" target="_blank" rel="noopener">İletişim</a> &nbsp;·&nbsp; Avla Gayrimenkul A.Ş. · realestate@avla.com.tr
   </div>
 </footer>
 <script>

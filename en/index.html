@@ -1039,6 +1039,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .footer-wa svg{width:16px;height:16px;flex:0 0 auto;fill:currentColor}
 .footer-wa .sep{opacity:.5}
+
+/* --- Şartlar & Süreç bloğu (sorgu-eşlemeli bilgi katmanı, 12 Ağu 2026) --- */
+.sartlar{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3rem 0 2.6rem}
+.sartlar-eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.5rem}
+.sartlar h2{font-size:clamp(1.45rem,3.2vw,2.05rem);margin-bottom:1rem}
+.sartlar h2 em{font-style:italic;color:var(--gold)}
+.sartlar-lead{max-width:74ch;margin-bottom:1.5rem}
+.sartlar-lead p{margin-bottom:.7rem;font-size:1.01rem}
+.sartlar-warn{border-left:3px solid var(--gold);padding-left:.9rem;color:var(--text-muted);font-size:.94rem}
+.sartlar-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:.7rem 1.4rem;align-items:start}
+.sartlar details{border:1px solid var(--border);border-radius:var(--radius);background:var(--cream-light);overflow:hidden}
+.sartlar summary{cursor:pointer;padding:.85rem 1rem;font-weight:600;font-size:.94rem;color:var(--charcoal);list-style:none;display:flex;justify-content:space-between;gap:.8rem;align-items:center}
+.sartlar summary::-webkit-details-marker{display:none}
+.sartlar summary::after{content:"+";color:var(--gold);font-size:1.25rem;line-height:1;flex:0 0 auto}
+.sartlar details[open] summary::after{content:"\2013"}
+.sartlar details[open] summary{border-bottom:1px solid var(--border)}
+.sartlar .sa-body{padding:.9rem 1rem 1.05rem;font-size:.92rem;color:var(--text)}
+.sartlar .sa-body p{margin-bottom:.6rem}
+.sartlar .sa-body p:last-child{margin-bottom:0}
+.sartlar .sa-body ul,.sartlar .sa-body ol{margin:.4rem 0 .6rem 1.15rem}
+.sartlar .sa-body li{margin-bottom:.35rem}
+.sartlar .sa-tier{margin:.5rem 0 .7rem;padding:.7rem .85rem;border-left:3px solid var(--gold-light);background:var(--white);border-radius:var(--radius)}
+.sartlar .sa-tier b{color:var(--charcoal)}
+.sartlar-foot{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+.sartlar-jump{display:inline-block;padding:.82rem 1.6rem;border-radius:999px;background:#F08025;color:#fff;font-weight:700;font-size:.9rem;letter-spacing:.02em;box-shadow:0 8px 22px rgba(240,128,37,.26);transition:background .18s ease,transform .18s ease}
+.sartlar-jump:hover,.sartlar-jump:focus-visible{background:#d96d18;color:#fff;transform:translateY(-2px)}
+.sartlar-note{font-size:.81rem;color:var(--text-muted);max-width:62ch;line-height:1.55}
+.footer-legal{max-width:760px;margin:1.4rem auto 0;padding-top:1.1rem;border-top:1px solid rgba(232,220,200,.16);text-align:center;font-size:.79rem;color:rgba(232,220,200,.62)}
+.footer-legal details{margin-bottom:.6rem}
+.footer-legal summary{cursor:pointer;color:rgba(232,220,200,.8);list-style:none}
+.footer-legal summary::-webkit-details-marker{display:none}
+.footer-legal summary::after{content:" \25BE"}
+.footer-legal details[open] summary::after{content:" \25B4"}
+.footer-legal .fl-body{padding:.7rem .4rem 0;text-align:left;line-height:1.6}
+.footer-legal .fl-body p{margin-bottom:.5rem}
+.footer-legal a{color:rgba(232,220,200,.85);text-decoration:underline}
+.footer-legal a:hover{color:var(--cream)}
+@media(max-width:640px){.sartlar{padding:2.2rem 0 1.8rem}.sartlar-grid{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
@@ -1076,6 +1114,139 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="gv-hero-cta-sub">Your advisor responds within 24 hours</div>
   </div>
 </section>
+
+
+<!-- BEGIN: Requirements & Process (query-matched information layer) -->
+<section class="sartlar" id="sartlar">
+  <div class="container">
+    <div class="sartlar-eyebrow">The short answer first · Then the portfolio</div>
+    <h2>Buying Property in Greece for <em>Residency</em>: Requirements, Process, Timeline and Cost</h2>
+
+    <div class="sartlar-lead">
+      <p><strong>Short answer:</strong> Non-EU investors who buy Greek property above a set threshold can obtain a <strong>residence permit renewable every five years</strong> for themselves and their family. The permit carries no obligation to live in Greece, allows free movement within the Schengen area, and is renewed for as long as the property is held. <strong>It is a residence permit — not citizenship.</strong></p>
+      <p class="sartlar-warn">The investment threshold is not fixed by region: depending on the property's tier and the route chosen it can be <strong>€250,000, €400,000 or €800,000</strong>. Below we explain which applies when — and for every project in our portfolio we confirm this in writing at the offer stage.</p>
+    </div>
+
+    <div class="sartlar-grid">
+
+      <details>
+        <summary>Does the Golden Visa grant citizenship?</summary>
+        <div class="sa-body">
+          <p><strong>No — not directly.</strong> What the investment route grants is a <em>residence permit</em>. Greek citizenship is a separate and far longer application; the law requires long-term, <strong>physical</strong> legal residence together with language and integration requirements.</p>
+          <p>The programme's greatest advantage — “no obligation to live in Greece” — is also its greatest limitation on the citizenship path: unless you actually reside in the country, the residence clock for naturalisation does not run.</p>
+          <p>If citizenship is your objective, plan the route from the outset with a <strong>Greek lawyer</strong>. We handle the property side; for the legal process we refer you to the independent law firms we work with.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What is the investment threshold, and why does everyone quote a different number?</summary>
+        <div class="sa-body">
+          <p>Because there is no single number. The law defines <strong>three tiers</strong>:</p>
+          <div class="sa-tier"><b>€800,000</b> — the upper tier set for high-demand areas. It must be a <strong>single</strong> property of <strong>at least 120 m²</strong>.</div>
+          <div class="sa-tier"><b>€400,000</b> — other areas. The same single-property and 120 m² conditions apply.</div>
+          <div class="sa-tier"><b>€250,000</b> — <strong>this is not a location-based threshold.</strong> It applies in two cases only: <em>(a)</em> conversion of a non-residential building into residential use (<strong>change of use</strong>), where the conversion was carried out after 5 April 2024 and completed before the application; <em>(b)</em> restoration of a listed or protected building. There is no floor-area requirement on this route, but no more than one independent residential unit may be created under the same title, and the property <strong>may not be let on short-term rentals</strong> (daily/weekly) for five years.</div>
+          <p>Which tier a property falls into is determined by its location and legal status and <strong>must be confirmed property by property.</strong> The portfolio below contains projects on both the standard route and the change-of-use route; the threshold shown on each card reflects the route that project follows.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What does a foreign buyer need in order to purchase in Greece?</summary>
+        <div class="sa-body">
+          <p>Non-residents may buy residential property in Greece. In practice three things are required:</p>
+          <ul>
+            <li><strong>AFM (Greek tax number)</strong> — obtainable by power of attorney.</li>
+            <li><strong>A Greek bank account</strong> — payment must be documented through banking channels.</li>
+            <li><strong>Proof of source of funds.</strong></li>
+          </ul>
+          <p>The purchase is executed <strong>before a notary</strong> and registered at the land registry. You do not need to be in Greece for the process; it can be run under power of attorney. Certain designated border areas require additional clearance — the Athens projects in this portfolio are not among them.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How does the process work, and how long does it take?</summary>
+        <div class="sa-body">
+          <ol>
+            <li><strong>Property selection and reservation</strong> — preliminary agreement and deposit.</li>
+            <li><strong>AFM + bank account</strong> — opened through your lawyer's power of attorney.</li>
+            <li><strong>Legal due diligence</strong> — title history, mortgages and encumbrances, permits and occupancy status.</li>
+            <li><strong>Notarial deed and land-registry entry</strong> — ownership transfers at this stage.</li>
+            <li><strong>Residence permit application</strong> — biometrics appointment and file submission.</li>
+            <li><strong>Blue receipt</strong> — the application slip; it grants the right to remain in Greece until the card is issued.</li>
+            <li><strong>Residence card</strong> — issued, then renewed every five years.</li>
+          </ol>
+          <p>In practice the deed stage on a completed property can be finished within a few weeks; issuance of the card depends on appointment availability. <strong>Treat any guaranteed timeline with suspicion</strong> — the appointment calendar is in the authorities' hands, not the agent's. We report the actual timeline to you in writing at each stage.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What costs come on top of the purchase price?</summary>
+        <div class="sa-body">
+          <p>Budget for the following in addition to the price of the property:</p>
+          <ul>
+            <li>Transfer tax <em>or</em> VAT — depending on whether the property is a new build or a resale</li>
+            <li>Notary fee and land-registry duty</li>
+            <li>Legal fees (due diligence and power of attorney)</li>
+            <li>Agency commission</li>
+            <li>Residence permit application fee and biometrics fee (per person)</li>
+            <li>Annual property tax (ENFIA) and any building service charge</li>
+          </ul>
+          <p>Rates vary with the type and value of the property, so we do not quote a single percentage here. <strong>At the offer stage we provide these line by line, in writing, for the specific property</strong> — no surprise costs.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Which family members are covered?</summary>
+        <div class="sa-body">
+          <p>A single investment can cover:</p>
+          <ul>
+            <li>Spouse</li>
+            <li>Children under 21</li>
+            <li>The <strong>parents</strong> of both the investor and the spouse</li>
+          </ul>
+          <p>When children turn 21 a separate application is required to move them onto their own permit; this can be extended depending on their studies. Tell us your family structure at the outset and we will build the budget around the right number of people.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Other countries offer residency too — why Greece?</summary>
+        <div class="sa-body">
+          <p>Several European countries have offered residency against property; some have closed their programmes, others removed the real-estate route. The four reasons our clients give for choosing Greece:</p>
+          <ul>
+            <li><strong>The property remains a real asset</strong> — not a donation or a sum locked into a fund. You can sell it or let it.</li>
+            <li><strong>Broad family coverage</strong> — one of the few programmes that includes parents.</li>
+            <li><strong>No residence requirement</strong> — you hold the permit without relocating your life.</li>
+            <li><strong>Proximity</strong> — Athens is well connected across the region; seeing the property several times a year is realistic.</li>
+          </ul>
+          <p>To be straightforward in return: Greece is <strong>not</strong> the right route for someone seeking fast citizenship. If a passport is your objective, do not trust anyone presenting this programme as the answer on its own.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I rent the property out? What return should I expect?</summary>
+        <div class="sa-body">
+          <p>Yes — long-term letting is permitted and does not affect the permit. <strong>The exception:</strong> a property acquired on the €250,000 change-of-use route may not be let short-term (daily/weekly) for five years.</p>
+          <p>Some projects in the portfolio carry a <strong>developer-guaranteed net rent</strong>; where they do, the card says so. With guaranteed-yield offers what matters is not the headline rate but <strong>who stands behind the guarantee and for how many years</strong> — we verify this for you on every project.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <div class="sartlar-foot">
+      <a class="sartlar-jump" href="#portfoy">See the projects that fit your budget ↓</a>
+      <div class="sartlar-note">This page is a property portfolio. Avla Gayrimenkul A.Ş. handles property selection, negotiation and the purchase process; the residence permit application is filed by independent Greek lawyers. The information here is general in nature and is not legal advice.</div>
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[
+{"@type":"Question","name":"Does the Greek Golden Visa grant citizenship?","acceptedAnswer":{"@type":"Answer","text":"No, not directly. The investment route grants a residence permit. Greek citizenship is a separate application requiring long-term, physical legal residence together with language and integration requirements. Because the Golden Visa carries no obligation to live in Greece, holding the permit alone does not accrue the residence needed for naturalisation."}},
+{"@type":"Question","name":"What is the investment threshold for the Greek Golden Visa?","acceptedAnswer":{"@type":"Answer","text":"There is no single figure; the law defines three tiers. €800,000 is the upper tier set for high-demand areas, requiring a single property of at least 120 m². €400,000 applies to other areas under the same single-property and 120 m² conditions. €250,000 is not a location-based threshold; it applies only to the conversion of a non-residential building into residential use (completed after 5 April 2024) or the restoration of a listed building. Which tier applies must be confirmed property by property."}},
+{"@type":"Question","name":"What does a foreign buyer need to purchase property in Greece?","acceptedAnswer":{"@type":"Answer","text":"Non-residents may buy residential property in Greece. Three things are required in practice: an AFM (Greek tax number), a Greek bank account, and proof of source of funds. The purchase is executed before a notary and registered at the land registry, and can be completed under power of attorney without the buyer travelling to Greece."}},
+{"@type":"Question","name":"Which family members does the residence permit cover?","acceptedAnswer":{"@type":"Answer","text":"A single investment can cover the spouse, children under 21, and the parents of both the investor and the spouse. When children turn 21 a separate application is required to move them onto their own permit."}},
+{"@type":"Question","name":"Can the property be rented out?","acceptedAnswer":{"@type":"Answer","text":"Long-term letting is permitted and does not affect the permit. The exception is that a property acquired on the €250,000 change-of-use route may not be let on short-term (daily or weekly) rentals for five years."}}
+]}
+</script>
+<!-- END: Requirements & Process -->
 
 <!-- BEGIN: Glyfada Launch CTA -->
 <section class="glifada-cta-section">
@@ -1136,7 +1307,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </section>
 
-<section class="portfolio">
+<section class="portfolio" id="portfoy">
   <div class="container">
 
     <div class="group-head" data-group="pire">
@@ -2217,6 +2388,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="https://gv-danisman.avlarealestate.com" target="_blank" rel="noopener" class="athena-name">Athena</a>
     <a href="https://gv-danisman.avlarealestate.com" target="_blank" rel="noopener" class="beige-link">Your Greece Golden Visa Advisor</a>
     you can chat with
+  </div>
+  <div class="footer-legal">
+    <details>
+      <summary>Privacy and use of your data</summary>
+      <div class="fl-body">
+        <p>When you complete the form on this page we receive your name, e-mail address, telephone number and the note you send. We use this <strong>solely</strong> to respond to your enquiry and to present suitable projects; we do not sell it to third parties or pass it on for marketing. Records are held in Avla Gayrimenkul A.Ş.'s customer management system.</p>
+        <p>To have your records deleted or corrected, write to <a href="mailto:realestate@avla.com.tr">realestate@avla.com.tr</a>; we will action the request and confirm it to you in writing.</p>
+        <p>This page uses cookies for visit statistics and advertising measurement. If you block cookies in your browser, the content of the page continues to work as normal.</p>
+      </div>
+    </details>
+    <a href="https://www.avlarealestate.com/contact" target="_blank" rel="noopener">Contact</a> &nbsp;·&nbsp; Avla Gayrimenkul A.Ş. · realestate@avla.com.tr
   </div>
 </footer>
 <script>
