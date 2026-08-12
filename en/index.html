@@ -1072,6 +1072,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="hero-stat"><div class="num"><span class="m-berkay">€250-450K</span><span class="m-avla">€250-450K</span></div><div class="lbl">Budget</div></div>
       <div class="hero-stat"><div class="num"><span class="m-berkay">Ready — Q4 2028</span><span class="m-avla">Ready — Q4 2028</span></div><div class="lbl">Delivery Range</div></div>
     </div>
+    <button class="gv-hero-cta" type="button" onclick="gvFormOpen('hero')">✉ Golden Visa Application Form <span class="ar">→</span></button>
+    <div class="gv-hero-cta-sub">Your advisor responds within 24 hours</div>
   </div>
 </section>
 
@@ -2123,7 +2125,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="gv-cta-inner">
     <div class="gv-cta-text"><h3>Start your Golden Visa journey</h3><p>Fill in the form — the Avla team will call you within 24 hours; or browse our full Golden Visa portfolio on our website.</p></div>
     <div class="gv-cta-actions">
-      <button class="gv-btn gv-btn-gold" type="button" onclick="document.getElementById('gv-modal').classList.add('open')">✉ Golden Visa Application Form</button>
+      <button class="gv-btn gv-btn-gold" type="button" onclick="gvFormOpen('band')">✉ Golden Visa Application Form</button>
       <a class="gv-btn gv-btn-line" href="https://www.avlarealestate.com/en/property-status/golden-visa" target="_blank" rel="noopener">🏛 Full Golden Visa Portfolio</a>
     </div>
   </div>
@@ -2769,8 +2771,44 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
   .gv-pin{font-size:.6rem;letter-spacing:.14em;padding:.85rem .5rem}
 }
 @media print{.gv-pin{display:none}}
+
+/* hero form CTA (#F08025 corporate orange) */
+.gv-hero-cta{display:inline-flex;align-items:center;gap:.65rem;margin-top:2.1rem;
+  background:#F08025;color:#fff;border:0;cursor:pointer;border-radius:3px;
+  padding:1.05rem 2rem;font-family:'Inter',-apple-system,sans-serif;
+  font-size:.74rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  box-shadow:0 6px 24px rgba(240,128,37,.38);transition:background .2s,transform .2s}
+.gv-hero-cta:hover,.gv-hero-cta:focus-visible{background:#d96d18;transform:translateY(-1px)}
+.gv-hero-cta .ar{letter-spacing:0;font-size:.95rem}
+.gv-hero-cta-sub{margin-top:.7rem;font-size:.72rem;letter-spacing:.08em;color:rgba(255,253,248,.72)}
+
+/* sticky bottom CTA bar (mobile) */
+.gv-bar{position:fixed;left:0;right:0;bottom:0;z-index:398;display:none;width:100%;
+  padding:13px 14px calc(13px + env(safe-area-inset-bottom));
+  background:#F08025;border:0;cursor:pointer;color:#fff;
+  font-family:'Inter',-apple-system,sans-serif;font-size:.72rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;text-align:center;
+  box-shadow:0 -6px 20px rgba(26,35,50,.3);
+  transform:translateY(110%);transition:transform .25s ease}
+.gv-bar.show{transform:translateY(0)}
+.gv-bar:active,.gv-bar:hover{background:#d96d18}
+@media (max-width:768px){.gv-bar{display:block}}
+@media print{.gv-bar{display:none}}
 </style>
 <button class="gv-pin" type="button" aria-label="GOLDEN VISA APPLICATION"
-  onclick="document.getElementById('gv-modal').classList.add('open')"><span class="gv-pin-ok">‹</span>GOLDEN VISA APPLICATION</button>
+  onclick="gvFormOpen('pin')"><span class="gv-pin-ok">‹</span>GOLDEN VISA APPLICATION</button>
+<button class="gv-bar" id="gv-bar" type="button" onclick="gvFormOpen('sticky')">✉ Golden Visa Application Form</button>
+<script>
+function gvFormOpen(k){
+  document.getElementById('gv-modal').classList.add('open');
+  try{window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'gv_form_open',konum:k||'diger'});}catch(e){}
+}
+(function(){
+  var bar=document.getElementById('gv-bar'),on=false;
+  function chk(){var s=(window.scrollY||document.documentElement.scrollTop)>650;
+    if(s!==on){on=s;bar.classList.toggle('show',s);}}
+  window.addEventListener('scroll',chk,{passive:true});chk();
+})();
+</script>
 </body>
 </html>
