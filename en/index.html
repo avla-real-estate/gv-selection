@@ -2992,5 +2992,225 @@ function gvFormOpen(k){
   window.addEventListener('scroll',chk,{passive:true});chk();
 })();
 </script>
+
+<!-- sartlar-krem-kagit-v1: #sartlar bolumu sayfanin tasarim diline oturtuldu -->
+<style>
+/* ============================================================
+   ŞARTLAR & SÜREÇ — "Krem Kâğıt" varyantı
+   Sadece override CSS. HTML/DOM değişmedi.
+   Palet: sayfanın kendi değişkenleri (turuncu yok)
+   ============================================================ */
+
+/* --- 1. Zemin: beyaz blok kalktı, sayfanın kremine oturdu --- */
+.sartlar{
+  background:var(--cream-light);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  padding:4.6rem 0 4.2rem;
+  position:relative;
+}
+/* üstte çok hafif altın perde — bölümü "yapıştırılmış" olmaktan çıkarır */
+.sartlar::before{
+  content:'';
+  position:absolute;left:0;right:0;top:0;height:220px;
+  background:linear-gradient(180deg, rgba(168,139,85,.055) 0%, rgba(168,139,85,0) 100%);
+  pointer-events:none;
+}
+.sartlar .container{position:relative;z-index:1}
+
+/* --- 2. Başlık bloğu: sayfanın hero eyebrow'u ile aynı aile --- */
+.sartlar-eyebrow{
+  display:inline-flex;align-items:center;gap:.7rem;
+  font-family:'Inter',sans-serif;
+  font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--gold);font-weight:500;margin-bottom:.9rem;
+}
+.sartlar-eyebrow::before{
+  content:'';width:40px;height:1px;background:var(--gold);flex:0 0 auto;
+}
+.sartlar h2{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:clamp(1.9rem,3.4vw,2.75rem);
+  font-weight:500;line-height:1.15;letter-spacing:-.01em;
+  color:var(--charcoal);
+  max-width:34ch;
+  margin-bottom:2.2rem;
+}
+.sartlar h2 em{font-style:italic;font-weight:400;color:var(--gold)}
+
+/* --- 3. Giriş metni: tek dar sütun yerine dengeli iki blok --- */
+.sartlar-lead{
+  max-width:none;
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+  gap:2.6rem;
+  align-items:start;
+  margin:0 0 3rem;
+  padding-bottom:2.4rem;
+  border-bottom:1px solid var(--border);
+}
+.sartlar-lead p{
+  margin-bottom:0;
+  font-size:1.06rem;line-height:1.75;color:var(--text);font-weight:400;
+}
+.sartlar-lead p strong{color:var(--charcoal);font-weight:600}
+
+/* uyarı notu: krem kâğıt üstünde ince altın kenarlı sakin panel */
+.sartlar-warn{
+  border-left:2px solid var(--gold);
+  padding:1.25rem 1.5rem;
+  background:rgba(232,220,200,.42);
+  border-radius:0 var(--radius-lg) var(--radius-lg) 0;
+  color:var(--text-muted);
+  font-size:.95rem;line-height:1.7;
+}
+.sartlar-warn strong{color:var(--charcoal);font-weight:600}
+
+/* --- 4/5. Akordeon: beyaz kâğıt yaprakları --- */
+.sartlar-grid{
+  display:block;
+  columns:2;
+  column-gap:1.6rem;
+}
+.sartlar details{
+  break-inside:avoid;
+  -webkit-column-break-inside:avoid;
+  page-break-inside:avoid;
+  margin:0 0 1.15rem;
+}
+.sartlar details{
+  border:none;
+  border-radius:var(--radius-lg);
+  background:#FDFCF9;
+  box-shadow:var(--shadow-md);
+  overflow:hidden;
+  transition:box-shadow .3s ease, transform .3s ease;
+}
+.sartlar details:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-lg);
+}
+.sartlar details[open]{box-shadow:var(--shadow-lg)}
+
+.sartlar summary{
+  cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:1.1rem;
+  /* farklı uzunluktaki başlıklar aynı yüksekliği tutsun → satırlar hizalı */
+  min-height:5.65rem;
+  padding:1.15rem 1.4rem;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:1.3rem;font-weight:600;line-height:1.28;letter-spacing:-.005em;
+  color:var(--charcoal);
+  transition:color .2s ease;
+}
+.sartlar summary::-webkit-details-marker{display:none}
+.sartlar details:hover summary{color:var(--gold)}
+
+/* "+" altın daire içinde */
+.sartlar summary::after{
+  content:"+";
+  flex:0 0 auto;
+  width:32px;height:32px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(168,139,85,.16);
+  box-shadow:inset 0 0 0 1px rgba(168,139,85,.30);
+  color:var(--gold);
+  font-family:'Inter',sans-serif;font-size:1.18rem;font-weight:300;line-height:1;
+  transition:background .2s ease,color .2s ease;
+}
+.sartlar details:hover summary::after{background:rgba(168,139,85,.26);box-shadow:inset 0 0 0 1px rgba(168,139,85,.45)}
+.sartlar details[open] summary{border-bottom:1px solid var(--border)}
+.sartlar details[open] summary::after{
+  content:"\2013";
+  background:var(--gold);color:var(--white);
+}
+
+.sartlar .sa-body{
+  padding:1.25rem 1.35rem 1.45rem;
+  font-size:.94rem;line-height:1.75;color:var(--text);
+}
+.sartlar .sa-body p{margin-bottom:.75rem}
+.sartlar .sa-body p:last-child{margin-bottom:0}
+.sartlar .sa-body strong{color:var(--charcoal);font-weight:600}
+.sartlar .sa-body ul,.sartlar .sa-body ol{margin:.5rem 0 .8rem 1.25rem}
+.sartlar .sa-body li{margin-bottom:.4rem}
+.sartlar .sa-body li::marker{color:var(--gold)}
+
+/* eşik kutuları: beyaz kâğıdın üstünde krem yaprak */
+.sartlar .sa-tier{
+  margin:.55rem 0 .75rem;
+  padding:.85rem 1rem;
+  border-left:2px solid var(--gold-light);
+  background:var(--cream-light);
+  border-radius:0 var(--radius) var(--radius) 0;
+}
+.sartlar .sa-tier b{
+  color:var(--charcoal);
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:1.12rem;font-weight:600;letter-spacing:.01em;
+}
+
+/* --- 6. Alt şerit: lacivert hap + hukuk notu, dengeli --- */
+.sartlar-foot{
+  margin-top:3rem;
+  padding-top:1.9rem;
+  border-top:1px solid var(--border);
+  display:flex;flex-wrap:wrap;gap:1.4rem 2.6rem;
+  align-items:center;justify-content:space-between;
+}
+.sartlar-jump{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.85rem 1.9rem;
+  border-radius:999px;
+  background:var(--charcoal);
+  border:1px solid var(--charcoal);
+  color:var(--cream);
+  font-family:'Inter',sans-serif;
+  font-weight:600;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+  box-shadow:none;
+  transition:background .2s ease,color .2s ease,transform .2s ease;
+}
+.sartlar-jump:hover,.sartlar-jump:focus-visible{
+  background:var(--cream);
+  color:var(--charcoal);
+  border-color:var(--charcoal);
+  transform:translateY(-2px);
+}
+.sartlar-note{
+  flex:1 1 380px;
+  max-width:64ch;
+  font-size:.8rem;line-height:1.65;color:var(--text-muted);
+  padding-left:1.1rem;
+  border-left:1px solid var(--border);
+}
+
+/* --- 7. Mobil --- */
+@media(max-width:900px){
+  .sartlar-lead{grid-template-columns:1fr;gap:1.5rem;padding-bottom:2rem;margin-bottom:2.4rem}
+  .sartlar h2{max-width:none}
+}
+@media(max-width:640px){
+  .sartlar{padding:3rem 0 2.6rem}
+  .sartlar-eyebrow{font-size:.66rem;letter-spacing:.2em;gap:.5rem;margin-bottom:.75rem}
+  .sartlar-eyebrow::before{width:26px}
+  .sartlar h2{font-size:clamp(1.55rem,6vw,2rem);margin-bottom:1.6rem}
+  .sartlar-lead p{font-size:1rem}
+  .sartlar-grid{columns:1}
+  .sartlar details{margin-bottom:.9rem}
+  .sartlar summary{min-height:0;padding:1rem 1.1rem;font-size:1.18rem;gap:.8rem}
+  .sartlar summary::after{width:27px;height:27px}
+  .sartlar .sa-body{padding:1.05rem 1.1rem 1.2rem}
+  .sartlar-foot{flex-direction:column;align-items:flex-start;gap:1.2rem;margin-top:2.2rem}
+  .sartlar-jump{width:100%;justify-content:center}
+  .sartlar-note{padding-left:0;border-left:none;flex:1 1 auto}
+}
+
+
+/* --- 8. Çapa payı: yapışkan başlık 98px; #portfoy / #sartlar bağlantısı
+       bölüm başlığını başlığın altında bırakmasın --- */
+html{scroll-padding-top:110px}
+@media(max-width:640px){html{scroll-padding-top:88px}}
+
+</style>
 </body>
 </html>
