@@ -3178,5 +3178,124 @@ html{scroll-padding-top:110px}
 .sold-band b { color:#8C2F2F; }
 </style>
 <script src="https://hub.avlarealestate.com/iz.js" data-sayfa="gv-selection" data-genel="1" data-lang="tr" defer></script>
+<!-- avla-olcum-v1: bolum gorunurlugu + derinlik olaylari (2026-08-19)
+     Neden: sayfa TEK SAYFALIK -> Clarity'de bounce yapisal olarak %100 gorunuyor,
+     acilis sayfasi kalitesini olcen gecerli metrik yoktu. Asagidaki olaylar hem
+     dataLayer'a (GTM-T4JQ2XVT) hem Meta pixel'e (trackCustom) gider; pixel yoksa
+     sessizce atlanir. Bagimsiz, CDN yok. Pixel init YAPMAZ (o yalniz GTM'de). -->
+<script>
+(function(){
+  if (window.__avlaOlcumV1) return; window.__avlaOlcumV1 = 1;
+  var DIL = (document.documentElement.getAttribute('lang') || 'tr').toLowerCase().slice(0,2);
+  var SAYFA = 'gv-selection';
+  var gonderildi = {};
+  var kuyruk = [];   // fbq hazir degilken bekleyen olaylar
+  var fbqHazir = false;
+
+  function fbqDene(ad, par){
+    try {
+      if (typeof window.fbq === 'function') { window.fbq('trackCustom', ad, par); return true; }
+    } catch(e){}
+    return false;
+  }
+  // GTM'in pixel etiketi async yuklenir; hazir olana kadar (max 15 sn) tampon
+  (function bekle(){
+    var gecen = 0, t = setInterval(function(){
+      gecen += 250;
+      if (typeof window.fbq === 'function') {
+        clearInterval(t); fbqHazir = true;
+        for (var i = 0; i < kuyruk.length; i++) fbqDene(kuyruk[i][0], kuyruk[i][1]);
+        kuyruk.length = 0;
+      } else if (gecen > 15000) { clearInterval(t); kuyruk.length = 0; }
+    }, 250);
+  })();
+
+  function olay(ad, ek, anahtar){
+    var k = anahtar || ad;
+    if (gonderildi[k]) return; gonderildi[k] = 1;
+    var par = { sayfa: SAYFA, dil: DIL };
+    if (ek) for (var a in ek) { if (Object.prototype.hasOwnProperty.call(ek, a)) par[a] = ek[a]; }
+    try {
+      window.dataLayer = window.dataLayer || [];
+      var d = { event: ad };
+      for (var b in par) { if (Object.prototype.hasOwnProperty.call(par, b)) d[b] = par[b]; }
+      window.dataLayer.push(d);
+    } catch(e){}
+    if (!fbqHazir && !fbqDene(ad, par)) { kuyruk.push([ad, par]); }
+    else if (fbqHazir) { fbqDene(ad, par); }
+  }
+
+  function gozle(el, ad, ek){
+    if (!el || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function(girisler){
+      for (var i = 0; i < girisler.length; i++){
+        var g = girisler[i];
+        if (!g.isIntersecting) continue;
+        var yeter = Math.min(160, (g.boundingClientRect.height || 0) * 0.5);
+        if (g.intersectionRect.height >= yeter) { olay(ad, ek); io.disconnect(); return; }
+      }
+    }, { threshold: [0, 0.1, 0.25, 0.5] });
+    io.observe(el);
+  }
+
+  function baslat(){
+    // 1) sartlar bolumu goruldu
+    gozle(document.getElementById('sartlar'), 'sartlar_goruldu');
+    // 2) portfoy / proje listesi goruldu
+    gozle(document.getElementById('portfoy'), 'portfoy_goruldu');
+
+    // 3) akordeon acildi (her akordeon en fazla bir kez; hangisi oldugu parametrede)
+    var dts = document.querySelectorAll('details');
+    for (var i = 0; i < dts.length; i++){
+      (function(d, ix){
+        d.addEventListener('toggle', function(){
+          if (!d.open) return;
+          var s = d.querySelector('summary');
+          var b = (s && (s.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 80)) || ('akordeon-' + (ix + 1));
+          olay('akordeon_acildi', { baslik: b, sira: ix + 1 }, 'akordeon_acildi_' + ix);
+        });
+      })(dts[i], i);
+    }
+
+    // 4) WhatsApp CTA goruldu (sayfa icindeki CTA; sabit yuzen buton haric —
+    //    o hep ekranda oldugu icin sinyal degeri yok)
+    var waler = document.querySelectorAll('a[href*="wa.me/"]');
+    for (var j = 0; j < waler.length; j++){
+      if (waler[j].classList && waler[j].classList.contains('wa-fab')) continue;
+      gozle(waler[j], 'whatsapp_cta_goruldu', { konum: waler[j].getAttribute('data-wa') || 'sayfa' });
+      break;
+    }
+
+    // 5) WhatsApp CTA tiklandi (mevcut whatsapp_click push'una DOKUNULMADI)
+    document.addEventListener('click', function(e){
+      var a = e.target && e.target.closest && e.target.closest('a[href*="wa.me/"]');
+      if (!a) return;
+      olay('whatsapp_cta_tiklandi', { konum: a.getAttribute('data-wa') || (a.className && String(a.className).indexOf('wa-fab') > -1 ? 'fab' : 'diger') });
+    }, true);
+
+    // 6) derin scroll — sayfanin %50'si goruldu
+    var bekliyor = false;
+    function olc(){
+      bekliyor = false;
+      var g = document.documentElement;
+      var toplam = Math.max(g.scrollHeight, document.body ? document.body.scrollHeight : 0);
+      var gorunen = (window.pageYOffset || g.scrollTop || 0) + window.innerHeight;
+      if (toplam > 0 && gorunen / toplam >= 0.5){
+        olay('derin_scroll', { esik: 50 });
+        window.removeEventListener('scroll', tetik);
+      }
+    }
+    function tetik(){
+      if (bekliyor) return; bekliyor = true;
+      if (window.requestAnimationFrame) window.requestAnimationFrame(olc); else setTimeout(olc, 100);
+    }
+    window.addEventListener('scroll', tetik, { passive: true });
+    tetik();
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', baslat);
+  else baslat();
+})();
+</script>
 </body>
 </html>
