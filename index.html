@@ -980,17 +980,25 @@ footer .footer-cta a.athena-name:hover {
 #gvlb .t { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--cream-light); text-align: center; }
 #gvlb .s { font-size: 0.72rem; color: var(--cream-dark); margin: 0.3rem 0 0.8rem; }
 #gvlb .im { max-width: min(95vw, 1150px); max-height: 68vh; object-fit: contain;
-            border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); background: var(--charcoal); }
-#gvlb .nav { position: absolute; top: 50%; transform: translateY(-50%); width: 48px; height: 48px;
+            border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); background: var(--charcoal);
+            transition: opacity 0.18s ease; }
+#gvlb.yuk .im { opacity: 0.32; }
+#gvlb .sp { position: absolute; top: 50%; left: 50%; width: 42px; height: 42px; margin: -21px 0 0 -21px;
+            border: 3px solid rgba(196,168,120,0.30); border-top-color: var(--gold); border-radius: 50%;
+            display: none; pointer-events: none; z-index: 4; animation: gvspin 0.8s linear infinite; }
+#gvlb.yuk .sp { display: block; }
+@keyframes gvspin { to { transform: rotate(360deg); } }
+#gvlb .nav { position: absolute; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; z-index: 5;
              border-radius: 50%; border: 1px solid rgba(196,168,120,0.45); background: rgba(26,35,50,0.55);
              color: var(--white); font-size: 1.7rem; cursor: pointer; display: grid; place-items: center; }
 #gvlb .nav:hover { background: var(--gold); border-color: var(--gold); }
+#gvlb .nav:active { background: var(--gold); border-color: var(--gold); transform: translateY(-50%) scale(0.92); }
 #gvlb .prev { left: 1.2rem; } #gvlb .next { right: 1.2rem; }
-#gvlb .x { position: absolute; top: 1rem; right: 1.4rem; font-size: 2rem; line-height: 1;
+#gvlb .x { position: absolute; top: 1rem; right: 1.4rem; font-size: 2rem; line-height: 1; z-index: 5;
            color: var(--white); background: none; border: none; cursor: pointer; }
 #gvlb .th { display: flex; gap: 0.45rem; margin-top: 0.9rem; overflow-x: auto; max-width: min(95vw,1150px); padding-bottom: 0.25rem; }
 #gvlb .th img { height: 54px; width: 80px; object-fit: cover; border-radius: 6px; cursor: pointer;
-                opacity: 0.5; border: 2px solid transparent; flex: 0 0 auto; }
+                opacity: 0.5; border: 2px solid transparent; flex: 0 0 auto; background: rgba(255,255,255,0.08); }
 #gvlb .th img.on { opacity: 1; border-color: var(--gold); }
 @media (max-width: 640px) { #gvlb .nav { width: 38px; height: 38px; font-size: 1.3rem; }
   #gvlb .prev { left: 0.3rem; } #gvlb .next { right: 0.3rem; } .uv-tbl { font-size: 0.67rem; } }
@@ -2813,8 +2821,9 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
   <button class="x" aria-label="Kapat">&times;</button>
   <button class="nav prev" aria-label="&#8249;">&#8249;</button>
   <button class="nav next" aria-label="&#8250;">&#8250;</button>
-  <div class="t"></div><div class="s"></div>
-  <img class="im" src="" alt="">
+  <div class="t"></div><div class="s" aria-live="polite"></div>
+  <img class="im" src="" alt="" fetchpriority="high" decoding="async">
+  <div class="sp" aria-hidden="true"></div>
   <div class="th"></div>
 </div>
 <script>
@@ -2823,16 +2832,27 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
   var AC="Fiyatları gör", KAPA="Gizle";
   var lb=document.getElementById('gvlb'); if(!lb) return;
   var im=lb.querySelector('.im'), t=lb.querySelector('.t'), s=lb.querySelector('.s'), th=lb.querySelector('.th');
-  var cur=[], i=0;
-  function go(n){ if(!cur.length)return; i=(n+cur.length)%cur.length; im.src=P+cur[i];
+  var cur=[], i=0, tok=0, kucukAcik=false;
+  /* Kucuk resim seridi ANA gorsel yuklenene kadar bekler; yoksa 10 tam boy JPEG
+     ayni anda inip ‹/› tiklamasini saniyelerce olu birakiyordu (Clarity 26.08.2026). */
+  function kucukleriAc(){ if(kucukAcik)return; kucukAcik=true;
+    th.querySelectorAll('img[data-s]').forEach(function(x){ x.src=x.getAttribute('data-s'); x.removeAttribute('data-s'); }); }
+  function onyukle(n){ if(!cur.length)return; var k=(n+cur.length)%cur.length; var p=new Image(); p.decoding='async'; p.src=P+cur[k]; }
+  function go(n){ if(!cur.length)return; i=(n+cur.length)%cur.length;
     s.textContent=(i+1)+' / '+cur.length;
     th.querySelectorAll('img').forEach(function(x,k){x.classList.toggle('on',k===i);});
-    var a=th.querySelectorAll('img')[i]; if(a) a.scrollIntoView({block:'nearest',inline:'center'}); }
-  function open(sl){ cur=G[sl]||[]; if(!cur.length)return; t.textContent=A[sl]||'';
-    th.innerHTML=cur.map(function(f,k){return '<img src="'+P+f+'" width="80" height="54" data-k="'+k+'" alt="">';}).join('');
+    var a=th.querySelectorAll('img')[i]; if(a) a.scrollIntoView({block:'nearest',inline:'center'});
+    var benim=++tok, yol=P+cur[i];
+    lb.classList.add('yuk');
+    var p=new Image();
+    p.onload=function(){ if(benim!==tok)return; im.src=yol; lb.classList.remove('yuk'); kucukleriAc(); onyukle(i+1); onyukle(i-1); };
+    p.onerror=function(){ if(benim!==tok)return; im.src=yol; lb.classList.remove('yuk'); kucukleriAc(); };
+    p.decoding='async'; p.src=yol; }
+  function open(sl){ cur=G[sl]||[]; if(!cur.length)return; t.textContent=A[sl]||''; kucukAcik=false;
+    th.innerHTML=cur.map(function(f,k){return '<img data-s="'+P+f+'" width="80" height="54" data-k="'+k+'" alt="" decoding="async" fetchpriority="low">';}).join('');
     th.querySelectorAll('img').forEach(function(x){x.addEventListener('click',function(){go(+x.dataset.k);});});
     go(0); lb.classList.add('on'); document.body.style.overflow='hidden'; }
-  function close(){ lb.classList.remove('on'); document.body.style.overflow=''; }
+  function close(){ lb.classList.remove('on'); lb.classList.remove('yuk'); tok++; document.body.style.overflow=''; }
   document.querySelectorAll('.uv-head').forEach(function(hd){
     hd.addEventListener('click', function(){
       var bd = hd.nextElementSibling; if(!bd) return;
