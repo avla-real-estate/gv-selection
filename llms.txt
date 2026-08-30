@@ -1,0 +1,111 @@
+# Avla · Athens Golden Visa Master Selection
+
+> gv.selection.avlarealestate.com is the master property catalogue of Avla Gayrimenkul A.Ş. (Avla Real Estate) for the Greek Golden Visa residence-by-investment programme. It is a curated, single-page portfolio of 28 projects across the Attica region and two Greek islands, published in Turkish (root) and English (/en/). Each project is presented with a district-level location, a price band, unit-level pricing tables, an advisor commentary, a downloadable brochure, and a linked regional report or feasibility study. The page also carries a plain-language explainer of the Greek Golden Visa thresholds, requirements, process, costs and family coverage. Operated by Avla Gayrimenkul A.Ş. (Wikidata: Q140042281).
+
+## Site Facts
+
+- Publisher: Avla Gayrimenkul A.Ş. (Avla Real Estate), Istanbul, Turkey — founded 2014
+- Purpose: master catalogue of Greek Golden Visa investment properties, used by Avla advisors and by prospective investors researching the programme
+- Languages: Turkish at https://gv.selection.avlarealestate.com/ · English at https://gv.selection.avlarealestate.com/en/
+- Catalogue size: 28 projects
+- Price range: principally €250,000–450,000, with a small number of higher-value listings
+- Delivery range: completed / ready stock through to Q4 2028
+- Format: one static HTML page per language — full content is in the served HTML, no client-side rendering required to read the catalogue text
+- Audience: non-EU nationals evaluating Greek residence by real-estate investment, in particular investors from Turkey, the Gulf and Europe
+- Advisory language desk: Turkish, English, French, Greek
+
+## Catalogue Coverage (district level)
+
+Avla publishes locations at neighbourhood / municipality level only. Street addresses, door numbers and map pins are deliberately not published; exact locations are shared with clients during the offer stage.
+
+- Piraeus port axis — Piraeus, Mikrolimano, Nikaia
+- Athens city centre — Pangrati, Ampelokipi, Akademia Platonos, Moschato, Kallithea, Agios Dimitrios, Neos Kosmos
+- South Athens / Athens Riviera — Neo Faliro, Paleo Faliro, Alimos, Elliniko, Glyfada, Ano Glyfada
+- North Athens — Kifisia, Nea Erythraia
+- West Athens — Peristeri
+- Saronic Gulf — Aegina island (Agia Marina)
+- Ionian Sea — Lefkada island (Nikiana)
+- Northern Greece — Thessaloniki
+
+## Golden Visa Threshold Framework (as presented on this site)
+
+Greek legislation defines three investment tiers. The tier is not a single national figure and is not decided by neighbourhood alone.
+
+- €800,000 — the upper tier foreseen for high-demand areas. The investment must be a single property of at least 120 m².
+- €400,000 — other areas. The single-property and minimum 120 m² conditions apply in the same way.
+- €250,000 — not a location-based threshold. It applies in only two cases: (a) conversion of a non-residential building into housing through a change of use (αλλαγή χρήσης), where the conversion was carried out after 5 April 2024 and completed before the application; (b) restoration of a listed or protected building. This route carries no minimum floor-area condition, but more than one independent residential unit may not be created on the same title, and the residence may not be placed in short-term (daily / weekly) letting for five years.
+
+Which tier a property falls under is determined by its location and its legal status, and must be confirmed separately for each property.
+
+## What the Programme Does and Does Not Give
+
+- It is a residence permit, renewed every five years while the property is held. It is not citizenship.
+- There is no requirement to live in Greece; the permit allows free movement within the Schengen area.
+- Because there is no physical residence requirement, time under this permit does not by itself accumulate towards Greek citizenship, which is a separate and much longer application with language and integration conditions.
+- Family coverage under a single investment: spouse, children under 21, and the parents of the investor and of the spouse.
+- Long-term letting is permitted and does not affect the permit. The exception is the €250,000 change-of-use route, where short-term letting is barred for five years.
+
+## Buying Requirements and Process (summary)
+
+Foreign individuals may buy residential property in Greece. In practice three things are required: a Greek tax number (AFM), a Greek bank account, and documentation of the source of funds. Purchases are executed before a notary and registered at the land registry, and can be completed by power of attorney without travelling to Greece.
+
+Indicative sequence: property selection and reservation → AFM and bank account → legal due diligence (title history, encumbrances, permits and occupancy status) → notarial deed and land registry entry → residence permit application and biometrics → blue receipt card → residence card, renewed every five years.
+
+Costs beyond the purchase price include transfer tax or VAT depending on whether the property is new-build or resale, notary and land registry fees, legal fees, agency commission, residence permit application and biometric fees per person, and the annual property tax (ENFIA) plus any building charges. Rates vary by property type and value and are issued to clients itemised and in writing at offer stage.
+
+## Key Pages
+
+- [Master Selection — Turkish](https://gv.selection.avlarealestate.com/)
+- [Master Selection — English](https://gv.selection.avlarealestate.com/en/)
+- [Requirements, process, costs and family coverage explainer (TR)](https://gv.selection.avlarealestate.com/#sartlar)
+- [Requirements, process, costs and family coverage explainer (EN)](https://gv.selection.avlarealestate.com/en/#sartlar)
+- [Portfolio section (TR)](https://gv.selection.avlarealestate.com/#portfoy)
+- [Portfolio section (EN)](https://gv.selection.avlarealestate.com/en/#portfoy)
+- [Avla corporate site](https://www.avlarealestate.com)
+- [Greek Golden Visa pillar page (TR)](https://www.avlarealestate.com/yunanistan-golden-visa)
+- [Golden Visa property listings (TR)](https://www.avlarealestate.com/property-status/golden-visa)
+- [Golden Visa property listings (EN)](https://www.avlarealestate.com/en/property-status/golden-visa)
+- [Project presentations — full portfolio](https://www.avlarealestate.com/exclusive-projects)
+- [Contact](https://www.avlarealestate.com/contact)
+
+## Regional Research Behind the Catalogue
+
+- [Piraeus Golden Visa region report (EN)](https://www.avlarealestate.com/en/post/piraeus-golden-visa-region-report)
+- [Pire (Piraeus) Golden Visa bölge raporu (TR)](https://www.avlarealestate.com/post/pire-piraeus-golden-visa-bolge-raporu)
+- [Athens city centre Golden Visa region report (EN)](https://www.avlarealestate.com/en/post/athens-city-centre-golden-visa-region-report)
+- [Atina şehir merkezi Golden Visa bölge raporu (TR)](https://www.avlarealestate.com/post/atina-%C5%9Fehir-merkezi-golden-visa-b%C3%B6lge-raporu)
+- [Kallithea Athens Golden Visa investment analysis (EN)](https://www.avlarealestate.com/en/post/kallithea-athens-golden-visa-investment)
+- [Kallithea Atina Golden Visa yatırım fırsatı bölge analizi (TR)](https://www.avlarealestate.com/post/kallithea-atina-golden-visa-yatirim-firsati-bolge-analizi)
+- [Ampelokipi regional report (EN)](https://www.avlarealestate.com/en/post/ampelokipi-regional-report-athens-s-business-heart-golden-visa)
+- [Ampelokipi bölge raporu (TR)](https://www.avlarealestate.com/post/ampelokipi-b%C3%B6lge-raporu-atina-n%C4%B1n-i%CC%87%C5%9F-kalbi-golden-visa)
+- [Kifisia & Nea Erythraia — North Athens prestige report (EN)](https://www.avlarealestate.com/en/post/kifisia-nea-erythraia-north-athens-prestige-golden-visa)
+- [Kifisia & Nea Erythraia — Kuzey Atina prestij raporu (TR)](https://www.avlarealestate.com/post/kifisia-nea-erythraia-kuzey-atina-prestij-golden-visa)
+- [Peristeri, West Athens Golden Visa region report (EN)](https://www.avlarealestate.com/en/post/peristeri-west-athens-golden-visa-region-report)
+- [Peristeri, Batı Atina Golden Visa bölge raporu (TR)](https://www.avlarealestate.com/post/peristeri-bati-atina-golden-visa-bolge-raporu)
+- [Aegina island Golden Visa region report (EN)](https://www.avlarealestate.com/en/post/aegina-island-golden-visa-region-report)
+- [Aegina adası Golden Visa bölge raporu (TR)](https://www.avlarealestate.com/post/aegina-adasi-golden-visa-bolge-raporu)
+- [Lefkada Golden Visa region report (EN)](https://www.avlarealestate.com/en/post/lefkada-golden-visa-region-report)
+- [Lefkada Golden Visa bölge raporu (TR)](https://www.avlarealestate.com/post/lefkada-golden-visa-bolge-raporu)
+- [Athens, Piraeus & Glyfada guide for investors (EN)](https://www.avlarealestate.com/en/post/athens-piraeus-glyfada-real-estate-guide-turkish-investors-2026)
+- [Atina, Piraeus ve Glyfada gayrimenkul rehberi (TR)](https://www.avlarealestate.com/post/atina-piraeus-glyfada-gayrimenkul-rehberi-turk-yatirimcilar-2026)
+
+## Scope of Service
+
+Avla Gayrimenkul A.Ş. handles property selection, negotiation and the purchase process. The residence permit application itself is filed by independent Greek lawyers with whom Avla works. Content on this site is general information, not legal advice.
+
+Note on eligibility: Avla does not assert Golden Visa eligibility at project level. The applicable threshold depends on the tier the individual property falls under and on the investment route chosen, and is confirmed per property with the client's independent Greek lawyer before any commitment.
+
+## Contact
+
+- Email: realestate@avla.com.tr
+- WhatsApp / phone: +90 532 282 2657
+- Advisory languages: Turkish, English, French, Greek
+
+## Entity References
+
+- Main site llms.txt: https://www.avlarealestate.com/llms.txt
+- Wikidata (company): https://www.wikidata.org/wiki/Q140042281
+- Wikidata (founder): https://www.wikidata.org/wiki/Q140042270
+- LinkedIn: https://www.linkedin.com/company/avla-real-estate
+- Instagram: https://www.instagram.com/avla.real.estate/
+- YouTube: https://www.youtube.com/@avlarealestate
