@@ -2444,7 +2444,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({fields:fields,context:ctx})
     }).then(function(r){
-      if(r.ok){ msg.className='gv-msg ok'; msg.textContent='Teşekkürler! Başvurunuz alındı — 24 saat içinde dönüş yapacağız.'; f.reset(); btn.textContent=ol; btn.disabled=false;
+      if(r.ok){
+        try{window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'generate_lead',conversion_value:1,currency:'EUR',language:'tr',form_id:'gv_form',source:'gv_selection'});}catch(e){}
+        msg.className='gv-msg ok'; msg.textContent='Teşekkürler! Başvurunuz alındı — 24 saat içinde dönüş yapacağız.'; f.reset(); btn.textContent=ol; btn.disabled=false;
         setTimeout(function(){modal.classList.remove('open'); msg.className='gv-msg';},3200);
       } else { throw new Error('http '+r.status); }
     }).catch(function(){ msg.className='gv-msg err'; msg.textContent='Gönderilemedi. Lütfen tekrar deneyin ya da +90 532 282 26 57 numarasına WhatsApp yazın.'; btn.textContent=ol; btn.disabled=false; });
