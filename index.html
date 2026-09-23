@@ -1375,11 +1375,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section class="msb" id="masterseckibant">
   <div class="wrap">
     <!-- OTO:etkinlik -->
-    <a class="pk pk-etk" style="--pk-bg:linear-gradient(150deg,#553B73 0%,#402A5A 55%,#2c1d40 100%)" href="https://marriott-sisli-feedback.avlarealestate.com/?e=eylul" target="_blank" rel="noopener">
-      <span class="pk-k">Etkinlik · 5 gün kaldı</span>
-      <span class="pk-t">28 Eylül<span style="opacity:.55"> · </span>Pazartesi</span>
-      <span class="pk-s">«Atina'da hangi bütçe, nerede?» — sunum ve soru-cevap</span>
-      <span class="pk-n"><div><span class="v">13:00–15:00</span><span class="l">SAAT</span></div><i></i><div><span class="v">Webinar · Zoom</span><span class="l">YER</span></div></span>
+    <a class="pk pk-etk" style="--pk-bg:url('img/etkinlik-kart.jpg'),linear-gradient(150deg,#553B73 0%,#402A5A 55%,#2c1d40 100%)" href="https://marriott-sisli-feedback.avlarealestate.com/?e=eylul" target="_blank" rel="noopener">
+      <span class="pk-k">Yaklaşan etkinlikler</span>
+      <span class="pk-t">28 &amp; 30 Eylül</span>
+      <span class="pk-s">İki buluşma — webinar ve birebir görüşme</span>
+      <span class="pk-n"><div><span class="v">28 Eyl</span><span class="l">WEBINAR · ZOOM</span></div><i></i><div><span class="v">30 Eyl</span><span class="l">PALLADIUM TOWER · ATAŞEHIR</span></div></span>
       <span class="pk-g">Yerinizi ayırtın<span aria-hidden="true">&rarr;</span></span>
     </a>
     <!-- /OTO:etkinlik -->
@@ -1436,7 +1436,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="container">
     <div class="map-head map-head-cog">
       <div class="cog-eb">Coğrafya</div>
-      <h2><span data-auto="proje-total">30</span> proje harita üzerinde</h2>
+      <h2><span id="cog-sayi">22</span> proje harita üzerinde</h2>
       <p class="cog-not">Konumlar <b>semt düzeyinde daireler halinde</b> gösterilmektedir; kesin adresler yer gösterme programıyla paylaşılır. Çembere tıklayın, projeyi görün.</p>
     </div>
     <div id="avla-map"></div>
@@ -2975,12 +2975,29 @@ updateGroupHeads();
   window.__avlaGmAcildi = function () { var l = _cb.slice(); _cb = []; l.forEach(function (f) { f(); }); };
 
   var STIL = [
-    { featureType: "poi.business", stylers: [{ visibility: "off" }] },
-    { featureType: "transit", elementType: "labels.icon", stylers: [{ visibility: "off" }] },
-    { featureType: "water", elementType: "geometry", stylers: [{ color: "#cfd9e0" }] },
-    { featureType: "landscape", elementType: "geometry", stylers: [{ color: "#f4f1ea" }] }
+    // Sami 23.09.2026: "aşırı detaylı, şık durmuyor" — özet harita, sade zemin
+    { elementType: "geometry", stylers: [{ color: "#f4f1ea" }] },
+    { elementType: "labels.icon", stylers: [{ visibility: "off" }] },
+    { elementType: "labels.text.fill", stylers: [{ color: "#8a8f98" }] },
+    { elementType: "labels.text.stroke", stylers: [{ color: "#f4f1ea" }] },
+    { featureType: "poi", stylers: [{ visibility: "off" }] },
+    { featureType: "transit", stylers: [{ visibility: "off" }] },
+    { featureType: "road", elementType: "labels", stylers: [{ visibility: "off" }] },
+    { featureType: "road", elementType: "geometry", stylers: [{ color: "#e9e3d6" }] },
+    { featureType: "road.highway", elementType: "geometry", stylers: [{ color: "#e2d9c6" }] },
+    { featureType: "road.local", stylers: [{ visibility: "off" }] },
+    { featureType: "administrative.land_parcel", stylers: [{ visibility: "off" }] },
+    { featureType: "administrative.neighborhood", stylers: [{ visibility: "off" }] },
+    { featureType: "administrative.locality", elementType: "labels.text.fill", stylers: [{ color: "#6b7280" }] },
+    { featureType: "water", elementType: "geometry", stylers: [{ color: "#d3dde3" }] },
+    { featureType: "water", elementType: "labels", stylers: [{ visibility: "off" }] },
+    { featureType: "landscape.natural", elementType: "geometry", stylers: [{ color: "#efe9dc" }] }
   ];
 
+  // Attika özet görünümü: Kifisia–Glyfada, Pire–Chalandri (Lefkada/Selanik 'Tümü' ile)
+  var ATTIKA = null;
+  function attikaKur() { ATTIKA = new google.maps.LatLngBounds(
+      new google.maps.LatLng(37.835, 23.60), new google.maps.LatLng(38.10, 23.86)); }
   function Sinir(sw, ne) { this._sw = sw; this._ne = ne; }
   Sinir.prototype.pad = function (o) {
     var dy = (this._ne.lat - this._sw.lat) * o, dx = (this._ne.lng - this._sw.lng) * o;
@@ -3009,6 +3026,16 @@ updateGroupHeads();
         "font:600 12.5px Inter,sans-serif;color:#1A2E4A;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.25)";
       dg.onclick = function () { if (window.AvlaMap && window.AvlaMap.showAll) window.AvlaMap.showAll(); };
       self._g.controls[google.maps.ControlPosition.TOP_LEFT].push(dg);
+      // 'Attika' düğmesi: özet görünüm (Atina + Riviera + Pire)
+      var da = dg.cloneNode(false); da.textContent = "Attika";
+      da.onclick = function () { self._g.fitBounds(ATTIKA, 12); };
+      self._g.controls[google.maps.ControlPosition.TOP_LEFT].push(da);
+      // numaralar yalnız yakınlaşınca — uzakta yalnız yoğunluk (Sami: estetik)
+      self._g.addListener("zoom_changed", function () {
+        var goster = self._g.getZoom() >= 12;
+        (self._etiketler || []).forEach(function (e) { e.setVisible(goster); });
+      });
+      attikaKur();
       self._kuyruk.forEach(function (f) { f(self._g); });
       self._kuyruk = [];
     });
@@ -3026,6 +3053,9 @@ updateGroupHeads();
         new google.maps.LatLng(s._sw.lat, s._sw.lng),
         new google.maps.LatLng(s._ne.lat, s._ne.lng)), 26);
     });
+  };
+  Harita.prototype.attika = function () {
+    return this._yap(function (g) { if (ATTIKA) g.fitBounds(ATTIKA, 12); });
   };
   Harita.prototype.removeLayer = function (k) { if (k && k._gizle) k._gizle(); return this; };
   Harita.prototype.addLayer = function (k) { if (k && k.addTo) k.addTo(this); return this; };
@@ -3074,15 +3104,16 @@ updateGroupHeads();
       var r = tukendi ? 380 : Math.max(420, Math.round(330 + 95 * Math.sqrt(n || 1)));
       var renk = tukendi ? "#9aa0a8" : self._renk;
       self._nesne = new google.maps.Circle({ map: g, center: self._ll, radius: r,
-        strokeColor: renk, strokeOpacity: .95, strokeWeight: 2,
-        fillColor: renk, fillOpacity: tukendi ? .16 : .30, clickable: true });
+        strokeColor: renk, strokeOpacity: .85, strokeWeight: 1.5,
+        fillColor: renk, fillOpacity: .26, clickable: true });
       // çemberin ortasında kısa ilan numarası (A0172 → 172) — iğne değil, yazı
       if (self._no) {
         var kisa = self._no.replace(/^A0*/, "");
         self._etiket = new google.maps.Marker({ position: self._ll, map: g, clickable: false, zIndex: 5,
           icon: { path: google.maps.SymbolPath.CIRCLE, scale: 0, strokeOpacity: 0, fillOpacity: 0 },
-          label: { text: kisa, color: tukendi ? "#6b7280" : "#0F2647", fontSize: "11px", fontWeight: "700",
-                   fontFamily: "Inter, sans-serif" } });
+          label: { text: kisa, color: "#0F2647", fontSize: "11px", fontWeight: "700",
+                   fontFamily: "Inter, sans-serif" }, visible: g.getZoom() >= 12 });
+        (h._g && (h._etiketler = h._etiketler || []).push(self._etiket));
       }
       self._kur();
     });
@@ -3186,6 +3217,8 @@ function AVLA_HARITA_INIT(){
   const berkayMarkers = [];
   const otherMarkers = [];
   data.forEach(p => {
+    // Sami 23.09.2026: haritada yalnız müsait dairesi olan projeler (satılanlar kartlarda duruyor)
+    if (p.n === 0) return;
     const broLink = p.brochure ? `<a class="bro" href="brochures/${p.brochure}" target="_blank" rel="noopener">Broşür</a>` : (p.ilan ? `<a class="bro" href="${p.ilan}" target="_blank" rel="noopener">İlan</a>` : '');
     const popup = `
       <div class="avla-popup">
@@ -3202,7 +3235,11 @@ function AVLA_HARITA_INIT(){
     else otherMarkers.push(marker);
   });
   // Expose map filter
-  window.AvlaMap = {
+  
+/* başlık sayısı haritadaki aktif projeden gelir */
+(function(){ try { var n = data.filter(function(p){ return p.n !== 0; }).length;
+  var s = document.getElementById('cog-sayi'); if (s) s.textContent = n; } catch(e){} })();
+window.AvlaMap = {
     showBerkay() {
       otherMarkers.forEach(m => { try { map.removeLayer(m); } catch(e){} });
       berkayMarkers.forEach(m => m.addTo(map));
@@ -3216,7 +3253,7 @@ function AVLA_HARITA_INIT(){
     }
   };
   // Default: Berkay's 4 only
-  setTimeout(() => window.AvlaMap.showAll(), 150);
+  setTimeout(() => { [...berkayMarkers, ...otherMarkers].forEach(m => m.addTo(map)); map.attika(); }, 150);
 }
 
 /* defer'li leaflet DOMContentLoaded'dan once hazir olur */
