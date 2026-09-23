@@ -4453,11 +4453,33 @@ window.gvFormOpen = function(){
   var k = document.getElementById('kayit'); if (k) k.scrollIntoView({behavior:'smooth', block:'start'});
 };
 </script>
-</body>
-</html>
 
 <!-- GEÇMİŞ ETKİNLİKLER penceresi -->
-<div class="ge-modal" id="gecmis" data-geri-modal role<!-- GERI-DONUS -->
+<div class="ge-modal" id="gecmis" data-geri-modal role="dialog" aria-modal="true" aria-labelledby="ge-baslik">
+  <div class="ge-panel">
+    <button type="button" class="ge-kapat" aria-label="Kapat">&times;</button>
+    <span class="ge-k">Geçmiş etkinlikler</span>
+    <h3 class="ge-t" id="ge-baslik">Birlikte olduğumuz <i>buluşmalar</i></h3>
+    <div class="ge-izgara">
+      <a class="ge-kare" href="https://19-eylul.avlarealestate.com/"><img src="img/etk-19-eylul.jpg" alt="" loading="lazy" width="640" height="640"><span class="ge-tur">Yatırımcı buluşması</span><span class="ge-tarih">19 Eylül 2026</span><span class="ge-yer">InterContinental İstanbul · Penthouse</span><span class="ge-git">Sayfayı açın &rarr;</span></a>
+      <a class="ge-kare" href="https://davet-29-temmuz.avlarealestate.com/"><img src="img/etk-29-temmuz.jpg" alt="" loading="lazy" width="640" height="640"><span class="ge-tur">Yatırım buluşması</span><span class="ge-tarih">29 Temmuz 2026</span><span class="ge-yer">Marriott Şişli · 32. kat</span><span class="ge-git">Sayfayı açın &rarr;</span></a>
+      <a class="ge-kare" href="https://davet-05-temmuz.avlarealestate.com/"><img src="img/etk-05-temmuz.jpg" alt="" loading="lazy" width="640" height="640"><span class="ge-tur">Yatırım buluşması</span><span class="ge-tarih">5 Temmuz 2026</span><span class="ge-yer">InterContinental Taksim · Penthouse</span><span class="ge-git">Sayfayı açın &rarr;</span></a>
+      <a class="ge-kare" href="https://05-temmuz-sunum.avlarealestate.com/"><img src="img/etk-05-temmuz-sunum.jpg" alt="" loading="lazy" width="640" height="640"><span class="ge-tur">Etkinlik sunumu</span><span class="ge-tarih">5 Temmuz 2026</span><span class="ge-yer">Buluşmada sunulan projeler</span><span class="ge-git">Sayfayı açın &rarr;</span></a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var m=document.getElementById("gecmis"), ac=document.querySelector(".ge-serit");
+  function acPencere(){ m.classList.add("acik"); document.documentElement.style.overflow="hidden"; m.querySelector(".ge-kapat").focus(); }
+  function kapat(){ m.classList.remove("acik"); document.documentElement.style.overflow=""; ac && ac.focus(); }
+  ac && ac.addEventListener("click", acPencere);
+  m.addEventListener("geri-ac", acPencere);
+  m.addEventListener("click", function(e){ if(e.target===m || e.target.closest(".ge-kapat")) kapat(); });
+  document.addEventListener("keydown", function(e){ if(e.key==="Escape" && m.classList.contains("acik")) kapat(); });
+})();
+</script>
+<!-- GERI-DONUS -->
 <style>
 #avla-geri{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:9px;
   padding:10px 17px 10px 14px;border-radius:999px;background:#0F2647;color:#F5EFE3;border:1px solid rgba(201,182,138,.8);
@@ -4510,27 +4532,5 @@ window.gvFormOpen = function(){
 })();
 </script>
 <!-- /GERI-DONUS -->
-="dialog" aria-modal="true" aria-labelledby="ge-baslik">
-  <div class="ge-panel">
-    <button type="button" class="ge-kapat" aria-label="Kapat">&times;</button>
-    <span class="ge-k">Geçmiş etkinlikler</span>
-    <h3 class="ge-t" id="ge-baslik">Birlikte olduğumuz <i>buluşmalar</i></h3>
-    <div class="ge-izgara">
-      <a class="ge-kare" href="https://19-eylul.avlarealestate.com/"><img src="img/etk-19-eylul.jpg" alt="" loading="lazy" width="640" height="640"><span class="ge-tur">Yatırımcı buluşması</span><span class="ge-tarih">19 Eylül 2026</span><span class="ge-yer">InterContinental İstanbul · Penthouse</span><span class="ge-git">Sayfayı açın &rarr;</span></a>
-      <a class="ge-kare" href="https://davet-29-temmuz.avlarealestate.com/"><img src="img/etk-29-temmuz.jpg" alt="" loading="lazy" width="640" height="640"><span class="ge-tur">Yatırım buluşması</span><span class="ge-tarih">29 Temmuz 2026</span><span class="ge-yer">Marriott Şişli · 32. kat</span><span class="ge-git">Sayfayı açın &rarr;</span></a>
-      <a class="ge-kare" href="https://davet-05-temmuz.avlarealestate.com/"><img src="img/etk-05-temmuz.jpg" alt="" loading="lazy" width="640" height="640"><span class="ge-tur">Yatırım buluşması</span><span class="ge-tarih">5 Temmuz 2026</span><span class="ge-yer">InterContinental Taksim · Penthouse</span><span class="ge-git">Sayfayı açın &rarr;</span></a>
-      <a class="ge-kare" href="https://05-temmuz-sunum.avlarealestate.com/"><img src="img/etk-05-temmuz-sunum.jpg" alt="" loading="lazy" width="640" height="640"><span class="ge-tur">Etkinlik sunumu</span><span class="ge-tarih">5 Temmuz 2026</span><span class="ge-yer">Buluşmada sunulan projeler</span><span class="ge-git">Sayfayı açın &rarr;</span></a>
-    </div>
-  </div>
-</div>
-<script>
-(function(){
-  var m=document.getElementById("gecmis"), ac=document.querySelector(".ge-serit");
-  function acPencere(){ m.classList.add("acik"); document.documentElement.style.overflow="hidden"; m.querySelector(".ge-kapat").focus(); }
-  function kapat(){ m.classList.remove("acik"); document.documentElement.style.overflow=""; ac && ac.focus(); }
-  ac && ac.addEventListener("click", acPencere);
-  m.addEventListener("geri-ac", acPencere);
-  m.addEventListener("click", function(e){ if(e.target===m || e.target.closest(".ge-kapat")) kapat(); });
-  document.addEventListener("keydown", function(e){ if(e.key==="Escape" && m.classList.contains("acik")) kapat(); });
-})();
-</script>
+</body>
+</html>
