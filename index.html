@@ -1126,6 +1126,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .footer-legal a{color:rgba(232,220,200,.85);text-decoration:underline}
 .footer-legal a:hover{color:var(--cream)}
 @media(max-width:640px){.sartlar{padding:2.2rem 0 1.8rem}.sartlar-grid{grid-template-columns:1fr}}
+
+/* GEÇMİŞ ETKİNLİKLER şeridi + penceresi (Sami 23.09.2026) */
+.ge-wrap{margin-top:18px}
+.ge-serit{display:flex;align-items:center;gap:22px;width:100%;padding:20px 24px;border:1px solid rgba(201,182,138,.5);border-radius:14px;
+  background:linear-gradient(100deg,rgba(64,42,90,.62) 0%,rgba(23,47,84,.55) 60%,rgba(15,38,71,.35) 100%);color:#F5EFE3;cursor:pointer;
+  text-align:left;font:inherit;transition:border-color .25s,transform .25s,box-shadow .25s}
+.ge-serit:hover{border-color:#dec79c;transform:translateY(-2px);box-shadow:0 14px 34px rgba(0,0,0,.28)}
+.ge-yazi{display:flex;flex-direction:column;min-width:0}
+.ge-k{display:flex;align-items:center;gap:10px;font:600 11px/1 'Inter',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#dec79c}
+.ge-k::before{content:"";width:22px;height:1px;background:#C9B68A}
+.ge-t{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:27px;line-height:1.15;margin:8px 0 0;color:#F5EFE3}
+.ge-t i{color:#dec79c}
+.ge-s{font:400 13px/1.45 'Inter',sans-serif;color:rgba(245,239,227,.68);margin-top:4px}
+.ge-kucuk{display:flex;margin-left:auto;padding-left:12px}
+.ge-kucuk img{width:56px;height:56px;object-fit:cover;border-radius:9px;border:2px solid #0F2647;margin-left:-14px;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+.ge-ok{flex:0 0 auto;width:40px;height:40px;border:1px solid rgba(222,199,156,.7);border-radius:50%;display:grid;place-items:center;color:#dec79c;font-size:16px}
+.ge-serit:hover .ge-ok{background:#dec79c;color:#0F2647}
+@media(max-width:640px){.ge-kucuk{display:none}.ge-serit{padding:16px 16px;gap:14px}.ge-t{font-size:22px}}
+.ge-modal{position:fixed;inset:0;z-index:2147482000;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(6,16,32,.8)}
+.ge-modal.acik{display:flex}
+.ge-panel{position:relative;width:min(1100px,100%);max-height:calc(100vh - 48px);overflow:auto;background:#0F2647;
+  border:1px solid rgba(201,182,138,.55);border-radius:16px;padding:30px 30px 28px;color:#F5EFE3;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.ge-panel .ge-t{font-size:32px;margin-bottom:0}
+.ge-kapat{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(222,199,156,.6);
+  background:none;color:#dec79c;font-size:22px;line-height:1;cursor:pointer}
+.ge-kapat:hover{background:#dec79c;color:#0F2647}
+.ge-izgara{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:22px}
+@media(max-width:920px){.ge-izgara{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.ge-kare{position:relative;aspect-ratio:1/1;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:16px;color:#fff;text-decoration:none;border:1px solid rgba(201,182,138,.4);isolation:isolate;transition:border-color .25s}
+.ge-kare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .6s}
+.ge-kare::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(58,38,84,.20) 0%,rgba(58,38,84,.62) 45%,rgba(36,22,54,.95) 100%)}
+.ge-kare:hover{border-color:#dec79c}.ge-kare:hover img{transform:scale(1.05)}
+.ge-tur{font:600 10px/1 'Inter',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#dec79c}
+.ge-tarih{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:27px;line-height:1.05;margin:7px 0 4px}
+.ge-yer{font:400 12.5px/1.35 'Inter',sans-serif;color:rgba(255,255,255,.82)}
+.ge-git{font:500 12.5px/1 'Inter',sans-serif;color:#dec79c;margin-top:12px}
+@media(max-width:560px){.ge-modal{padding:12px}.ge-panel{padding:24px 14px 16px}.ge-panel .ge-t{font-size:25px}
+  .ge-izgara{gap:10px}.ge-kare{padding:11px}.ge-tarih{font-size:20px}.ge-yer{font-size:11.5px}.ge-git{font-size:11.5px;margin-top:8px}}
 </style>
 </head>
 <body>
@@ -1384,6 +1424,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="pk-n"><div><span class="v">33+</span><span class="l">YIL</span></div><i></i><div><span class="v">1.200+</span><span class="l">İŞLEM</span></div><i></i><div><span class="v">5</span><span class="l">KITA</span></div></span>
       <span class="pk-g">Tanışın<span aria-hidden="true">&rarr;</span></span>
     </a>
+  </div>
+
+  <!-- GEÇMİŞ ETKİNLİKLER (Sami 23.09.2026: dörtlünün altında yatay şerit; tıklanınca kare kare sayfalar) -->
+  <div class="wrap ge-wrap">
+    <button type="button" class="ge-serit" aria-haspopup="dialog" aria-controls="gecmis">
+      <span class="ge-yazi"><span class="ge-k">Geçmiş etkinlikler</span>
+        <span class="ge-t">Birlikte olduğumuz <i>buluşmalar</i></span>
+        <span class="ge-s">4 sayfa · Temmuz – Eylül 2026 · davetiyeler ve sunumlar</span></span>
+      <span class="ge-kucuk" aria-hidden="true"><img src="img/etk-19-eylul.jpg" alt="" width="54" height="54" loading="lazy"><img src="img/etk-29-temmuz.jpg" alt="" width="54" height="54" loading="lazy"><img src="img/etk-05-temmuz.jpg" alt="" width="54" height="54" loading="lazy"></span>
+      <span class="ge-ok" aria-hidden="true">&rarr;</span>
+    </button>
   </div>
 </section>
 </div>
@@ -4404,3 +4455,82 @@ window.gvFormOpen = function(){
 </script>
 </body>
 </html>
+
+<!-- GEÇMİŞ ETKİNLİKLER penceresi -->
+<div class="ge-modal" id="gecmis" data-geri-modal role<!-- GERI-DONUS -->
+<style>
+#avla-geri{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:9px;
+  padding:10px 17px 10px 14px;border-radius:999px;background:#0F2647;color:#F5EFE3;border:1px solid rgba(201,182,138,.8);
+  font:500 13px/1.1 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.02em;text-decoration:none;
+  box-shadow:0 8px 24px rgba(10,27,52,.30);transition:transform .2s,background .2s}
+#avla-geri:hover{background:#172f54;transform:translateY(-1px)}
+#avla-geri span{color:#dec79c;font-size:16px;line-height:1}
+@media(max-width:560px){#avla-geri{left:12px;bottom:12px;padding:9px 14px 9px 12px;font-size:12px}}
+@media print{#avla-geri{display:none}}
+</style>
+<script>
+(function(){
+  var BEN = "Master Seçkiye dön";
+  var ALAN = /(^|\.)avlarealestate\.com$/i, WIX = /^(www\.)?avlarealestate\.com$/i, A = "avla-geri";
+  var q = new URLSearchParams(location.search);
+  function guvenli(u){ try{ var x = new URL(u, location.href);
+    return (x.protocol === "https:" && ALAN.test(x.hostname) && !WIX.test(x.hostname)) ? x : null; }catch(e){ return null; } }
+  // DÖNÜŞ düğmesi
+  var g = q.get("geri"), ad = q.get("geriad");
+  try{ if (g) sessionStorage.setItem(A, JSON.stringify({u:g, a:ad}));
+       else { var s = JSON.parse(sessionStorage.getItem(A) || "null"); if (s){ g = s.u; ad = s.a; } } }catch(e){}
+  var hedef = g && guvenli(g);
+  function dugme(){
+    if (!hedef || hedef.hostname === location.hostname || document.getElementById("geri") || document.getElementById("avla-geri")) return;
+    var b = document.createElement("a"); b.id = "avla-geri"; b.href = hedef.href;
+    b.innerHTML = '<span aria-hidden="true">&larr;</span>'; b.appendChild(document.createTextNode(ad || "Geri dönün"));
+    document.body.appendChild(b);
+  }
+  // KALDIĞI YER: ?y= konumu, ?m= açık pencere
+  var y = parseInt(q.get("y"), 10), m = q.get("m");
+  function kay(){ var h = document.documentElement, e = h.style.scrollBehavior; h.style.scrollBehavior = "auto"; window.scrollTo(0, y); h.style.scrollBehavior = e; }
+  if (!isNaN(y)) { if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    window.addEventListener("load", function(){ kay(); setTimeout(kay, 400); }); }
+  if (!isNaN(y) || m) { q.delete("y"); q.delete("m");
+    history.replaceState(null, "", location.pathname + (q.toString() ? "?" + q : "") + location.hash); }
+  function hazir(){ dugme(); if (!isNaN(y)) kay();
+    if (m) { var p = document.getElementById(m); if (p && p.hasAttribute("data-geri-modal")) p.dispatchEvent(new CustomEvent("geri-ac")); } }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", hazir); else hazir();
+  // ÇIKIŞ: başka Avla sayfasına giderken dönüş adresi + tam konum
+  document.addEventListener("click", function(ev){
+    if (ev.defaultPrevented || ev.button || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
+    var a = ev.target.closest && ev.target.closest("a[href]"); if (!a || a.id === "avla-geri" || a.id === "geri") return;
+    var x = guvenli(a.getAttribute("href")); if (!x || x.hostname === location.hostname) return;
+    var geri = new URL(location.href); ["geri","geriad","y","m"].forEach(function(k){ geri.searchParams.delete(k); });
+    geri.hash = ""; geri.searchParams.set("y", Math.round(window.scrollY));
+    var acik = document.querySelector("[data-geri-modal].acik"); if (acik && acik.id) geri.searchParams.set("m", acik.id);
+    x.searchParams.set("geri", geri.href); x.searchParams.set("geriad", BEN);
+    ev.preventDefault(); location.href = x.href;
+  }, true);
+})();
+</script>
+<!-- /GERI-DONUS -->
+="dialog" aria-modal="true" aria-labelledby="ge-baslik">
+  <div class="ge-panel">
+    <button type="button" class="ge-kapat" aria-label="Kapat">&times;</button>
+    <span class="ge-k">Geçmiş etkinlikler</span>
+    <h3 class="ge-t" id="ge-baslik">Birlikte olduğumuz <i>buluşmalar</i></h3>
+    <div class="ge-izgara">
+      <a class="ge-kare" href="https://19-eylul.avlarealestate.com/"><img src="img/etk-19-eylul.jpg" alt="" loading="lazy" width="640" height="640"><span class="ge-tur">Yatırımcı buluşması</span><span class="ge-tarih">19 Eylül 2026</span><span class="ge-yer">InterContinental İstanbul · Penthouse</span><span class="ge-git">Sayfayı açın &rarr;</span></a>
+      <a class="ge-kare" href="https://davet-29-temmuz.avlarealestate.com/"><img src="img/etk-29-temmuz.jpg" alt="" loading="lazy" width="640" height="640"><span class="ge-tur">Yatırım buluşması</span><span class="ge-tarih">29 Temmuz 2026</span><span class="ge-yer">Marriott Şişli · 32. kat</span><span class="ge-git">Sayfayı açın &rarr;</span></a>
+      <a class="ge-kare" href="https://davet-05-temmuz.avlarealestate.com/"><img src="img/etk-05-temmuz.jpg" alt="" loading="lazy" width="640" height="640"><span class="ge-tur">Yatırım buluşması</span><span class="ge-tarih">5 Temmuz 2026</span><span class="ge-yer">InterContinental Taksim · Penthouse</span><span class="ge-git">Sayfayı açın &rarr;</span></a>
+      <a class="ge-kare" href="https://05-temmuz-sunum.avlarealestate.com/"><img src="img/etk-05-temmuz-sunum.jpg" alt="" loading="lazy" width="640" height="640"><span class="ge-tur">Etkinlik sunumu</span><span class="ge-tarih">5 Temmuz 2026</span><span class="ge-yer">Buluşmada sunulan projeler</span><span class="ge-git">Sayfayı açın &rarr;</span></a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var m=document.getElementById("gecmis"), ac=document.querySelector(".ge-serit");
+  function acPencere(){ m.classList.add("acik"); document.documentElement.style.overflow="hidden"; m.querySelector(".ge-kapat").focus(); }
+  function kapat(){ m.classList.remove("acik"); document.documentElement.style.overflow=""; ac && ac.focus(); }
+  ac && ac.addEventListener("click", acPencere);
+  m.addEventListener("geri-ac", acPencere);
+  m.addEventListener("click", function(e){ if(e.target===m || e.target.closest(".ge-kapat")) kapat(); });
+  document.addEventListener("keydown", function(e){ if(e.key==="Escape" && m.classList.contains("acik")) kapat(); });
+})();
+</script>
