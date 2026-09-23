@@ -2596,57 +2596,59 @@ const subRegionMap = {
   'yorum-heritage-piraeus': 'pire',
   'yorum-piraeus-serenity': 'pire',
   'yorum-riviera-zen-41': 'pire',
-  'yorum-mercy-lofts': 'aegina',
-  'yorum-afea-residence': 'lefkada',
-  'yorum-lefkada-crystal-waters': 'ampelokipi',
+  'yorum-mercy-lofts': 'pire',
+  'yorum-afea-residence': 'aegina',
+  'yorum-lefkada-crystal-waters': 'lefkada',
   'yorum-minoas-athens': 'ampelokipi',
-  'yorum-trinity': 'merkez',
-  'yorum-aurora-residences': 'moschato-kallithea',
+  'yorum-trinity': 'ampelokipi',
+  'yorum-aurora-residences': 'merkez',
   'yorum-boulevard-residences': 'moschato-kallithea',
+  'yorum-south-moschato': 'moschato-kallithea',
+  'yorum-metro-apartments-daire-g1': 'agios-dimitrios',
+  'yorum-the-hera-athens': 'akademia-platonos',
+  'yorum-riviera-plato': 'merkez',
   'yorum-kallithea-snfcc': 'moschato-kallithea',
-  'yorum-south-moschato': 'agios-dimitrios',
-  'yorum-metro-apartments-daire-g1': 'akademia-platonos',
-  'yorum-the-hera-athens': 'merkez',
-  'yorum-riviera-plato': 'riviera',
   'yorum-aenaon-park-residences': 'riviera',
   'yorum-venus-athens-riviera': 'riviera',
   'yorum-the-one-glyfada': 'riviera',
   'yorum-riviera-onyx': 'riviera',
   'yorum-riviera-seascape': 'riviera',
-  'yorum-the-ellinikon-views': 'kifisia',
-  'yorum-the-north-village': 'chalandri',
+  'yorum-the-ellinikon-views': 'riviera',
+  'yorum-the-north-village': 'kifisia',
   'yorum-chalandri-court': 'chalandri',
-  'yorum-terrace-heights': 'selanik'
+  'yorum-terrace-heights': 'peristeri',
+  'yorum-thessaloniki-bay-residences': 'selanik'
 };
 
 // Property → mahalle eşlemesi (group-head <small> içinde dinamik göstermek için)
 const neighborhoodMap = {
-  'yorum-etolikou-seafront': 'Mikrolimano',
-  'yorum-mikrolimano-38n': 'Piraeus',
+  'yorum-etolikou-seafront': 'Piraeus',
+  'yorum-mikrolimano-38n': 'Mikrolimano',
   'yorum-heritage-piraeus': 'Piraeus',
-  'yorum-piraeus-serenity': 'Kaminia',
-  'yorum-riviera-zen-41': 'Nikaia',
-  'yorum-mercy-lofts': 'Aegina',
-  'yorum-afea-residence': 'Lefkada',
-  'yorum-lefkada-crystal-waters': 'Ampelokipi',
+  'yorum-piraeus-serenity': 'Piraeus',
+  'yorum-riviera-zen-41': 'Kaminia',
+  'yorum-mercy-lofts': 'Nikaia',
+  'yorum-afea-residence': 'Aegina',
+  'yorum-lefkada-crystal-waters': 'Lefkada',
   'yorum-minoas-athens': 'Ampelokipi',
-  'yorum-trinity': 'Pangrati',
-  'yorum-aurora-residences': 'Kallithea',
+  'yorum-trinity': 'Ampelokipi',
+  'yorum-aurora-residences': 'Pangrati',
   'yorum-boulevard-residences': 'Kallithea',
+  'yorum-south-moschato': 'Moschato',
+  'yorum-metro-apartments-daire-g1': 'Agios Dimitrios',
+  'yorum-the-hera-athens': 'Akademia Platonos',
+  'yorum-riviera-plato': 'Neos Kosmos',
   'yorum-kallithea-snfcc': 'Kallithea',
-  'yorum-south-moschato': 'Agios Dimitrios',
-  'yorum-metro-apartments-daire-g1': 'Akademia Platonos',
-  'yorum-the-hera-athens': 'Neos Kosmos',
-  'yorum-riviera-plato': 'Elliniko',
   'yorum-aenaon-park-residences': 'Elliniko',
-  'yorum-venus-athens-riviera': 'Glyfada',
-  'yorum-the-one-glyfada': 'Ano Glyfada',
-  'yorum-riviera-onyx': 'Alimos',
-  'yorum-riviera-seascape': 'Elliniko',
-  'yorum-the-ellinikon-views': 'Nea Erythraia',
-  'yorum-the-north-village': 'Chalandri',
+  'yorum-venus-athens-riviera': 'Elliniko',
+  'yorum-the-one-glyfada': 'Glyfada',
+  'yorum-riviera-onyx': 'Paleo Faliro',
+  'yorum-riviera-seascape': 'Alimos',
+  'yorum-the-ellinikon-views': 'Elliniko',
+  'yorum-the-north-village': 'Nea Erythraia',
   'yorum-chalandri-court': 'Chalandri',
-  'yorum-terrace-heights': 'Thessaloniki'
+  'yorum-terrace-heights': 'Peristeri',
+  'yorum-thessaloniki-bay-residences': 'Thessaloniki'
 };
 
 // Her property kartına data-subregion + data-neighborhood ata
@@ -2655,9 +2657,9 @@ document.querySelectorAll('.property').forEach(p => {
   if (yorumBtn) {
     const key = yorumBtn.dataset.yorumTarget;
     const sr = subRegionMap[key];
-    if (sr) p.dataset.subregion = sr;
+    if (sr && !p.dataset.subregion) p.dataset.subregion = sr;
     const nbh = neighborhoodMap[key];
-    if (nbh) p.dataset.neighborhood = nbh;
+    if (nbh && !p.dataset.neighborhood) p.dataset.neighborhood = nbh;
   }
 });
 
