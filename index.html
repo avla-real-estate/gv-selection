@@ -983,11 +983,10 @@ footer .footer-cta a.athena-name:hover {
           background: var(--cream-light); padding: 0.7rem 0.8rem;
           font-size: 0.7rem; color: var(--text-muted); font-style: italic; }
 .property-cover.gv-tikla { cursor: zoom-in; }
-.gv-foto { position: absolute; right: 0.7rem; bottom: 0.7rem; z-index: 3;
-           font-size: 0.63rem; font-weight: 700; letter-spacing: 0.04em; color: var(--white);
-           background: rgba(26,35,50,0.62); backdrop-filter: blur(4px);
-           border: 1px solid rgba(196,168,120,0.55); border-radius: 999px; padding: 0.22rem 0.6rem; }
-.property-cover.gv-tikla:hover .gv-foto { background: var(--gold); border-color: var(--gold); }
+.gv-foto { position: absolute; right: 1rem; bottom: 0.85rem; z-index: 3;
+           font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; color: var(--white);
+           background: none; border: 0; padding: 0; text-shadow: 0 1px 2px rgba(0,0,0,.65),0 0 14px rgba(0,0,0,.45); }
+.property-cover.gv-tikla:hover .gv-foto { color: var(--gold); }
 #gvlb { position: fixed; inset: 0; background: rgba(16,22,34,0.95); z-index: 9999;
         display: none; flex-direction: column; align-items: center; justify-content: center; padding: 1.6rem 1rem; }
 #gvlb.on { display: flex; }
@@ -4250,10 +4249,8 @@ html{scroll-padding-top:110px}
 @media(max-width:760px){ .map-section{padding:40px 0 30px} .map-section #avla-map{height:360px;min-height:340px} }
 
 /* ilan numarası — kart görselinin sağ üstü (Sami 23.09.2026) */
-.property-cover .ilan-no{position:absolute;top:.7rem;right:.7rem;z-index:4;
-  font:700 11px/1 'Inter',sans-serif;letter-spacing:.08em;color:#0F2647;
-  background:rgba(255,255,255,.94);border:1px solid rgba(201,182,138,.7);border-radius:4px;
-  padding:6px 8px;box-shadow:0 2px 8px rgba(10,27,52,.18)}
+.property-cover .ilan-no{position:absolute;top:.85rem;right:1rem;z-index:4;
+  font:600 13px/1 'Inter',sans-serif;letter-spacing:.12em;color:#fff;background:none;border:0;padding:0;text-shadow:0 1px 2px rgba(0,0,0,.65),0 0 14px rgba(0,0,0,.45)}
 </style>
 <!-- avla-olcum-v1: bolum gorunurlugu + derinlik olaylari (2026-08-19)
      Neden: sayfa TEK SAYFALIK -> Clarity'de bounce yapisal olarak %100 gorunuyor,
