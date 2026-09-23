@@ -983,10 +983,11 @@ footer .footer-cta a.athena-name:hover {
           background: var(--cream-light); padding: 0.7rem 0.8rem;
           font-size: 0.7rem; color: var(--text-muted); font-style: italic; }
 .property-cover.gv-tikla { cursor: zoom-in; }
-.gv-foto { position: absolute; right: 0.7rem; bottom: 0.7rem; z-index: 3;
-           font-size: 0.63rem; font-weight: 700; letter-spacing: 0.04em; color: var(--white);
-           background: rgba(26,35,50,0.62); backdrop-filter: blur(4px);
-           border: 1px solid rgba(196,168,120,0.55); border-radius: 999px; padding: 0.22rem 0.6rem; }
+/* foto sayacı: başlıkla aynı hizada, ikonsuz, silik (Sami 23.09.2026) */
+.cover-name-block { display: flex; align-items: flex-end; align-items: last baseline; justify-content: space-between; gap: .8rem; }
+.cover-name-block .cover-name { min-width: 0; }
+.gv-foto { flex: 0 0 auto; white-space: nowrap; font-size: 0.68rem; font-weight: 400; letter-spacing: 0.05em;
+           color: rgba(255,255,255,.60); text-shadow: 0 1px 6px rgba(0,0,0,.45); }
 .property-cover.gv-tikla:hover .gv-foto { background: var(--gold); border-color: var(--gold); }
 #gvlb { position: fixed; inset: 0; background: rgba(16,22,34,0.95); z-index: 9999;
         display: none; flex-direction: column; align-items: center; justify-content: center; padding: 1.6rem 1rem; }
@@ -1353,10 +1354,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="pire" data-budget="fit" data-subregion="pire" data-neighborhood="Piraeus">
         <div data-gv="etolikou" class="property-cover gv-tikla cover-pire">
           <img width="1100" height="619" class="cover-img" src="/img/covers/etolikou-seafront-1334bacb.webp" loading="lazy" decoding="async" alt="Etolikou Seafront" loading="lazy">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 8 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">Etolikou Seafront</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">Etolikou Seafront</div><div class="gv-foto">8 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -1392,10 +1391,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="pire" data-budget="over" data-subregion="pire" data-neighborhood="Mikrolimano">
         <div data-gv="mikrolimano" class="property-cover gv-tikla cover-pire">
           <img width="1100" height="619" class="cover-img" src="/img/covers/mikrolimano-38n-b3e80ca3.webp" loading="lazy" decoding="async" alt="Mikrolimano 38N" loading="lazy">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">Mikrolimano 38N</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">Mikrolimano 38N</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -1430,10 +1427,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="pire" data-budget="fit" data-subregion="pire" data-neighborhood="Piraeus">
         <div data-gv="heritage" class="property-cover gv-tikla cover-pire">
           <img width="800" height="500" class="cover-img" src="/img/covers/heritage-piraeus-0996b9bd.webp" loading="lazy" decoding="async" alt="Heritage Piraeus" loading="lazy">
-          <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div><div class="gv-foto">◧ 10 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">Heritage Piraeus</div>
+          <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div>          <div class="cover-name-block">
+            <div class="cover-name">Heritage Piraeus</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -1469,9 +1464,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="pire" data-budget="fit" data-subregion="pire" data-neighborhood="Piraeus">
         <div data-gv="serenity" class="property-cover gv-tikla cover-pire">
           <img width="1200" height="750" class="cover-img" src="/img/covers/piraeus-serenity-residence-d1372c1f.webp" loading="lazy" decoding="async" alt="Piraeus Serenity Residence" loading="lazy">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
-          <div class="cover-name-block">
-            <div class="cover-name">Piraeus Serenity Residence</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">Piraeus Serenity Residence</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -1508,9 +1502,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-region="pire" data-budget="fit" data-subregion="pire" data-neighborhood="Kaminia">
         <div data-gv="zen41" class="property-cover gv-tikla cover-pire">
           <img width="1000" height="1000" class="cover-img" src="/img/covers/riviera-zen-41-94f5b1ff.webp" loading="lazy" decoding="async" alt="Riviera Zen 41">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
-          <div class="cover-name-block">
-            <div class="cover-name">Riviera Zen 41</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">Riviera Zen 41</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -1529,9 +1522,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-region="pire" data-budget="fit" data-subregion="pire" data-neighborhood="Nikaia">
         <div data-gv="mercy" class="property-cover gv-tikla cover-pire">
           <img width="1000" height="1000" class="cover-img" src="/img/covers/mercy-lofts-e0b0188a.webp" loading="lazy" decoding="async" alt="Mercy Lofts">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
-          <div class="cover-name-block">
-            <div class="cover-name">Mercy Lofts</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">Mercy Lofts</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -1555,10 +1547,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="aegina" data-budget="fit" data-subregion="aegina" data-neighborhood="Aegina">
         <div data-gv="afea" class="property-cover gv-tikla cover-aegina">
           <img width="1000" height="500" class="cover-img" src="/img/covers/afea-residence-8f7dacfd.webp" loading="lazy" decoding="async" alt="AFEA Residence" loading="lazy">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">AFEA Residence</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">AFEA Residence</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -1591,10 +1581,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="lefkada" data-budget="fit" data-subregion="lefkada" data-neighborhood="Lefkada">
         <div data-gv="lefkada" class="property-cover gv-tikla cover-lefkada">
           <img width="1000" height="707" class="cover-img" src="/img/covers/lefkada-crystal-waters-e33df7f1.webp" loading="lazy" decoding="async" alt="Lefkada Crystal Waters" loading="lazy">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">Lefkada Crystal Waters</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">Lefkada Crystal Waters</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -1635,10 +1623,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit" data-subregion="ampelokipi" data-neighborhood="Ampelokipi">
         <div data-gv="minoas" class="property-cover gv-tikla cover-merkez">
           <img width="960" height="539" class="cover-img" src="/img/covers/minoas-athens-0bf272a8.webp" loading="lazy" decoding="async" alt="MINOAS Athens" loading="lazy">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">MINOAS Athens</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">MINOAS Athens</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -1673,9 +1659,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit" data-subregion="ampelokipi" data-neighborhood="Ampelokipi">
         <div data-gv="trinity" class="property-cover gv-tikla cover-merkez">
           <img width="1200" height="750" class="cover-img" src="/img/covers/trinity-cf378efa.webp" loading="lazy" decoding="async" alt="Trinity Ampelokipi" loading="lazy">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
-          <div class="cover-name-block">
-            <div class="cover-name">TRINITY</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">TRINITY</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -1711,10 +1696,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit" data-subregion="merkez" data-neighborhood="Pangrati">
         <div data-gv="aurora" class="property-cover gv-tikla cover-merkez">
           <img width="741" height="800" class="cover-img" src="/img/covers/aurora-residences-87b78f2c.webp" loading="lazy" decoding="async" alt="Aurora Residences" loading="lazy">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">Aurora Residences</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">Aurora Residences</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -1749,10 +1732,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit" data-subregion="moschato-kallithea" data-neighborhood="Kallithea">
         <div data-gv="boulevard" class="property-cover gv-tikla cover-kallithea">
           <img width="800" height="500" class="cover-img" src="/img/covers/boulevard-residences-6c68a131.webp" loading="lazy" decoding="async" alt="Boulevard Residences" loading="lazy">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">Boulevard Residences</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">Boulevard Residences</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -1787,10 +1768,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit" data-subregion="moschato-kallithea" data-neighborhood="Kallithea">
         <div data-gv="south-kallithea" class="property-cover gv-tikla cover-kallithea">
           <img width="1400" height="786" class="cover-img" src="/img/covers/el-venizelou-290-da6e7674.webp" loading="lazy" decoding="async" alt="El. Venizelou 290 Kallithea" loading="lazy">
-          <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div><div class="gv-foto">◧ 10 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">El. Venizelou 290</div>
+          <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div>          <div class="cover-name-block">
+            <div class="cover-name">El. Venizelou 290</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -1824,10 +1803,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit" data-subregion="moschato-kallithea" data-neighborhood="Moschato">
         <div data-gv="south-moschato" class="property-cover gv-tikla cover-kallithea">
           <img width="1200" height="675" class="cover-img" src="/img/covers/south-moschato-e1ab81f2.webp" loading="lazy" decoding="async" alt="South Moschato render" />
-          <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div><div class="gv-foto">◧ 10 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">South Moschato</div>
+          <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div>          <div class="cover-name-block">
+            <div class="cover-name">South Moschato</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -1863,10 +1840,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit" data-subregion="agios-dimitrios" data-neighborhood="Agios Dimitrios">
         <div data-gv="metro-apartments" class="property-cover gv-tikla cover-agdim">
           <img width="1067" height="800" class="cover-img" src="/img/covers/metro-apartments-daire-g1-5b407552.webp" loading="lazy" decoding="async" alt="Metro Apartments — Daire G1" loading="lazy">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">Metro Apartments — Daire G1</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">Metro Apartments — Daire G1</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -1902,10 +1877,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit" data-subregion="akademia-platonos" data-neighborhood="Akademia Platonos">
         <div data-gv="the-hera" class="property-cover gv-tikla cover-kuzey">
           <img width="880" height="630" class="cover-img" src="/img/covers/the-hera-athens-21fcd0d9.webp" loading="lazy" decoding="async" alt="The Hera Athens" loading="lazy">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">The Hera Athens</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">The Hera Athens</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -1941,9 +1914,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-region="merkez" data-budget="fit" data-subregion="merkez" data-neighborhood="Neos Kosmos">
         <div data-gv="plato" class="property-cover gv-tikla cover-merkez">
           <img width="1000" height="1000" class="cover-img" src="/img/covers/riviera-plato-ee95af96.webp" loading="lazy" decoding="async" alt="Riviera Plato">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 7 photos</div>
-          <div class="cover-name-block">
-            <div class="cover-name">Riviera Plato</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">Riviera Plato</div><div class="gv-foto">7 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -1961,10 +1933,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-region="merkez" data-budget="fit" data-subregion="moschato-kallithea" data-neighborhood="Kallithea">
         <div data-gv="kallithea-snfcc" class="property-cover gv-tikla cover-kallithea">
           <img width="1000" height="609" class="cover-img" src="/img/covers/kallithea-snfcc-residences-b8f17463.webp" loading="lazy" decoding="async" alt="SNFCC Residences Kallithea">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 12 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">SNFCC Residences</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">SNFCC Residences</div><div class="gv-foto">12 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -1997,10 +1967,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="riviera" data-budget="fit" data-subregion="riviera" data-neighborhood="Elliniko">
         <div data-gv="aenaon" class="property-cover gv-tikla cover-riviera">
           <img width="1000" height="495" class="cover-img" src="/img/covers/aenaon-park-residences-cf7d32e8.webp" loading="lazy" decoding="async" alt="Aenaon Park Residences" loading="lazy">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">Aenaon Park Residences</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">Aenaon Park Residences</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -2035,10 +2003,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="riviera" data-budget="over" data-subregion="riviera" data-neighborhood="Elliniko">
         <div data-gv="venus" class="property-cover gv-tikla cover-riviera">
           <img width="800" height="500" class="cover-img" src="/img/covers/venus-athens-riviera-567e85b8.webp" loading="lazy" decoding="async" alt="Venus Athens Riviera" loading="lazy">
-          <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div><div class="gv-foto">◧ 10 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">Venus Athens Riviera</div>
+          <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div>          <div class="cover-name-block">
+            <div class="cover-name">Venus Athens Riviera</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -2073,10 +2039,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="riviera" data-budget="over" data-subregion="riviera" data-neighborhood="Glyfada">
         <div data-gv="the-one" class="property-cover gv-tikla cover-riviera">
           <img width="800" height="500" class="cover-img" src="/img/covers/the-one-glyfada-3b64c5b6.webp" loading="lazy" decoding="async" alt="THE ONE Glyfada" loading="lazy">
-          <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div><div class="gv-foto">◧ 5 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">THE ONE Glyfada</div>
+          <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div>          <div class="cover-name-block">
+            <div class="cover-name">THE ONE Glyfada</div><div class="gv-foto">5 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -2111,10 +2075,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="riviera" data-budget="fit" style="align-self:start" data-subregion="riviera" data-neighborhood="Ano Glyfada">
         <div data-gv="south-glyfada" class="property-cover gv-tikla cover-riviera">
           <img width="720" height="405" class="cover-img" src="/img/covers/south-glyfada-f0951006.webp" loading="lazy" decoding="async" alt="South Glyfada" loading="lazy">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">South Glyfada</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">South Glyfada</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -2147,9 +2109,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-region="riviera" data-budget="fit" style="align-self:start" data-subregion="riviera" data-neighborhood="Glyfada">
         <div data-gv="liviis20" class="property-cover gv-tikla cover-riviera">
           <img width="900" height="675" class="cover-img" src="/img/covers/liviis-20-glyfada-e71bc11a.webp" loading="lazy" decoding="async" alt="Liviis 20 Glyfada" loading="lazy">
-          <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div><div class="gv-foto">◧ 10 photos</div>
-          <div class="cover-name-block">
-            <div class="cover-name">Liviis 20 Glyfada</div>
+          <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div>          <div class="cover-name-block">
+            <div class="cover-name">Liviis 20 Glyfada</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -2180,9 +2141,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-region="riviera" data-budget="fit" data-subregion="riviera" data-neighborhood="Paleo Faliro">
         <div data-gv="onyx" class="property-cover gv-tikla cover-riviera">
           <img width="1000" height="1000" class="cover-img" src="/img/covers/riviera-onyx-70aec3d2.webp" loading="lazy" decoding="async" alt="Riviera Onyx">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
-          <div class="cover-name-block">
-            <div class="cover-name">Riviera Onyx</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">Riviera Onyx</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -2201,9 +2161,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-region="riviera" data-budget="fit" data-subregion="riviera" data-neighborhood="Alimos">
         <div data-gv="seascape" class="property-cover gv-tikla cover-riviera">
           <img width="1000" height="1000" class="cover-img" src="/img/covers/riviera-seascape-5df4d7e8.webp" loading="lazy" decoding="async" alt="Riviera Seascape">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
-          <div class="cover-name-block">
-            <div class="cover-name">Riviera Seascape</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">Riviera Seascape</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -2222,9 +2181,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-region="riviera" data-budget="fit" data-subregion="riviera" data-neighborhood="Elliniko">
         <div data-gv="ellinikon" class="property-cover gv-tikla cover-riviera">
           <img width="1000" height="1000" class="cover-img" src="/img/covers/the-ellinikon-views-65fe7350.webp" loading="lazy" decoding="async" alt="The Ellinikon Views">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
-          <div class="cover-name-block">
-            <div class="cover-name">The Ellinikon Views</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">The Ellinikon Views</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -2248,10 +2206,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="kuzey" data-budget="fit" data-subregion="kifisia" data-neighborhood="Nea Erythraia">
         <div data-gv="north-village" class="property-cover gv-tikla cover-kuzey">
           <img width="1000" height="444" class="cover-img" src="/img/covers/the-north-village-34791c9b.webp" loading="lazy" decoding="async" alt="The North Village" loading="lazy">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 7 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">The North Village</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">The North Village</div><div class="gv-foto">7 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -2289,10 +2245,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="kuzey" data-budget="fit" data-subregion="chalandri" data-neighborhood="Chalandri">
         <div data-gv="chalandri-court" class="property-cover gv-tikla cover-kuzey">
           <img width="1000" height="609" class="cover-img" src="/img/covers/chalandri-court-residences-7d964275.webp" loading="lazy" decoding="async" alt="Chalandri Court Residences">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 7 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">Chalandri Court Residences</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">Chalandri Court Residences</div><div class="gv-foto">7 photos</div>
           </div>
         </div>
         <div class="property-body">
@@ -2328,10 +2282,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="bati" data-budget="fit" data-subregion="peristeri" data-neighborhood="Peristeri">
         <div data-gv="terrace-heights" class="property-cover gv-tikla cover-bati">
           <img width="1000" height="495" class="cover-img" src="/img/covers/terrace-heights-042e715c.webp" loading="lazy" decoding="async" alt="Terrace Heights — Peristeri, West Athens">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
-
-          <div class="cover-name-block">
-            <div class="cover-name">Terrace Heights</div>
+          <div class="cover-overlay"></div>          <div class="cover-name-block">
+            <div class="cover-name">Terrace Heights</div><div class="gv-foto">10 photos</div>
           </div>
         </div>
         <div class="property-body">
