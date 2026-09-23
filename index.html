@@ -1125,8 +1125,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .footer-legal a:hover{color:var(--cream)}
 @media(max-width:640px){.sartlar{padding:2.2rem 0 1.8rem}.sartlar-grid{grid-template-columns:1fr}}
 </style>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <body>
 <header>
@@ -2770,6 +2768,163 @@ updateGroupHeads();
 })();
 </script>
 <script>
+/* Leaflet → GOOGLE MAPS uyum katmanı · Avla (Sami 23.09.2026)
+   "Harita API haritası olsun ve büyütülebilir olsun."
+   Sayfanın mevcut Leaflet çağrıları (L.map / L.marker / L.circle / L.featureGroup /
+   L.divIcon / L.tileLayer) değişmeden Google Maps üzerinde çalışır.
+   Google async yüklendiği için her nesne kendi işini kuyruğa alır, harita açılınca uygular. */
+(function () {
+  var GKEY = "AIzaSyCy1l7hG5Q95QbCZkFN2_yV41hnjIWqLB4";
+  var _cb = [], _yuk = false;
+
+  function hazir(f) {
+    if (window.google && google.maps && google.maps.Marker) { f(); return; }
+    _cb.push(f);
+    if (_yuk) return;
+    _yuk = true;
+    var s = document.createElement("script");
+    s.src = "https://maps.googleapis.com/maps/api/js?key=" + GKEY +
+            "&language=tr&region=GR&loading=async&callback=__avlaGmAcildi";
+    s.async = true;
+    document.head.appendChild(s);
+  }
+  window.__avlaGmAcildi = function () { var l = _cb.slice(); _cb = []; l.forEach(function (f) { f(); }); };
+
+  var STIL = [
+    { featureType: "poi.business", stylers: [{ visibility: "off" }] },
+    { featureType: "transit", elementType: "labels.icon", stylers: [{ visibility: "off" }] },
+    { featureType: "water", elementType: "geometry", stylers: [{ color: "#cfd9e0" }] },
+    { featureType: "landscape", elementType: "geometry", stylers: [{ color: "#f4f1ea" }] }
+  ];
+
+  function Sinir(sw, ne) { this._sw = sw; this._ne = ne; }
+  Sinir.prototype.pad = function (o) {
+    var dy = (this._ne.lat - this._sw.lat) * o, dx = (this._ne.lng - this._sw.lng) * o;
+    return new Sinir({ lat: this._sw.lat - dy, lng: this._sw.lng - dx },
+                     { lat: this._ne.lat + dy, lng: this._ne.lng + dx });
+  };
+  Sinir.prototype.isValid = function () { return isFinite(this._sw.lat) && isFinite(this._ne.lat); };
+
+  function Harita(id, o) {
+    var self = this;
+    this._kuyruk = []; this._g = null; this._id = id; this._o = o || {};
+    this._merkez = { lat: 37.96, lng: 23.72 }; this._zoom = 11;
+    hazir(function () {
+      var el = document.getElementById(self._id);
+      if (!el) return;
+      self._g = new google.maps.Map(el, {
+        center: self._merkez, zoom: self._zoom, mapTypeId: "roadmap", styles: STIL,
+        fullscreenControl: true, zoomControl: true, streetViewControl: false,
+        mapTypeControl: true, scrollwheel: self._o.scrollWheelZoom !== false,
+        gestureHandling: "cooperative"
+      });
+      self._kuyruk.forEach(function (f) { f(self._g); });
+      self._kuyruk = [];
+    });
+  }
+  Harita.prototype._yap = function (f) { this._g ? f(this._g) : this._kuyruk.push(f); return this; };
+  Harita.prototype.setView = function (ll, z) {
+    this._merkez = { lat: ll[0], lng: ll[1] }; this._zoom = z;
+    var m = this._merkez;
+    return this._yap(function (g) { g.setCenter(m); g.setZoom(z); });
+  };
+  Harita.prototype.fitBounds = function (s) {
+    if (!s || !s.isValid()) return this;
+    return this._yap(function (g) {
+      g.fitBounds(new google.maps.LatLngBounds(
+        new google.maps.LatLng(s._sw.lat, s._sw.lng),
+        new google.maps.LatLng(s._ne.lat, s._ne.lng)), 26);
+    });
+  };
+  Harita.prototype.removeLayer = function (k) { if (k && k._gizle) k._gizle(); return this; };
+  Harita.prototype.addLayer = function (k) { if (k && k.addTo) k.addTo(this); return this; };
+  Harita.prototype.invalidateSize = function () { return this; };
+  Harita.prototype.on = function () { return this; };
+
+  function pinIkon(renk) {
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="34" viewBox="0 0 26 34">' +
+      '<path d="M13 33C13 33 24 20.5 24 13A11 11 0 1 0 2 13c0 7.5 11 20 11 20z" fill="' + renk +
+      '" stroke="#ffffff" stroke-width="2.2"/><circle cx="13" cy="13" r="4.1" fill="#ffffff" opacity=".92"/></svg>';
+    return { url: "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg),
+             scaledSize: new google.maps.Size(26, 34), anchor: new google.maps.Point(13, 33) };
+  }
+
+  function Katman() { this._harita = null; this._nesne = null; this._popup = null; this._iw = null; }
+  Katman.prototype.bindPopup = function (html) { this._popup = html; this._kur(); return this; };
+  Katman.prototype._kur = function () {
+    var self = this;
+    if (!self._nesne || !self._popup || self._iw) return;
+    self._iw = new google.maps.InfoWindow({ content: self._popup });
+    self._nesne.addListener("click", function (e) {
+      if (self._nesne.getPosition) self._iw.open(self._harita, self._nesne);
+      else { self._iw.setPosition(e.latLng || self._nesne.getCenter()); self._iw.open(self._harita); }
+    });
+  };
+  Katman.prototype._gizle = function () { if (this._nesne) this._nesne.setMap(null); };
+  Katman.prototype.remove = function () { this._gizle(); return this; };
+
+  function Isaret(ll, o) {
+    Katman.call(this);
+    this._ll = { lat: ll[0], lng: ll[1] };
+    this._renk = (o && o.icon && o.icon._renk) || "#1A2E4A";
+    this._baslik = (o && o.title) || "";
+  }
+  Isaret.prototype = Object.create(Katman.prototype);
+  Isaret.prototype.addTo = function (h) {
+    var self = this;
+    h._yap(function (g) {
+      self._harita = g;
+      if (self._nesne) { self._nesne.setMap(g); return; }
+      self._nesne = new google.maps.Marker({ position: self._ll, map: g, title: self._baslik,
+                                             icon: pinIkon(self._renk) });
+      self._kur();
+    });
+    return this;
+  };
+
+  function Cember(ll, o) {
+    Katman.call(this);
+    this._ll = { lat: ll[0], lng: ll[1] }; this._o = o || {};
+  }
+  Cember.prototype = Object.create(Katman.prototype);
+  Cember.prototype.addTo = function (h) {
+    var self = this, o = self._o;
+    h._yap(function (g) {
+      self._harita = g;
+      if (self._nesne) { self._nesne.setMap(g); return; }
+      self._nesne = new google.maps.Circle({
+        map: g, center: self._ll, radius: o.radius || 500,
+        strokeColor: o.color || "#C49B5A", strokeWeight: o.weight || 2, strokeOpacity: .95,
+        fillColor: o.fillColor || o.color || "#C49B5A", fillOpacity: o.fillOpacity != null ? o.fillOpacity : .18,
+        clickable: true
+      });
+      self._kur();
+    });
+    return this;
+  };
+
+  window.L = {
+    map: function (id, o) { return new Harita(id, o); },
+    tileLayer: function () { return { addTo: function () { return this; } }; },
+    divIcon: function (o) {
+      var m = /background:\s*([^;"']+)/.exec((o && o.html) || "");
+      return { _renk: m ? m[1].trim() : "#1A2E4A" };
+    },
+    marker: function (ll, o) { return new Isaret(ll, o); },
+    circle: function (ll, o) { return new Cember(ll, o); },
+    featureGroup: function (arr) {
+      return { getBounds: function () {
+        var la = [], ln = [];
+        (arr || []).forEach(function (k) { if (k && k._ll) { la.push(k._ll.lat); ln.push(k._ll.lng); } });
+        if (!la.length) return new Sinir({ lat: 37.9, lng: 23.6 }, { lat: 38.0, lng: 23.8 });
+        return new Sinir({ lat: Math.min.apply(null, la), lng: Math.min.apply(null, ln) },
+                         { lat: Math.max.apply(null, la), lng: Math.max.apply(null, ln) });
+      } };
+    }
+  };
+})();
+</script>
+<script>
 function AVLA_HARITA_INIT(){
   const data = [
     {"code": "AV-NEW-ONYX", "name": "Riviera Onyx", "region": "riviera", "color": "#2f8f7d", "lat": 37.928, "lng": 23.7, "addr": "Paleo Faliro · Athens Riviera", "bg": false},
@@ -3353,6 +3508,8 @@ html{scroll-padding-top:110px}
 .sold-band { margin:.95rem 0 .25rem; border:1px solid #8C2F2F; border-left:4px solid #8C2F2F;
   border-radius:10px; background:#FBF3F3; padding:.7rem .8rem; font-size:.72rem; line-height:1.5; color:#5B2020; }
 .sold-band b { color:#8C2F2F; }
+
+#avla-map{width:100%;display:block;min-height:420px}
 </style>
 <!-- avla-olcum-v1: bolum gorunurlugu + derinlik olaylari (2026-08-19)
      Neden: sayfa TEK SAYFALIK -> Clarity'de bounce yapisal olarak %100 gorunuyor,
