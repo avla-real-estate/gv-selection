@@ -3161,7 +3161,8 @@ function AVLA_HARITA_INIT(){
       {"code": "AV-CHC-01", "name": "Chalandri Court Residences", "region": "kuzey", "color": "#4f6f9c", "lat": 38.023, "lng": 23.800, "addr": "Chalandri · North Athens", "ilan": "https://www.avlarealestate.com/properties/chalandri-one-bedroom-residences-with-parking-north-athens", "bg": true, "no": "A0223", "n": 41},
     {"code": "AV-PER-01", "name": "Terrace Heights ★", "region": "bati", "color": "#6a8a65", "lat": 38.0186, "lng": 23.6960, "addr": "Peristeri, West Athens", "ilan": "https://www.avlarealestate.com/properties/terrace-heights-peristeri-west-athens-golden-visa", "bg": true, "no": "A0152", "n": 22},
           {"code": "AV-LEF-01", "name": "Lefkada Crystal Waters", "region": "lefkada", "color": "#2f8f7d", "lat": 38.7647, "lng": 20.7222, "addr": "Nikiana, Lefkada", "brochure": "29_lefkada_crystal_waters.pdf", "bg": true, "no": "A0141", "n": 73},
-    {"code": "AV-TH-01", "name": "Thessaloniki Bay Residences", "region": "selanik", "color": "#2b5f80", "lat": 40.60, "lng": 22.95, "addr": "Thessaloniki, Greece", "ilan": "https://www.avlarealestate.com/properties/thessaloniki-bay-residences-thessaloniki", "bg": true, "no": "A0182", "n": 0}
+    {"code": "AV-TH-01", "name": "Thessaloniki Bay Residences", "region": "selanik", "color": "#2b5f80", "lat": 40.60, "lng": 22.95, "addr": "Thessaloniki, Greece", "ilan": "https://www.avlarealestate.com/properties/thessaloniki-bay-residences-thessaloniki", "bg": true, "no": "A0182", "n": 0},
+    {"code": "AV-SG-01", "name": "South Glyfada", "region": "riviera", "color": "#a05230", "lat": 37.8745, "lng": 23.7770, "addr": "Ano Glyfada · Athens Riviera", "ilan": "https://www.avlarealestate.com/properties/south-glyfada-ano-glyfada-athens-riviera-golden-visa", "bg": true, "no": "A0161", "n": 33}
   ];
   const map = L.map('avla-map', { scrollWheelZoom: false }).setView([37.96, 23.72], 11);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
@@ -3201,10 +3202,6 @@ function AVLA_HARITA_INIT(){
     else otherMarkers.push(marker);
   });
   // Expose map filter
-  // South Glyfada — bölge çemberi
-  L.circle([37.8745, 23.7770], { radius: 600, color: '#C49B5A', weight: 2, fillColor: '#C49B5A', fillOpacity: 0.18 })
-    .addTo(map)
-    .bindPopup('<b>South Glyfada</b><br>Ano Glyfada · Atina Rivierası<br><a href="https://www.avlarealestate.com/properties/south-glyfada-ano-glyfada-athens-riviera-golden-visa" target="_blank" rel="noopener">İlan</a>');
   window.AvlaMap = {
     showBerkay() {
       otherMarkers.forEach(m => { try { map.removeLayer(m); } catch(e){} });
