@@ -2241,7 +2241,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
       </div>
     <div class="group-head" data-group="kuzey">
-      <h3>North Athens <small>Kifisia · Nea Erythraia · Chalandri · 2 Projects</small></h3>
+      <h3>North Athens <small>Kifisia · Nea Erythraia · 1 Project</small></h3>
       <span class="group-tag">NORTH</span>
     </div>
     <div class="property-grid">
@@ -2280,6 +2280,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
+    </div>
+    <div class="group-head" data-group="chalandri">
+      <h3>North Athens · Chalandri <small>Chalandri · 1 Project</small></h3>
+      <span class="group-tag">CHALANDRI</span>
+    </div>
+    <div class="property-grid">
       <div class="property has-photo" data-berkay-selection="1" data-region="kuzey" data-budget="fit" data-subregion="chalandri" data-neighborhood="Chalandri">
         <div data-gv="chalandri-court" class="property-cover gv-tikla cover-kuzey">
           <img width="1000" height="609" class="cover-img" src="/img/covers/chalandri-court-residences-7d964275.webp" loading="lazy" decoding="async" alt="Chalandri Court Residences">
@@ -2313,9 +2319,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
-      
-      
-    </div>
+</div>
     <div class="group-head" data-group="bati">
       <h3>West Athens <small>Peristeri · 1 Project</small></h3>
       <span class="group-tag">WEST</span>
@@ -2709,7 +2713,7 @@ document.querySelectorAll('.chip[data-subregion]').forEach(chip => {
 
 
 // Group-head h3 + group-tag tıklaması: ilgili chip'i tetikle (filter + scroll)
-const groupToChipMap = {'pire':'pire','aegina':'aegina','merkez':'merkez','riviera':'riviera','kuzey':'kifisia','bati':'peristeri','selanik':'selanik'};
+const groupToChipMap = {'pire':'pire','aegina':'aegina','merkez':'merkez','riviera':'riviera','kuzey':'kifisia','chalandri':'chalandri','bati':'peristeri','selanik':'selanik'};
 document.querySelectorAll('.group-head').forEach(gh => {
   const groupName = gh.dataset.group;
   const chipKey = groupToChipMap[groupName];
