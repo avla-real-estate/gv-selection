@@ -200,7 +200,9 @@ header .container {
 .chip-agdim:hover { background: #8a7345; border-color: #8a7345; }
 .chip-riviera::before { background: #a05230; }
 .chip-kifisia::before { background: #6d5a9c; }
+  .chip-chalandri::before { background: #4f6f9c; }
 .chip-kifisia:hover { background: #6d5a9c; border-color: #6d5a9c; }
+  .chip-chalandri:hover { background: #4f6f9c; border-color: #4f6f9c; }
 .chip-peristeri::before { background: #6a8a65; }
 .chip-peristeri:hover { background: #6a8a65; border-color: #6a8a65; }
 .chip-selanik::before { background: #2b5f80; }
@@ -1305,6 +1307,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <button class="chip chip-agdim" data-subregion="agios-dimitrios" title="Agios Dimitrios">Agios Dimitrios</button>
       <button class="chip chip-riviera" data-subregion="riviera" title="South Athens · Riviera">South Athens · Riviera</button>
       <button class="chip chip-kifisia" data-subregion="kifisia" title="Kifisia · Nea Erythraia (North Athens)">Kifisia · Nea Erythraia</button>
+        <button class="chip chip-chalandri" data-subregion="chalandri" title="Chalandri (Kuzey Atina)">Chalandri</button>
       <button class="chip chip-peristeri" data-subregion="peristeri" title="Peristeri (West Athens)">Peristeri</button>
       <button class="chip chip-selanik" data-subregion="selanik" title="Thessaloniki (Northern Greece)">Thessaloniki</button>
     </div>
@@ -1328,6 +1331,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="legend-item"><i style="background:#8a7345"></i>Agios Dimitrios</span>
       <span class="legend-item"><i style="background:#a05230"></i>South Athens · Riviera</span>
       <span class="legend-item"><i style="background:#6d5a9c"></i>Kifisia · Nea Erythraia</span>
+      <span class="legend-item"><i style="background:#4f6f9c"></i>Chalandri</span>
       <span class="legend-item"><i style="background:#6a8a65"></i>Peristeri</span>
       <span class="legend-item"><i style="background:#2b5f80"></i>Thessaloniki</span>
             <span class="legend-item"><i style="background:#2f8f7d"></i>Lefkada</span>
@@ -1423,14 +1427,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="pire" data-budget="fit">
         <div data-gv="heritage" class="property-cover gv-tikla cover-pire">
           <img width="800" height="500" class="cover-img" src="/img/covers/heritage-piraeus-0996b9bd.webp" loading="lazy" decoding="async" alt="Heritage Piraeus" loading="lazy">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
+          <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div><div class="gv-foto">◧ 10 photos</div>
 
           <div class="cover-name-block">
             <div class="cover-name">Heritage Piraeus</div>
           </div>
         </div>
         <div class="property-body">
-          <h3 class="property-title">Heritage Piraeus</h3>
+          <h3 class="property-title">Heritage Piraeus<span class="sold-chip">Sold</span></h3>
           <div class="property-location">Piraeus · Pasha Limanı district</div>
           <div class="specs">
             <div class="spec"><span class="lbl">Build Type</span><span class="val">Restorasyon (tarihi koruma altında)</span></div>
@@ -1446,6 +1450,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="rating-row"><span class="rating-lbl">Liquidity</span><span class="rating-stars" data-score="5">★★★★★</span></div>
           </div>
           <div class="note">On the Pasha Limanı axis of the Piraeus port band — a residential conversion of a heritage-protected (διατηρητέα) building, preserving its original façade. A flagship product in the rare category where the Greek GV €250K threshold still applies. With post-2024 thresholds raised to €400-800K, the restoration-conversion exemption is this portfolio's most strategic building block: lowest entry combined with original architectural value. Piraeus port-front, Europe's fastest-appreciating harbor band driven by COSCO investment and marina/cruise transformations.</div>
+            <div class="sold-band"><b>SOLD OUT.</b> No apartments remain available in this project (23 September 2026). Please contact your advisor for current alternatives with a similar profile.</div>
           <div class="yorum-content" id="yorum-heritage-piraeus" data-rank="4" hidden>Heritage Piraeus — historic neoclassical residence in the Pasha Limanı district of Piraeus. Rare architectural restoration with character that is highly valued in the rental and resale market. Walkable to the main port and metro. Recommended for investors who value heritage assets with appreciation upside.</div>
           <div class="uv-wrap"><button type="button" class="uv-head" aria-expanded="false"><span class="uv-t">Available Apartments</span><span class="uv-n">3</span><span class="uv-ok2">View prices</span><span class="uv-ch">&#9662;</span></button><div class="uv-body" hidden><div class="uv-alt">Net m² = enclosed interior only · Gross m² = incl. balcony/terrace/garden and parking · Rows marked <b>Reserved</b> are shown greyed out and are not included in the available-apartment count.</div><div class="uv-scroll"><table class="uv-tbl"><thead><tr><th>Unit</th><th>Floor</th><th>Price</th><th>Net m²</th><th>Outdoor</th><th>Park.</th><th>Gross m²</th><th>Net €/m²</th><th>Gross €/m²</th></tr></thead><tbody><tr><td class="uv-k">I-1</td><td>Zemin (GK)</td><td class="uv-f">€250.000</td><td>25</td><td>—</td><td>—</td><td>25</td><td>10.000</td><td class="uv-hl">10.000</td></tr><tr><td class="uv-k">I-2</td><td>Zemin (GK)</td><td class="uv-f">€280.000</td><td>55,2</td><td>—</td><td>—</td><td>55,2</td><td>5.076</td><td class="uv-hl">5.072</td></tr><tr><td class="uv-k">A-1</td><td>1. kat</td><td class="uv-f">€280.000</td><td>44,7</td><td>3</td><td>—</td><td>47,7</td><td>6.265</td><td class="uv-hl">5.870</td></tr><tr class="uv-rez"><td class="uv-k">B-1 <span class="uv-rez-b">Reserved</span></td><td>2. kat</td><td class="uv-f">€290.000</td><td>40</td><td>4</td><td>—</td><td>44</td><td>7.250</td><td class="uv-hl">6.591</td></tr><tr class="uv-rez"><td class="uv-k">A-2 <span class="uv-rez-b">Reserved</span></td><td>1. kat</td><td class="uv-f">€320.000</td><td>66</td><td>2</td><td>—</td><td>68</td><td>4.851</td><td class="uv-hl">4.706</td></tr><tr class="uv-rez"><td class="uv-k">B-2 <span class="uv-rez-b">Reserved</span></td><td>2. kat</td><td class="uv-f">€400.000</td><td>84,5</td><td>3</td><td>—</td><td>87,5</td><td>4.734</td><td class="uv-hl">4.571</td></tr></tbody></table></div><div class="uv-kaynak">Source: Geliştiricinin resmî listesi · 14.06.2026 · Availability: Avla inventory, 25 August 2026</div></div></div>
           <div class="actions">
@@ -1779,14 +1784,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit">
         <div data-gv="south-kallithea" class="property-cover gv-tikla cover-kallithea">
           <img width="1400" height="786" class="cover-img" src="/img/covers/el-venizelou-290-da6e7674.webp" loading="lazy" decoding="async" alt="El. Venizelou 290 Kallithea" loading="lazy">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
+          <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div><div class="gv-foto">◧ 10 photos</div>
 
           <div class="cover-name-block">
             <div class="cover-name">El. Venizelou 290</div>
           </div>
         </div>
         <div class="property-body">
-          <h3 class="property-title">El. Venizelou 290</h3>
+          <h3 class="property-title">El. Venizelou 290<span class="sold-chip">Sold</span></h3>
           <div class="property-location">City Center · Kallithea</div>
           <div class="specs">
             <div class="spec"><span class="lbl">Build Type</span><span class="val">New development · 7 floors</span></div>
@@ -1802,6 +1807,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="rating-row"><span class="rating-lbl">Liquidity</span><span class="rating-stars" data-score="4.5">★★★★<span class="rating-half">★</span></span></div>
           </div>
           <div class="note">A new 7-storey development with 22 residences (18 apartments + 4 maisonettes) on El. Venizelou Avenue, Kallithea's main artery. Every unit is a one-bedroom — the most liquid rental typology in Athens. Delivered with A-class energy rating, heat pumps, Grohe fixtures and a European kitchen package. The location sits in the transition belt between Athens' historic centre and the Riviera: close to the SNFCC (Stavros Niarchos Cultural Centre) and the Faliro seafront, with quick metro access to the centre. Kallithea has been the fastest-appreciating centre-to-Riviera corridor of the last five years, with steady year-round one-bedroom rental demand. Golden Visa eligible, from €260,000.</div>
+            <div class="sold-band"><b>SOLD OUT.</b> No apartments remain available in this project (23 September 2026). Please contact your advisor for current alternatives with a similar profile.</div>
           <div class="uv-wrap"><button type="button" class="uv-head" aria-expanded="false"><span class="uv-t">Available Apartments</span><span class="uv-n">5</span><span class="uv-ok2">View prices</span><span class="uv-ch">&#9662;</span></button><div class="uv-body" hidden><div class="uv-alt">Net m² = enclosed interior only · Gross m² = incl. balcony/terrace/garden and parking · Rows marked <b>Reserved</b> are shown greyed out and are not included in the available-apartment count.</div><div class="uv-scroll"><table class="uv-tbl"><thead><tr><th>Unit</th><th>Floor</th><th>Price</th><th>Net m²</th><th>Outdoor</th><th>Park.</th><th>Gross m²</th><th>Net €/m²</th><th>Gross €/m²</th></tr></thead><tbody><tr><td class="uv-k">GF2</td><td>0</td><td class="uv-f">€257.000</td><td>39,8</td><td>10</td><td>—</td><td>49,8</td><td>6.457</td><td class="uv-hl">5.161</td></tr><tr><td class="uv-k">GF1</td><td>0</td><td class="uv-f">€270.000</td><td>41,8</td><td>12</td><td>—</td><td>53,8</td><td>6.459</td><td class="uv-hl">5.019</td></tr><tr><td class="uv-k">GF3</td><td>0</td><td class="uv-f">€272.000</td><td>41,8</td><td>17</td><td>—</td><td>58,8</td><td>6.507</td><td class="uv-hl">4.626</td></tr><tr class="uv-rez"><td class="uv-k">5.2 <span class="uv-rez-b">Reserved</span></td><td>5</td><td class="uv-f">€284.000</td><td>40,8</td><td>7</td><td>—</td><td>47,8</td><td>6.961</td><td class="uv-hl">5.941</td></tr><tr class="uv-rez"><td class="uv-k">3.3 <span class="uv-rez-b">Reserved</span></td><td>3</td><td class="uv-f">€288.000</td><td>41,8</td><td>17</td><td>—</td><td>58,8</td><td>6.890</td><td class="uv-hl">4.898</td></tr><tr><td class="uv-k">M.4</td><td>6&amp;7</td><td class="uv-f">€356.000</td><td>50,8</td><td>16</td><td>—</td><td>66,8</td><td>7.008</td><td class="uv-hl">5.329</td></tr><tr><td class="uv-k">M.1</td><td>6&amp;7</td><td class="uv-f">€358.000</td><td>51,3</td><td>13</td><td>—</td><td>64,3</td><td>6.979</td><td class="uv-hl">5.568</td></tr></tbody></table></div><div class="uv-kaynak">Source: Geliştirici resmî listesi · 3 Ağustos 2026 · Availability: Avla inventory, 25 August 2026</div></div></div>
           <div class="actions">
             <a class="btn btn-primary" href="../brochures/A0166.pdf" target="_blank">Brochure</a>
@@ -1815,14 +1821,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit">
         <div data-gv="south-moschato" class="property-cover gv-tikla cover-kallithea">
           <img width="1200" height="675" class="cover-img" src="/img/covers/south-moschato-e1ab81f2.webp" loading="lazy" decoding="async" alt="South Moschato render" />
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
+          <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div><div class="gv-foto">◧ 10 photos</div>
 
           <div class="cover-name-block">
             <div class="cover-name">South Moschato</div>
           </div>
         </div>
         <div class="property-body">
-          <h3 class="property-title">South Moschato</h3>
+          <h3 class="property-title">South Moschato<span class="sold-chip">Sold</span></h3>
           <div class="property-location">City Center · Moschato</div>
           <div class="specs">
             <div class="spec"><span class="lbl">Build Type</span><span class="val">Yeni inşa · 2. ve 3. kat</span></div>
@@ -1838,6 +1844,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="rating-row"><span class="rating-lbl">Liquidity</span><span class="rating-stars" data-score="4">★★★★</span></div>
           </div>
           <div class="note">Moschato — sitting between Piraeus and central Athens — has rapidly developed in recent years. Just <strong>1 km</strong> to the coast, 15 min to central Athens, near the metro line. This project occupies floors 2 and 3 of a 5-storey new build, comprising <strong>18 units</strong> — 16 × 1+1 and 2 × 2+1 layouts. A-class energy, heat pump, Grohe sanitary ware, and European kitchen fittings deliver a modern living standard. Starting at €258K — close to the <strong>GV minimum threshold</strong>, an excellent entry option.</div>
+            <div class="sold-band"><b>SOLD OUT.</b> No apartments remain available in this project — 14 apartments sold, 4 reserved (23 September 2026). Please contact your advisor for current alternatives with a similar profile.</div>
           <div class="yorum-content" id="yorum-south-moschato" data-rank="4" hidden>South Moschato — Moschato district, between Piraeus and central Athens. A boutique residential building with carefully designed units, walking distance to Moschato metro and the coastal tram. Affordable Golden Visa entry (~€250-300K), with strong rental demand from professionals commuting to Piraeus and central Athens. Quiet residential street, modern build quality. Balanced city-and-coastal exit-strategy pick.</div>
           <div class="uv-wrap"><button type="button" class="uv-head" aria-expanded="false"><span class="uv-t">Available Apartments</span><span class="uv-n">9</span><span class="uv-ok2">View prices</span><span class="uv-ch">&#9662;</span></button><div class="uv-body" hidden><div class="uv-alt">Net m² = enclosed interior only · Gross m² = incl. balcony/terrace/garden and parking</div><div class="uv-scroll"><table class="uv-tbl"><thead><tr><th>Unit</th><th>Floor</th><th>Price</th><th>Net m²</th><th>Outdoor</th><th>Park.</th><th>Gross m²</th><th>Net €/m²</th><th>Gross €/m²</th></tr></thead><tbody><tr><td class="uv-k">2.10</td><td>2</td><td class="uv-f">€282.000</td><td>41,8</td><td>11</td><td><span class="uv-ok">✓</span></td><td>65,3</td><td>6.746</td><td class="uv-hl">4.319</td></tr><tr><td class="uv-k">2.11</td><td>2</td><td class="uv-f">€289.000</td><td>42,8</td><td>10,5</td><td><span class="uv-ok">✓</span></td><td>65,8</td><td>6.752</td><td class="uv-hl">4.392</td></tr><tr><td class="uv-k">3.2</td><td>3</td><td class="uv-f">€293.000</td><td>42,8</td><td>11,5</td><td><span class="uv-ok">✓</span></td><td>66,8</td><td>6.846</td><td class="uv-hl">4.386</td></tr><tr><td class="uv-k">3.3</td><td>3</td><td class="uv-f">€293.000</td><td>42,8</td><td>11</td><td><span class="uv-ok">✓</span></td><td>66,3</td><td>6.846</td><td class="uv-hl">4.419</td></tr><tr><td class="uv-k">3.4</td><td>3</td><td class="uv-f">€293.000</td><td>42,8</td><td>10,5</td><td><span class="uv-ok">✓</span></td><td>65,8</td><td>6.846</td><td class="uv-hl">4.453</td></tr><tr><td class="uv-k">3.1</td><td>3</td><td class="uv-f">€307.000</td><td>44,8</td><td>11,5</td><td><span class="uv-ok">✓</span></td><td>68,8</td><td>6.853</td><td class="uv-hl">4.462</td></tr><tr><td class="uv-k">3.7</td><td>3</td><td class="uv-f">€345.000</td><td>45,7</td><td>48</td><td><span class="uv-ok">✓</span></td><td>106,2</td><td>7.549</td><td class="uv-hl">3.249</td></tr><tr><td class="uv-k">2.9</td><td>2</td><td class="uv-f">€350.000</td><td>51,8</td><td>13</td><td><span class="uv-ok">✓</span></td><td>77,3</td><td>6.757</td><td class="uv-hl">4.528</td></tr><tr><td class="uv-k">2.5</td><td>2</td><td class="uv-f">€364.000</td><td>52,3</td><td>17,5</td><td><span class="uv-ok">✓</span></td><td>82,3</td><td>6.960</td><td class="uv-hl">4.423</td></tr></tbody></table></div><div class="uv-kaynak">Source: 2026-07-04</div></div></div>
           <div class="actions">
@@ -2107,13 +2114,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="property has-photo" data-region="riviera" data-budget="fit" style="align-self:start">
         <div data-gv="liviis20" class="property-cover gv-tikla cover-riviera">
           <img width="900" height="675" class="cover-img" src="/img/covers/liviis-20-glyfada-e71bc11a.webp" loading="lazy" decoding="async" alt="Liviis 20 Glyfada" loading="lazy">
-          <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
+          <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div><div class="gv-foto">◧ 10 photos</div>
           <div class="cover-name-block">
             <div class="cover-name">Liviis 20 Glyfada</div>
           </div>
         </div>
         <div class="property-body">
-          <h3 class="property-title">Liviis 20 Glyfada</h3>
+          <h3 class="property-title">Liviis 20 Glyfada<span class="sold-chip">Sold</span></h3>
           <div class="property-location">Glyfada · Athens Riviera</div>
           <div class="specs">
             <div class="spec"><span class="lbl">Structure</span><span class="val">New build · 5 floors</span></div><div class="spec"><span class="lbl">Delivery</span><span class="val">2026 Q1</span></div><div class="spec"><span class="lbl">Units</span><span class="val">Studio (Loft)</span></div><div class="spec"><span class="lbl">Price</span><span class="val">From €190,000</span></div>
@@ -2126,6 +2133,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="rating-row"><span class="rating-lbl">Liquidity</span><span class="rating-stars" data-score="4">★★★★</span></div>
           </div>
           <div class="note">In a quiet residential part of Glyfada, — a 5-floor new build (11×1BR + 3 maisonettes): A+ energy, heat pumps, Grohe, Italian kitchens, rooftop photovoltaics. Delivery 2026 Q1. Top-floor <b>Loft 6.1</b>: 27 sqm + 18 sqm balcony + large private roof terrace, sea view — <b>€190,000</b>. <b>Not eligible for Golden Visa</b> — the price is below the GV threshold; an entry rental/investment opportunity.</div>
+            <div class="sold-band"><b>SOLD OUT.</b> No apartments remain available in this project (23 September 2026). Please contact your advisor for current alternatives with a similar profile.</div>
           <div class="sold-band"><b>RESERVED.</b> The single apartment in this project is currently reserved; none are available for sale (25 August 2026). Please contact your advisor for the current status and similar alternatives.</div><div class="uv-wrap"><button type="button" class="uv-head" aria-expanded="false"><span class="uv-t">Available Apartments</span><span class="uv-n">0</span><span class="uv-ok2">View prices</span><span class="uv-ch">&#9662;</span></button><div class="uv-body" hidden><div class="uv-alt">Net m² = enclosed interior only · Gross m² = incl. balcony/terrace/garden and parking · Rows marked <b>Reserved</b> are shown greyed out and are not included in the available-apartment count.</div><div class="uv-scroll"><table class="uv-tbl"><thead><tr><th>Unit</th><th>Floor</th><th>Price</th><th>Net m²</th><th>Outdoor</th><th>Park.</th><th>Gross m²</th><th>Net €/m²</th><th>Gross €/m²</th></tr></thead><tbody><tr class="uv-rez"><td class="uv-k">LOFT 6.1 <span class="uv-rez-b">Reserved</span></td><td>6 (ust kat)</td><td class="uv-f">€190.000</td><td>27</td><td>18</td><td>—</td><td>45</td><td>7.037</td><td class="uv-hl">4.222</td></tr></tbody></table></div><div class="uv-kaynak">Source: 2025-12-31 · Availability: Avla inventory, 25 August 2026</div></div></div>
           <div class="actions">
             <a class="btn btn-primary" href="https://gv.selection.avlarealestate.com/brochures/25_liviis20_glyfada.pdf" target="_blank" rel="noopener">Brochure</a>
@@ -2200,7 +2208,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
       </div>
     <div class="group-head" data-group="kuzey">
-      <h3>North Athens <small>Kifisia · Nea Erythraia · 1 Project</small></h3>
+      <h3>North Athens <small>Kifisia · Nea Erythraia · Chalandri · 2 Projects</small></h3>
       <span class="group-tag">NORTH</span>
     </div>
     <div class="property-grid">
@@ -2239,6 +2247,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
+      <div class="property has-photo" data-berkay-selection="1" data-region="kuzey" data-budget="fit">
+        <div data-gv="chalandri-court" class="property-cover gv-tikla cover-kuzey">
+          <img width="1000" height="609" class="cover-img" src="/img/covers/chalandri-court-residences-7d964275.webp" loading="lazy" decoding="async" alt="Chalandri Court Residences">
+          <div class="cover-overlay"></div><div class="gv-foto">◧ 7 photos</div>
+
+          <div class="cover-name-block">
+            <div class="cover-name">Chalandri Court Residences</div>
+          </div>
+        </div>
+        <div class="property-body">
+          <h3 class="property-title">Chalandri Court Residences</h3>
+          <div class="property-location">Chalandri · North Athens</div>
+          <div class="specs">
+            <div class="spec"><span class="lbl">Units</span><span class="val">45 Units</span></div><div class="spec"><span class="lbl">Unit size</span><span class="val">38–57 m² net</span></div><div class="spec"><span class="lbl">Price from</span><span class="val">€267,000</span></div><div class="spec"><span class="lbl">Rental</span><span class="val">3% Guaranteed · 3 Years</span></div>
+          </div>
+          <div class="tags"><span class="tag">Golden Visa</span><span class="tag">Parking Included</span><span class="tag">3% Guaranteed Rent</span><span class="tag">Energy Class A</span><span class="tag">North Athens</span></div>
+          <div class="rating">
+            <div class="rating-row"><span class="rating-lbl">Location</span><span class="rating-stars" data-score="5">★★★★★</span></div>
+            <div class="rating-row"><span class="rating-lbl">Investment</span><span class="rating-stars" data-score="4">★★★★</span></div>
+            <div class="rating-row"><span class="rating-lbl">Build</span><span class="rating-stars" data-score="5">★★★★★</span></div>
+            <div class="rating-row"><span class="rating-lbl">Liquidity</span><span class="rating-stars" data-score="4">★★★★</span></div>
+          </div>
+          <div class="note">In the centre of Chalandri — one of North Athens' most established and sought-after districts — a new 45-unit development: mainly one-bedroom apartments with duplexes on the upper floors, 38–57 m² net. <b>Parking included</b>, Energy Class A, 3% guaranteed rent for 3 years. Metro and Chalandri's café-restaurant axis are within walking distance, with direct access to the Kifisias corridor and the northern business districts. Prices start at €267,000; delivery Q2 2028 (+3 months). 41 of the 45 apartments are available — the widest choice in this selection.</div>
+          <div class="yorum-content" id="yorum-chalandri-court" data-rank="17" hidden>Chalandri Court Residences — a 45-unit development within walking distance of the centre of Chalandri, the settled middle-to-upper income district of North Athens. Apartments are mainly one-bedroom (38–57 m² net, 48–106 m² gross), with two-storey duplex layouts on the upper floors. Every apartment includes parking, Energy Class A and a 3% · 3-year guaranteed rental agreement. Price band €267,000 – €400,000; 41 apartments available, 4 reserved. Delivery Q2 2028, with a 3-month grace period in the contract. Chalandri is the southern gateway of the Kifisia–Marousi corridor: metro connection, a mature tenant pool (corporate employees and families) and steadier pricing than the centre. As a new build involving a partial change of use, the applicable Golden Visa threshold is confirmed in writing on a per-apartment basis.</div>
+          <div class="actions">
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Chalandri%2C+Athens%2C+Greece" target="_blank" rel="noopener">Location</a>
+            <a class="btn btn-outline gv-yorum" data-yorum="yorum-chalandri-court">Review</a>
+            <a class="btn btn-outline" href="https://www.avlarealestate.com/properties/chalandri-one-bedroom-residences-with-parking-north-athens" target="_blank" rel="noopener">Listing</a>
+            <a class="btn btn-outline" href="https://a211dbfc-9c5e-44ec-aeff-64a7a120dffd.usrfiles.com/ugd/0503e3_c83301b4bcc14e988342ba8a2e8b62c9.pdf" target="_blank" rel="noopener">Area</a>
+            <a class="btn btn-outline" href="https://a211dbfc-9c5e-44ec-aeff-64a7a120dffd.usrfiles.com/ugd/0503e3_c5ceb6abf7874673846297ddfffe86f3.pdf" target="_blank" rel="noopener">Feasibility</a>
+          </div>
+        </div>
+      </div>
+      
       
     </div>
     <div class="group-head" data-group="bati">
@@ -2529,6 +2571,7 @@ const subRegionMap = {
   'yorum-venus-athens-riviera': 'riviera',
   'yorum-the-one-glyfada': 'riviera',
   'yorum-the-north-village': 'kifisia',
+  'yorum-chalandri-court': 'chalandri',
   'yorum-terrace-heights': 'peristeri',
   'yorum-thessaloniki-bay-residences': 'selanik',
   'yorum-t18-city-residences': 'merkez',
@@ -2685,6 +2728,7 @@ function AVLA_HARITA_INIT(){
     {"code": "AV-ZAF-02", "name": "Venus Athens Riviera ★", "region": "riviera", "color": "#a05230", "lat": 37.895, "lng": 23.749, "addr": "Elliniko · Athens Riviera", "brochure": "16_venus_athens_riviera.pdf", "bg": true},
     {"code": "AV-OIK-04", "name": "THE ONE Glyfada ★", "region": "riviera", "color": "#a05230", "lat": 37.8807, "lng": 23.7552, "addr": "Vouliagmenis Ave, Glyfada, Athens", "brochure": "17_the_one_glyfada.pdf", "bg": true},
     {"code": "AV-RNT-01", "name": "The North Village ★", "region": "kuzey", "color": "#6d5a9c", "lat": 38.087, "lng": 23.805, "addr": "Nea Erythraia · Kifisia", "brochure": "20_the_north_village.pdf", "bg": true},
+      {"code": "AV-CHC-01", "name": "Chalandri Court Residences", "region": "kuzey", "color": "#4f6f9c", "lat": 38.023, "lng": 23.800, "addr": "Chalandri · North Athens", "ilan": "https://www.avlarealestate.com/properties/chalandri-one-bedroom-residences-with-parking-north-athens", "bg": true},
     {"code": "AV-PER-01", "name": "Terrace Heights ★", "region": "bati", "color": "#6a8a65", "lat": 38.0186, "lng": 23.6960, "addr": "Peristeri, West Athens", "ilan": "https://www.avlarealestate.com/en/properties/terrace-heights-peristeri-west-athens-golden-visa", "bg": true},
           {"code": "AV-LEF-01", "name": "Lefkada Crystal Waters", "region": "lefkada", "color": "#2f8f7d", "lat": 38.7647, "lng": 20.7222, "addr": "Nikiana, Lefkada", "brochure": "29_lefkada_crystal_waters.pdf", "bg": true},
     {"code": "AV-TH-01", "name": "Thessaloniki Bay Residences", "region": "selanik", "color": "#2b5f80", "lat": 40.60, "lng": 22.95, "addr": "Thessaloniki, Greece", "ilan": "https://www.avlarealestate.com/properties/thessaloniki-bay-residences-thessaloniki", "bg": true}
