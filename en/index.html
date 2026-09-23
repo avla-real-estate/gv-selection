@@ -187,7 +187,9 @@ header .container {
 .chip-pire::before { background: #3a7ea0; }
 .chip-pire:hover { background: #3a7ea0; border-color: #3a7ea0; }
 .chip-aegina::before { background: #4a9d9c; }
+  .chip-lefkada::before { background: #3f8f8f; }
 .chip-aegina:hover { background: #4a9d9c; border-color: #4a9d9c; }
+  .chip-lefkada:hover { background: #3f8f8f; border-color: #3f8f8f; }
 .chip-merkez::before { background: #8a4a65; }
 .chip-merkez:hover { background: #8a4a65; border-color: #8a4a65; }
 .chip-ampelokipi::before { background: #7a8a45; }
@@ -1300,6 +1302,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="region-chips" aria-label="Region labels — color-coded with map pins, click to jump to the corresponding card">
       <button class="chip chip-pire" data-subregion="pire" title="Piraeus">Piraeus</button>
       <button class="chip chip-aegina" data-subregion="aegina" title="Aegina Island (Saronic Gulf)">Aegina Island</button>
+        <button class="chip chip-lefkada" data-subregion="lefkada" title="Lefkada Island">Lefkada Island</button>
       <button class="chip chip-merkez" data-subregion="merkez" title="City Center (Ampelokipi · Sinopis · Pangrati)">City Center</button>
       <button class="chip chip-ampelokipi" data-subregion="ampelokipi" title="Ampelokipi (Central Athens)">Ampelokipi</button>
       <button class="chip chip-akademia" data-subregion="akademia-platonos" title="Akademia Platonos">Akademia Platonos</button>
@@ -1347,7 +1350,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="group-tag">PIRAEUS</span>
     </div>
     <div class="property-grid">
-      <div class="property has-photo" data-berkay-selection="1" data-region="pire" data-budget="fit">
+      <div class="property has-photo" data-berkay-selection="1" data-region="pire" data-budget="fit" data-subregion="pire" data-neighborhood="Piraeus">
         <div data-gv="etolikou" class="property-cover gv-tikla cover-pire">
           <img width="1100" height="619" class="cover-img" src="/img/covers/etolikou-seafront-1334bacb.webp" loading="lazy" decoding="async" alt="Etolikou Seafront" loading="lazy">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 8 photos</div>
@@ -1386,7 +1389,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
       
-      <div class="property has-photo" data-berkay-selection="1" data-region="pire" data-budget="over">
+      <div class="property has-photo" data-berkay-selection="1" data-region="pire" data-budget="over" data-subregion="pire" data-neighborhood="Mikrolimano">
         <div data-gv="mikrolimano" class="property-cover gv-tikla cover-pire">
           <img width="1100" height="619" class="cover-img" src="/img/covers/mikrolimano-38n-b3e80ca3.webp" loading="lazy" decoding="async" alt="Mikrolimano 38N" loading="lazy">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
@@ -1424,7 +1427,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
-      <div class="property has-photo" data-berkay-selection="1" data-region="pire" data-budget="fit">
+      <div class="property has-photo" data-berkay-selection="1" data-region="pire" data-budget="fit" data-subregion="pire" data-neighborhood="Piraeus">
         <div data-gv="heritage" class="property-cover gv-tikla cover-pire">
           <img width="800" height="500" class="cover-img" src="/img/covers/heritage-piraeus-0996b9bd.webp" loading="lazy" decoding="async" alt="Heritage Piraeus" loading="lazy">
           <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div><div class="gv-foto">◧ 10 photos</div>
@@ -1463,7 +1466,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
-      <div class="property has-photo" data-berkay-selection="1" data-region="pire" data-budget="fit">
+      <div class="property has-photo" data-berkay-selection="1" data-region="pire" data-budget="fit" data-subregion="pire" data-neighborhood="Piraeus">
         <div data-gv="serenity" class="property-cover gv-tikla cover-pire">
           <img width="1200" height="750" class="cover-img" src="/img/covers/piraeus-serenity-residence-d1372c1f.webp" loading="lazy" decoding="async" alt="Piraeus Serenity Residence" loading="lazy">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
@@ -1502,7 +1505,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
     
-      <div class="property has-photo" data-region="pire" data-budget="fit">
+      <div class="property has-photo" data-region="pire" data-budget="fit" data-subregion="pire" data-neighborhood="Kaminia">
         <div data-gv="zen41" class="property-cover gv-tikla cover-pire">
           <img width="1000" height="1000" class="cover-img" src="/img/covers/riviera-zen-41-94f5b1ff.webp" loading="lazy" decoding="async" alt="Riviera Zen 41">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
@@ -1523,7 +1526,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
       
-      <div class="property has-photo" data-region="pire" data-budget="fit">
+      <div class="property has-photo" data-region="pire" data-budget="fit" data-subregion="pire" data-neighborhood="Nikaia">
         <div data-gv="mercy" class="property-cover gv-tikla cover-pire">
           <img width="1000" height="1000" class="cover-img" src="/img/covers/mercy-lofts-e0b0188a.webp" loading="lazy" decoding="async" alt="Mercy Lofts">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
@@ -1549,7 +1552,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="group-tag">ISLANDS</span>
     </div>
     <div class="property-grid">
-      <div class="property has-photo" data-berkay-selection="1" data-region="aegina" data-budget="fit">
+      <div class="property has-photo" data-berkay-selection="1" data-region="aegina" data-budget="fit" data-subregion="aegina" data-neighborhood="Aegina">
         <div data-gv="afea" class="property-cover gv-tikla cover-aegina">
           <img width="1000" height="500" class="cover-img" src="/img/covers/afea-residence-8f7dacfd.webp" loading="lazy" decoding="async" alt="AFEA Residence" loading="lazy">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
@@ -1585,7 +1588,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
-      <div class="property has-photo" data-berkay-selection="1" data-region="lefkada" data-budget="fit">
+      <div class="property has-photo" data-berkay-selection="1" data-region="lefkada" data-budget="fit" data-subregion="lefkada" data-neighborhood="Lefkada">
         <div data-gv="lefkada" class="property-cover gv-tikla cover-lefkada">
           <img width="1000" height="707" class="cover-img" src="/img/covers/lefkada-crystal-waters-e33df7f1.webp" loading="lazy" decoding="async" alt="Lefkada Crystal Waters" loading="lazy">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
@@ -1629,7 +1632,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="group-tag">CITY CENTER</span>
     </div>
     <div class="property-grid">
-      <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit">
+      <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit" data-subregion="ampelokipi" data-neighborhood="Ampelokipi">
         <div data-gv="minoas" class="property-cover gv-tikla cover-merkez">
           <img width="960" height="539" class="cover-img" src="/img/covers/minoas-athens-0bf272a8.webp" loading="lazy" decoding="async" alt="MINOAS Athens" loading="lazy">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
@@ -1667,7 +1670,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
-      <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit">
+      <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit" data-subregion="ampelokipi" data-neighborhood="Ampelokipi">
         <div data-gv="trinity" class="property-cover gv-tikla cover-merkez">
           <img width="1200" height="750" class="cover-img" src="/img/covers/trinity-cf378efa.webp" loading="lazy" decoding="async" alt="Trinity Ampelokipi" loading="lazy">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
@@ -1705,7 +1708,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
-      <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit">
+      <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit" data-subregion="merkez" data-neighborhood="Pangrati">
         <div data-gv="aurora" class="property-cover gv-tikla cover-merkez">
           <img width="741" height="800" class="cover-img" src="/img/covers/aurora-residences-87b78f2c.webp" loading="lazy" decoding="async" alt="Aurora Residences" loading="lazy">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
@@ -1743,7 +1746,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
-      <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit">
+      <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit" data-subregion="moschato-kallithea" data-neighborhood="Kallithea">
         <div data-gv="boulevard" class="property-cover gv-tikla cover-kallithea">
           <img width="800" height="500" class="cover-img" src="/img/covers/boulevard-residences-6c68a131.webp" loading="lazy" decoding="async" alt="Boulevard Residences" loading="lazy">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
@@ -1781,7 +1784,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
-    <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit">
+    <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit" data-subregion="moschato-kallithea" data-neighborhood="Kallithea">
         <div data-gv="south-kallithea" class="property-cover gv-tikla cover-kallithea">
           <img width="1400" height="786" class="cover-img" src="/img/covers/el-venizelou-290-da6e7674.webp" loading="lazy" decoding="async" alt="El. Venizelou 290 Kallithea" loading="lazy">
           <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div><div class="gv-foto">◧ 10 photos</div>
@@ -1818,7 +1821,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
-      <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit">
+      <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit" data-subregion="moschato-kallithea" data-neighborhood="Moschato">
         <div data-gv="south-moschato" class="property-cover gv-tikla cover-kallithea">
           <img width="1200" height="675" class="cover-img" src="/img/covers/south-moschato-e1ab81f2.webp" loading="lazy" decoding="async" alt="South Moschato render" />
           <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div><div class="gv-foto">◧ 10 photos</div>
@@ -1857,7 +1860,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
-      <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit">
+      <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit" data-subregion="agios-dimitrios" data-neighborhood="Agios Dimitrios">
         <div data-gv="metro-apartments" class="property-cover gv-tikla cover-agdim">
           <img width="1067" height="800" class="cover-img" src="/img/covers/metro-apartments-daire-g1-5b407552.webp" loading="lazy" decoding="async" alt="Metro Apartments — Daire G1" loading="lazy">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
@@ -1896,7 +1899,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
       
-      <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit">
+      <div class="property has-photo" data-berkay-selection="1" data-region="merkez" data-budget="fit" data-subregion="akademia-platonos" data-neighborhood="Akademia Platonos">
         <div data-gv="the-hera" class="property-cover gv-tikla cover-kuzey">
           <img width="880" height="630" class="cover-img" src="/img/covers/the-hera-athens-21fcd0d9.webp" loading="lazy" decoding="async" alt="The Hera Athens" loading="lazy">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
@@ -1935,7 +1938,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
     
-      <div class="property has-photo" data-region="merkez" data-budget="fit">
+      <div class="property has-photo" data-region="merkez" data-budget="fit" data-subregion="merkez" data-neighborhood="Neos Kosmos">
         <div data-gv="plato" class="property-cover gv-tikla cover-merkez">
           <img width="1000" height="1000" class="cover-img" src="/img/covers/riviera-plato-ee95af96.webp" loading="lazy" decoding="async" alt="Riviera Plato">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 7 photos</div>
@@ -1961,7 +1964,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="group-tag">RIVIERA</span>
     </div>
     <div class="property-grid">
-      <div class="property has-photo" data-berkay-selection="1" data-region="riviera" data-budget="fit">
+      <div class="property has-photo" data-berkay-selection="1" data-region="riviera" data-budget="fit" data-subregion="riviera" data-neighborhood="Elliniko">
         <div data-gv="aenaon" class="property-cover gv-tikla cover-riviera">
           <img width="1000" height="495" class="cover-img" src="/img/covers/aenaon-park-residences-cf7d32e8.webp" loading="lazy" decoding="async" alt="Aenaon Park Residences" loading="lazy">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
@@ -1999,7 +2002,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
-      <div class="property has-photo" data-berkay-selection="1" data-region="riviera" data-budget="over">
+      <div class="property has-photo" data-berkay-selection="1" data-region="riviera" data-budget="over" data-subregion="riviera" data-neighborhood="Elliniko">
         <div data-gv="venus" class="property-cover gv-tikla cover-riviera">
           <img width="800" height="500" class="cover-img" src="/img/covers/venus-athens-riviera-567e85b8.webp" loading="lazy" decoding="async" alt="Venus Athens Riviera" loading="lazy">
           <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div><div class="gv-foto">◧ 10 photos</div>
@@ -2037,7 +2040,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
-      <div class="property has-photo" data-berkay-selection="1" data-region="riviera" data-budget="over">
+      <div class="property has-photo" data-berkay-selection="1" data-region="riviera" data-budget="over" data-subregion="riviera" data-neighborhood="Glyfada">
         <div data-gv="the-one" class="property-cover gv-tikla cover-riviera">
           <img width="800" height="500" class="cover-img" src="/img/covers/the-one-glyfada-3b64c5b6.webp" loading="lazy" decoding="async" alt="THE ONE Glyfada" loading="lazy">
           <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div><div class="gv-foto">◧ 5 photos</div>
@@ -2075,7 +2078,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
-      <div class="property has-photo" data-berkay-selection="1" data-region="riviera" data-budget="fit" style="align-self:start">
+      <div class="property has-photo" data-berkay-selection="1" data-region="riviera" data-budget="fit" style="align-self:start" data-subregion="riviera" data-neighborhood="Ano Glyfada">
         <div data-gv="south-glyfada" class="property-cover gv-tikla cover-riviera">
           <img width="720" height="405" class="cover-img" src="/img/covers/south-glyfada-f0951006.webp" loading="lazy" decoding="async" alt="South Glyfada" loading="lazy">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
@@ -2111,7 +2114,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
-      <div class="property has-photo" data-region="riviera" data-budget="fit" style="align-self:start">
+      <div class="property has-photo" data-region="riviera" data-budget="fit" style="align-self:start" data-subregion="riviera" data-neighborhood="Glyfada">
         <div data-gv="liviis20" class="property-cover gv-tikla cover-riviera">
           <img width="900" height="675" class="cover-img" src="/img/covers/liviis-20-glyfada-e71bc11a.webp" loading="lazy" decoding="async" alt="Liviis 20 Glyfada" loading="lazy">
           <div class="cover-overlay"></div><div class="sold-ribbon">SOLD OUT</div><div class="gv-foto">◧ 10 photos</div>
@@ -2144,7 +2147,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
     
-      <div class="property has-photo" data-region="riviera" data-budget="fit">
+      <div class="property has-photo" data-region="riviera" data-budget="fit" data-subregion="riviera" data-neighborhood="Paleo Faliro">
         <div data-gv="onyx" class="property-cover gv-tikla cover-riviera">
           <img width="1000" height="1000" class="cover-img" src="/img/covers/riviera-onyx-70aec3d2.webp" loading="lazy" decoding="async" alt="Riviera Onyx">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
@@ -2165,7 +2168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
       
-      <div class="property has-photo" data-region="riviera" data-budget="fit">
+      <div class="property has-photo" data-region="riviera" data-budget="fit" data-subregion="riviera" data-neighborhood="Alimos">
         <div data-gv="seascape" class="property-cover gv-tikla cover-riviera">
           <img width="1000" height="1000" class="cover-img" src="/img/covers/riviera-seascape-5df4d7e8.webp" loading="lazy" decoding="async" alt="Riviera Seascape">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
@@ -2186,7 +2189,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
       
-      <div class="property has-photo" data-region="riviera" data-budget="fit">
+      <div class="property has-photo" data-region="riviera" data-budget="fit" data-subregion="riviera" data-neighborhood="Elliniko">
         <div data-gv="ellinikon" class="property-cover gv-tikla cover-riviera">
           <img width="1000" height="1000" class="cover-img" src="/img/covers/the-ellinikon-views-65fe7350.webp" loading="lazy" decoding="async" alt="The Ellinikon Views">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
@@ -2212,7 +2215,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="group-tag">NORTH</span>
     </div>
     <div class="property-grid">
-      <div class="property has-photo" data-berkay-selection="1" data-region="kuzey" data-budget="fit">
+      <div class="property has-photo" data-berkay-selection="1" data-region="kuzey" data-budget="fit" data-subregion="kifisia" data-neighborhood="Nea Erythraia">
         <div data-gv="north-village" class="property-cover gv-tikla cover-kuzey">
           <img width="1000" height="444" class="cover-img" src="/img/covers/the-north-village-34791c9b.webp" loading="lazy" decoding="async" alt="The North Village" loading="lazy">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 7 photos</div>
@@ -2247,7 +2250,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
-      <div class="property has-photo" data-berkay-selection="1" data-region="kuzey" data-budget="fit">
+      <div class="property has-photo" data-berkay-selection="1" data-region="kuzey" data-budget="fit" data-subregion="chalandri" data-neighborhood="Chalandri">
         <div data-gv="chalandri-court" class="property-cover gv-tikla cover-kuzey">
           <img width="1000" height="609" class="cover-img" src="/img/covers/chalandri-court-residences-7d964275.webp" loading="lazy" decoding="async" alt="Chalandri Court Residences">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 7 photos</div>
@@ -2273,7 +2276,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="yorum-content" id="yorum-chalandri-court" data-rank="17" hidden>Chalandri Court Residences — a 45-unit development within walking distance of the centre of Chalandri, the settled middle-to-upper income district of North Athens. Apartments are mainly one-bedroom (38–57 m² net, 48–106 m² gross), with two-storey duplex layouts on the upper floors. Every apartment includes parking, Energy Class A and a 3% · 3-year guaranteed rental agreement. Price band €267,000 – €400,000; 41 apartments available, 4 reserved. Delivery Q2 2028, with a 3-month grace period in the contract. Chalandri is the southern gateway of the Kifisia–Marousi corridor: metro connection, a mature tenant pool (corporate employees and families) and steadier pricing than the centre. As a new build involving a partial change of use, the applicable Golden Visa threshold is confirmed in writing on a per-apartment basis.</div>
           <div class="actions">
             <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Chalandri%2C+Athens%2C+Greece" target="_blank" rel="noopener">Location</a>
-            <a class="btn btn-outline gv-yorum" data-yorum="yorum-chalandri-court">Review</a>
+            <button type="button" class="btn btn-yorum yorum-btn" data-yorum-target="yorum-chalandri-court">Review</button>
             <a class="btn btn-outline" href="https://www.avlarealestate.com/properties/chalandri-one-bedroom-residences-with-parking-north-athens" target="_blank" rel="noopener">Listing</a>
             <a class="btn btn-outline" href="https://a211dbfc-9c5e-44ec-aeff-64a7a120dffd.usrfiles.com/ugd/0503e3_c83301b4bcc14e988342ba8a2e8b62c9.pdf" target="_blank" rel="noopener">Area</a>
             <a class="btn btn-outline" href="https://a211dbfc-9c5e-44ec-aeff-64a7a120dffd.usrfiles.com/ugd/0503e3_c5ceb6abf7874673846297ddfffe86f3.pdf" target="_blank" rel="noopener">Feasibility</a>
@@ -2288,7 +2291,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="group-tag">WEST</span>
     </div>
     <div class="property-grid">
-      <div class="property has-photo" data-berkay-selection="1" data-region="bati" data-budget="fit">
+      <div class="property has-photo" data-berkay-selection="1" data-region="bati" data-budget="fit" data-subregion="peristeri" data-neighborhood="Peristeri">
         <div data-gv="terrace-heights" class="property-cover gv-tikla cover-bati">
           <img width="1000" height="495" class="cover-img" src="/img/covers/terrace-heights-042e715c.webp" loading="lazy" decoding="async" alt="Terrace Heights — Peristeri, West Athens">
           <div class="cover-overlay"></div><div class="gv-foto">◧ 10 photos</div>
@@ -2332,7 +2335,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="group-tag">THESSALONIKI</span>
     </div>
     <div class="property-grid">
-      <div class="property has-photo" data-berkay-selection="0" data-region="selanik" data-budget="fit">
+      <div class="property has-photo" data-berkay-selection="0" data-region="selanik" data-budget="fit" data-subregion="selanik" data-neighborhood="Thessaloniki">
         <div class="property-cover cover-selanik">
           <img width="1000" height="563" class="cover-img" src="/img/covers/thessaloniki-bay-9bc200b8.webp" loading="lazy" decoding="async" alt="Thessaloniki Bay Residences — Thessaloniki">
           <div class="cover-overlay"></div>
@@ -2554,53 +2557,60 @@ filterButtons.forEach(btn => {
 
 // Property → sub-region eşlemesi (harita pin renkleriyle uyumlu)
 const subRegionMap = {
-  'yorum-lefkada-crystal-waters': 'lefkada',
-  'yorum-etolikou-seafront': 'pire', 'yorum-afea-residence': 'aegina',
+  'yorum-etolikou-seafront': 'pire',
   'yorum-mikrolimano-38n': 'pire',
   'yorum-heritage-piraeus': 'pire',
   'yorum-piraeus-serenity': 'pire',
-  'yorum-trinity': 'ampelokipi',
-  'yorum-metropolitan-apartment': 'ampelokipi',
+  'yorum-riviera-zen-41': 'pire',
+  'yorum-mercy-lofts': 'aegina',
+  'yorum-afea-residence': 'lefkada',
+  'yorum-lefkada-crystal-waters': 'ampelokipi',
   'yorum-minoas-athens': 'ampelokipi',
-  'yorum-aurora-residences': 'merkez',
+  'yorum-trinity': 'merkez',
+  'yorum-aurora-residences': 'moschato-kallithea',
   'yorum-boulevard-residences': 'moschato-kallithea',
-  'yorum-metro-apartments-daire-g1': 'agios-dimitrios',
-  'yorum-the-hera-athens': 'akademia-platonos',
-  'yorum-south-moschato': 'moschato-kallithea',
+  'yorum-south-moschato': 'agios-dimitrios',
+  'yorum-metro-apartments-daire-g1': 'akademia-platonos',
+  'yorum-the-hera-athens': 'merkez',
+  'yorum-riviera-plato': 'riviera',
   'yorum-aenaon-park-residences': 'riviera',
   'yorum-venus-athens-riviera': 'riviera',
   'yorum-the-one-glyfada': 'riviera',
-  'yorum-the-north-village': 'kifisia',
-  'yorum-chalandri-court': 'chalandri',
-  'yorum-terrace-heights': 'peristeri',
-  'yorum-thessaloniki-bay-residences': 'selanik',
-  'yorum-t18-city-residences': 'merkez',
-  'yorum-ap37-suites': 'agios-dimitrios'
+  'yorum-riviera-onyx': 'riviera',
+  'yorum-riviera-seascape': 'riviera',
+  'yorum-the-ellinikon-views': 'kifisia',
+  'yorum-the-north-village': 'chalandri',
+  'yorum-chalandri-court': 'peristeri',
+  'yorum-terrace-heights': 'selanik'
 };
 
 // Property → mahalle eşlemesi (group-head <small> içinde dinamik göstermek için)
 const neighborhoodMap = {
-  'yorum-lefkada-crystal-waters': 'Lefkada',
-  'yorum-etolikou-seafront': 'Pire', 'yorum-afea-residence': 'Aegina',
-  'yorum-mikrolimano-38n': 'Mikrolimano',
-  'yorum-heritage-piraeus': 'Pire',
-  'yorum-piraeus-serenity': 'Pire',
-  'yorum-trinity': 'Ampelokipi',
-  'yorum-metropolitan-apartment': 'Ampelokipi',
+  'yorum-etolikou-seafront': 'Mikrolimano',
+  'yorum-mikrolimano-38n': 'Piraeus',
+  'yorum-heritage-piraeus': 'Piraeus',
+  'yorum-piraeus-serenity': 'Kaminia',
+  'yorum-riviera-zen-41': 'Nikaia',
+  'yorum-mercy-lofts': 'Aegina',
+  'yorum-afea-residence': 'Lefkada',
+  'yorum-lefkada-crystal-waters': 'Ampelokipi',
   'yorum-minoas-athens': 'Ampelokipi',
-  'yorum-aurora-residences': 'Pangrati',
-  'yorum-boulevard-residences': 'Moschato',
-  'yorum-metro-apartments-daire-g1': 'Agios Dimitrios',
-  'yorum-the-hera-athens': 'Akademia Platonos',
-  'yorum-south-moschato': 'Moschato',
+  'yorum-trinity': 'Pangrati',
+  'yorum-aurora-residences': 'Kallithea',
+  'yorum-boulevard-residences': 'Kallithea',
+  'yorum-south-moschato': 'Agios Dimitrios',
+  'yorum-metro-apartments-daire-g1': 'Akademia Platonos',
+  'yorum-the-hera-athens': 'Neos Kosmos',
+  'yorum-riviera-plato': 'Elliniko',
   'yorum-aenaon-park-residences': 'Elliniko',
-  'yorum-venus-athens-riviera': 'Elliniko',
-  'yorum-the-one-glyfada': 'Glyfada',
-  'yorum-the-north-village': 'Nea Erythraia',
-  'yorum-terrace-heights': 'Peristeri',
-  'yorum-thessaloniki-bay-residences': 'Thessaloniki',
-  'yorum-t18-city-residences': 'Athens Centre',
-  'yorum-ap37-suites': 'Agios Dimitrios'
+  'yorum-venus-athens-riviera': 'Glyfada',
+  'yorum-the-one-glyfada': 'Ano Glyfada',
+  'yorum-riviera-onyx': 'Alimos',
+  'yorum-riviera-seascape': 'Elliniko',
+  'yorum-the-ellinikon-views': 'Nea Erythraia',
+  'yorum-the-north-village': 'Chalandri',
+  'yorum-chalandri-court': 'Peristeri',
+  'yorum-terrace-heights': 'Thessaloniki'
 };
 
 // Her property kartına data-subregion + data-neighborhood ata
