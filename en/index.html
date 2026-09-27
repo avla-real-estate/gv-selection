@@ -3085,7 +3085,7 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
       window.dataLayer.push({event:'whatsapp_click', konum:a.getAttribute('data-wa')||'diger'});
     }catch(err){}
     /* 27.09.2026: Meta dönüşüm olayı — web sitesi→WhatsApp kampanyaları whatsapp_click'e optimize ediyor; GTM bu olayı yalnız Google Ads'e iletiyor */
-    try{ if(typeof window.fbq==='function') window.fbq('trackCustom','whatsapp_click',{konum:a.getAttribute('data-wa')||'diger', sayfa:'gv-selection-en'}); }catch(err){}
+    try{ if(typeof window.fbq==='function' && (a.getAttribute('href')||'').indexOf('905322822657')>-1) window.fbq('trackCustom','whatsapp_click',{konum:a.getAttribute('data-wa')||'diger', sayfa:'gv-selection-en'}); }catch(err){}
   }, true);
 })();
 </script>
