@@ -478,6 +478,7 @@ footer .footer-cta a.athena-name:hover {
   .specs { grid-template-columns: repeat(2, 1fr); }
   header .container { flex-direction: column; align-items: flex-start; gap: 0.7rem; padding: 1rem 1.5rem; }
   .header-meta { text-align: left; }
+  header { position: static; }
   .filters-bar { top: 0; position: relative; }
   .property-grid { grid-template-columns: 1fr; }
 }
@@ -2951,8 +2952,10 @@ document.querySelectorAll('.chip[data-subregion]').forEach(chip => {
   chip.addEventListener('click', () => {
     if (chip.getAttribute('aria-disabled') === 'true') return;
     const sr = chip.dataset.subregion;
-    const headerH = document.querySelector('header')?.offsetHeight || 67;
-    const filterH = document.querySelector('.filters-bar')?.offsetHeight || 60;
+    // Yalnızca yapışkan (sticky) olan çubuklar hedefi örter; mobilde ikisi de akışta
+    const stickyH = el => el && getComputedStyle(el).position === 'sticky' ? el.offsetHeight : 0;
+    const headerH = stickyH(document.querySelector('header'));
+    const filterH = stickyH(document.querySelector('.filters-bar'));
     // Section-level chip: subregion adı bir group-head data-group'una eşitse section'ın kendine scroll
     const sectionHead = document.querySelector(`.group-head[data-group="${sr}"]`);
     let target;
@@ -3545,33 +3548,14 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
 .gv-hero-cta .ar{letter-spacing:0;font-size:.95rem}
 .gv-hero-cta-sub{margin-top:.7rem;font-size:.72rem;letter-spacing:.08em;color:rgba(255,253,248,.72)}
 
-/* mobil yapışkan alt CTA barı */
-.gv-bar{position:fixed;left:0;right:0;bottom:0;z-index:398;display:none;width:100%;
-  padding:13px 14px calc(13px + env(safe-area-inset-bottom));
-  background:#F08025;border:0;cursor:pointer;color:#fff;
-  font-family:'Inter',-apple-system,sans-serif;font-size:.72rem;font-weight:700;
-  letter-spacing:.18em;text-transform:uppercase;text-align:center;
-  box-shadow:0 -6px 20px rgba(26,35,50,.3);
-  transform:translateY(110%);transition:transform .25s ease}
-.gv-bar.show{transform:translateY(0)}
-.gv-bar:active,.gv-bar:hover{background:#d96d18}
-@media (max-width:768px){.gv-bar{display:block}}
-@media print{.gv-bar{display:none}}
 </style>
 <button class="gv-pin" type="button" aria-label="GOLDEN VISA BAŞVURUSU"
   onclick="gvFormOpen('pin')"><span class="gv-pin-ok">‹</span>GOLDEN VISA BAŞVURUSU</button>
-<button class="gv-bar" id="gv-bar" type="button" onclick="gvFormOpen('sticky')">✉ Golden Visa Başvuru Formu</button>
 <script>
 function gvFormOpen(k){
   document.getElementById('gv-modal').classList.add('open');
   try{window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'gv_form_open',konum:k||'diger'});}catch(e){}
 }
-(function(){
-  var bar=document.getElementById('gv-bar'),on=false;
-  function chk(){var s=(window.scrollY||document.documentElement.scrollTop)>650;
-    if(s!==on){on=s;bar.classList.toggle('show',s);}}
-  window.addEventListener('scroll',chk,{passive:true});chk();
-})();
 </script>
 
 <!-- sartlar-krem-kagit-v1: #sartlar bolumu sayfanin tasarim diline oturtuldu -->
