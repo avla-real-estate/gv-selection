@@ -1970,6 +1970,16 @@ var KONUM_HAZIR = fetch('https://gv.selection.avlarealestate.com/test/deneme-sec
       n.innerHTML = 'Sözleşmeniz imzalandı · kesin konum işaretlidir · <a href="https://www.google.com/maps/search/?api=1&query=' + pm.dataset.lat + ',' + pm.dataset.lng + '" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600">Google Haritada Aç</a>';
     });
   });
+
+/* imza sonrası sayfa açıkken de kendiliğinden fark etsin: 30 sn'de bir konum.json'a bakar */
+(function(){
+  var t = setInterval(function(){
+    if (KONUM) { clearInterval(t); return; }
+    fetch('https://gv.selection.avlarealestate.com/test/deneme-secki/konum.json?t=' + Date.now(), {cache:'no-store'})
+      .then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; })
+      .then(function(k){ if (!k) return; clearInterval(t); location.reload(); });
+  }, 30000);
+})();
 document.addEventListener('click', function(e){
   var a = e.target.closest('.gm-kilit'); if (!a) return;
   e.preventDefault(); var pm = a.closest('.pmap-not').previousElementSibling;
