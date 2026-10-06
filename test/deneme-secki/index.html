@@ -1047,6 +1047,15 @@ h2 .pno{transform:translateY(-2px)}
 }
 
 </style>
+<style>
+.imz-btn{display:inline-flex;align-items:center;gap:8px;margin:6px 0 2px;padding:9px 16px;border:1.5px solid var(--navy,#1A2E4A);border-radius:999px;color:var(--navy,#1A2E4A)!important;font:600 13px Inter,sans-serif;text-decoration:none;background:#fff}
+.imz-btn:hover{background:var(--navy,#1A2E4A);color:#fff!important}
+.imz-btn.ok{border-color:#2E6B4F;color:#2E6B4F!important;pointer-events:none}
+.imz-muhur{display:flex;align-items:flex-end;gap:6px;min-height:84px;margin-bottom:-10px}
+.imz-muhur img.m{width:78px;height:78px;opacity:.92} .imz-muhur img.s{width:120px;height:auto;margin-left:4px}
+.imz-tarih{font:500 13px Inter,sans-serif;color:var(--navy,#1A2E4A);min-height:84px;display:flex;align-items:flex-end;margin-bottom:-10px}
+@media print{.imz-btn{display:none!important}}
+</style>
 </head>
 <body>
 
@@ -1902,12 +1911,12 @@ function fDaha(b){var k=b.previousElementSibling;
         <div class="imz-b">SÖZLEŞME TARAFI</div>
         <div class="imz-d">Deneme Müşteri · Müşteri kayıt no —</div>
         <div class="imz-n">dijital yer gösterme ile kayda geçmiştir</div>
-        <div class="imz-c"><div><i></i><span>İmza</span></div><div><i></i><span>Tarih</span></div></div>
+        <div class="imz-c"><div><a class="imz-btn" id="imzBtn" href="https://app.imzayeri.com/sign/dd8af953-c857-4d2d-acec-0113949d9e04" target="_blank" rel="noopener">✍ Sözleşmeyi imzala</a><i></i><span>İmza</span></div><div><i></i><span>Tarih</span></div></div>
       </div>
       <div class="imz">
         <div class="imz-b">GAYRİMENKUL ACENTESİ</div>
         <div class="imz-d">Avla Real Estate Gayrimenkul A.Ş. ve Avla International Properties FZ-LLC · M. Sami Akbeniz<br>Caferağa Mah. Şifa Sok. No:19 Kadıköy · İstanbul / Türkiye · Kadıköy V.D. 1061174832</div>
-        <div class="imz-c"><div><i></i><span>İmza</span></div><div><i></i><span>Tarih</span></div></div>
+        <div class="imz-c"><div><div class="imz-muhur"><img class="m" src="https://gv.selection.avlarealestate.com/_imza/muhur-avla-re.png" alt="Avla Real Estate Gayrimenkul A.Ş. mührü"><img class="m" src="https://gv.selection.avlarealestate.com/_imza/muhur-avla-intl.png" alt="Avla International Properties FZ-LLC mührü"><img class="s" src="https://gv.selection.avlarealestate.com/_imza/imza-sami.png" alt="M. Sami Akbeniz imzası"></div><i></i><span>İmza</span></div><div><div class="imz-tarih">06.10.2026</div><i></i><span>Tarih</span></div></div>
       </div>
     </div>
       <div class="sm-yaz-kunye">Avla Real Estate Gayrimenkul A.Ş. · Caferağa Mah. Şifa Sok. No:19 Kadıköy · İstanbul / Türkiye · Kadıköy V.D. 1061174832<br>Avla International Properties FZ-LLC · RAKEZ kayıt no 1911964 · CWEP8995, Compass Building, Al Shohada Road, Al Hamra Industrial Zone-FZ, Ras Al Khaimah, Birleşik Arap Emirlikleri<br>Danışman: M. Sami Akbeniz · +90 532 282 26 57 — Müşteri kayıt no: —</div>
@@ -1963,6 +1972,7 @@ var KONUM_HAZIR = fetch('https://gv.selection.avlarealestate.com/test/deneme-sec
   .then(function(k){
     if (!k) return;
     KONUM = k;
+    var ib=document.getElementById('imzBtn'); if(ib){ ib.textContent='✓ İmzalandı'; ib.classList.add('ok'); ib.removeAttribute('href'); }
     bolgeler.forEach(function(b){ var x = k.bolgeler[b.ad]; if (x){ b.lat = x.lat; b.lng = x.lng; b.r = 60; b.nokta = 'kesin'; } });
     Object.keys(k.pmap || {}).forEach(function(id){ var el = document.getElementById(id); if (el){ el.dataset.lat = k.pmap[id].lat; el.dataset.lng = k.pmap[id].lng; el.dataset.r = 60; el.dataset.nokta = 'kesin'; } });
     document.querySelectorAll('.pmap-not').forEach(function(n){
