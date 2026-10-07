@@ -2534,7 +2534,7 @@ function imzIzle(){
   function bak(){
     if (KONUM){ clearInterval(_imzIzleT); return; }
     fetch('https://imzayeri.com/api/rest/recipient_requests/' + kod + '/job', {cache:'no-store'})
-      .then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; })
+      .then(function(r){ return r.json().then(function(j){ return r.ok ? j : (String(j && j.code) === '222' ? {recipient:{signTime:1}} : null); }); }).catch(function(){ return null; })
       .then(function(d){
         if (!d || !d.recipient || _imzAlindi) return;
         var st = String(d.recipient.status || '').toUpperCase();
