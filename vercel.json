@@ -27,5 +27,105 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "thessaloniki-bay-residences-a0182.avlarealestate.com"
+        }
+      ],
+      "destination": "/mulk/a0182/:path*"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "chalandri-court-residences-a0223.avlarealestate.com"
+        }
+      ],
+      "destination": "/mulk/a0223/:path*"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "neo-faliro-park-residences-a0135.avlarealestate.com"
+        }
+      ],
+      "destination": "/mulk/a0135/:path*"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/mulk/a0182",
+      "destination": "https://thessaloniki-bay-residences-a0182.avlarealestate.com/",
+      "permanent": false,
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ]
+    },
+    {
+      "source": "/mulk/a0182/",
+      "destination": "https://thessaloniki-bay-residences-a0182.avlarealestate.com/",
+      "permanent": false,
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ]
+    },
+    {
+      "source": "/mulk/a0223",
+      "destination": "https://chalandri-court-residences-a0223.avlarealestate.com/",
+      "permanent": false,
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ]
+    },
+    {
+      "source": "/mulk/a0223/",
+      "destination": "https://chalandri-court-residences-a0223.avlarealestate.com/",
+      "permanent": false,
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ]
+    },
+    {
+      "source": "/mulk/a0135",
+      "destination": "https://neo-faliro-park-residences-a0135.avlarealestate.com/",
+      "permanent": false,
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ]
+    },
+    {
+      "source": "/mulk/a0135/",
+      "destination": "https://neo-faliro-park-residences-a0135.avlarealestate.com/",
+      "permanent": false,
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ]
+    }
   ]
 }
