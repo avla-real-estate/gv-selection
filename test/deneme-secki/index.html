@@ -1963,8 +1963,7 @@ var IMZA_URL = 'https://app.imzayeri.com/sign/1cc983f3-2665-451c-87c5-72023a3e73
 var KONUM = null;
 function gmAc(lat, lng){
   if (KONUM){ window.open('https://www.google.com/maps/search/?api=1&query=' + lat + ',' + lng, '_blank', 'noopener'); return false; }
-  if (IMZA_URL){ window.open(IMZA_URL, '_blank', 'noopener'); }
-  else { alert('Sözleşme bağlantısı hazırlanıyor.'); }
+  imzKutu('davet');
   return false;
 }
 var KONUM_HAZIR = fetch('https://gv.selection.avlarealestate.com/test/deneme-secki/konum.json?t=' + Date.now(), {cache:'no-store'})
@@ -1972,6 +1971,7 @@ var KONUM_HAZIR = fetch('https://gv.selection.avlarealestate.com/test/deneme-sec
   .then(function(k){
     if (!k) return;
     KONUM = k;
+    try { if (localStorage.getItem('imzaGitti')) { localStorage.removeItem('imzaGitti'); setTimeout(function(){ imzKutu('acildi'); }, 900); } } catch(e){}
     var ib=document.getElementById('imzBtn'); if(ib){ ib.textContent='✓ İmzalandı'; ib.classList.add('ok'); ib.removeAttribute('href'); }
     bolgeler.forEach(function(b){ var x = k.bolgeler[b.ad]; if (x){ b.lat = x.lat; b.lng = x.lng; b.r = 60; b.nokta = 'kesin'; } });
     Object.keys(k.pmap || {}).forEach(function(id){ var el = document.getElementById(id); if (el){ el.dataset.lat = k.pmap[id].lat; el.dataset.lng = k.pmap[id].lng; el.dataset.r = 60; el.dataset.nokta = 'kesin'; } });
@@ -1988,7 +1988,7 @@ var KONUM_HAZIR = fetch('https://gv.selection.avlarealestate.com/test/deneme-sec
     fetch('https://gv.selection.avlarealestate.com/test/deneme-secki/konum.json?t=' + Date.now(), {cache:'no-store'})
       .then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; })
       .then(function(k){ if (!k) return; clearInterval(t); location.reload(); });
-  }, 30000);
+  }, (function(){ try { return localStorage.getItem('imzaGitti') ? 15000 : 30000; } catch(e){ return 30000; } })());
 })();
 document.addEventListener('click', function(e){
   var a = e.target.closest('.gm-kilit'); if (!a) return;
@@ -2474,5 +2474,66 @@ function dKapat(b){var d=b.closest('details');if(!d)return;var once=d.getBoundin
 })();
 </script>
 
+
+<!-- İMZA KUTULARI (Sami 07.10.2026): konuma basınca önce davet kutusu → İmza Yeri; dönünce "birkaç dakika" bilgisi; konum açılınca kutlama -->
+<style>
+.imzk-ort{position:fixed;inset:0;background:rgba(20,30,46,.55);display:none;align-items:center;justify-content:center;z-index:9999;padding:16px}
+.imzk-ort.ac{display:flex}
+.imzk{background:#fff;max-width:440px;width:100%;border-radius:10px;padding:26px 24px 20px;box-shadow:0 18px 50px rgba(0,0,0,.25);text-align:left;position:relative}
+.imzk h3{margin:0 0 8px;font-size:23px}
+.imzk p{margin:0 0 10px;color:var(--ink);font-size:14px;line-height:1.6}
+.imzk ul{margin:4px 0 14px 18px;padding:0;color:var(--mut);font-size:13.5px;line-height:1.7}
+.imzk .ust{font:600 11px Inter,sans-serif;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-bottom:6px}
+.imzk .btn1{display:block;width:100%;text-align:center;background:var(--navy);color:#fff;border:0;border-radius:6px;padding:12px 14px;font:600 14.5px Inter,sans-serif;cursor:pointer;text-decoration:none}
+.imzk .btn1:hover{background:#243c5f}
+.imzk .btn2{display:block;width:100%;text-align:center;background:none;border:0;color:var(--mut);padding:10px;font:500 13px Inter,sans-serif;cursor:pointer}
+.imzk .kapa{position:absolute;top:8px;right:12px;background:none;border:0;font-size:22px;color:#9aa3ae;cursor:pointer}
+.imzk .saat{display:inline-block;width:38px;height:38px;border-radius:50%;border:3px solid var(--cizgi);border-top-color:var(--gold);animation:imzkd 1.1s linear infinite;margin-bottom:10px}
+@keyframes imzkd{to{transform:rotate(360deg)}}
+</style>
+<div class="imzk-ort" id="imzkOrt" onclick="if(event.target===this)imzKapa()"><div class="imzk" id="imzk"></div></div>
+<script>
+function imzKapa(){ document.getElementById('imzkOrt').classList.remove('ac'); }
+function imzKutu(tur){
+  var k = document.getElementById('imzk'), h = '';
+  if (tur === 'davet') {
+    h = '<button class="kapa" onclick="imzKapa()">×</button>'
+      + '<div class="ust">Kesin konum</div><h3>Mülkün tam yerini görmek için tek adım kaldı</h3>'
+      + '<p>Seçkideki mülklerin kesin konumlarını, kısa <b>Dijital Yer Gösterme Protokolü</b>\'nü onayladığınız anda açıyoruz.</p>'
+      + '<ul><li>Telefonunuzdan 1 dakikada, e-imza ile onaylanır</li><li>Size hiçbir ücret ya da alım yükümlülüğü getirmez</li>'
+      + '<li>Onaydan birkaç dakika sonra tüm konumlar bu haritada kendiliğinden açılır</li></ul>'
+      + '<a class="btn1" href="#" onclick="return imzGit()">✍ Protokolü onayla, konumları aç</a>'
+      + '<button class="btn2" onclick="imzKapa()">Şimdilik semt düzeyinde bakmaya devam et</button>';
+  } else if (tur === 'bekle') {
+    h = '<button class="kapa" onclick="imzKapa()">×</button><div style="text-align:center"><span class="saat"></span></div>'
+      + '<div class="ust" style="text-align:center">Teşekkür ederiz</div><h3 style="text-align:center">İmzanız alınıyor</h3>'
+      + '<p style="text-align:center">Protokolü onayladıysanız kesin konumlar <b>birkaç dakika içinde</b> bu haritada kendiliğinden açılacak. Sayfayı kapatmanıza gerek yok.</p>'
+      + '<button class="btn2" onclick="imzKapa()">Tamam</button>';
+  } else if (tur === 'acildi') {
+    h = '<button class="kapa" onclick="imzKapa()">×</button><div class="ust">Protokol imzalandı</div>'
+      + '<h3>Konumlar açıldı ✓</h3><p>Haritadaki işaretler artık mülklerin kesin yerini gösteriyor. Her mülkte <b>Google Haritada Aç</b> ile yol tarifi alabilirsiniz.</p>'
+      + '<a class="btn1" href="#avla-map" onclick="imzKapa()">Haritaya git</a>';
+  }
+  k.innerHTML = h; document.getElementById('imzkOrt').classList.add('ac');
+}
+function imzGit(){
+  try { localStorage.setItem('imzaGitti', Date.now()); } catch(e){}
+  if (IMZA_URL) window.open(IMZA_URL, '_blank', 'noopener');
+  imzKapa(); return false;
+}
+/* İmza Yeri sekmesinden sayfaya dönünce: "birkaç dakika" kutusu (bir kez) */
+(function(){
+  var gosterildi = false;
+  function don(){
+    if (document.visibilityState !== 'visible' || KONUM || gosterildi) return;
+    var t = 0; try { t = +localStorage.getItem('imzaGitti') || 0; } catch(e){}
+    if (t && Date.now() - t > 8000 && Date.now() - t < 6 * 3600e3) { gosterildi = true; imzKutu('bekle'); }
+  }
+  document.addEventListener('visibilitychange', don); window.addEventListener('focus', don);
+  /* üstteki "Sözleşmeyi imzala" düğmesi de aynı akıştan geçsin */
+  var ib = document.getElementById('imzBtn');
+  if (ib) ib.addEventListener('click', function(e){ if (KONUM) return; e.preventDefault(); imzKutu('davet'); });
+})();
+</script>
 </body>
 </html>
