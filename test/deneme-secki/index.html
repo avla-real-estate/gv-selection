@@ -2501,13 +2501,18 @@ function imzKutu(tur){
       + '<div class="ust">Kesin konum</div><h3>Mülkün tam yerini görmek için tek adım kaldı</h3>'
       + '<p>Seçkideki mülklerin kesin konumlarını, kısa <b>Dijital Yer Gösterme Protokolü</b>\'nü onayladığınız anda açıyoruz.</p>'
       + '<ul><li>Telefonunuzdan 1 dakikada, e-imza ile onaylanır</li><li>Size hiçbir ücret ya da alım yükümlülüğü getirmez</li>'
-      + '<li>Onaydan birkaç dakika sonra tüm konumlar bu haritada kendiliğinden açılır</li></ul>'
-      + '<a class="btn1" href="#" onclick="return imzGit()">✍ Protokolü onayla, konumları aç</a>'
+      + '<li>Onaydan yaklaşık 1 dakika sonra tüm konumlar bu haritada kendiliğinden açılır</li></ul>'
+      + '<a class="btn1" href="#" onclick="return imzGit()">📄 Protokolü incele, konumları aç</a>'
       + '<button class="btn2" onclick="imzKapa()">Şimdilik semt düzeyinde bakmaya devam et</button>';
   } else if (tur === 'bekle') {
     h = '<button class="kapa" onclick="imzKapa()">×</button><div style="text-align:center"><span class="saat"></span></div>'
       + '<div class="ust" style="text-align:center">Teşekkür ederiz</div><h3 style="text-align:center">İmzanız alınıyor</h3>'
-      + '<p style="text-align:center">Protokolü onayladıysanız kesin konumlar <b>birkaç dakika içinde</b> bu haritada kendiliğinden açılacak. Sayfayı kapatmanıza gerek yok.</p>'
+      + '<p style="text-align:center">İmzanızı tamamladığınız an bunu göreceğiz; kesin konumlar <b>yaklaşık 1 dakika içinde</b> bu haritada kendiliğinden açılacak. Sayfayı kapatmanıza gerek yok.</p>'
+      + '<button class="btn2" onclick="imzKapa()">Tamam</button>';
+  } else if (tur === 'alindi') {
+    h = '<button class="kapa" onclick="imzKapa()">×</button><div style="text-align:center"><span class="saat"></span></div>'
+      + '<div class="ust" style="text-align:center">İmzanız alındı ✓</div><h3 style="text-align:center">Konumlar açılıyor</h3>'
+      + '<p style="text-align:center">Teşekkür ederiz. Kesin konumlar <b>yaklaşık 1 dakika içinde</b> bu haritada kendiliğinden açılacak. Sayfayı kapatmanıza gerek yok.</p>'
       + '<button class="btn2" onclick="imzKapa()">Tamam</button>';
   } else if (tur === 'acildi') {
     h = '<button class="kapa" onclick="imzKapa()">×</button><div class="ust">Protokol imzalandı</div>'
@@ -2519,7 +2524,34 @@ function imzKutu(tur){
 function imzGit(){
   try { localStorage.setItem('imzaGitti', Date.now()); } catch(e){}
   if (IMZA_URL) window.open(IMZA_URL, '_blank', 'noopener');
-  imzKapa(); return false;
+  imzKapa(); imzIzle(); return false;
+}
+/* İmza Yeri durum adresi (herkese açık, CORS açık): imza atıldığı an anlaşılır — e-posta beklenmez (Sami 07.10: "bekletmemeli") */
+var _imzIzleT = null, _imzAlindi = false;
+function imzIzle(){
+  if (_imzIzleT || !IMZA_URL || KONUM) return;
+  var kod = IMZA_URL.replace(/\/+$/,'').split('/').pop();
+  function bak(){
+    if (KONUM){ clearInterval(_imzIzleT); return; }
+    fetch('https://imzayeri.com/api/rest/recipient_requests/' + kod + '/job', {cache:'no-store'})
+      .then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; })
+      .then(function(d){
+        if (!d || !d.recipient || _imzAlindi) return;
+        var st = String(d.recipient.status || '').toUpperCase();
+        if (d.recipient.signTime || ['WAITING','PENDING','SENT','VIEWED','OPENED','IN_PROGRESS','NEW','DRAFT','REJECTED','DECLINED','CANCELLED','EXPIRED'].indexOf(st) < 0){
+          _imzAlindi = true; imzKutu('alindi'); konumBekle();
+        }
+      });
+  }
+  bak(); _imzIzleT = setInterval(bak, 4000);
+}
+/* imza alındıktan sonra konum.json'u 5 sn'de bir yokla, gelince sayfayı yenile (yenilenince 'Konumlar açıldı' kutusu) */
+function konumBekle(){
+  var t = setInterval(function(){
+    fetch(location.pathname.replace(/[^\/]*$/,'') + 'konum.json?t=' + Date.now(), {cache:'no-store'})
+      .then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; })
+      .then(function(k){ if (k){ clearInterval(t); location.reload(); } });
+  }, 5000);
 }
 /* İmza Yeri sekmesinden sayfaya dönünce: "birkaç dakika" kutusu (bir kez) */
 (function(){
@@ -2527,9 +2559,10 @@ function imzGit(){
   function don(){
     if (document.visibilityState !== 'visible' || KONUM || gosterildi) return;
     var t = 0; try { t = +localStorage.getItem('imzaGitti') || 0; } catch(e){}
-    if (t && Date.now() - t > 8000 && Date.now() - t < 6 * 3600e3) { gosterildi = true; imzKutu('bekle'); }
+    if (t && Date.now() - t > 8000 && Date.now() - t < 6 * 3600e3) { gosterildi = true; if (!_imzAlindi) imzKutu('bekle'); imzIzle(); }
   }
   document.addEventListener('visibilitychange', don); window.addEventListener('focus', don);
+  try { var t0 = +localStorage.getItem('imzaGitti') || 0; if (t0 && Date.now() - t0 < 6 * 3600e3) setTimeout(imzIzle, 1500); } catch(e){}
   /* üstteki "Sözleşmeyi imzala" düğmesi de aynı akıştan geçsin */
   var ib = document.getElementById('imzBtn');
   if (ib) ib.addEventListener('click', function(e){ if (KONUM) return; e.preventDefault(); imzKutu('davet'); });
