@@ -61,6 +61,201 @@
       }
     },
     {
+      "src": "^/mulk/a0161/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://south-glyfada-a0161.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0160/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://piraeus-serenity-residence-a0160.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0168/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://kaminia-terrace-residences-a0168.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0169/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://the-ellinikon-views-a0169.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0170/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://alimos-coast-residences-a0170.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0171/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://koukaki-heights-residences-a0171.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0158/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://afea-residence-aegina-a0158.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0219/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://elliniko-garden-duplexes-a0219.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0317/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://neo-irakleio-pool-residences-a0317.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0320/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://nea-ionia-forest-park-residences-a0320.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0225/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://exarcheia-museum-residences-a0225.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0226/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://gazi-technopolis-residences-a0226.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0224/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://ilioupoli-boutique-residences-a0224.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0121/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://the-hera-athens-a0121.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0233/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://monastiraki-residences-a0233.avlarealestate.com/"
+      }
+    },
+    {
       "src": "^/(.*)$",
       "has": [
         {
@@ -89,6 +284,156 @@
         }
       ],
       "dest": "/mulk/a0135/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "south-glyfada-a0161.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0161/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "piraeus-serenity-residence-a0160.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0160/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "kaminia-terrace-residences-a0168.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0168/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "the-ellinikon-views-a0169.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0169/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "alimos-coast-residences-a0170.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0170/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "koukaki-heights-residences-a0171.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0171/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "afea-residence-aegina-a0158.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0158/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "elliniko-garden-duplexes-a0219.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0219/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "neo-irakleio-pool-residences-a0317.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0317/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "nea-ionia-forest-park-residences-a0320.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0320/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "exarcheia-museum-residences-a0225.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0225/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gazi-technopolis-residences-a0226.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0226/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "ilioupoli-boutique-residences-a0224.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0224/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "the-hera-athens-a0121.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0121/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "monastiraki-residences-a0233.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0233/$1"
     }
   ]
 }
