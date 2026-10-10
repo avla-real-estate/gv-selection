@@ -2514,6 +2514,11 @@ function imzKutu(tur){
       + '<div class="ust" style="text-align:center">İmzanız alındı ✓</div><h3 style="text-align:center">Konumlar açılıyor</h3>'
       + '<p style="text-align:center">Teşekkür ederiz. Kesin konumlar <b>yaklaşık 1 dakika içinde</b> bu haritada kendiliğinden açılacak. Sayfayı kapatmanıza gerek yok.</p>'
       + '<button class="btn2" onclick="imzKapa()">Tamam</button>';
+  } else if (tur === 'red') {
+    h = '<button class="kapa" onclick="imzKapa()">×</button><div class="ust">Protokol onaylanmadı</div>'
+      + '<h3>Konumlar semt düzeyinde kalıyor</h3><p>Protokolü onaylamadığınız için kesin konumlar açılmadı. Haritada mülklerin bulunduğu semtleri görmeye devam edebilirsiniz.</p>'
+      + '<p>Fikrinizi değiştirirseniz danışmanınızdan yeni bir onay bağlantısı isteyebilirsiniz.</p>'
+      + '<button class="btn2" onclick="imzKapa()">Tamam</button>';
   } else if (tur === 'acildi') {
     h = '<button class="kapa" onclick="imzKapa()">×</button><div class="ust">Protokol imzalandı</div>'
       + '<h3>Konumlar açıldı ✓</h3><p>Haritadaki işaretler artık mülklerin kesin yerini gösteriyor. Her mülkte <b>Google Haritada Aç</b> ile yol tarifi alabilirsiniz.</p>'
@@ -2533,13 +2538,17 @@ function imzIzle(){
   var kod = IMZA_URL.replace(/\/+$/,'').split('/').pop();
   function bak(){
     if (KONUM){ clearInterval(_imzIzleT); return; }
-    fetch('https://imzayeri.com/api/rest/recipient_requests/' + kod + '/job', {cache:'no-store'})
-      .then(function(r){ return r.json().then(function(j){ return r.ok ? j : (String(j && j.code) === '222' ? {recipient:{signTime:1}} : null); }); }).catch(function(){ return null; })
+    /* /status: SUCCESS = imzalandı · REJECTED = reddedildi (Sami 10.10: ret = imzasız, konum AÇILMAZ) */
+    fetch('https://imzayeri.com/api/rest/recipient_requests/' + kod + '/status', {cache:'no-store'})
+      .then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; })
       .then(function(d){
-        if (!d || !d.recipient || _imzAlindi) return;
-        var st = String(d.recipient.status || '').toUpperCase();
-        if (d.recipient.signTime || ['WAITING','PENDING','SENT','VIEWED','OPENED','IN_PROGRESS','NEW','DRAFT','REJECTED','DECLINED','CANCELLED','EXPIRED'].indexOf(st) < 0){
-          _imzAlindi = true; imzKutu('alindi'); konumBekle();
+        if (!d || _imzAlindi) return;
+        var st = String(d.status || '').toUpperCase();
+        if (st === 'SUCCESS' || st === 'SIGNED' || st === 'COMPLETED'){ _imzAlindi = true; clearInterval(_imzIzleT); imzKutu('alindi'); konumBekle(); }
+        else if (['REJECTED','DECLINED','CANCELLED','CANCELED','EXPIRED'].indexOf(st) >= 0){
+          _imzAlindi = true; clearInterval(_imzIzleT);
+          try { localStorage.removeItem('imzaGitti'); } catch(e){}
+          imzKutu('red');
         }
       });
   }
