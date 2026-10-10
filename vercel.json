@@ -256,6 +256,45 @@
       }
     },
     {
+      "src": "^/mulk/a0220/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://kato-elliniko-riviera-suites-a0220.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0286/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://glyfada-ellinikon-lofts-a0286.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/lyk/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://lykovrysi-north-residences.avlarealestate.com/"
+      }
+    },
+    {
       "src": "^/(.*)$",
       "has": [
         {
@@ -434,6 +473,36 @@
         }
       ],
       "dest": "/mulk/a0233/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "kato-elliniko-riviera-suites-a0220.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0220/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "glyfada-ellinikon-lofts-a0286.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0286/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "lykovrysi-north-residences.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/lyk/$1"
     }
   ]
 }
