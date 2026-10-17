@@ -1218,6 +1218,110 @@
       }
     },
     {
+      "src": "^/mulk/a0115/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://kareas-hill-lofts-a0115.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0147/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://agios-dimitrios-south-residences-a0147.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0157/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://south-side-suites-a0157.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0164/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://aegina-town-residences-a0164.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0234/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://neos-kosmos-tram-residences-a0234.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0235/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://ano-glyfada-garden-suites-a0235.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0236/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://nea-ionia-park-lofts-a0236.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0277/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://piraeus-metro-duplexes-a0277.avlarealestate.com/"
+      }
+    },
+    {
       "src": "^/(.*)$",
       "has": [
         {
@@ -2136,6 +2240,86 @@
         }
       ],
       "dest": "/mulk/a0273/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "kareas-hill-lofts-a0115.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0115/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "agios-dimitrios-south-residences-a0147.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0147/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "south-side-suites-a0157.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0157/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "aegina-town-residences-a0164.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0164/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "neos-kosmos-tram-residences-a0234.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0234/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "ano-glyfada-garden-suites-a0235.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0235/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "nea-ionia-park-lofts-a0236.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0236/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "piraeus-metro-duplexes-a0277.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0277/$1"
     }
   ]
 }
