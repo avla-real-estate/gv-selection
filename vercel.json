@@ -295,6 +295,149 @@
       }
     },
     {
+      "src": "^/mulk/a0130/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://ampelokipi-court-residences-a0130.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0132/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://opus-residence-a0132.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0222/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://kallithea-garden-residences-a0222.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0231/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://alimos-marina-pool-residences-a0231.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0232/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://ellinikon-park-residences-a0232.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0266/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://saronida-sea-view-residences-a0266.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0267/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://glyfada-boutique-residences-a0267.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0268/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://glyfada-centre-residences-a0268.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0272/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://ilioupoli-boutique-suites-a0272.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0274/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://voula-garden-residences-a0274.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0291/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://paleo-faliro-marina-residences-a0291.avlarealestate.com/"
+      }
+    },
+    {
       "src": "^/(.*)$",
       "has": [
         {
@@ -503,6 +646,116 @@
         }
       ],
       "dest": "/mulk/lyk/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "ampelokipi-court-residences-a0130.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0130/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "opus-residence-a0132.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0132/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "kallithea-garden-residences-a0222.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0222/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "alimos-marina-pool-residences-a0231.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0231/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "ellinikon-park-residences-a0232.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0232/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "saronida-sea-view-residences-a0266.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0266/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "glyfada-boutique-residences-a0267.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0267/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "glyfada-centre-residences-a0268.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0268/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "ilioupoli-boutique-suites-a0272.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0272/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "voula-garden-residences-a0274.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0274/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "paleo-faliro-marina-residences-a0291.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0291/$1"
     }
   ]
 }
