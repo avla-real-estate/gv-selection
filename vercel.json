@@ -1214,7 +1214,7 @@
       ],
       "status": 307,
       "headers": {
-        "Location": "https://piraeus-harbour-residences-a0273.avlarealestate.com/"
+        "Location": "https://piraeus-port-lofts-a0273.avlarealestate.com/"
       }
     },
     {
@@ -2236,7 +2236,7 @@
       "has": [
         {
           "type": "host",
-          "value": "piraeus-harbour-residences-a0273.avlarealestate.com"
+          "value": "piraeus-port-lofts-a0273.avlarealestate.com"
         }
       ],
       "dest": "/mulk/a0273/$1"
