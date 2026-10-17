@@ -698,6 +698,266 @@
       }
     },
     {
+      "src": "^/mulk/a0152/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://peristeri-hill-residences-a0152.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0150/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://the-socrates-living-a0150.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0151/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://nea-ionia-court-residences-a0151.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0149/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://kallithea-park-suites-a0149.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0148/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://nea-erythraia-garden-residences-a0148.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0146/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://blue-bay-4-a0146.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0145/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://south-moschato-residences-a0145.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0144/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://peristeri-garden-court-a0144.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0143/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://pangrati-twins-a0143.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0142/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://oliville-residences-a0142.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0141/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://nikiana-beach-residences-a0141.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0140/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://chalandri-project-halandri-projesi-a0140.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0139/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://filadelfia-park-suites-a0139.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0137/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://the-one-a0137.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0136/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://elliniko-court-residences-a0136.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0134/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://perikleous-rodou-marousi-a0134.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0133/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://athens-metro-apartments-a0133.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0131/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://izi-lux-a0131.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0129/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://ampelokipi-city-suites-a0129.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0128/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://nikaia-court-residences-a0128.avlarealestate.com/"
+      }
+    },
+    {
       "src": "^/(.*)$",
       "has": [
         {
@@ -1216,6 +1476,206 @@
         }
       ],
       "dest": "/mulk/a0153/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "peristeri-hill-residences-a0152.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0152/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "the-socrates-living-a0150.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0150/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "nea-ionia-court-residences-a0151.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0151/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "kallithea-park-suites-a0149.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0149/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "nea-erythraia-garden-residences-a0148.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0148/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "blue-bay-4-a0146.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0146/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "south-moschato-residences-a0145.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0145/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "peristeri-garden-court-a0144.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0144/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "pangrati-twins-a0143.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0143/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "oliville-residences-a0142.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0142/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "nikiana-beach-residences-a0141.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0141/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "chalandri-project-halandri-projesi-a0140.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0140/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "filadelfia-park-suites-a0139.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0139/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "the-one-a0137.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0137/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "elliniko-court-residences-a0136.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0136/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "perikleous-rodou-marousi-a0134.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0134/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "athens-metro-apartments-a0133.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0133/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "izi-lux-a0131.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0131/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "ampelokipi-city-suites-a0129.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0129/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "nikaia-court-residences-a0128.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0128/$1"
     }
   ]
 }
