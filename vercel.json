@@ -958,6 +958,266 @@
       }
     },
     {
+      "src": "^/mulk/a0127/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://mikrolimano-bay-residences-a0127.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0126/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://rentis-park-residences-a0126.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0125/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://piraeus-harbour-residences-a0125.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0124/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://aurora-residences-a0124.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0123/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://kallithea-central-suites-a0123.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0120/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://piraeus-heritage-residences-a0120.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0117/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://riviera-gate-athens-a0117.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0116/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://mavi-port-a0116.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0227/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://gazi-kerameikos-lofts-a0227.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0228/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://neos-kosmos-metro-suites-a0228.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0229/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://neos-kosmos-court-residences-a0229.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0230/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://nea-ionia-metro-residences-a0230.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0237/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://katechaki-metro-suites-a0237.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0245/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://psyrri-urban-residences-a0245.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0247/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://piraeus-loft-suites-a0247.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0264/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://peristeri-garden-residences-a0264.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0265/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://moschato-garden-residences-a0265.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0269/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://kallithea-garden-duplexes-a0269.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0271/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://kallithea-park-view-penthouse-a0271.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0273/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://piraeus-harbour-residences-a0273.avlarealestate.com/"
+      }
+    },
+    {
       "src": "^/(.*)$",
       "has": [
         {
@@ -1676,6 +1936,206 @@
         }
       ],
       "dest": "/mulk/a0128/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "mikrolimano-bay-residences-a0127.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0127/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "rentis-park-residences-a0126.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0126/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "piraeus-harbour-residences-a0125.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0125/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "aurora-residences-a0124.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0124/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "kallithea-central-suites-a0123.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0123/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "piraeus-heritage-residences-a0120.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0120/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "riviera-gate-athens-a0117.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0117/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "mavi-port-a0116.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0116/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gazi-kerameikos-lofts-a0227.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0227/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "neos-kosmos-metro-suites-a0228.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0228/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "neos-kosmos-court-residences-a0229.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0229/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "nea-ionia-metro-residences-a0230.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0230/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "katechaki-metro-suites-a0237.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0237/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "psyrri-urban-residences-a0245.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0245/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "piraeus-loft-suites-a0247.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0247/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "peristeri-garden-residences-a0264.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0264/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "moschato-garden-residences-a0265.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0265/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "kallithea-garden-duplexes-a0269.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0269/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "kallithea-park-view-penthouse-a0271.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0271/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "piraeus-harbour-residences-a0273.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0273/$1"
     }
   ]
 }
