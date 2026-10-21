@@ -477,100 +477,127 @@ tr.dr-r .pbtn,tr.dr-s .pbtn{opacity:.65}
 .env-durum{margin:10px 0 2px;font-size:12px;line-height:1.5;color:#5a6472}
 .env-durum b{font-weight:500;color:#1A2E4A}
 </style>
-</head>
+<!--SATIS:B:css--><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style id="satis-css">
+:root{--navy:#142A42;--civit:#2B4170;--gold:#9C7F4E;--golda:#D2BE99;--cream:#F6F1E7;--kirec:#EDEBE4;--ink:#1F1E1B;--mut:#5f5b52;--cizgi:#E2D9C6;--cta:#F08025;--ctah:#d96d18;--zeytin:#637A47}
+body,body *:not(svg):not(path):not(i.fa){font-family:'Jost',system-ui,-apple-system,'Segoe UI',sans-serif!important;font-style:normal!important}
+body{font-weight:300;font-size:15.5px;background:var(--cream);color:var(--ink);line-height:1.6}
+b,strong,th,dt,summary,.eyebrow,.b1,.b2,button,[style*="font-weight:6"],[style*="font-weight:7"],[style*="font-weight: 6"],[style*="font-weight: 7"],[style*="font:6"],[style*="font:7"],[style*="font: 6"],[style*="font: 7"]{font-weight:500!important}
+h1,h2,h3,h4,h5,.hstats .n{font-weight:400!important;letter-spacing:-.005em}
+h2{font-size:30px;color:var(--navy)}
+.eyebrow{color:var(--gold);letter-spacing:.2em}
+.hero{min-height:min(92vh,760px)}
+.hero>img{opacity:.66}
+.hin{padding:110px 20px 34px;background:linear-gradient(180deg,rgba(20,42,66,0) 0%,rgba(20,42,66,.55) 45%,rgba(20,42,66,.94) 100%)}
+.hero h1{font-size:clamp(34px,5.6vw,58px);color:#fff}
+.hero .sub{font-size:clamp(17px,2.1vw,20px);color:#efe6d3;font-weight:300;max-width:660px;margin-top:12px;line-height:1.45}
+.hlogo img{height:118px}
+.hstats{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;border:0;padding:0}
+.hstats>div{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:1px;padding:9px 14px 10px;border-radius:12px;background:rgba(246,241,231,.11);border:1px solid rgba(210,190,153,.38);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);min-width:0;max-width:100%}
+.hstats .n{font-size:17px!important;color:#fff!important;line-height:1.25;overflow-wrap:anywhere}
+.hstats .l{font-size:10px!important;letter-spacing:.14em;color:var(--golda)!important;text-transform:uppercase}
+.hstats .c-fiy{order:1}.hstats .c-gv{order:2;background:rgba(99,122,71,.5);border-color:rgba(190,205,160,.5)}.hstats .c-tes{order:3}.hstats .c-kir{order:4}.hstats .c-en{order:5}.hstats .c-mus{order:6}
+.hstats .c-yok{display:none!important}
+.hcta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.hcta a{display:inline-flex;align-items:center;gap:8px;border-radius:99px;padding:12px 22px;font-size:14.5px;text-decoration:none;font-weight:500}
+.hcta .h1c{background:var(--cta);color:#fff;box-shadow:0 4px 16px rgba(240,128,37,.35)}.hcta .h1c:hover{background:var(--ctah)}
+.hcta .h2c{border:1.5px solid rgba(210,190,153,.6);color:#fff;background:rgba(20,42,66,.35)}
+.hcta svg{width:16px;height:16px;fill:currentColor}
+section.satis{padding:44px 0 6px}
+.sx-grid{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:34px;align-items:center}
+.sx-grid.sx-yatay{grid-template-columns:1fr}.sx-grid.sx-yok{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.yt{position:relative;border-radius:18px;overflow:hidden;background:#0f1d2e;cursor:pointer;box-shadow:0 10px 34px rgba(20,42,66,.22)}
+.yt-dikey{aspect-ratio:9/16;max-height:620px}.yt-yatay{aspect-ratio:16/9}
+.yt img,.yt iframe,.yt video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
+.yt img{opacity:.88;transition:.3s}.yt:hover img{opacity:1;transform:scale(1.02)}
+.yt-oy{position:absolute;left:50%;top:50%;width:74px;height:74px;margin:-37px 0 0 -37px;border-radius:50%;background:rgba(240,128,37,.94);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.yt-oy svg{width:34px;height:34px;fill:#fff;margin-left:4px}
+.yt-et{position:absolute;left:14px;bottom:12px;color:#fff;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;background:rgba(20,42,66,.6);padding:5px 10px;border-radius:99px}
+.sx-gorsel{border-radius:18px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 10px 34px rgba(20,42,66,.18)}.sx-gorsel img{width:100%;height:100%;object-fit:cover}
+.sx-metin h2{margin-bottom:14px}
+.sx-neden{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:10px}
+.sx-neden li{position:relative;padding:12px 16px 12px 46px;background:#fff;border-radius:12px;border:1px solid var(--cizgi);font-size:16px;line-height:1.4;color:var(--ink)}
+.sx-neden li:before{content:"";position:absolute;left:16px;top:50%;width:18px;height:18px;margin-top:-9px;border-radius:50%;background:var(--zeytin) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M9.5 16.6 5 12.1l1.4-1.4 3.1 3.1 8-8L19 7.2z'/%3E%3C/svg%3E") center/14px no-repeat}
+.sx-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.sx-cta a{display:inline-flex;align-items:center;border-radius:99px;padding:12px 22px;font-size:14.5px;text-decoration:none;font-weight:500}
+.sx-cta .c1{background:var(--cta);color:#fff}.sx-cta .c1:hover{background:var(--ctah)}.sx-cta .c2{border:1.5px solid var(--civit);color:var(--civit)}
+.vitrin{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:8px;margin-top:16px}
+.vitrin .vt{position:relative;padding:0;border:0;background:#ddd;border-radius:12px;overflow:hidden;cursor:zoom-in}
+.vitrin .vt img{width:100%;height:100%;object-fit:cover;transition:.35s}
+.vitrin .vt:hover img{transform:scale(1.03)}
+.vitrin .vt:first-child{grid-column:span 2;grid-row:span 2}
+.vitrin.v1{grid-template-columns:1fr;grid-auto-rows:380px}.vitrin.v1 .vt:first-child{grid-column:auto;grid-row:auto}
+.vitrin.v2,.vitrin.v3{grid-template-columns:2fr 1fr;grid-auto-rows:170px}.vitrin.v2 .vt:first-child,.vitrin.v3 .vt:first-child{grid-column:auto}
+.vt-ust{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(20,42,66,.55);color:#fff;font-size:26px;letter-spacing:.04em}
+#fiyatlar .pmap,#fiyatlar .pmap-not,section[id] h2 .pno{display:none!important}
+.sx-tum{margin-top:12px;background:none;border:1.5px solid var(--civit);color:var(--civit);border-radius:99px;padding:10px 20px;font-size:14px;cursor:pointer}
+.kx{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px;margin-top:14px;background:#fff;border-radius:16px;border:1px solid var(--cizgi);padding:8px 22px}
+.kx>div{display:grid;grid-template-columns:118px minmax(0,1fr);gap:12px;padding:11px 0;border-bottom:1px solid #efe8da}
+.kx dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding-top:3px}
+.kx dd{font-size:15px;color:var(--ink);line-height:1.45}
+.kx .ty{color:#9a8f7d;font-style:normal}
+.sx-not{font-size:12.5px;color:var(--mut);margin-top:8px}
+details.ayr,details.ayr-grup,details.ayr-band{margin-top:18px}
+details.ayr>summary,details.ayr-grup>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--cizgi);border-radius:14px;padding:16px 20px;color:var(--navy);font-size:16px}
+details.ayr>summary::-webkit-details-marker,details.ayr-grup>summary::-webkit-details-marker,details.ayr-band>summary::-webkit-details-marker{display:none}
+details.ayr>summary i,details.ayr-grup>summary i,details.ayr-band>summary i{margin-left:auto;font-style:normal;font-size:22px;color:var(--gold);transition:.2s}
+details[open]>summary i{transform:rotate(45deg)}
+details.ayr-grup>summary .eyebrow{margin:0;font-size:10.5px}
+details.ayr-grup{margin:40px 0 10px}
+details.ayr-band{max-width:1040px;margin:26px auto;padding:0 20px}
+details.ayr-band>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;background:var(--navy);color:#f3ecdc;border-radius:14px;padding:18px 22px;font-size:16px}
+details.ayr-band>summary .eyebrow{color:var(--golda);margin:0;font-size:10.5px}
+details.ayr-band[open]{max-width:none;padding:0}
+details.ayr-band[open]>summary{max-width:1000px;margin:0 auto 0}
+details.rapor[open]>summary{background:#fff}
+.snav-in a.act{color:#fff}
+@media(max-width:820px){.sx-grid,.sx-grid.sx-yok{grid-template-columns:1fr}.yt-dikey{max-width:360px;margin:0 auto;width:100%}.kx{grid-template-columns:1fr}}
+@media(max-width:640px){
+ .hero{min-height:auto}.hin{padding:84px 16px 26px}.hlogo img{height:84px}.hlogo{margin-bottom:14px}
+ .hstats{gap:6px}.hstats>div{padding:7px 11px 8px;flex:1 1 calc(50% - 6px)}.hstats .n{font-size:15px!important}
+ .hcta a{padding:11px 16px;font-size:14px;flex:1 1 auto;justify-content:center}
+ h2{font-size:25px}.vitrin,.vitrin.v2,.vitrin.v3{grid-template-columns:repeat(2,1fr);grid-auto-rows:120px}.vitrin .vt:first-child{grid-column:span 2;grid-row:span 2}
+ .kx{padding:4px 14px}.kx>div{grid-template-columns:1fr;gap:2px}
+ .sx-neden li{font-size:15px}
+ .yt-dikey{max-width:300px}
+ #fiyatlar table:has(thead th:nth-child(10)) :is(th,td):is(:nth-child(2),:nth-child(5),:nth-child(6),:nth-child(8),:nth-child(9)){display:none}
+ #fiyatlar td:first-child{white-space:nowrap}
+}
+</style><!--SATIS:S:css--></head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4JQ2XVT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="hero">
-  <img src="img/g-01.webp" alt="Neo Faliro Park Residences · Neo Faliro · Atina Rivierası" fetchpriority="high">
+  <img src="img/g-04.webp" alt="Neo Faliro Park Residences · Neo Faliro · Atina Rivierası" fetchpriority="high">
   <div class="hin"><div class="wrap">
     <a class="hlogo" href="https://www.avlarealestate.com" target="_blank" rel="noopener" title="Avla Real Estate"><img src="/mulk/_ortak/avla-logo-kare.png" alt="Avla Real Estate"></a>
     <div class="eyebrow">Avla Real Estate · Mülk Dosyası · Golden Visa</div>
     <h1>Neo Faliro Park Residences</h1>
     <div class="slogan">Mobilyalı Teslim — <b>Atina Rivierası</b> · Golden Visa</div>
-    <div class="sub">Atina Rivierası'nın kuzey kapısı Neo Faliro'da, üç bloklu yeni rezidans. Tam mobilyalı teslim, çatıda havuz ve deniz manzarası, maliklere özel üye kulübü. Künye, fiyatlı daire listesi, bölge ve proje raporları — riskleriyle birlikte.</div>
-    <div class="hstats"><div><div class="n">73</div><div class="l">Müsait daire</div></div><div><div class="n">€265.000 – €420.000</div><div class="l">Fiyat aralığı</div></div><div><div class="n">Aralık 2027</div><div class="l">Daire teslimi</div></div><div><div class="n">10 yıl</div><div class="l">Kira garantisi</div></div></div>
+    <div class="sub">Neo Faliro sahilinde, park ve marina cepheli A++ enerji sınıfı yeni konut.</div>
+    <div class="hstats"><div class="c-mus"><div class="n">73</div><div class="l">Müsait daire</div></div><div class="c-fiy"><div class="n">€265.000 – €420.000</div><div class="l">Fiyat aralığı</div></div><div><div class="n">Aralık 2027</div><div class="l">Daire teslimi</div></div><div class="c-kir"><div class="n">10 yıl</div><div class="l">Kira garantisi<!--SATIS:B:cip--><div class="c-gv"><div class="n">Golden Visa · Sıfır bina</div><div class="l">Sınıf</div></div><div class="c-en"><div class="n">A++</div><div class="l">Enerji sınıfı</div></div><!--SATIS:S:cip--></div><!--SATIS:B:hcta--><div class="hcta"><a class="h1c" href="#fiyatlar">Fiyat listesi</a><a class="h2c" href="https://wa.me/905322822657?text=Merhaba%2C%20Neo%20Faliro%20Park%20Residences%20sayfas%C4%B1n%C4%B1%20inceledim.%20Bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp&#x27;tan yazın</a></div><!--SATIS:S:hcta--></div></div>
   </div></div>
 </div>
 
 <nav class="snav" id="snav" aria-label="İçindekiler">
-  <div class="snav-in">
-    <a href="#giris">Dosya Notu</a>
-    <a href="#gv">Golden Visa</a>
-    <a href="#harita">Konum</a>
-    <a href="#proje"><i style="background:#2f6b83"></i>Neo Faliro Park Residences</a>
-    <a href="#daire">Daireler</a>
-    <a href="#kesif">Portföy</a>
-    <a class="scta" href="#kayit">Görüşme</a>
+  <div class="snav-in"><!--SATIS:B:nav-->
+    <a href="#sunum">Öne çıkanlar</a>
+    <a href="#gorseller">Görseller</a>
+    <a href="#kunye">Künye</a>
+    <a href="#harita">Harita</a>
+    <a href="#ayrinti">Ayrıntı</a>
+    <a class="scta" href="#kayit">Görüşme</a><!--SATIS:S:nav-->
   </div>
 </nav>
 
 <div class="wrap">
-
-<section id="giris">
-  <div class="eyebrow">Dosya Notu</div>
-  <h2>Neden bu proje?</h2>
-  <div class="card">
-    <p>Bu dosya tek bir proje için hazırlandı ve üç ölçüt üzerine kuruldu: <b>Atina Rivierası hattı</b>, <b>yönetilen, mobilyalı teslim bir mülk</b> ve <b>uzun vadeli kira garantisi</b>. Neo Faliro, Riviera'nın şehir merkezine en yakın ve yenilenmekte olan kuzey kapısıdır; proje, kullanım dışı dönemlerde malikten bir şey beklemeyen bir yönetim modeli sunar.</p>
-<p>Proje üç binadan oluşur: <b>126 konut</b>, 1+1 ve 2+1 daireler, çatıda havuz ve bar, restore edilen tarihî konakta maliklere özel üye kulübü. Aşağıda önce Golden Visa çerçevesini, sonra konumu, ardından projenin künyesini bulacaksınız. Bölümün sonunda dört açılır rapor var: <b>fiyatlı daire listesi</b>, <b>bölge raporu</b>, <b>proje raporu</b> ve <b>yatırım fizibilitesi</b>. Güçlü yanları kadar zayıf yanları da yazdık; bir başlıkta doğrulanmış verimiz yoksa bunu açıkça belirttik ve tahminle doldurmadık.</p>
-    <div class="uyari"><b>Müsaitlik ve fiyat sorumluluğu:</b> Bu sayfadaki fiyat ve müsaitlik bilgisi, geliştiricinin bize ulaşan <b>18 Ağustos 2026 tarihli listesine</b> dayanır. Müsaitlik kısa sürede değişebilir; Avla bu bilgilerin güncelliği konusunda sorumluluk üstlenmez. Ticari koşullar da aynı kaynağa dayanır ve <b>bağlayıcı teklif değildir</b>. Bağlayıcı karar öncesinde dairenin durumunu ve size sunulan ticari koşulları geliştiriciden yazılı olarak birlikte teyit ederiz.</div>
-    <div class="onnot"><b>Bu sayfa tek bir mülk için hazırlanmıştır.</b> Künyesi, fiyatlı daire listesi, bölge ve proje raporları burada bir arada verilmiştir. Mülkü gezmek ya da bağlayıcı bir adım atmak istediğinizde, tanıtımı kayda geçiren yer gösterme formunu birlikte doldururuz; <a href="#" onclick="szAc(event)"><b>şartlarımızı ve modelimizi buradan inceleyebilirsiniz</b></a>.</div>
-  </div>
-  <div class="gv">
-    <b style="font-family:'Cormorant Garamond',serif;font-size:19px">Yunanistan Golden Visa — kısa hatırlatma</b>
-    <div class="madde">
-      <span>Eşik <b>tek bir rakam değildir</b>: €250.000 / €400.000 / €800.000</span>
-      <span>Eş + 21 yaş altı çocuklar + her iki tarafın ebeveynleri</span>
-      <span>5 yılda bir yenilenen oturum</span>
-      <span>Asgari ikamet şartı yok</span>
-      <span>Uzun dönem kiralama serbest</span>
-      <span>Bu bir <b>oturma iznidir</b>, vatandaşlık değildir</span>
-    </div>
-  </div>
-</section>
-
-<section id="gv">
-  <div class="eyebrow">Önce Çerçeve</div>
-  <h2>Golden Visa eşiği nasıl belirlenir?</h2>
-  <div class="card">
-    <p>Tek bir rakam yok. Mevzuat <b>üç kademe</b> tanımlıyor ve bir mülkün hangi kademeye girdiği, konumu ve <b>hukuki durumu</b> ile belirlenir. Bu nedenle Avla, portföydeki her proje için eşik teyidini teklif aşamasında yazılı olarak verir.</p>
-    <div class="akis">
-      <div class="adim"><div class="no">€800.000</div><b>Üst kademe</b><br>Yoğun talep gören bölgeler için öngörülür. <b>Tek</b> bir mülk ve <b>en az 120 m²</b> şartı vardır.</div>
-      <div class="adim"><div class="no">€400.000</div><b>Diğer bölgeler</b><br>Aynı şekilde tek mülk ve en az 120 m² şartı geçerlidir.</div>
-      <div class="adim"><div class="no">€250.000</div><b>Konuma bağlı değildir</b><br>Yalnızca iki halde: (a) konut dışı bir binanın <b>kullanım değişikliği</b> ile konuta dönüştürülmesi (dönüşüm 5 Nisan 2024 sonrası yapılmış ve başvurudan önce tamamlanmış olmalı), (b) <b>tescilli / koruma altındaki</b> bir binanın restorasyonu.</div>
-    </div>
-    <p style="margin-top:16px">€250.000 rotasında yüzölçümü şartı yoktur; buna karşılık aynı tapuda birden fazla bağımsız konut ünitesi oluşturulamaz ve konut <b>5 yıl boyunca kısa dönem kiralamaya</b> (günlük/haftalık) verilemez. Golden Visa uygunluğu ve geçerli eşik, daire bazında bağımsız Yunan avukat incelemesiyle yazılı teyit edilir.</p>
-  </div>
-  <div class="akis" style="margin-top:22px">
-    <div class="adim"><div class="no">1</div><b>Yazılı teyit</b><br>İlgilendiğiniz daire için geliştiriciden güncel fiyat, müsaitlik ve eşik teyidi alınır.</div>
-    <div class="adim"><div class="no">2</div><b>Yerinde gezi</b><br>Atina programını biz kurar, gezide size eşlik ederiz.</div>
-    <div class="adim"><div class="no">3</div><b>Rezervasyon ve hukuki inceleme</b><br>Ön sözleşme ve kapora; ardından tapu geçmişi, ipotek/haciz, ruhsat ve iskân kontrolü.</div>
-    <div class="adim"><div class="no">4</div><b>AFM, banka, noter, tapu</b><br>Vekâletle yürütülebilir; Yunanistan'da bulunmanız şart değildir.</div>
-    <div class="adim"><div class="no">5</div><b>Oturum başvurusu</b><br>Biyometrik randevu, mavi kart, ardından oturum kartı ve 5 yılda bir yenileme.</div>
-  </div>
-</section>
-
-<section id="harita">
-  <div class="eyebrow">Coğrafya</div>
-  <h2>Neo Faliro Park Residences haritada</h2>
-  <p class="kucuk" style="margin-top:8px">Konum <b>semt düzeyinde çember</b> ile gösterilmiştir. Net adres bilgisi, bizimle iletişime geçen misafirlerimizle bizzat paylaşılır.</p>
-  <div id="avla-map"></div>
-  <div class="mlegend"><span><i style="background:#2f6b83"></i>Neo Faliro · Atina Rivierası</span></div>
-<div id="konum-kilit" class="kkart">
-  <div class="kk-ikon">🔒</div>
-  <div class="kk-govde"><b>Net konum bilgisi kilitli</b>
-    <p>Bu dosyada mülkün neredeyse tüm bilgisi açık; yalnızca net konumunu yayınlamıyoruz. Net konum için bizi arayın — <b>uzman danışmanımız</b> gerekli bilgilendirmeyi yapar, konumu paylaşır ve sunumu bizzat gerçekleştirir. Dilerseniz <a href="#kayit">sayfa sonundaki kısa formu</a> KVKK kapsamında doldurun; biz sizi arayalım. <a href="#" onclick="szAc(event)">Şartlarımız ve modelimiz →</a></p></div>
-  <div class="kk-akare">
-    <a class="kk-btn" href="tel:+905322822657">📞 Bizi arayın</a>
-    <a class="kk-btn wa" href="https://wa.me/905322822657?text=Merhaba%2C%20Neo%20Faliro%20Park%20Residences%20%28Ref%20A0135%29%20i%C3%A7in%20net%20konum%20ve%20detayl%C4%B1%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan yazın</a>
-  </div>
-</div>
-</section>
-
+<!--SATIS:B:bolumler--><section id="sunum" class="satis"><div class="sx-grid sx-yok"><div class="sx-gorsel"><img src="img/g-01.webp" alt="Neo Faliro Park Residences" loading="lazy" decoding="async"></div><div class="sx-metin"><div class="eyebrow">Öne çıkanlar</div><h2>Neden bu mülk?</h2><ul class="sx-neden"><li>Sahil şeridine 1 dk yürüme</li><li>Marina Faliro 5 dk yürüme</li><li>A++ enerji sınıfı</li><li>Tam mobilyalı ve beyaz eşyalı teslim</li><li>10 yıllık kira garantisi</li></ul><div class="sx-cta"><a class="c1" href="#fiyatlar">Fiyat listesi</a><a class="c2" href="https://wa.me/905322822657?text=Merhaba%2C%20Neo%20Faliro%20Park%20Residences%20sayfas%C4%B1n%C4%B1%20inceledim.%20Bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp&#x27;tan yazın</a></div></div></div></section><section id="gorseller" class="satis"><div class="eyebrow">Görseller</div><h2>Bina ve daireler</h2><div class="vitrin v5"><button type="button" class="vt" onclick="vitrinAc(0)" aria-label="Çatı terası, deniz manzarası"><img src="img/g-04.webp" alt="Çatı terası, deniz manzarası" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(1)" aria-label="Genel görünüm"><img src="img/g-01.webp" alt="Genel görünüm" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(2)" aria-label="Restore edilen tarihî konak ve yeni blok"><img src="img/g-02.webp" alt="Restore edilen tarihî konak ve yeni blok" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(5)" aria-label="İç mekân · oturma odası (temsilî)"><img src="img/g-07.webp" alt="İç mekân · oturma odası (temsilî)" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(6)" aria-label="İç mekân · oturma odası ve balkon (temsilî)"><img src="img/g-08.webp" alt="İç mekân · oturma odası ve balkon (temsilî)" loading="lazy" decoding="async"><span class="vt-ust">+6</span></button></div><button type="button" class="sx-tum" onclick="vitrinAc(0)">Tüm görselleri aç (11)</button></section><section id="kunye" class="satis"><div class="eyebrow">Künye</div><h2>Kısaca</h2><dl class="kx"><div><dt>Yapım</dt><dd>Sıfır bina (yeni yapı)</dd></div><div><dt>Otopark</dt><dd>Var</dd></div><div><dt>Enerji sınıfı</dt><dd>A++</dd></div><div><dt>Okullar</dt><dd>International School of Piraeus (uluslararası) 1,8 km · Lampiri Schools (özel) 1,4 km · devlet ilkokulu 150 m</dd></div><div><dt>Alışveriş</dt><dd>Village Shopping and More Rentis AVM 3,0 km · market 200 m</dd></div><div><dt>Ulaşım</dt><dd>Metro Faliro 600 m · Tramvay Neo Faliro 450 m</dd></div><div><dt>Plaj</dt><dd>Plaj 2,0 km</dd></div><div><dt>Havalimanı</dt><dd>Atina Havalimanı ~40 dk (araçla)</dd></div></dl><p class="sx-not">Mesafeler semt merkezinden kuş uçuşu (OpenStreetMap); havalimanı süresi trafiksiz araç süresidir. Bilgiler teklif öncesinde yazılı teyit edilir.</p></section><!--SATIS:S:bolumler-->
 <section id="proje">
   <div class="eyebrow">Neo Faliro · Atina Rivierası<span class="tesl">Yapım aşamasında · Aralık 2027</span></div>
   <h2>Neo Faliro Park Residences</h2>
-  <div class="card"><p>Atina Rivierası'nın kuzey kapısı Neo Faliro'da, sahil şeridinde park ve marina cepheli üç bloklu yeni proje: toplam <b>126 konut</b>, 1+1 ve 2+1 daireler. <b>Tam mobilyalı ve beyaz eşyalı</b> teslim, A++ enerji sınıfı hedefi, çatıda deniz manzaralı havuz ve bar, restore edilen tarihî konakta maliklere özel üye kulübü.</p><p><b>Durum:</b> Daireler Aralık 2027, ortak alanlar Mart 2028 teslimli. Projede <b>10 yıllık kira garantisi</b> (yıllık %3 net ya da %4 brüt) sunuluyor. Şu an <b>73 daire</b> müsait.</p>
+  <!--SATIS:W1:proje--><details class="ayr"><summary>Proje ayrıntıları · tam künye ve bütün görseller (11)<i>+</i></summary>
+  <!--/SATIS:W1:proje--><div class="card"><p>Atina Rivierası'nın kuzey kapısı Neo Faliro'da, sahil şeridinde park ve marina cepheli üç bloklu yeni proje: toplam <b>126 konut</b>, 1+1 ve 2+1 daireler. <b>Tam mobilyalı ve beyaz eşyalı</b> teslim, A++ enerji sınıfı hedefi, çatıda deniz manzaralı havuz ve bar, restore edilen tarihî konakta maliklere özel üye kulübü.</p><p><b>Durum:</b> Daireler Aralık 2027, ortak alanlar Mart 2028 teslimli. Projede <b>10 yıllık kira garantisi</b> (yıllık %3 net ya da %4 brüt) sunuluyor. Şu an <b>73 daire</b> müsait.</p>
     <p class="serit">İlan sayfası — talep üzerine &nbsp;·&nbsp; <a href="#r-bolge" onclick="return rAc('r-bolge')">Bölge raporu</a> &nbsp;·&nbsp; <a href="#r-fiz" onclick="return rAc('r-fiz')">Yatırım fizibilitesi</a></p>
   </div>
 
@@ -586,7 +613,19 @@ tr.dr-r .pbtn,tr.dr-s .pbtn{opacity:.65}
   </div>
 
   <h3 style="margin-top:34px">Görseller · 11 görsel</h3>
-  <div class="gal"><img src="img/g-01.webp" alt="Genel görünüm" loading="eager" onclick="ac('img/g-01.webp','Genel görünüm')"><img src="img/g-02.webp" alt="Restore edilen tarihî konak ve yeni blok" loading="eager" onclick="ac('img/g-02.webp','Restore edilen tarihî konak ve yeni blok')"><img src="img/g-03.webp" alt="Bina girişi" loading="lazy" onclick="ac('img/g-03.webp','Bina girişi')"><img src="img/g-04.webp" alt="Çatı terası, deniz manzarası" loading="lazy" onclick="ac('img/g-04.webp','Çatı terası, deniz manzarası')"><img src="img/g-05.webp" alt="Çatı sonsuzluk havuzu ve bar" loading="lazy" onclick="ac('img/g-05.webp','Çatı sonsuzluk havuzu ve bar')"><img src="img/g-06.webp" alt="Marina ve sahil şeridi" loading="lazy" onclick="ac('img/g-06.webp','Marina ve sahil şeridi')"><img src="img/g-07.webp" alt="İç mekân · oturma odası (temsilî)" loading="lazy" onclick="ac('img/g-07.webp','İç mekân · oturma odası (temsilî)')"><img src="img/g-08.webp" alt="İç mekân · oturma odası ve balkon (temsilî)" loading="lazy" onclick="ac('img/g-08.webp','İç mekân · oturma odası ve balkon (temsilî)')"><img src="img/g-09.webp" alt="İç mekân · oturma köşesi (temsilî)" loading="lazy" onclick="ac('img/g-09.webp','İç mekân · oturma köşesi (temsilî)')"><img src="img/g-10.webp" alt="İç mekân · yatak odası (temsilî)" loading="lazy" onclick="ac('img/g-10.webp','İç mekân · yatak odası (temsilî)')"><img src="img/g-11.webp" alt="İç mekân · oturma odası (temsilî)" loading="lazy" onclick="ac('img/g-11.webp','İç mekân · oturma odası (temsilî)')"></div>
+  <div class="gal">
+    <img src="img/g-04.webp" alt="Çatı terası, deniz manzarası" loading="lazy" onclick="ac('img/g-04.webp','Çatı terası, deniz manzarası')">
+    <img src="img/g-01.webp" alt="Genel görünüm" loading="eager" onclick="ac('img/g-01.webp','Genel görünüm')">
+    <img src="img/g-02.webp" alt="Restore edilen tarihî konak ve yeni blok" loading="eager" onclick="ac('img/g-02.webp','Restore edilen tarihî konak ve yeni blok')">
+    <img src="img/g-03.webp" alt="Bina girişi" loading="lazy" onclick="ac('img/g-03.webp','Bina girişi')">
+    <img src="img/g-05.webp" alt="Çatı sonsuzluk havuzu ve bar" loading="lazy" onclick="ac('img/g-05.webp','Çatı sonsuzluk havuzu ve bar')">
+    <img src="img/g-07.webp" alt="İç mekân · oturma odası (temsilî)" loading="lazy" onclick="ac('img/g-07.webp','İç mekân · oturma odası (temsilî)')">
+    <img src="img/g-08.webp" alt="İç mekân · oturma odası ve balkon (temsilî)" loading="lazy" onclick="ac('img/g-08.webp','İç mekân · oturma odası ve balkon (temsilî)')">
+    <img src="img/g-09.webp" alt="İç mekân · oturma köşesi (temsilî)" loading="lazy" onclick="ac('img/g-09.webp','İç mekân · oturma köşesi (temsilî)')">
+    <img src="img/g-10.webp" alt="İç mekân · yatak odası (temsilî)" loading="lazy" onclick="ac('img/g-10.webp','İç mekân · yatak odası (temsilî)')">
+    <img src="img/g-11.webp" alt="İç mekân · oturma odası (temsilî)" loading="lazy" onclick="ac('img/g-11.webp','İç mekân · oturma odası (temsilî)')">
+    <img src="img/g-06.webp" alt="Marina ve sahil şeridi" loading="lazy" onclick="ac('img/g-06.webp','Marina ve sahil şeridi')">
+  </div>
   <div class="gal-ipucu">Kaydırın →</div>
   <div class="tblnot">Tüm iç ve dış mekân görselleri bilgisayar üretimi <b>temsilî görsellerdir</b>; geliştirici bunların bağlayıcı olmadığını belirtiyor.</div>
 
@@ -808,8 +847,66 @@ tr.dr-r .pbtn,tr.dr-s .pbtn{opacity:.65}
 <h5 style="margin-top:14px">Sonuç &amp; Yatırım Kararı</h5>
 <p><b>Yatırım Kararı: POZİTİF.</b> Neo Faliro Park Residences, Neo Faliro Metro ayağı + managed asset profili + park rejenerasyon halo etkisi üçlüsünün kesişiminde, Athens Riviera'nın kuzey kapısında defansif premium pozisyon sunmaktadır. €280K giriş bandı, %4 kira garantisi ve 5-10 yıllık ufukta %40-110 birikimli getiri varsayımıyla, Golden Visa motivasyonlu ve managed real estate tercih eden yatırımcı için düşük volatilite, yüksek likidite profilindedir. Kulüp operasyonu çıkış değerini ve kira sürekliliğini destekler.</p>
     <button class="dkapat" onclick="this.closest('details').open=false">Kapat</button></div></details>
+<!--SATIS:W2:proje--></details><!--/SATIS:W2:proje--></section>
+<section id="harita">
+  <div class="eyebrow">Coğrafya</div>
+  <h2>Neo Faliro Park Residences haritada</h2>
+  <p class="kucuk" style="margin-top:8px">Konum <b>semt düzeyinde çember</b> ile gösterilmiştir. Net adres bilgisi, bizimle iletişime geçen misafirlerimizle bizzat paylaşılır.</p>
+  <div id="avla-map"></div>
+  <div class="mlegend"><span><i style="background:#2f6b83"></i>Neo Faliro · Atina Rivierası</span></div>
+<div id="konum-kilit" class="kkart">
+  <div class="kk-ikon">🔒</div>
+  <div class="kk-govde"><b>Net konum bilgisi kilitli</b>
+    <p>Bu dosyada mülkün neredeyse tüm bilgisi açık; yalnızca net konumunu yayınlamıyoruz. Net konum için bizi arayın — <b>uzman danışmanımız</b> gerekli bilgilendirmeyi yapar, konumu paylaşır ve sunumu bizzat gerçekleştirir. Dilerseniz <a href="#kayit">sayfa sonundaki kısa formu</a> KVKK kapsamında doldurun; biz sizi arayalım. <a href="#" onclick="szAc(event)">Şartlarımız ve modelimiz →</a></p></div>
+  <div class="kk-akare">
+    <a class="kk-btn" href="tel:+905322822657">📞 Bizi arayın</a>
+    <a class="kk-btn wa" href="https://wa.me/905322822657?text=Merhaba%2C%20Neo%20Faliro%20Park%20Residences%20%28Ref%20A0135%29%20i%C3%A7in%20net%20konum%20ve%20detayl%C4%B1%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan yazın</a>
+  </div>
+</div>
 </section>
-
+<!--SATIS:W1:ayr--><details class="ayr-grup" id="ayrinti"><summary><span class="eyebrow">Ayrıntı</span>Golden Visa çerçevesi, daire karşılaştırması, özet ve tanıtım protokolü<i>+</i></summary><!--/SATIS:W1:ayr-->
+<section id="giris">
+  <div class="eyebrow">Dosya Notu</div>
+  <h2>Neden bu proje?</h2>
+  <div class="card">
+    <p>Bu dosya tek bir proje için hazırlandı ve üç ölçüt üzerine kuruldu: <b>Atina Rivierası hattı</b>, <b>yönetilen, mobilyalı teslim bir mülk</b> ve <b>uzun vadeli kira garantisi</b>. Neo Faliro, Riviera'nın şehir merkezine en yakın ve yenilenmekte olan kuzey kapısıdır; proje, kullanım dışı dönemlerde malikten bir şey beklemeyen bir yönetim modeli sunar.</p>
+<p>Proje üç binadan oluşur: <b>126 konut</b>, 1+1 ve 2+1 daireler, çatıda havuz ve bar, restore edilen tarihî konakta maliklere özel üye kulübü. Aşağıda önce Golden Visa çerçevesini, sonra konumu, ardından projenin künyesini bulacaksınız. Bölümün sonunda dört açılır rapor var: <b>fiyatlı daire listesi</b>, <b>bölge raporu</b>, <b>proje raporu</b> ve <b>yatırım fizibilitesi</b>. Güçlü yanları kadar zayıf yanları da yazdık; bir başlıkta doğrulanmış verimiz yoksa bunu açıkça belirttik ve tahminle doldurmadık.</p>
+    <div class="uyari"><b>Müsaitlik ve fiyat sorumluluğu:</b> Bu sayfadaki fiyat ve müsaitlik bilgisi, geliştiricinin bize ulaşan <b>18 Ağustos 2026 tarihli listesine</b> dayanır. Müsaitlik kısa sürede değişebilir; Avla bu bilgilerin güncelliği konusunda sorumluluk üstlenmez. Ticari koşullar da aynı kaynağa dayanır ve <b>bağlayıcı teklif değildir</b>. Bağlayıcı karar öncesinde dairenin durumunu ve size sunulan ticari koşulları geliştiriciden yazılı olarak birlikte teyit ederiz.</div>
+    <div class="onnot"><b>Bu sayfa tek bir mülk için hazırlanmıştır.</b> Künyesi, fiyatlı daire listesi, bölge ve proje raporları burada bir arada verilmiştir. Mülkü gezmek ya da bağlayıcı bir adım atmak istediğinizde, tanıtımı kayda geçiren yer gösterme formunu birlikte doldururuz; <a href="#" onclick="szAc(event)"><b>şartlarımızı ve modelimizi buradan inceleyebilirsiniz</b></a>.</div>
+  </div>
+  <div class="gv">
+    <b style="font-family:'Cormorant Garamond',serif;font-size:19px">Yunanistan Golden Visa — kısa hatırlatma</b>
+    <div class="madde">
+      <span>Eşik <b>tek bir rakam değildir</b>: €250.000 / €400.000 / €800.000</span>
+      <span>Eş + 21 yaş altı çocuklar + her iki tarafın ebeveynleri</span>
+      <span>5 yılda bir yenilenen oturum</span>
+      <span>Asgari ikamet şartı yok</span>
+      <span>Uzun dönem kiralama serbest</span>
+      <span>Bu bir <b>oturma iznidir</b>, vatandaşlık değildir</span>
+    </div>
+  </div>
+</section>
+<section id="gv">
+  <div class="eyebrow">Önce Çerçeve</div>
+  <h2>Golden Visa eşiği nasıl belirlenir?</h2>
+  <div class="card">
+    <p>Tek bir rakam yok. Mevzuat <b>üç kademe</b> tanımlıyor ve bir mülkün hangi kademeye girdiği, konumu ve <b>hukuki durumu</b> ile belirlenir. Bu nedenle Avla, portföydeki her proje için eşik teyidini teklif aşamasında yazılı olarak verir.</p>
+    <div class="akis">
+      <div class="adim"><div class="no">€800.000</div><b>Üst kademe</b><br>Yoğun talep gören bölgeler için öngörülür. <b>Tek</b> bir mülk ve <b>en az 120 m²</b> şartı vardır.</div>
+      <div class="adim"><div class="no">€400.000</div><b>Diğer bölgeler</b><br>Aynı şekilde tek mülk ve en az 120 m² şartı geçerlidir.</div>
+      <div class="adim"><div class="no">€250.000</div><b>Konuma bağlı değildir</b><br>Yalnızca iki halde: (a) konut dışı bir binanın <b>kullanım değişikliği</b> ile konuta dönüştürülmesi (dönüşüm 5 Nisan 2024 sonrası yapılmış ve başvurudan önce tamamlanmış olmalı), (b) <b>tescilli / koruma altındaki</b> bir binanın restorasyonu.</div>
+    </div>
+    <p style="margin-top:16px">€250.000 rotasında yüzölçümü şartı yoktur; buna karşılık aynı tapuda birden fazla bağımsız konut ünitesi oluşturulamaz ve konut <b>5 yıl boyunca kısa dönem kiralamaya</b> (günlük/haftalık) verilemez. Golden Visa uygunluğu ve geçerli eşik, daire bazında bağımsız Yunan avukat incelemesiyle yazılı teyit edilir.</p>
+  </div>
+  <div class="akis" style="margin-top:22px">
+    <div class="adim"><div class="no">1</div><b>Yazılı teyit</b><br>İlgilendiğiniz daire için geliştiriciden güncel fiyat, müsaitlik ve eşik teyidi alınır.</div>
+    <div class="adim"><div class="no">2</div><b>Yerinde gezi</b><br>Atina programını biz kurar, gezide size eşlik ederiz.</div>
+    <div class="adim"><div class="no">3</div><b>Rezervasyon ve hukuki inceleme</b><br>Ön sözleşme ve kapora; ardından tapu geçmişi, ipotek/haciz, ruhsat ve iskân kontrolü.</div>
+    <div class="adim"><div class="no">4</div><b>AFM, banka, noter, tapu</b><br>Vekâletle yürütülebilir; Yunanistan'da bulunmanız şart değildir.</div>
+    <div class="adim"><div class="no">5</div><b>Oturum başvurusu</b><br>Biyometrik randevu, mavi kart, ardından oturum kartı ve 5 yılda bir yenileme.</div>
+  </div>
+</section>
+<!--SATIS:W2:ayr--></details><!--/SATIS:W2:ayr-->
 <section class="kesif-band" id="kesif">
   <div class="kesif-inner">
     <div class="kesif-head"><div class="k">Seçkinin Ötesi</div><h2>Portföyün <em>Tamamını</em> Keşfedin</h2></div>
@@ -865,7 +962,6 @@ tr.dr-r .pbtn,tr.dr-s .pbtn{opacity:.65}
     </form>
   </div>
 </details>
-
 </div><!-- /wrap -->
 
 <footer>
@@ -1097,5 +1193,22 @@ function szKapat(){document.getElementById('smodal').classList.remove('on');docu
 })();
 </script>
 <script src="https://gv-danisman.avlarealestate.com/widget.js" defer></script>
-</body>
+<!--SATIS:B:js--><script id="satis-js">
+(function(){
+  function ac(id){var el=document.getElementById(id);if(!el)return;var d=el.closest?el.closest('details'):null;while(d){d.open=true;d=d.parentElement?d.parentElement.closest('details'):null;}}
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var id=(a.getAttribute('href')||'').slice(1);if(id)ac(id);},true);
+  if(location.hash)ac(location.hash.slice(1));
+  function oynat(k){if(k.dataset.on)return;k.dataset.on='1';var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+k.dataset.id+'?autoplay=1&rel=0&playsinline=1&modestbranding=1';
+    f.setAttribute('allow','autoplay; encrypted-media; picture-in-picture; fullscreen');f.setAttribute('allowfullscreen','');f.title=k.dataset.t||'Video';
+    k.innerHTML='';k.appendChild(f);try{(window.dataLayer=window.dataLayer||[]).push({event:'video_play',video_id:k.dataset.id});}catch(e){}}
+  document.querySelectorAll('.yt[data-id]').forEach(function(k){k.addEventListener('click',function(){oynat(k)});k.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();oynat(k);}});});
+  window.vitrinAc=function(j){
+    var pg=document.querySelector('.gal[data-satis-galeri]')||document.querySelector('section[id^="a0"] .gal,#lyk .gal,#proje .gal');
+    if(!pg||typeof _galeriler==='undefined'||typeof _lbCiz!=='function')return;
+    var gi=[].slice.call(document.querySelectorAll('.gal')).indexOf(pg);if(gi<0||!_galeriler[gi])return;
+    _aktif=_galeriler[gi];_ix=Math.max(0,Math.min(j||0,_aktif.length-1));_lbCiz();
+    document.getElementById('lb').classList.add('on');document.body.style.overflow='hidden';};
+})();
+</script><!--SATIS:S:js--></body>
 </html>
