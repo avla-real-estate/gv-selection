@@ -1187,7 +1187,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
   <div class="tblnot">Görseller bilgisayar ortamında üretilmiş temsilî görsellerdir.</div>
   <details class="rapor"><summary>Fiyatlar ve müsait daireler — 19 dairenin 12'si</summary><div class="rbody">
-    <div class="pmap" id="pmap-a0226" data-lat="37.98" data-lng="23.71" data-r="250" data-renk="#8a4a5a"></div>
+    <div class="pmap" id="pmap-a0226" data-lat="37.976" data-lng="23.712" data-r="250" data-renk="#8a4a5a"></div>
     <div class="tblnot pmap-not">Konum <b>semt düzeyinde</b> gösterilmektedir — Gazi · Atina merkez.</div>
     <div class="tbl"><table>
       <thead><tr><th>Daire</th><th>Kat</th><th>Tip</th><th>Net m²</th><th>Balkon m²</th><th>Brüt m²</th><th>Fiyat</th><th>€ / m² net</th><th>€ / m² brüt</th><th>Plan</th></tr></thead>
@@ -1563,7 +1563,7 @@ function fDaha(b){var k=b.previousElementSibling;
 <script>
 
 var bolgeler=[
-      {ad:'Gazi · Technopolis\'e birkaç adım, eşyalı 1+1 daireler',semt:'Gazi · Atina merkez',lat:37.98,lng:23.71,r:300,renk:'#8a4a5a'}
+      {ad:'Gazi · Technopolis\'e birkaç adım, eşyalı 1+1 daireler',semt:'Gazi · Atina merkez',lat:37.976,lng:23.712,r:300,renk:'#8a4a5a'}
     ];
 
 /* ---- harita: GOOGLE MAPS (Sami 23.09.2026) — semt çemberi, pin YOK, tam ekran açık ---- */
@@ -1591,6 +1591,16 @@ var GM_STIL = [
 
 
 
+/* çember balonu → sayfadaki mülk bölümü (Sami 21.10.2026: "haritada tıklayınca çıkan bilgi mülkün bilgisine geri dönmeli") */
+function mulkBag(yazi){
+  var s = document.querySelector('section[id^="a0"]') || document.getElementById('lyk');
+  return s ? '<br><a href="#' + s.id + '" onclick="return mulkGit(\'' + s.id + '\')" style="display:inline-block;margin-top:7px;font-weight:600;font-size:12.5px;color:#A88B55;text-decoration:none">' + yazi + '</a>' : '';
+}
+function mulkGit(id){
+  var git = function(){ var el = document.getElementById(id); if (el) el.scrollIntoView({behavior:'smooth', block:'start'}); try { history.replaceState(null, '', '#' + id); } catch(e){} };
+  if (document.fullscreenElement && document.exitFullscreen) { document.exitFullscreen().then(function(){ setTimeout(git, 200); }).catch(git); } else git();
+  return false;
+}
 function gmCember(map, b, i){
   var c = new google.maps.Circle({
     map: map, center: {lat: b.lat, lng: b.lng}, radius: b.r,
@@ -1600,7 +1610,7 @@ function gmCember(map, b, i){
   var iw = new google.maps.InfoWindow({
     content: '<div style="font:600 13px Inter,sans-serif;color:#1A2E4A;padding:2px 4px;line-height:1.5">'
            + '<b>' + b.ad + '</b><br><span style="font-weight:400;color:#5a6472">' + b.semt + '</span>'
-           + '<br><span style="font-weight:400;font-size:11.5px;color:#8a929e">Konum semt düzeyinde gösterilmektedir.</span></div>'
+           + '<br><span style="font-weight:400;font-size:11.5px;color:#8a929e">Konum semt düzeyinde gösterilmektedir.</span>' + mulkBag('Mülk bilgilerine git ↓') + '</div>'
   });
   c.addListener('click', function(e){ iw.setPosition(e.latLng || c.getCenter()); iw.open(map); });
   return c;

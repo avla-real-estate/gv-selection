@@ -1199,7 +1199,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
   <div class="tblnot">All images are computer-generated representations; fittings and façade details may differ in the finished building.</div>
   <details class="rapor"><summary>Prices and available units — 15 of 23</summary><div class="rbody">
-    <div class="pmap" id="pmap-a0220" data-lat="37.895" data-lng="23.735" data-r="250" data-renk="#5a7a8a"></div>
+    <div class="pmap" id="pmap-a0220" data-lat="37.907" data-lng="23.745" data-r="250" data-renk="#5a7a8a"></div>
     <div class="tblnot pmap-not">The location is <b>shown at district level</b>  — Kato Elliniko · Athens Riviera.</div>
     <div class="tbl"><table>
       <thead><tr><th>Unit</th><th>Floor</th><th>Type</th><th>Net m²</th><th>Balcony m²</th><th>Gross m²</th><th>Price</th><th>€ / m² net</th><th>€ / m² gross</th><th>Plan</th></tr></thead>
@@ -1579,7 +1579,7 @@ function fDaha(b){var k=b.previousElementSibling;
 <script>
 
 var bolgeler=[
-      {ad:'Kato Elliniko Riviera Suites',semt:'Kato Elliniko · Athens Riviera',lat:37.895,lng:23.735,r:300,renk:'#5a7a8a'}
+      {ad:'Kato Elliniko Riviera Suites',semt:'Kato Elliniko · Athens Riviera',lat:37.907,lng:23.745,r:300,renk:'#5a7a8a'}
     ];
 
 /* ---- harita: GOOGLE MAPS (Sami 23.09.2026) — semt çemberi, pin YOK, tam ekran açık ---- */
@@ -1607,6 +1607,16 @@ var GM_STIL = [
 
 
 
+/* çember balonu → sayfadaki mülk bölümü (Sami 21.10.2026: "haritada tıklayınca çıkan bilgi mülkün bilgisine geri dönmeli") */
+function mulkBag(yazi){
+  var s = document.querySelector('section[id^="a0"]') || document.getElementById('lyk');
+  return s ? '<br><a href="#' + s.id + '" onclick="return mulkGit(\'' + s.id + '\')" style="display:inline-block;margin-top:7px;font-weight:600;font-size:12.5px;color:#A88B55;text-decoration:none">' + yazi + '</a>' : '';
+}
+function mulkGit(id){
+  var git = function(){ var el = document.getElementById(id); if (el) el.scrollIntoView({behavior:'smooth', block:'start'}); try { history.replaceState(null, '', '#' + id); } catch(e){} };
+  if (document.fullscreenElement && document.exitFullscreen) { document.exitFullscreen().then(function(){ setTimeout(git, 200); }).catch(git); } else git();
+  return false;
+}
 function gmCember(map, b, i){
   var c = new google.maps.Circle({
     map: map, center: {lat: b.lat, lng: b.lng}, radius: b.r,
@@ -1616,7 +1626,7 @@ function gmCember(map, b, i){
   var iw = new google.maps.InfoWindow({
     content: '<div style="font:600 13px Inter,sans-serif;color:#1A2E4A;padding:2px 4px;line-height:1.5">'
            + '<b>' + b.ad + '</b><br><span style="font-weight:400;color:#5a6472">' + b.semt + '</span>'
-           + '<br><span style="font-weight:400;font-size:11.5px;color:#8a929e">The location is shown at district level.</span></div>'
+           + '<br><span style="font-weight:400;font-size:11.5px;color:#8a929e">The location is shown at district level.</span>' + mulkBag('View property details ↓') + '</div>'
   });
   c.addListener('click', function(e){ iw.setPosition(e.latLng || c.getCenter()); iw.open(map); });
   return c;

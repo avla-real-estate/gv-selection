@@ -1265,7 +1265,7 @@ tr.dr-r .pbtn,tr.dr-s .pbtn{opacity:.65}
     <button class="dkapat" onclick="dKapat(this)" aria-label="Bölümü kapat"><i>−</i> Kapat</button>
   </div></details>
   <details class="rapor"><summary>Konum</summary><div class="rbody">
-    <div class="pmap" id="pmap-a0136" data-lat="37.9" data-lng="23.75" data-r="250" data-renk="#8a4a4a"></div>
+    <div class="pmap" id="pmap-a0136" data-lat="37.895" data-lng="23.751" data-r="250" data-renk="#8a4a4a"></div>
     <div class="tblnot pmap-not">Konum <b>semt düzeyinde</b> gösterilmektedir — Elliniko · riviera.</div>
     <div class="tblnot">Daire bazında fiyat listesi geliştiriciden istendi; liste geldiğinde bu bölüm dolar.</div>
     <button class="dkapat" onclick="dKapat(this)" aria-label="Bölümü kapat"><i>−</i> Kapat</button>
@@ -1601,7 +1601,7 @@ function fDaha(b){var k=b.previousElementSibling;
 <script>
 
 var bolgeler=[
-      {ad:'Elliniko Court Residences',semt:'Elliniko · riviera',lat:37.9,lng:23.75,r:300,renk:'#8a4a4a'}
+      {ad:'Elliniko Court Residences',semt:'Elliniko · riviera',lat:37.895,lng:23.751,r:300,renk:'#8a4a4a'}
     ];
 
 /* ---- harita: GOOGLE MAPS (Sami 23.09.2026) — semt çemberi, pin YOK, tam ekran açık ---- */
@@ -1629,6 +1629,16 @@ var GM_STIL = [
 
 
 
+/* çember balonu → sayfadaki mülk bölümü (Sami 21.10.2026: "haritada tıklayınca çıkan bilgi mülkün bilgisine geri dönmeli") */
+function mulkBag(yazi){
+  var s = document.querySelector('section[id^="a0"]') || document.getElementById('lyk');
+  return s ? '<br><a href="#' + s.id + '" onclick="return mulkGit(\'' + s.id + '\')" style="display:inline-block;margin-top:7px;font-weight:600;font-size:12.5px;color:#A88B55;text-decoration:none">' + yazi + '</a>' : '';
+}
+function mulkGit(id){
+  var git = function(){ var el = document.getElementById(id); if (el) el.scrollIntoView({behavior:'smooth', block:'start'}); try { history.replaceState(null, '', '#' + id); } catch(e){} };
+  if (document.fullscreenElement && document.exitFullscreen) { document.exitFullscreen().then(function(){ setTimeout(git, 200); }).catch(git); } else git();
+  return false;
+}
 function gmCember(map, b, i){
   var c = new google.maps.Circle({
     map: map, center: {lat: b.lat, lng: b.lng}, radius: b.r,
@@ -1638,7 +1648,7 @@ function gmCember(map, b, i){
   var iw = new google.maps.InfoWindow({
     content: '<div style="font:600 13px Inter,sans-serif;color:#1A2E4A;padding:2px 4px;line-height:1.5">'
            + '<b>' + b.ad + '</b><br><span style="font-weight:400;color:#5a6472">' + b.semt + '</span>'
-           + '<br><span style="font-weight:400;font-size:11.5px;color:#8a929e">Konum semt düzeyinde gösterilmektedir.</span></div>'
+           + '<br><span style="font-weight:400;font-size:11.5px;color:#8a929e">Konum semt düzeyinde gösterilmektedir.</span>' + mulkBag('Mülk bilgilerine git ↓') + '</div>'
   });
   c.addListener('click', function(e){ iw.setPosition(e.latLng || c.getCenter()); iw.open(map); });
   return c;

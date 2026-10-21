@@ -3086,38 +3086,38 @@ updateGroupHeads();
 function AVLA_HARITA_INIT(){
   const data = [
     {"code": "AV-NEW-ONYX", "name": "Riviera Onyx", "region": "riviera", "color": "#2f8f7d", "lat": 37.928, "lng": 23.711, "addr": "Paleo Faliro · Athens Riviera", "bg": false, "no": "A0172", "n": 1},
-    {"code": "AV-NEW-PLATO", "name": "Riviera Plato", "region": "merkez", "color": "#a0763a", "lat": 37.96, "lng": 23.728, "addr": "Neos Kosmos · Koukaki sınırı", "bg": false, "no": "A0171", "n": 1},
-    {"code": "AV-NEW-SEASC", "name": "Riviera Seascape", "region": "riviera", "color": "#2f8f7d", "lat": 37.91, "lng": 23.72, "addr": "Alimos · Athens Riviera", "bg": false, "no": "A0170", "n": 1},
-    {"code": "AV-NEW-ELLIN", "name": "The Ellinikon Views", "region": "riviera", "color": "#2f8f7d", "lat": 37.883, "lng": 23.748, "addr": "Elliniko · Athens Riviera", "bg": false, "no": "A0169", "n": 3},
+    {"code": "AV-NEW-PLATO", "name": "Riviera Plato", "region": "merkez", "color": "#a0763a", "lat": 37.960, "lng": 23.720, "addr": "Neos Kosmos · Koukaki sınırı", "bg": false, "no": "A0171", "n": 1},
+    {"code": "AV-NEW-SEASC", "name": "Riviera Seascape", "region": "riviera", "color": "#2f8f7d", "lat": 37.914, "lng": 23.719, "addr": "Alimos · Athens Riviera", "bg": false, "no": "A0170", "n": 1},
+    {"code": "AV-NEW-ELLIN", "name": "The Ellinikon Views", "region": "riviera", "color": "#2f8f7d", "lat": 37.891, "lng": 23.746, "addr": "Elliniko · Athens Riviera", "bg": false, "no": "A0169", "n": 3},
     {"code": "AV-NEW-ZEN41", "name": "Riviera Zen 41", "region": "pire", "color": "#3a7ea0", "lat": 37.943, "lng": 23.647, "addr": "Pire · yerleşik konut dokusu", "bg": false, "no": "A0168", "n": 13},
     ,
-    {"code": "AV-MIB-01", "name": "Etolikou Seafront ★", "region": "pire", "color": "#3a7ea0", "lat": 37.9425, "lng": 23.644, "addr": "Akti Kondili · Pire", "brochure": "01_etolikou_seafront.pdf", "bg": true, "no": "A0125", "n": 36},
-    {"code": "AV-SER-01", "name": "Piraeus Serenity ★", "region": "pire", "color": "#3a7ea0", "lat": 37.9400, "lng": 23.6500, "addr": "Liman aksı · Pire", "brochure": "23_serenity.pdf", "ilan": "https://www.avlarealestate.com/properties/piraeus-serenity-residence-golden-visa", "bg": true, "no": "A0160", "n": 27},
+    {"code": "AV-MIB-01", "name": "Etolikou Seafront ★", "region": "pire", "color": "#3a7ea0", "lat": 37.949, "lng": 23.640, "addr": "Pire · liman aksı", "brochure": "01_etolikou_seafront.pdf", "bg": true, "no": "A0125", "n": 36},
+    {"code": "AV-SER-01", "name": "Piraeus Serenity ★", "region": "pire", "color": "#3a7ea0", "lat": 37.953, "lng": 23.652, "addr": "Liman aksı · Pire", "brochure": "23_serenity.pdf", "ilan": "https://www.avlarealestate.com/properties/piraeus-serenity-residence-golden-visa", "bg": true, "no": "A0160", "n": 27},
     ,
     {"code": "AV-AFE-01", "name": "AFEA Residence ★", "region": "aegina", "color": "#4a9d9c", "lat": 37.745, "lng": 23.533, "addr": "Agia Marina, Aegina", "brochure": "21_afea_residence.pdf", "bg": true, "no": "A0158", "n": 6},
-    {"code": "AV-HMW-01", "name": "Mikrolimano 38N ★", "region": "pire", "color": "#3a7ea0", "lat": 37.9355, "lng": 23.6585, "addr": "Akti Koumoundourou, Mikrolimano", "brochure": "04_mikrolimano_38n.pdf", "bg": true, "no": "A0127", "n": 16},
-    {"code": "AV-VAK-02", "name": "Heritage Piraeus ★", "region": "pire", "color": "#3a7ea0", "lat": 37.9445, "lng": 23.647, "addr": "Pasha Limanı · Pire", "brochure": "07_heritage_piraeus.pdf", "bg": true, "no": "A0120", "n": 3},
+    {"code": "AV-HMW-01", "name": "Mikrolimano 38N ★", "region": "pire", "color": "#3a7ea0", "lat": 37.9355, "lng": 23.6585, "addr": "Mikrolimano · Pire", "brochure": "04_mikrolimano_38n.pdf", "bg": true, "no": "A0127", "n": 16},
+    {"code": "AV-VAK-02", "name": "Heritage Piraeus ★", "region": "pire", "color": "#3a7ea0", "lat": 37.937, "lng": 23.644, "addr": "Pasha Limanı · Pire", "brochure": "07_heritage_piraeus.pdf", "bg": true, "no": "A0120", "n": 3},
        ,
-    {"code": "AV-VAK-01", "name": "Aurora Residences ★", "region": "merkez", "color": "#8a4a65", "lat": 37.962, "lng": 23.751, "addr": "Pangrati · Atina Merkez", "brochure": "02_aurora_residences.pdf", "bg": true, "no": "A0124", "n": 9},
-    {"code": "AV-OIK-01", "name": "Boulevard Residences ★", "region": "merkez", "color": "#6a8a65", "lat": 37.94, "lng": 23.7, "addr": "Kallithea · Atina Merkez", "brochure": "10_boulevard_residences.pdf", "bg": true, "no": "A0123", "n": 6},
+    {"code": "AV-VAK-01", "name": "Aurora Residences ★", "region": "merkez", "color": "#8a4a65", "lat": 37.959, "lng": 23.738, "addr": "Pangrati · Atina Merkez", "brochure": "02_aurora_residences.pdf", "bg": true, "no": "A0124", "n": 9},
+    {"code": "AV-OIK-01", "name": "Boulevard Residences ★", "region": "merkez", "color": "#6a8a65", "lat": 37.952, "lng": 23.694, "addr": "Kallithea · Atina Merkez", "brochure": "10_boulevard_residences.pdf", "bg": true, "no": "A0123", "n": 6},
     ,
     {"code": "AV-ZAF-04", "name": "SNFCC Rezidansları", "region": "merkez", "color": "#6a8a65", "lat": 37.946, "lng": 23.695, "addr": "Kallithea · Atina Merkez", "ilan": "https://www.avlarealestate.com/properties/kallithea-boutique-one-bedroom-residences-near-snfcc", "bg": true, "no": "A0222", "n": 2},
-    {"code": "AV-VAK-04", "name": "Metro Apartments — Daire G1 ★", "region": "merkez", "color": "#8a7345", "lat": 37.9352, "lng": 23.7344, "addr": "Agios Dimitrios · Atina", "brochure": "13_metro_apartments.pdf", "bg": true, "no": "A0133", "n": 1},
-    {"code": "AV-ZAF-05", "name": "Imittos Etekleri Rezidansları", "region": "merkez", "color": "#3f6f5a", "lat": 37.93, "lng": 23.75, "addr": "Ilioupoli · Atina Güney", "bg": true, "no": "A0224", "n": 7},
+    {"code": "AV-VAK-04", "name": "Metro Apartments — Daire G1 ★", "region": "merkez", "color": "#8a7345", "lat": 37.937, "lng": 23.742, "addr": "Agios Dimitrios · Atina", "brochure": "13_metro_apartments.pdf", "bg": true, "no": "A0133", "n": 1},
+    {"code": "AV-ZAF-05", "name": "Imittos Etekleri Rezidansları", "region": "merkez", "color": "#3f6f5a", "lat": 37.943, "lng": 23.755, "addr": "Ilioupoli · Atina Güney", "bg": true, "no": "A0224", "n": 7},
     {"code": "AV-VAK-03", "name": "The Hera Athens ★", "region": "merkez", "color": "#85a505", "lat": 37.997, "lng": 23.71, "addr": "Akademia Platonos · Atina", "brochure": "09_hera_athens.pdf", "bg": true, "no": "A0121", "n": 26},
     ,
-    {"code": "AV-EUR-01", "name": "Aenaon Park Residences ★", "region": "riviera", "color": "#a05230", "lat": 37.9395, "lng": 23.6798, "addr": "Neo Faliro · Athens Riviera", "brochure": "15_aenaon_park_residences.pdf", "bg": true, "no": "A0135", "n": 73},
+    {"code": "AV-EUR-01", "name": "Aenaon Park Residences ★", "region": "riviera", "color": "#a05230", "lat": 37.948, "lng": 23.671, "addr": "Neo Faliro · Athens Riviera", "brochure": "15_aenaon_park_residences.pdf", "bg": true, "no": "A0135", "n": 73},
     ,
     ,
     {"code": "AV-RNT-01", "name": "The North Village ★", "region": "kuzey", "color": "#6d5a9c", "lat": 38.087, "lng": 23.805, "addr": "Nea Erythraia · Kifisia", "brochure": "20_the_north_village.pdf", "bg": true, "no": "A0148", "n": 7},
-    {"code": "AV-KER-01", "name": "Kato Elliniko Riviera Suites", "region": "riviera", "color": "#a05230", "lat": 37.895, "lng": 23.735, "addr": "Kato Elliniko · Athens Riviera", "ilan": "https://www.avlarealestate.com/properties/kato-elliniko-furnished-apartments-pool-rooftop-lounge-beside-ellinikon", "bg": true, "no": "A0220", "n": 15},
+    {"code": "AV-KER-01", "name": "Kato Elliniko Riviera Suites", "region": "riviera", "color": "#a05230", "lat": 37.907, "lng": 23.745, "addr": "Kato Elliniko · Athens Riviera", "ilan": "https://www.avlarealestate.com/properties/kato-elliniko-furnished-apartments-pool-rooftop-lounge-beside-ellinikon", "bg": true, "no": "A0220", "n": 15},
     {"code": "AV-NIR-01", "name": "Neo Irakleio · havuzlu butik binada eşyalı 1+1 daireler", "region": "kuzey", "color": "#6d5a9c", "lat": 38.05, "lng": 23.76, "addr": "Neo Irakleio · North Athens", "ilan": "https://www.avlarealestate.com/properties/neo-irakleio-furnished-one-bedroom-apartments-pool-north-athens", "bg": true, "no": "A0317", "n": 2},
-    {"code": "AV-LYK-01", "name": "Lykovrysi · eşyalı 1+1 daireler ve bahçe dubleksleri", "region": "kuzey", "color": "#6d5a9c", "lat": 38.07, "lng": 23.78, "addr": "Lykovrysi · North Athens", "ilan": "https://lykovrysi-north-residences.avlarealestate.com/", "bg": true, "no": "LYK", "n": 16},
-      {"code": "AV-CHC-01", "name": "Chalandri Court Residences", "region": "kuzey", "color": "#4f6f9c", "lat": 38.023, "lng": 23.800, "addr": "Chalandri · North Athens", "ilan": "https://www.avlarealestate.com/properties/chalandri-one-bedroom-residences-with-parking-north-athens", "bg": true, "no": "A0223", "n": 15},
-    {"code": "AV-PER-01", "name": "Terrace Heights ★", "region": "bati", "color": "#6a8a65", "lat": 38.0186, "lng": 23.6960, "addr": "Peristeri, West Athens", "ilan": "https://www.avlarealestate.com/properties/terrace-heights-peristeri-west-athens-golden-visa", "bg": true, "no": "A0152", "n": 22},
-          {"code": "AV-LEF-01", "name": "Lefkada Crystal Waters", "region": "lefkada", "color": "#2f8f7d", "lat": 38.7647, "lng": 20.7222, "addr": "Nikiana, Lefkada", "brochure": "29_lefkada_crystal_waters.pdf", "bg": true, "no": "A0141", "n": 73},
-    {"code": "AV-TH-01", "name": "Thessaloniki Bay Residences", "region": "selanik", "color": "#2b5f80", "lat": 40.60, "lng": 22.95, "addr": "Thessaloniki, Greece", "ilan": "https://www.avlarealestate.com/properties/thessaloniki-bay-residences-thessaloniki", "bg": true, "no": "A0182", "n": 0},
-    {"code": "AV-SG-01", "name": "South Glyfada", "region": "riviera", "color": "#a05230", "lat": 37.8745, "lng": 23.7770, "addr": "Ano Glyfada · Athens Riviera", "ilan": "https://www.avlarealestate.com/properties/south-glyfada-ano-glyfada-athens-riviera-golden-visa", "bg": true, "no": "A0161", "n": 33}
+    {"code": "AV-LYK-01", "name": "Lykovrysi · eşyalı 1+1 daireler ve bahçe dubleksleri", "region": "kuzey", "color": "#6d5a9c", "lat": 38.066, "lng": 23.776, "addr": "Lykovrysi · North Athens", "ilan": "https://lykovrysi-north-residences.avlarealestate.com/", "bg": true, "no": "LYK", "n": 16},
+      {"code": "AV-CHC-01", "name": "Chalandri Court Residences", "region": "kuzey", "color": "#4f6f9c", "lat": 38.020, "lng": 23.793, "addr": "Chalandri · North Athens", "ilan": "https://www.avlarealestate.com/properties/chalandri-one-bedroom-residences-with-parking-north-athens", "bg": true, "no": "A0223", "n": 15},
+    {"code": "AV-PER-01", "name": "Terrace Heights ★", "region": "bati", "color": "#6a8a65", "lat": 38.004, "lng": 23.691, "addr": "Peristeri, West Athens", "ilan": "https://www.avlarealestate.com/properties/terrace-heights-peristeri-west-athens-golden-visa", "bg": true, "no": "A0152", "n": 22},
+          {"code": "AV-LEF-01", "name": "Lefkada Crystal Waters", "region": "lefkada", "color": "#2f8f7d", "lat": 38.754, "lng": 20.719, "addr": "Nikiana, Lefkada", "brochure": "29_lefkada_crystal_waters.pdf", "bg": true, "no": "A0141", "n": 73},
+    {"code": "AV-TH-01", "name": "Thessaloniki Bay Residences", "region": "selanik", "color": "#2b5f80", "lat": 40.608, "lng": 22.952, "addr": "Thessaloniki, Greece", "ilan": "https://www.avlarealestate.com/properties/thessaloniki-bay-residences-thessaloniki", "bg": true, "no": "A0182", "n": 0},
+    {"code": "AV-SG-01", "name": "South Glyfada", "region": "riviera", "color": "#a05230", "lat": 37.880, "lng": 23.770, "addr": "Ano Glyfada · Athens Riviera", "ilan": "https://www.avlarealestate.com/properties/south-glyfada-ano-glyfada-athens-riviera-golden-visa", "bg": true, "no": "A0161", "n": 33}
   ];
   const map = L.map('avla-map', { scrollWheelZoom: false }).setView([37.96, 23.72], 11);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
@@ -3149,6 +3149,7 @@ function AVLA_HARITA_INIT(){
         <div class="ttl">${p.name}</div>
         <div class="addr">${p.addr}</div>
         <div class="btns">
+          ${p.no ? `<a class="git" href="#" data-no="${p.no}">Mülke git ↓</a>` : ''}
           ${broLink}
           <button class="yor yorum-btn" type="button" data-yorum-target="${slugifyForYorum(p.name)}">Yorum</button>
         </div>
@@ -3182,6 +3183,18 @@ window.AvlaMap = {
 
 /* defer'li leaflet DOMContentLoaded'dan once hazir olur */
 if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',function(){AVLA_HARITA_INIT();});}else{AVLA_HARITA_INIT();}
+
+/* harita popup → ilgili kart (Sami 21.10.2026: "haritada tıklayınca çıkan bilgi mülkün bilgisine geri dönmeli") */
+document.addEventListener('click', function(e){
+  var a = e.target.closest && e.target.closest('.avla-popup a.git'); if (!a) return;
+  e.preventDefault();
+  var no = a.getAttribute('data-no'), kart = null;
+  document.querySelectorAll('.property .ilan-no').forEach(function(x){ if (!kart && x.textContent.trim() === no) kart = x.closest('.property'); });
+  if (!kart) return;
+  if (kart.classList.contains('hidden') && typeof applyFilter === 'function') applyFilter('all');
+  var git = function(){ kart.scrollIntoView({behavior:'smooth', block:'center'}); kart.style.transition = 'box-shadow .3s'; kart.style.boxShadow = '0 0 0 4px rgba(168,139,85,.75)'; setTimeout(function(){ kart.style.boxShadow = ''; }, 2200); };
+  if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().then(function(){ setTimeout(git, 200); }).catch(git); else git();
+});
 </script>
 
 
