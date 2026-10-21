@@ -2693,6 +2693,9 @@ document.addEventListener('click', function(e){
   e.preventDefault();
   var no = a.getAttribute('data-no'), kart = null;
   document.querySelectorAll('.property .ilan-no').forEach(function(x){ if (!kart && x.textContent.trim() === no) kart = x.closest('.property'); });
+  /* EN kartlarında ilan no rozeti yok → kapak data-gv eşlemesi (TR kartlarından üretildi) */
+  var GVK = {"A0125":"etolikou","A0127":"mikrolimano","A0120":"heritage","A0160":"serenity","A0168":"zen41","A0158":"afea","A0141":"lefkada","A0124":"aurora","A0123":"boulevard","A0121":"the-hera","A0171":"plato","A0222":"kallithea-snfcc","A0224":"ilioupoli-imittos","A0133":"metro-apartments","A0135":"aenaon","A0161":"south-glyfada","A0172":"onyx","A0170":"seascape","A0169":"ellinikon","A0220":"kato-elliniko","A0148":"north-village","A0317":"neo-irakleio","LYK":"lykovrysi","A0223":"chalandri-court","A0152":"terrace-heights"};
+  if (!kart && GVK[no]) { var c = document.querySelector('.property [data-gv="' + GVK[no] + '"]'); if (c) kart = c.closest('.property'); }
   if (!kart) return;
   if (kart.classList.contains('hidden') && typeof applyFilter === 'function') applyFilter('all');
   var git = function(){ kart.scrollIntoView({behavior:'smooth', block:'center'}); kart.style.transition = 'box-shadow .3s'; kart.style.boxShadow = '0 0 0 4px rgba(168,139,85,.75)'; setTimeout(function(){ kart.style.boxShadow = ''; }, 2200); };
