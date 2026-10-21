@@ -17,9 +17,14 @@
  "gv": "Dönüşüm projesi — uygunluk ve geçerli eşik daire bazında , bağımsız Yunan avukat incelemesiyle yazılı teyit edilir",
  "ozet": "SOUTH B.1 — Agios Dimitrios'taki butik rezidansta kalan son ev: full eşyalı bahçe dairesi, 46,30 m² + 60 m² özel bahçe.",
  "kapak": "img/kapak.jpg",
- "teyit": null,
+ "teyit": "5 Ekim 2026",
  "renk": "#8a4a4a",
  "rapor": [
   "envanter eşleşmedi (0/0) — tablo kaynak seçkideki gibi kaldı"
- ]
+ ],
+ "rezerve": 0,
+ "satildi": 46,
+ "teyitte": 0,
+ "toplam": 46,
+ "env_senkron": "2026-10-22"
 }

@@ -5,8 +5,8 @@
  "bolge": "Koukaki · Atina merkez",
  "url": "https://koukaki-heights-residences-a0171.avlarealestate.com/",
  "musait": 1,
- "fiyat": "€465.000 – €465.000",
- "net": "59,00 – 59,00",
+ "fiyat": "€465.000",
+ "net": "59,00",
  "brut": "59,00 – 59,00",
  "emn": "€7.881",
  "tipler": [
@@ -21,5 +21,10 @@
  "kapak": "img/kapak.jpg",
  "teyit": "19 Eylül 2026",
  "renk": "#8a5a4a",
- "rapor": []
+ "rapor": [],
+ "rezerve": 0,
+ "satildi": 4,
+ "teyitte": 0,
+ "toplam": 5,
+ "env_senkron": "2026-10-22"
 }

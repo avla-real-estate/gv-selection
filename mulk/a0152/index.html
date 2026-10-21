@@ -1068,6 +1068,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
 </style>
+<style id="env-durum">
+tr.dr-r td,tr.dr-s td{color:#8b919a}
+tr.dr-r td.f,tr.dr-s td.f{color:#8b919a}
+tr.dr-r .pbtn,tr.dr-s .pbtn{opacity:.65}
+.dur{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:999px;font-size:10.5px;font-weight:500;letter-spacing:.02em;line-height:1.6;vertical-align:1px;white-space:nowrap}
+.dur-r{background:#fbecd9;color:#93560f}
+.dur-s{background:#ebebeb;color:#5f646b}
+.dur-t{background:#eaeef5;color:#46577a}
+.dozet{font-size:12.5px;line-height:1.55;color:var(--mut,#5a6472);margin:12px 0 8px}
+.dozet b{font-weight:500;color:var(--navy,#1A2E4A)}
+.env-durum{margin:10px 0 2px;font-size:12px;line-height:1.5;color:#5a6472}
+.env-durum b{font-weight:500;color:#1A2E4A}
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4JQ2XVT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -1148,10 +1161,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section id="karsilastirma">
   <div class="eyebrow">Karşılaştırma</div>
   <h2>Daire tipleri — tek tabloda</h2>
-  <div class="tbl"><table><thead><tr><th>Daire</th><th>Tip</th><th>İç m²</th><th>Balkon / dış m²</th><th>Toplam m²</th><th>Fiyat</th><th>€ / iç m²</th><th>€ / toplam m²</th><th>Teslim</th></tr></thead><tbody>
-<tr><td><b><a href="#a0152" style="color:inherit">I-8</a></b></td><td>—</td><td>30,00</td><td>0,00</td><td>30,00</td><td class="f">€145.000</td><td>€4.833</td><td>€4.833</td><td>Teyitte</td></tr>
-<tr><td><b><a href="#a0152" style="color:inherit">I-6</a></b></td><td>—</td><td>55,00</td><td>4,50</td><td>59,50</td><td class="f">€260.000</td><td>€4.727</td><td>€4.370</td><td>Teyitte</td></tr>
-  </tbody></table></div>
+  <div class="tbl"><table><thead><tr><th>Daire</th><th>Tip</th><th>İç m²</th><th>Balkon / dış m²</th><th>Toplam m²</th><th>Fiyat</th><th>€ / iç m²</th><th>€ / toplam m²</th><th>Teslim</th></tr></thead><tbody> <tr><td colspan="9">Şu an müsait daire yok — bütün daireler durumlarıyla proje bölümündeki listede.</td></tr> </tbody></table></div>
   <div class="tblnot">Her daire tipinden en uygun fiyatlı ve en geniş müsait daire. Birim fiyatlar liste fiyatı üzerinden; bağlayıcı fiyat yazılı teyitle sabitlenir. Tablonun tamamı proje bölümündeki “Fiyatlar ve müsait daireler” başlığı altındadır.</div>
 </section>
 
@@ -1193,6 +1203,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <details class="rapor"><summary>Fiyatlar ve müsait daireler — 44 dairenin 22'si</summary><div class="rbody">
     <div class="pmap" id="pmap-a0152" data-lat="38.02" data-lng="23.7" data-r="250" data-renk="#4a7a7a"></div>
     <div class="tblnot pmap-not">Konum <b>semt düzeyinde</b> gösterilmektedir — Peristeri · bati.</div>
+    <div class="dozet">Durum: <b>22 müsait</b> · 22 rezerve — son teyit <b>17 Eylül 2026</b>. Rezerve ve satılan daireler listede kalır; soluk ve etiketlidir.</div>
     <div class="tbl"><table>
       <thead><tr><th>Daire</th><th>Kat</th><th>Tip</th><th>Net m²</th><th>Balkon m²</th><th>Brüt m²</th><th>Fiyat</th><th>€ / m² net</th><th>€ / m² brüt</th><th>Plan</th></tr></thead>
       <tbody>
@@ -1208,19 +1219,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <tr class="fgiz"><td>I-9</td><td>Zemin</td><td>—</td><td>44,00</td><td>3,00</td><td>47,00</td><td class="f">€260.000</td><td>€5.909</td><td>€5.532</td><td>—</td></tr>
       <tr class="fgiz"><td>A-1</td><td>1</td><td>—</td><td>48,00</td><td>3,50</td><td>51,50</td><td class="f">€255.000</td><td>€5.312</td><td>€4.951</td><td>—</td></tr>
       <tr class="fgiz"><td>A-10</td><td>1</td><td>—</td><td>47,00</td><td>8,00</td><td>55,00</td><td class="f">€255.000</td><td>€5.426</td><td>€4.636</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>A-11 <span class="dur dur-r">Rezerve</span></td><td>1</td><td>—</td><td>45,00</td><td>11,00</td><td>56,00</td><td class="f">€255.000</td><td>€5.667</td><td>€4.554</td><td>—</td></tr>
       <tr class="fgiz"><td>A-2</td><td>1</td><td>—</td><td>33,00</td><td>5,50</td><td>38,50</td><td class="f">€252.000</td><td>€7.636</td><td>€6.545</td><td>—</td></tr>
       <tr class="fgiz"><td>A-3</td><td>1</td><td>—</td><td>36,00</td><td>6,50</td><td>42,50</td><td class="f">€252.000</td><td>€7.000</td><td>€5.929</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>A-4 <span class="dur dur-r">Rezerve</span></td><td>1</td><td>—</td><td>36,00</td><td>12,00</td><td>48,00</td><td class="f">€250.000</td><td>€6.944</td><td>€5.208</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>A-5 <span class="dur dur-r">Rezerve</span></td><td>1</td><td>—</td><td>34,00</td><td>7,00</td><td>41,00</td><td class="f">€250.000</td><td>€7.353</td><td>€6.098</td><td>—</td></tr>
       <tr class="fgiz"><td>A-6</td><td>1</td><td>—</td><td>40,00</td><td>6,00</td><td>46,00</td><td class="f">€255.000</td><td>€6.375</td><td>€5.543</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>A-7 <span class="dur dur-r">Rezerve</span></td><td>1</td><td>—</td><td>56,00</td><td>10,50</td><td>66,50</td><td class="f">Fiyat teyitte</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>A-8 <span class="dur dur-r">Rezerve</span></td><td>1</td><td>—</td><td>27,50</td><td>0,00</td><td>27,50</td><td class="f">€150.000</td><td>€5.455</td><td>€5.455</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>A-9 <span class="dur dur-r">Rezerve</span></td><td>1</td><td>—</td><td>48,00</td><td>8,00</td><td>56,00</td><td class="f">€260.000</td><td>€5.417</td><td>€4.643</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>B-1 <span class="dur dur-r">Rezerve</span></td><td>2</td><td>—</td><td>46,00</td><td>35,50</td><td>81,50</td><td class="f">Fiyat teyitte</td><td>—</td><td>—</td><td>—</td></tr>
       <tr class="fgiz"><td>B-2</td><td>2</td><td>—</td><td>39,50</td><td>12,00</td><td>51,50</td><td class="f">€250.000</td><td>€6.329</td><td>€4.854</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>B-3 <span class="dur dur-r">Rezerve</span></td><td>2</td><td>—</td><td>43,00</td><td>33,00</td><td>76,00</td><td class="f">Fiyat teyitte</td><td>—</td><td>—</td><td>—</td></tr>
       <tr class="fgiz"><td>B-4</td><td>2</td><td>—</td><td>31,00</td><td>11,00</td><td>42,00</td><td class="f">€250.000</td><td>€8.065</td><td>€5.952</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>B-5 <span class="dur dur-r">Rezerve</span></td><td>2</td><td>—</td><td>47,00</td><td>93,00</td><td>140,00</td><td class="f">Fiyat teyitte</td><td>—</td><td>—</td><td>—</td></tr>
       <tr class="fgiz"><td>B-6</td><td>2</td><td>—</td><td>42,00</td><td>10,00</td><td>52,00</td><td class="f">€265.000</td><td>€6.310</td><td>€5.096</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>B-7 <span class="dur dur-r">Rezerve</span></td><td>2</td><td>—</td><td>36,00</td><td>36,50</td><td>72,50</td><td class="f">Fiyat teyitte</td><td>—</td><td>—</td><td>—</td></tr>
       <tr class="fgiz"><td>B-8</td><td>2</td><td>—</td><td>33,00</td><td>8,00</td><td>41,00</td><td class="f">€250.000</td><td>€7.576</td><td>€6.098</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>C-1 <span class="dur dur-r">Rezerve</span></td><td>3</td><td>—</td><td>46,00</td><td>26,00</td><td>72,00</td><td class="f">Fiyat teyitte</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>C-2 <span class="dur dur-r">Rezerve</span></td><td>3</td><td>—</td><td>39,50</td><td>10,00</td><td>49,50</td><td class="f">€260.000</td><td>€6.582</td><td>€5.253</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>C-3 <span class="dur dur-r">Rezerve</span></td><td>3</td><td>—</td><td>43,00</td><td>25,50</td><td>68,50</td><td class="f">Fiyat teyitte</td><td>—</td><td>—</td><td>—</td></tr>
       <tr class="fgiz"><td>C-4</td><td>3</td><td>—</td><td>31,00</td><td>10,00</td><td>41,00</td><td class="f">€252.000</td><td>€8.129</td><td>€6.146</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>C-5 <span class="dur dur-r">Rezerve</span></td><td>3</td><td>—</td><td>47,00</td><td>20,00</td><td>67,00</td><td class="f">Fiyat teyitte</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>C-6 <span class="dur dur-r">Rezerve</span></td><td>3</td><td>—</td><td>42,00</td><td>8,00</td><td>50,00</td><td class="f">Fiyat teyitte</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>C-7 <span class="dur dur-r">Rezerve</span></td><td>3</td><td>—</td><td>36,00</td><td>15,00</td><td>51,00</td><td class="f">Fiyat teyitte</td><td>—</td><td>—</td><td>—</td></tr>
       <tr class="fgiz"><td>C-8</td><td>3</td><td>—</td><td>33,00</td><td>8,00</td><td>41,00</td><td class="f">€255.000</td><td>€7.727</td><td>€6.220</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>D-1 <span class="dur dur-r">Rezerve</span></td><td>4 (Penthouse)</td><td>—</td><td>52,50</td><td>104,50</td><td>157,00</td><td class="f">€325.000</td><td>€6.190</td><td>€2.070</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>D-2 <span class="dur dur-r">Rezerve</span></td><td>4 (Penthouse)</td><td>—</td><td>39,00</td><td>10,00</td><td>49,00</td><td class="f">€280.000</td><td>€7.179</td><td>€5.714</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>D-3 <span class="dur dur-r">Rezerve</span></td><td>4 (Penthouse)</td><td>—</td><td>43,00</td><td>65,50</td><td>108,50</td><td class="f">Fiyat teyitte</td><td>—</td><td>—</td><td>—</td></tr>
       <tr class="fgiz"><td>D-4</td><td>4 (Penthouse)</td><td>—</td><td>31,00</td><td>10,00</td><td>41,00</td><td class="f">€260.000</td><td>€8.387</td><td>€6.341</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>D-5 <span class="dur dur-r">Rezerve</span></td><td>4 (Penthouse)</td><td>—</td><td>47,00</td><td>21,50</td><td>68,50</td><td class="f">Fiyat teyitte</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>D-6 <span class="dur dur-r">Rezerve</span></td><td>4 (Penthouse)</td><td>—</td><td>42,00</td><td>41,00</td><td>83,00</td><td class="f">€310.000</td><td>€7.381</td><td>€3.735</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>D-7 <span class="dur dur-r">Rezerve</span></td><td>4 (Penthouse)</td><td>—</td><td>66,00</td><td>58,00</td><td>124,00</td><td class="f">Fiyat teyitte</td><td>—</td><td>—</td><td>—</td></tr>
       </tbody>
     </table></div>
-    <button class="fdaha" onclick="fDaha(this)" data-cok="Kalan 16 daireyi göster  +" data-az="Daha az göster  −">Kalan 16 daireyi göster  +</button>
+    <button class="fdaha" onclick="fDaha(this)" data-cok="Kalan 38 daireyi göster  +" data-az="Daha az göster  −">Kalan 38 daireyi göster  +</button>
     <div class="tblnot">Kaynak: geliştiricinin fiyat listesi, <b>2026-08-16</b>. Brüt alan = net iç alan + balkon/bahçe; alanlarda ±%3 tolerans vardır. Müsaitlik teklif aşamasında yazılı teyit edilir.</div>
     <button class="dkapat" onclick="dKapat(this)" aria-label="Bölümü kapat"><i>−</i> Kapat</button>
   </div></details>

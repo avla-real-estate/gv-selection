@@ -4,11 +4,11 @@
  "semt": "Akademia Platonos",
  "bolge": "Akademia Platonos · Atina Bazı daireler hazır · ortak alanlar 05/2027",
  "url": "https://the-hera-athens-a0121.avlarealestate.com/",
- "musait": 35,
- "fiyat": "€250.000 – €360.000",
- "net": "37,34 – 79,57",
- "brut": "43,26 – 113,83",
- "emn": "€3.770",
+ "musait": 26,
+ "fiyat": "€250.000 – €350.000",
+ "net": "37,34 – 92,29",
+ "brut": "43,26 – 114,29",
+ "emn": "€3.684",
  "tipler": [
   "1+1",
   "2+1"
@@ -20,7 +20,12 @@
  "gv": "",
  "ozet": "Bu proje, mevcut bir bloğun çatı havuzlu 57 daireye dönüştürülmesidir.",
  "kapak": "img/kapak.jpg",
- "teyit": "18 Eylül 2026",
+ "teyit": "17 Ekim 2026",
  "renk": "#7a6a9a",
- "rapor": []
+ "rapor": [],
+ "rezerve": 11,
+ "satildi": 20,
+ "teyitte": 0,
+ "toplam": 57,
+ "env_senkron": "2026-10-22"
 }

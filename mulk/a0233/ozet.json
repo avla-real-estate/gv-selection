@@ -25,5 +25,10 @@
   "Daire 16 etiket uyuşmuyor (tablo 49,00 m², envanter 56,00 m²) — fiyata dokunulmadı",
   "Daire 15 etiket uyuşmuyor (tablo 56,00 m², envanter 55,00 m²) — fiyata dokunulmadı",
   "Daire 17 etiket uyuşmuyor (tablo 55,00 m², envanter 49,00 m²) — fiyata dokunulmadı"
- ]
+ ],
+ "rezerve": 0,
+ "satildi": 0,
+ "teyitte": 0,
+ "toplam": 3,
+ "env_senkron": "2026-10-22"
 }

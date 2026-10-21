@@ -1068,6 +1068,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
 </style>
+<style id="env-durum">
+tr.dr-r td,tr.dr-s td{color:#8b919a}
+tr.dr-r td.f,tr.dr-s td.f{color:#8b919a}
+tr.dr-r .pbtn,tr.dr-s .pbtn{opacity:.65}
+.dur{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:999px;font-size:10.5px;font-weight:500;letter-spacing:.02em;line-height:1.6;vertical-align:1px;white-space:nowrap}
+.dur-r{background:#fbecd9;color:#93560f}
+.dur-s{background:#ebebeb;color:#5f646b}
+.dur-t{background:#eaeef5;color:#46577a}
+.dozet{font-size:12.5px;line-height:1.55;color:var(--mut,#5a6472);margin:12px 0 8px}
+.dozet b{font-weight:500;color:var(--navy,#1A2E4A)}
+.env-durum{margin:10px 0 2px;font-size:12px;line-height:1.5;color:#5a6472}
+.env-durum b{font-weight:500;color:#1A2E4A}
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4JQ2XVT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -1148,10 +1161,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section id="karsilastirma">
   <div class="eyebrow">Karşılaştırma</div>
   <h2>Daire tipleri — tek tabloda</h2>
-  <div class="tbl"><table><thead><tr><th>Daire</th><th>Tip</th><th>İç m²</th><th>Balkon / dış m²</th><th>Toplam m²</th><th>Fiyat</th><th>€ / iç m²</th><th>€ / toplam m²</th><th>Teslim</th></tr></thead><tbody>
-<tr><td><b><a href="#a0144" style="color:inherit">M4 (Mezonet 4)</a></b></td><td>—</td><td>47,50</td><td>4,00</td><td>51,50</td><td class="f">€270.000</td><td>€5.684</td><td>€5.243</td><td>Haziran 2026</td></tr>
-<tr><td><b><a href="#a0144" style="color:inherit">M3 (Mezonet 3)</a></b></td><td>—</td><td>61,00</td><td>4,00</td><td>65,00</td><td class="f">€300.000</td><td>€4.918</td><td>€4.615</td><td>Haziran 2026</td></tr>
-  </tbody></table></div>
+  <div class="tbl"><table><thead><tr><th>Daire</th><th>Tip</th><th>İç m²</th><th>Balkon / dış m²</th><th>Toplam m²</th><th>Fiyat</th><th>€ / iç m²</th><th>€ / toplam m²</th><th>Teslim</th></tr></thead><tbody> <tr><td colspan="9">Şu an müsait daire yok — bütün daireler durumlarıyla proje bölümündeki listede.</td></tr> </tbody></table></div>
   <div class="tblnot">Her daire tipinden en uygun fiyatlı ve en geniş müsait daire. Birim fiyatlar liste fiyatı üzerinden; bağlayıcı fiyat yazılı teyitle sabitlenir. Tablonun tamamı proje bölümündeki “Fiyatlar ve müsait daireler” başlığı altındadır.</div>
 </section>
 
@@ -1194,13 +1204,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <details class="rapor"><summary>Fiyatlar ve müsait daireler — 21 dairenin 2'si</summary><div class="rbody">
     <div class="pmap" id="pmap-a0144" data-lat="38.02" data-lng="23.69" data-r="250" data-renk="#4a7a7a"></div>
     <div class="tblnot pmap-not">Konum <b>semt düzeyinde</b> gösterilmektedir — Peristeri · bati.</div>
+    <div class="dozet">Durum: <b>2 müsait</b> · 1 rezerve · 18 satıldı — son teyit <b>18 Eylül 2026</b>. Rezerve ve satılan daireler listede kalır; soluk ve etiketlidir.</div>
     <div class="tbl"><table>
       <thead><tr><th>Daire</th><th>Kat</th><th>Tip</th><th>Net m²</th><th>Balkon m²</th><th>Brüt m²</th><th>Fiyat</th><th>€ / m² net</th><th>€ / m² brüt</th><th>Plan</th></tr></thead>
       <tbody>
+      <tr class="dr-s"><td>M1 (Mezonet 1) <span class="dur dur-s">Satıldı</span></td><td>Arka zemin + giris</td><td>—</td><td>46,00</td><td>24,00</td><td>70,00</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s"><td>M2 (Mezonet 2) <span class="dur dur-s">Satıldı</span></td><td>Arka zemin + giris</td><td>—</td><td>57,00</td><td>24,00</td><td>81,00</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
       <tr><td>M3 (Mezonet 3)</td><td>Arka zemin + giris</td><td>—</td><td>61,00</td><td>4,00</td><td>65,00</td><td class="f">€300.000</td><td>€4.918</td><td>€4.615</td><td>—</td></tr>
       <tr><td>M4 (Mezonet 4)</td><td>Arka zemin + giris</td><td>—</td><td>47,50</td><td>4,00</td><td>51,50</td><td class="f">€270.000</td><td>€5.684</td><td>€5.243</td><td>—</td></tr>
+      <tr class="dr-s"><td>SF1 <span class="dur dur-s">Satıldı</span></td><td>Giris kat</td><td>—</td><td>49,00</td><td>60,00</td><td>109,00</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>SF2 <span class="dur dur-s">Satıldı</span></td><td>Giris kat</td><td>—</td><td>49,00</td><td>30,50</td><td>79,50</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A1 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>34,50</td><td>4,00</td><td>38,50</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A2 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>37,00</td><td>6,00</td><td>43,00</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A3 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>38,00</td><td>3,00</td><td>41,00</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A4 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>28,50</td><td>11,00</td><td>39,50</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A5 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>28,00</td><td>1,00</td><td>29,00</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A6 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>28,50</td><td>3,00</td><td>31,50</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A7 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>30,00</td><td>3,00</td><td>33,00</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>M5 (Mezonet 5) <span class="dur dur-s">Satıldı</span></td><td>1.-2. kat</td><td>—</td><td>34,00</td><td>5,00</td><td>39,00</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B1 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>35,00</td><td>4,00</td><td>39,00</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B2 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>37,00</td><td>6,00</td><td>43,00</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B3 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>37,00</td><td>3,00</td><td>40,00</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B4 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>30,50</td><td>8,00</td><td>38,50</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-r"><td>B5 <span class="dur dur-r">Rezerve</span></td><td>2</td><td>—</td><td>27,00</td><td>1,00</td><td>28,00</td><td class="f">€250.000</td><td>€9.259</td><td>€8.929</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B6 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>28,50</td><td>3,00</td><td>31,50</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B7 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>30,00</td><td>3,00</td><td>33,00</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
       </tbody>
     </table></div>
+    <button class="fdaha" onclick="fDaha(this)" data-cok="Kalan 15 daireyi göster  +" data-az="Daha az göster  −">Kalan 15 daireyi göster  +</button>
     <div class="tblnot">Kaynak: geliştiricinin fiyat listesi, <b>2026-09-03</b>. Brüt alan = net iç alan + balkon/bahçe; alanlarda ±%3 tolerans vardır. Müsaitlik teklif aşamasında yazılı teyit edilir.</div>
     <button class="dkapat" onclick="dKapat(this)" aria-label="Bölümü kapat"><i>−</i> Kapat</button>
   </div></details>

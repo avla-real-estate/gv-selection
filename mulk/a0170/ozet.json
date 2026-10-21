@@ -5,8 +5,8 @@
  "bolge": "Alimos · Athens Riviera",
  "url": "https://alimos-coast-residences-a0170.avlarealestate.com/",
  "musait": 1,
- "fiyat": "€330.000 – €330.000",
- "net": "29,00 – 29,00",
+ "fiyat": "€330.000",
+ "net": "29,00",
  "brut": "29,00 – 29,00",
  "emn": "€11.379",
  "tipler": [
@@ -21,5 +21,10 @@
  "kapak": "img/kapak.jpg",
  "teyit": "23 Eylül 2026",
  "renk": "#8a7345",
- "rapor": []
+ "rapor": [],
+ "rezerve": 0,
+ "satildi": 32,
+ "teyitte": 0,
+ "toplam": 33,
+ "env_senkron": "2026-10-22"
 }

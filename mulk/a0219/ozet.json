@@ -4,10 +4,10 @@
  "semt": "Elliniko",
  "bolge": "Elliniko · Atina Rivierası",
  "url": "https://elliniko-garden-duplexes-a0219.avlarealestate.com/",
- "musait": 5,
- "fiyat": "€290.000 – €330.000",
- "net": "41,22 – 55,33",
- "brut": "41,22 – 82,24",
+ "musait": 7,
+ "fiyat": "€290.000 – €800.000",
+ "net": "41,22 – 132,00",
+ "brut": "82,24 – 253,46",
  "emn": "€5.964",
  "tipler": [
   "Bahçe dubleksi",
@@ -22,5 +22,10 @@
  "kapak": "img/kapak.jpg",
  "teyit": "30 Eylül 2026",
  "renk": "#a07a30",
- "rapor": []
+ "rapor": [],
+ "rezerve": 0,
+ "satildi": 1,
+ "teyitte": 0,
+ "toplam": 8,
+ "env_senkron": "2026-10-22"
 }

@@ -17,9 +17,14 @@
  "gv": "Uygunluk ve geçerli eşik daire bazında , bağımsız Yunan avukat incelemesiyle yazılı teyit edilir",
  "ozet": "Kallithea, Güney Atina'da 10 mobilyalı daireden oluşan butik koleksiyon — Atina Riviera'sına 10 dk, merkeze 15 dk, üç üniversiteye komşu.",
  "kapak": "img/kapak.jpg",
- "teyit": null,
+ "teyit": "11 Ekim 2026",
  "renk": "#1A2E4A",
  "rapor": [
   "envanter eşleşmedi (0/0) — tablo kaynak seçkideki gibi kaldı"
- ]
+ ],
+ "rezerve": 2,
+ "satildi": 8,
+ "teyitte": 0,
+ "toplam": 10,
+ "env_senkron": "2026-10-22"
 }

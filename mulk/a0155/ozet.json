@@ -4,7 +4,7 @@
  "semt": "Atina Merkez",
  "bolge": "Atina Merkez · merkez",
  "url": "https://athens-central-court-a0155.avlarealestate.com/",
- "musait": 8,
+ "musait": 5,
  "fiyat": "€262.500 – €336.000",
  "net": "31,00 – 79,00",
  "brut": "39,00 – 84,00",
@@ -19,7 +19,12 @@
  "gv": "Dönüşüm projesi — uygunluk ve geçerli eşik daire bazında , bağımsız Yunan avukat incelemesiyle yazılı teyit edilir",
  "ozet": "Atina merkezinde Larisis İstasyonu yanında tam mobilyalı şehir daireleri — geniş balkonlar, kişiye özel depo odaları ve ortak fitness, metroya üç dakika.",
  "kapak": "img/kapak.jpg",
- "teyit": "13 Ekim 2026",
+ "teyit": "20 Ekim 2026",
  "renk": "#1A2E4A",
- "rapor": []
+ "rapor": [],
+ "rezerve": 6,
+ "satildi": 10,
+ "teyitte": 0,
+ "toplam": 21,
+ "env_senkron": "2026-10-22"
 }

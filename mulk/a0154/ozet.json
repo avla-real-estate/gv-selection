@@ -21,5 +21,10 @@
  "kapak": "img/kapak.jpg",
  "teyit": "1 Ekim 2026",
  "renk": "#6a4a8a",
- "rapor": []
+ "rapor": [],
+ "rezerve": 1,
+ "satildi": 18,
+ "teyitte": 0,
+ "toplam": 23,
+ "env_senkron": "2026-10-22"
 }

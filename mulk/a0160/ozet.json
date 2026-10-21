@@ -4,11 +4,11 @@
  "semt": "Pire",
  "bolge": "Pire",
  "url": "https://piraeus-serenity-residence-a0160.avlarealestate.com/",
- "musait": 28,
- "fiyat": "€235.000 – €309.000",
- "net": "22,10 – 55,30",
+ "musait": 27,
+ "fiyat": "€235.000 – €284.000",
+ "net": "22,10 – 49,20",
  "brut": "22,10 – 55,30",
- "emn": "€5.588",
+ "emn": "€5.772",
  "tipler": [
   "1+1",
   "Stüdyo"
@@ -24,5 +24,10 @@
  "renk": "#2b5f80",
  "rapor": [
   "ek bölüm: #getiri (tek-sayfa-getiri-bolumu.html)"
- ]
+ ],
+ "rezerve": 2,
+ "satildi": 0,
+ "teyitte": 9,
+ "toplam": 38,
+ "env_senkron": "2026-10-22"
 }

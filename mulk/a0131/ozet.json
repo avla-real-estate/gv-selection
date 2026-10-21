@@ -5,9 +5,9 @@
  "bolge": "Tavros · guney",
  "url": "https://izi-lux-a0131.avlarealestate.com/",
  "musait": 1,
- "fiyat": "€295.000 – €295.000",
- "net": "62,00 – 62,00",
- "brut": "67,00 – 67,00",
+ "fiyat": "€295.000",
+ "net": "62,00",
+ "brut": "67,00",
  "emn": "€4.758",
  "tipler": [
   "—"
@@ -21,5 +21,10 @@
  "kapak": "img/kapak.jpg",
  "teyit": "4 Eylül 2026",
  "renk": "#8a6a4a",
- "rapor": []
+ "rapor": [],
+ "rezerve": 0,
+ "satildi": 22,
+ "teyitte": 5,
+ "toplam": 28,
+ "env_senkron": "2026-10-22"
 }

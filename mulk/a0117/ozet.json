@@ -5,9 +5,9 @@
  "bolge": "Ilioupoli · guney",
  "url": "https://riviera-gate-athens-a0117.avlarealestate.com/",
  "musait": 1,
- "fiyat": "€340.000 – €340.000",
- "net": "61,90 – 61,90",
- "brut": "61,90 – 61,90",
+ "fiyat": "€340.000",
+ "net": "61,90",
+ "brut": "61,90",
  "emn": "€5.493",
  "tipler": [
   "—"
@@ -21,5 +21,10 @@
  "kapak": "img/kapak.jpg",
  "teyit": "19 Ağustos 2026",
  "renk": "#1A2E4A",
- "rapor": []
+ "rapor": [],
+ "rezerve": 6,
+ "satildi": 0,
+ "teyitte": 0,
+ "toplam": 7,
+ "env_senkron": "2026-10-22"
 }

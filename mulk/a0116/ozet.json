@@ -17,9 +17,14 @@
  "gv": "Dönüşüm projesi — uygunluk ve geçerli eşik daire bazında , bağımsız Yunan avukat incelemesiyle yazılı teyit edilir",
  "ozet": "Pire’de marina ve limana yakın konumda yer alan MAVI PORT, ticari alandan konuta dönüştürülmüş modern dairesiyle Golden Visa’ya uygun, tamamen yenilenmiş ve mobilyalı bir yatırım fırsatı sunar.",
  "kapak": "img/kapak.jpg",
- "teyit": null,
+ "teyit": "19 Ağustos 2026",
  "renk": "#4a6a8a",
  "rapor": [
   "envanter eşleşmedi (0/0) — tablo kaynak seçkideki gibi kaldı"
- ]
+ ],
+ "rezerve": 2,
+ "satildi": 1,
+ "teyitte": 0,
+ "toplam": 3,
+ "env_senkron": "2026-10-22"
 }

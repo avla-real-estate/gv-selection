@@ -17,9 +17,14 @@
  "gv": "Dönüşüm projesi — uygunluk ve geçerli eşik daire bazında , bağımsız Yunan avukat incelemesiyle yazılı teyit edilir",
  "ozet": "Pangrati merkezinde adresinde commercial space'ten dönüştürülmüş 59 m² zemin kat 2 yatak odalı 2 daire.",
  "kapak": "img/kapak.jpg",
- "teyit": null,
+ "teyit": "6 Eylül 2026",
  "renk": "#7a5a2a",
  "rapor": [
   "envanter eşleşmedi (0/0) — tablo kaynak seçkideki gibi kaldı"
- ]
+ ],
+ "rezerve": 2,
+ "satildi": 0,
+ "teyitte": 0,
+ "toplam": 2,
+ "env_senkron": "2026-10-22"
 }

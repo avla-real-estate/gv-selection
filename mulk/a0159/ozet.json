@@ -17,9 +17,14 @@
  "gv": "Dönüşüm projesi — uygunluk ve geçerli eşik daire bazında , bağımsız Yunan avukat incelemesiyle yazılı teyit edilir",
  "ozet": "TRINITY — Atina'nın en köklü konut ve iş bölgelerinden Ampelokipi'de 17 adet 1+1 daire.",
  "kapak": "img/kapak.jpg",
- "teyit": null,
+ "teyit": "14 Ekim 2026",
  "renk": "#8a6a4a",
  "rapor": [
   "envanter eşleşmedi (0/0) — tablo kaynak seçkideki gibi kaldı"
- ]
+ ],
+ "rezerve": 5,
+ "satildi": 12,
+ "teyitte": 0,
+ "toplam": 17,
+ "env_senkron": "2026-10-22"
 }

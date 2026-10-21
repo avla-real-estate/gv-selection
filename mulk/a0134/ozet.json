@@ -17,9 +17,14 @@
  "gv": "Uygunluk ve geçerli eşik daire bazında , bağımsız Yunan avukat incelemesiyle yazılı teyit edilir",
  "ozet": "Marousi Atina'nın 'kingstone' kurumsal merkezinde 3 binalı kompleks (tarihi konak restorasyonu + 2 yeni inşa)! €280-350K, 35-58 m², 2028 Q1.",
  "kapak": "img/kapak.jpg",
- "teyit": null,
+ "teyit": "5 Ekim 2026",
  "renk": "#4a7a7a",
  "rapor": [
   "envanter eşleşmedi (0/0) — tablo kaynak seçkideki gibi kaldı"
- ]
+ ],
+ "rezerve": 0,
+ "satildi": 28,
+ "teyitte": 0,
+ "toplam": 28,
+ "env_senkron": "2026-10-22"
 }

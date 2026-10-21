@@ -4,7 +4,7 @@
  "semt": "Nikaia",
  "bolge": "Nikaia · pire",
  "url": "https://nikaia-loft-residences-a0167.avlarealestate.com/",
- "musait": 33,
+ "musait": 35,
  "fiyat": "€250.000 – €325.000",
  "net": "34,00 – 56,00",
  "brut": "35,00 – 81,00",
@@ -21,5 +21,10 @@
  "kapak": "img/kapak.jpg",
  "teyit": "23 Eylül 2026",
  "renk": "#6a4a8a",
- "rapor": []
+ "rapor": [],
+ "rezerve": 2,
+ "satildi": 7,
+ "teyitte": 0,
+ "toplam": 44,
+ "env_senkron": "2026-10-22"
 }

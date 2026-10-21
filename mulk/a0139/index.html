@@ -1068,6 +1068,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
 </style>
+<style id="env-durum">
+tr.dr-r td,tr.dr-s td{color:#8b919a}
+tr.dr-r td.f,tr.dr-s td.f{color:#8b919a}
+tr.dr-r .pbtn,tr.dr-s .pbtn{opacity:.65}
+.dur{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:999px;font-size:10.5px;font-weight:500;letter-spacing:.02em;line-height:1.6;vertical-align:1px;white-space:nowrap}
+.dur-r{background:#fbecd9;color:#93560f}
+.dur-s{background:#ebebeb;color:#5f646b}
+.dur-t{background:#eaeef5;color:#46577a}
+.dozet{font-size:12.5px;line-height:1.55;color:var(--mut,#5a6472);margin:12px 0 8px}
+.dozet b{font-weight:500;color:var(--navy,#1A2E4A)}
+.env-durum{margin:10px 0 2px;font-size:12px;line-height:1.5;color:#5a6472}
+.env-durum b{font-weight:500;color:#1A2E4A}
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4JQ2XVT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -1148,10 +1161,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section id="karsilastirma">
   <div class="eyebrow">Karşılaştırma</div>
   <h2>Daire tipleri — tek tabloda</h2>
-  <div class="tbl"><table><thead><tr><th>Daire</th><th>Tip</th><th>İç m²</th><th>Balkon / dış m²</th><th>Toplam m²</th><th>Fiyat</th><th>€ / iç m²</th><th>€ / toplam m²</th><th>Teslim</th></tr></thead><tbody>
-<tr><td><b><a href="#a0139" style="color:inherit">A29</a></b></td><td>—</td><td>36,92</td><td>6,59</td><td>43,51</td><td class="f">€255.000</td><td>€6.907</td><td>€5.861</td><td>2027</td></tr>
-<tr><td><b><a href="#a0139" style="color:inherit">A11</a></b></td><td>—</td><td>53,18</td><td>9,39</td><td>62,57</td><td class="f">€269.000</td><td>€5.058</td><td>€4.299</td><td>2027</td></tr>
-  </tbody></table></div>
+  <div class="tbl"><table><thead><tr><th>Daire</th><th>Tip</th><th>İç m²</th><th>Balkon / dış m²</th><th>Toplam m²</th><th>Fiyat</th><th>€ / iç m²</th><th>€ / toplam m²</th><th>Teslim</th></tr></thead><tbody> <tr><td colspan="9">Şu an müsait daire yok — bütün daireler durumlarıyla proje bölümündeki listede.</td></tr> </tbody></table></div>
   <div class="tblnot">Her daire tipinden en uygun fiyatlı ve en geniş müsait daire. Birim fiyatlar liste fiyatı üzerinden; bağlayıcı fiyat yazılı teyitle sabitlenir. Tablonun tamamı proje bölümündeki “Fiyatlar ve müsait daireler” başlığı altındadır.</div>
 </section>
 
@@ -1194,27 +1204,67 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <details class="rapor"><summary>Fiyatlar ve müsait daireler — 73 dairenin 31'i</summary><div class="rbody">
     <div class="pmap" id="pmap-a0139" data-lat="38.04" data-lng="23.73" data-r="250" data-renk="#6a4a8a"></div>
     <div class="tblnot pmap-not">Konum <b>semt düzeyinde</b> gösterilmektedir — Filadelfia · kuzey.</div>
+    <div class="dozet">Durum: <b>31 müsait</b> · 5 rezerve · 37 satıldı — son teyit <b>2 Ekim 2026</b>. Rezerve ve satılan daireler listede kalır; soluk ve etiketlidir.</div>
     <div class="tbl"><table>
       <thead><tr><th>Daire</th><th>Kat</th><th>Tip</th><th>Net m²</th><th>Balkon m²</th><th>Brüt m²</th><th>Fiyat</th><th>€ / m² net</th><th>€ / m² brüt</th><th>Plan</th></tr></thead>
       <tbody>
+      <tr class="dr-s fgiz"><td>A1 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>53,84</td><td>6,68</td><td>60,52</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A2 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>48,60</td><td>4,92</td><td>53,52</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A3 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>50,60</td><td>5,14</td><td>55,74</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A4 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>50,54</td><td>5,40</td><td>55,94</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A5 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>50,61</td><td>5,24</td><td>55,85</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A6 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>50,60</td><td>6,20</td><td>56,80</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>A7 <span class="dur dur-r">Rezerve</span></td><td>1</td><td>—</td><td>50,57</td><td>5,51</td><td>56,08</td><td class="f">€269.000</td><td>€5.319</td><td>€4.797</td><td>—</td></tr>
       <tr><td>A8</td><td>1</td><td>—</td><td>50,60</td><td>4,37</td><td>54,97</td><td class="f">€269.000</td><td>€5.316</td><td>€4.894</td><td>—</td></tr>
       <tr><td>A9</td><td>1</td><td>—</td><td>44,32</td><td>3,52</td><td>47,84</td><td class="f">€265.000</td><td>€5.979</td><td>€5.539</td><td>—</td></tr>
       <tr><td>A10</td><td>1</td><td>—</td><td>41,99</td><td>2,21</td><td>44,20</td><td class="f">€265.000</td><td>€6.311</td><td>€5.995</td><td>—</td></tr>
       <tr><td>A11</td><td>1</td><td>—</td><td>53,18</td><td>9,39</td><td>62,57</td><td class="f">€269.000</td><td>€5.058</td><td>€4.299</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A12 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>52,60</td><td>5,72</td><td>58,32</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A13 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>42,09</td><td>5,64</td><td>47,73</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A14 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>51,82</td><td>6,98</td><td>58,80</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A15 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>56,65</td><td>6,90</td><td>63,55</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A16 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>56,56</td><td>6,63</td><td>63,19</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A17 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>56,57</td><td>6,63</td><td>63,20</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A18 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>56,56</td><td>8,42</td><td>64,98</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A19 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>53,59</td><td>7,03</td><td>60,62</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
       <tr><td>A20</td><td>1</td><td>—</td><td>44,23</td><td>4,13</td><td>48,36</td><td class="f">€265.000</td><td>€5.991</td><td>€5.480</td><td>—</td></tr>
       <tr><td>A21</td><td>1</td><td>—</td><td>44,24</td><td>4,33</td><td>48,57</td><td class="f">€265.000</td><td>€5.990</td><td>€5.456</td><td>—</td></tr>
       <tr class="fgiz"><td>A22</td><td>1</td><td>—</td><td>42,85</td><td>5,50</td><td>48,35</td><td class="f">€265.000</td><td>€6.184</td><td>€5.481</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>A23 <span class="dur dur-r">Rezerve</span></td><td>1</td><td>—</td><td>57,88</td><td>6,16</td><td>64,04</td><td class="f">€269.000</td><td>€4.648</td><td>€4.200</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A24 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>68,62</td><td>11,26</td><td>79,88</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A25 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>87,83</td><td>8,98</td><td>96,81</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A26 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>78,56</td><td>11,63</td><td>90,19</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A27 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>67,70</td><td>10,32</td><td>78,02</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
       <tr class="fgiz"><td>A28</td><td>1</td><td>—</td><td>51,87</td><td>4,73</td><td>56,60</td><td class="f">€269.000</td><td>€5.186</td><td>€4.753</td><td>—</td></tr>
       <tr class="fgiz"><td>A29</td><td>1</td><td>—</td><td>36,92</td><td>6,59</td><td>43,51</td><td class="f">€255.000</td><td>€6.907</td><td>€5.861</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>A30 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>—</td><td>32,12</td><td>14,69</td><td>46,81</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B1 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>53,84</td><td>6,68</td><td>60,52</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
       <tr class="fgiz"><td>B2</td><td>2</td><td>—</td><td>48,60</td><td>4,92</td><td>53,52</td><td class="f">€265.000</td><td>€5.453</td><td>€4.951</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B3 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>50,60</td><td>5,14</td><td>55,74</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B4 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>50,54</td><td>5,40</td><td>55,94</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
       <tr class="fgiz"><td>B5</td><td>2</td><td>—</td><td>50,61</td><td>5,24</td><td>55,85</td><td class="f">€269.000</td><td>€5.315</td><td>€4.816</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B6 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>50,60</td><td>6,20</td><td>56,80</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>B7 <span class="dur dur-r">Rezerve</span></td><td>2</td><td>—</td><td>50,57</td><td>5,51</td><td>56,08</td><td class="f">€269.000</td><td>€5.319</td><td>€4.797</td><td>—</td></tr>
       <tr class="fgiz"><td>B8</td><td>2</td><td>—</td><td>50,60</td><td>4,37</td><td>54,97</td><td class="f">€269.000</td><td>€5.316</td><td>€4.894</td><td>—</td></tr>
       <tr class="fgiz"><td>B9</td><td>2</td><td>—</td><td>44,32</td><td>3,52</td><td>47,84</td><td class="f">€265.000</td><td>€5.979</td><td>€5.539</td><td>—</td></tr>
       <tr class="fgiz"><td>B10</td><td>2</td><td>—</td><td>41,99</td><td>2,21</td><td>44,20</td><td class="f">€265.000</td><td>€6.311</td><td>€5.995</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>B11 <span class="dur dur-r">Rezerve</span></td><td>2</td><td>—</td><td>53,18</td><td>9,39</td><td>62,57</td><td class="f">€269.000</td><td>€5.058</td><td>€4.299</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B12 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>52,60</td><td>5,72</td><td>58,32</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
       <tr class="fgiz"><td>B13</td><td>2</td><td>—</td><td>42,09</td><td>5,64</td><td>47,73</td><td class="f">€265.000</td><td>€6.296</td><td>€5.552</td><td>—</td></tr>
       <tr class="fgiz"><td>B14</td><td>2</td><td>—</td><td>51,82</td><td>6,98</td><td>58,80</td><td class="f">€269.000</td><td>€5.191</td><td>€4.575</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B15 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>56,65</td><td>6,90</td><td>63,55</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B16 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>56,56</td><td>6,63</td><td>63,19</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B17 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>56,57</td><td>6,63</td><td>63,20</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B18 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>56,56</td><td>8,42</td><td>64,98</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B19 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>53,59</td><td>7,03</td><td>60,62</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
       <tr class="fgiz"><td>B20</td><td>2</td><td>—</td><td>44,23</td><td>4,13</td><td>48,36</td><td class="f">€265.000</td><td>€5.991</td><td>€5.480</td><td>—</td></tr>
       <tr class="fgiz"><td>B21</td><td>2</td><td>—</td><td>44,24</td><td>4,33</td><td>48,57</td><td class="f">€265.000</td><td>€5.990</td><td>€5.456</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B22 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>42,85</td><td>5,50</td><td>48,35</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>B23 <span class="dur dur-r">Rezerve</span></td><td>2</td><td>—</td><td>57,88</td><td>6,16</td><td>64,04</td><td class="f">€269.000</td><td>€4.648</td><td>€4.200</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B24 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>68,62</td><td>11,26</td><td>79,88</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B25 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>87,83</td><td>8,98</td><td>96,81</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B26 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>78,56</td><td>11,63</td><td>90,19</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B27 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>67,70</td><td>10,32</td><td>78,02</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
       <tr class="fgiz"><td>B28</td><td>2</td><td>—</td><td>51,87</td><td>47,30</td><td>99,17</td><td class="f">€269.000</td><td>€5.186</td><td>€2.713</td><td>—</td></tr>
       <tr class="fgiz"><td>B29</td><td>2</td><td>—</td><td>36,92</td><td>6,59</td><td>43,51</td><td class="f">€255.000</td><td>€6.907</td><td>€5.861</td><td>—</td></tr>
       <tr class="fgiz"><td>B30</td><td>2</td><td>—</td><td>32,12</td><td>14,69</td><td>46,81</td><td class="f">€255.000</td><td>€7.939</td><td>€5.448</td><td>—</td></tr>
@@ -1222,15 +1272,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <tr class="fgiz"><td>Z2</td><td>3 (Z Collection / cati)</td><td>—</td><td>42,38</td><td>13,58</td><td>55,96</td><td class="f">€275.500</td><td>€6.501</td><td>€4.923</td><td>—</td></tr>
       <tr class="fgiz"><td>Z3</td><td>3 (Z Collection / cati)</td><td>—</td><td>43,54</td><td>13,82</td><td>57,36</td><td class="f">€275.500</td><td>€6.328</td><td>€4.803</td><td>—</td></tr>
       <tr class="fgiz"><td>Z4</td><td>3 (Z Collection / cati)</td><td>—</td><td>43,08</td><td>13,58</td><td>56,66</td><td class="f">€275.500</td><td>€6.395</td><td>€4.862</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>Z5 <span class="dur dur-s">Satıldı</span></td><td>3 (Z Collection / cati)</td><td>—</td><td>50,71</td><td>11,31</td><td>62,02</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
       <tr class="fgiz"><td>Z6</td><td>3 (Z Collection / cati)</td><td>—</td><td>34,54</td><td>53,75</td><td>88,29</td><td class="f">€265.500</td><td>€7.687</td><td>€3.007</td><td>—</td></tr>
       <tr class="fgiz"><td>Z7</td><td>3 (Z Collection / cati)</td><td>—</td><td>41,70</td><td>45,00</td><td>86,70</td><td class="f">€275.500</td><td>€6.607</td><td>€3.178</td><td>—</td></tr>
       <tr class="fgiz"><td>Z8</td><td>3 (Z Collection / cati)</td><td>—</td><td>42,28</td><td>51,29</td><td>93,57</td><td class="f">€275.500</td><td>€6.516</td><td>€2.944</td><td>—</td></tr>
       <tr class="fgiz"><td>Z9</td><td>3 (Z Collection / cati)</td><td>—</td><td>46,81</td><td>27,12</td><td>73,93</td><td class="f">€275.500</td><td>€5.885</td><td>€3.726</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>Z10 <span class="dur dur-s">Satıldı</span></td><td>3 (Z Collection / cati)</td><td>—</td><td>42,76</td><td>38,58</td><td>81,34</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
       <tr class="fgiz"><td>Z11</td><td>3 (Z Collection / cati)</td><td>—</td><td>40,60</td><td>30,57</td><td>71,17</td><td class="f">€275.500</td><td>€6.786</td><td>€3.871</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>Z12 <span class="dur dur-s">Satıldı</span></td><td>3 (Z Collection / cati)</td><td>—</td><td>45,76</td><td>27,91</td><td>73,67</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
       <tr class="fgiz"><td>Z13</td><td>3 (Z Collection / cati)</td><td>—</td><td>33,16</td><td>54,25</td><td>87,41</td><td class="f">€265.500</td><td>€8.007</td><td>€3.037</td><td>—</td></tr>
       </tbody>
     </table></div>
-    <button class="fdaha" onclick="fDaha(this)" data-cok="Kalan 25 daireyi göster  +" data-az="Daha az göster  −">Kalan 25 daireyi göster  +</button>
+    <button class="fdaha" onclick="fDaha(this)" data-cok="Kalan 67 daireyi göster  +" data-az="Daha az göster  −">Kalan 67 daireyi göster  +</button>
     <div class="tblnot">Kaynak: geliştiricinin fiyat listesi, <b>2026-09-03</b>. Brüt alan = net iç alan + balkon/bahçe; alanlarda ±%3 tolerans vardır. Müsaitlik teklif aşamasında yazılı teyit edilir.</div>
     <button class="dkapat" onclick="dKapat(this)" aria-label="Bölümü kapat"><i>−</i> Kapat</button>
   </div></details>

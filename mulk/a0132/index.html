@@ -1068,6 +1068,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
 </style>
+<style id="env-durum">
+tr.dr-r td,tr.dr-s td{color:#8b919a}
+tr.dr-r td.f,tr.dr-s td.f{color:#8b919a}
+tr.dr-r .pbtn,tr.dr-s .pbtn{opacity:.65}
+.dur{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:999px;font-size:10.5px;font-weight:500;letter-spacing:.02em;line-height:1.6;vertical-align:1px;white-space:nowrap}
+.dur-r{background:#fbecd9;color:#93560f}
+.dur-s{background:#ebebeb;color:#5f646b}
+.dur-t{background:#eaeef5;color:#46577a}
+.dozet{font-size:12.5px;line-height:1.55;color:var(--mut,#5a6472);margin:12px 0 8px}
+.dozet b{font-weight:500;color:var(--navy,#1A2E4A)}
+.env-durum{margin:10px 0 2px;font-size:12px;line-height:1.5;color:#5a6472}
+.env-durum b{font-weight:500;color:#1A2E4A}
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4JQ2XVT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -1148,10 +1161,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section id="karsilastirma">
   <div class="eyebrow">Karşılaştırma</div>
   <h2>Daire tipleri — tek tabloda</h2>
-  <div class="tbl"><table><thead><tr><th>Daire</th><th>Tip</th><th>İç m²</th><th>Balkon / dış m²</th><th>Toplam m²</th><th>Fiyat</th><th>€ / iç m²</th><th>€ / toplam m²</th><th>Teslim</th></tr></thead><tbody>
-<tr><td><b><a href="#a0132" style="color:inherit">B4</a></b></td><td>1+1</td><td>53,22</td><td>4,10</td><td>57,32</td><td class="f">€260.000</td><td>€4.885</td><td>€4.536</td><td>2. çeyrek 2027</td></tr>
-<tr><td><b><a href="#a0132" style="color:inherit">C1</a></b></td><td>2+1</td><td>72,01</td><td>3,00</td><td>75,01</td><td class="f">€314.000</td><td>€4.361</td><td>€4.186</td><td>2. çeyrek 2027</td></tr>
-  </tbody></table></div>
+  <div class="tbl"><table><thead><tr><th>Daire</th><th>Tip</th><th>İç m²</th><th>Balkon / dış m²</th><th>Toplam m²</th><th>Fiyat</th><th>€ / iç m²</th><th>€ / toplam m²</th><th>Teslim</th></tr></thead><tbody> <tr><td><b><a href="#a0132" style="color:inherit">B4</a></b></td><td>1+1</td><td>53,22</td><td>4,10</td><td>57,32</td><td class="f">€260.000</td><td>€4.885</td><td>€4.536</td><td>2. çeyrek 2027</td></tr> <tr><td><b><a href="#a0132" style="color:inherit">C1</a></b></td><td>2+1</td><td>72,01</td><td>3,00</td><td>75,01</td><td class="f">€314.000</td><td>€4.361</td><td>€4.186</td><td>2. çeyrek 2027</td></tr> </tbody></table></div>
   <div class="tblnot">Her daire tipinden en uygun fiyatlı ve en geniş müsait daire. Birim fiyatlar liste fiyatı üzerinden; bağlayıcı fiyat yazılı teyitle sabitlenir. Tablonun tamamı proje bölümündeki “Fiyatlar ve müsait daireler” başlığı altındadır.</div>
 </section>
 
@@ -1189,13 +1199,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <details class="rapor"><summary>Fiyatlar ve müsait daireler — 12 dairenin 2'si</summary><div class="rbody">
     <div class="pmap" id="pmap-a0132" data-lat="37.951" data-lng="23.701" data-r="250" data-renk="#4a7a5a"></div>
     <div class="tblnot pmap-not">Konum <b>semt düzeyinde</b> gösterilmektedir — Kallithea · Güney Atina.</div>
+    <div class="dozet">Durum: <b>2 müsait</b> · 7 rezerve · 3 satıldı — son teyit <b>4 Eylül 2026</b>. Rezerve ve satılan daireler listede kalır; soluk ve etiketlidir.</div>
     <div class="tbl"><table>
       <thead><tr><th>Daire</th><th>Kat</th><th>Tip</th><th>Net m²</th><th>Balkon m²</th><th>Brüt m²</th><th>Fiyat</th><th>€ / m² net</th><th>€ / m² brüt</th><th>Plan</th></tr></thead>
       <tbody>
+      <tr class="dr-s fgiz"><td>A1 <span class="dur dur-s">Satıldı</span></td><td>A (1. kat)</td><td>2+1</td><td>72,01</td><td>6,65</td><td>78,66</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-r"><td>A2 <span class="dur dur-r">Rezerve</span></td><td>A (1. kat)</td><td>—</td><td>50,63</td><td>6,93</td><td>57,56</td><td class="f">€260.000</td><td>€5.135</td><td>€4.517</td><td>—</td></tr>
+      <tr class="dr-r"><td>A3 <span class="dur dur-r">Rezerve</span></td><td>A (1. kat)</td><td>—</td><td>47,82</td><td>3,65</td><td>51,47</td><td class="f">€250.000</td><td>€5.228</td><td>€4.857</td><td>—</td></tr>
+      <tr class="dr-r"><td>A4 <span class="dur dur-r">Rezerve</span></td><td>A (1. kat)</td><td>1+1</td><td>53,22</td><td>4,10</td><td>57,32</td><td class="f">€258.000</td><td>€4.848</td><td>€4.501</td><td><button class="pbtn" onclick="ac('plan/a0132-kat-b.jpg','A4 — daire planı')">Plan</button></td></tr>
+      <tr class="dr-r"><td>B1 <span class="dur dur-r">Rezerve</span></td><td>2. kat (B)</td><td>2+1</td><td>72,01</td><td>3,00</td><td>75,01</td><td class="f">€312.000</td><td>€4.333</td><td>€4.159</td><td><button class="pbtn" onclick="ac('plan/a0132-kat-c.jpg','B1 — daire planı')">Plan</button></td></tr>
+      <tr class="dr-s fgiz"><td>B2 <span class="dur dur-s">Satıldı</span></td><td>2. kat (B)</td><td>—</td><td>50,63</td><td>3,16</td><td>53,79</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>B3 <span class="dur dur-r">Rezerve</span></td><td>2. kat (B)</td><td>—</td><td>47,82</td><td>3,65</td><td>51,47</td><td class="f">€252.000</td><td>€5.270</td><td>€4.896</td><td>—</td></tr>
       <tr><td>B4</td><td>2. kat (B)</td><td>1+1</td><td>53,22</td><td>4,10</td><td>57,32</td><td class="f">€260.000</td><td>€4.886</td><td>€4.536</td><td><button class="pbtn" onclick="ac('plan/a0132-kat-b.jpg','Opus Residences — 2. kat planı · B4')">Plan</button></td></tr>
       <tr><td>C1</td><td>3. kat (C)</td><td>2+1</td><td>72,01</td><td>3,00</td><td>75,01</td><td class="f">€314.000</td><td>€4.361</td><td>€4.186</td><td><button class="pbtn" onclick="ac('plan/a0132-kat-c.jpg','Opus Residences — 3. kat planı · C1')">Plan</button></td></tr>
+      <tr class="dr-s fgiz"><td>C2 <span class="dur dur-s">Satıldı</span></td><td>3. kat (C)</td><td>—</td><td>50,63</td><td>3,16</td><td>53,79</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>C3 <span class="dur dur-r">Rezerve</span></td><td>3. kat (C)</td><td>—</td><td>47,82</td><td>3,65</td><td>51,47</td><td class="f">€254.000</td><td>€5.312</td><td>€4.935</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td>C4 <span class="dur dur-r">Rezerve</span></td><td>3. kat (C)</td><td>1+1</td><td>53,22</td><td>4,10</td><td>57,32</td><td class="f">€262.000</td><td>€4.923</td><td>€4.571</td><td><button class="pbtn" onclick="ac('plan/a0132-kat-b.jpg','C4 — daire planı')">Plan</button></td></tr>
       </tbody>
     </table></div>
+    <button class="fdaha" onclick="fDaha(this)" data-cok="Kalan 6 daireyi göster  +" data-az="Daha az göster  −">Kalan 6 daireyi göster  +</button>
     <div class="tblnot">Brüt alan = net iç alan + balkon. € / m² net = fiyat ÷ net alan; € / m² brüt = fiyat ÷ brüt alan. Alanlar geliştiricinin kat planı sayfalarındandır; fiyatlar ve müsaitlik geliştirici listesinin 4 Eylül 2026 teyit tarihlidir. C1'in 2 yatak odalı olduğu kat planından okunmuştur; ilan metni "geniş 1+1" yazar, yazılı teyit istenecektir. Bağlayıcı fiyat teklif aşamasında yazılı teyitle sabitlenir.</div>
     <h3 style="margin-top:26px">Kat ve daire planları</h3>
     <h4 style="margin:14px 0 8px">Kat planları</h4>

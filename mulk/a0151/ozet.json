@@ -17,9 +17,14 @@
  "gv": "Uygunluk ve geçerli eşik daire bazında , bağımsız Yunan avukat incelemesiyle yazılı teyit edilir",
  "ozet": "Nea Ionia, Kuzey Atina'da metroya yürüme mesafesinde, beş mobilyalı daireden oluşan butik proje.",
  "kapak": "img/kapak.jpg",
- "teyit": null,
+ "teyit": "13 Ekim 2026",
  "renk": "#8a6a4a",
  "rapor": [
   "envanter eşleşmedi (0/0) — tablo kaynak seçkideki gibi kaldı"
- ]
+ ],
+ "rezerve": 1,
+ "satildi": 4,
+ "teyitte": 0,
+ "toplam": 5,
+ "env_senkron": "2026-10-22"
 }

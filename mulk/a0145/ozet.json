@@ -17,9 +17,14 @@
  "gv": "Uygunluk ve geçerli eşik daire bazında , bağımsız Yunan avukat incelemesiyle yazılı teyit edilir",
  "ozet": "Moschato, Atina'nın güney bölgesinde, deniz cephesine ve metro hatlarına yakın hızla değer kazanan semt.",
  "kapak": "img/kapak.jpg",
- "teyit": null,
+ "teyit": "30 Eylül 2026",
  "renk": "#8a4a4a",
  "rapor": [
   "envanter eşleşmedi (0/0) — tablo kaynak seçkideki gibi kaldı"
- ]
+ ],
+ "rezerve": 0,
+ "satildi": 18,
+ "teyitte": 0,
+ "toplam": 18,
+ "env_senkron": "2026-10-22"
 }

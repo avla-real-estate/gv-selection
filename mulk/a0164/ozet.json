@@ -5,7 +5,7 @@
  "bolge": "Aegina · adalar",
  "url": "https://aegina-town-residences-a0164.avlarealestate.com/",
  "musait": 2,
- "fiyat": "€255.000 – €255.000",
+ "fiyat": "€255.000",
  "net": "",
  "brut": "46,64 – 48,42",
  "emn": "—",
@@ -21,5 +21,10 @@
  "kapak": "img/kapak.jpg",
  "teyit": "2 Eylül 2026",
  "renk": "#8a6a4a",
- "rapor": []
+ "rapor": [],
+ "rezerve": 0,
+ "satildi": 7,
+ "teyitte": 0,
+ "toplam": 9,
+ "env_senkron": "2026-10-22"
 }

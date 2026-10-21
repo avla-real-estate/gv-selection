@@ -5,9 +5,9 @@
  "bolge": "Ampelokipi · merkez",
  "url": "https://ampelokipi-city-suites-a0129.avlarealestate.com/",
  "musait": 1,
- "fiyat": "€285.000 – €285.000",
- "net": "35,99 – 35,99",
- "brut": "45,35 – 45,35",
+ "fiyat": "€285.000",
+ "net": "35,99",
+ "brut": "45,35",
  "emn": "€7.919",
  "tipler": [
   "—"
@@ -21,5 +21,10 @@
  "kapak": "img/kapak.jpg",
  "teyit": "11 Eylül 2026",
  "renk": "#1A2E4A",
- "rapor": []
+ "rapor": [],
+ "rezerve": 0,
+ "satildi": 8,
+ "teyitte": 0,
+ "toplam": 9,
+ "env_senkron": "2026-10-22"
 }

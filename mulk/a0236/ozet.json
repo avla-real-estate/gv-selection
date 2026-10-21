@@ -17,9 +17,14 @@
  "gv": "Uygunluk ve geçerli eşik daire bazında , bağımsız Yunan avukat incelemesiyle yazılı teyit edilir",
  "ozet": "Kuzey Atina Nea Ionia'da büyük bir parkın karşısında 28–56 m² dokuz tam eşyalı loft tarzı daire: stüdyo, 1+1 ve asma katlı dubleksler, New York tarzı tuğla cephe, iki yıl net kira garantisi.",
  "kapak": "img/kapak.jpg",
- "teyit": null,
+ "teyit": "23 Eylül 2026",
  "renk": "#1A2E4A",
  "rapor": [
   "envanter eşleşmedi (0/0) — tablo kaynak seçkideki gibi kaldı"
- ]
+ ],
+ "rezerve": 9,
+ "satildi": 0,
+ "teyitte": 0,
+ "toplam": 9,
+ "env_senkron": "2026-10-22"
 }

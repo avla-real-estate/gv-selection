@@ -1068,6 +1068,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
 </style>
+<style id="env-durum">
+tr.dr-r td,tr.dr-s td{color:#8b919a}
+tr.dr-r td.f,tr.dr-s td.f{color:#8b919a}
+tr.dr-r .pbtn,tr.dr-s .pbtn{opacity:.65}
+.dur{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:999px;font-size:10.5px;font-weight:500;letter-spacing:.02em;line-height:1.6;vertical-align:1px;white-space:nowrap}
+.dur-r{background:#fbecd9;color:#93560f}
+.dur-s{background:#ebebeb;color:#5f646b}
+.dur-t{background:#eaeef5;color:#46577a}
+.dozet{font-size:12.5px;line-height:1.55;color:var(--mut,#5a6472);margin:12px 0 8px}
+.dozet b{font-weight:500;color:var(--navy,#1A2E4A)}
+.env-durum{margin:10px 0 2px;font-size:12px;line-height:1.5;color:#5a6472}
+.env-durum b{font-weight:500;color:#1A2E4A}
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4JQ2XVT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -1148,9 +1161,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section id="karsilastirma">
   <div class="eyebrow">Karşılaştırma</div>
   <h2>Daire tipleri — tek tabloda</h2>
-  <div class="tbl"><table><thead><tr><th>Daire</th><th>Tip</th><th>İç m²</th><th>Balkon / dış m²</th><th>Toplam m²</th><th>Fiyat</th><th>€ / iç m²</th><th>€ / toplam m²</th><th>Teslim</th></tr></thead><tbody>
-<tr><td><b><a href="#a0162" style="color:inherit">I2</a></b></td><td>—</td><td>44,00</td><td>0,00</td><td>44,00</td><td class="f">€260.000</td><td>€5.909</td><td>€5.909</td><td>Teyitte</td></tr>
-  </tbody></table></div>
+  <div class="tbl"><table><thead><tr><th>Daire</th><th>Tip</th><th>İç m²</th><th>Balkon / dış m²</th><th>Toplam m²</th><th>Fiyat</th><th>€ / iç m²</th><th>€ / toplam m²</th><th>Teslim</th></tr></thead><tbody> <tr><td colspan="9">Şu an müsait daire yok — bütün daireler durumlarıyla proje bölümündeki listede.</td></tr> </tbody></table></div>
   <div class="tblnot">Her daire tipinden en uygun fiyatlı ve en geniş müsait daire. Birim fiyatlar liste fiyatı üzerinden; bağlayıcı fiyat yazılı teyitle sabitlenir. Tablonun tamamı proje bölümündeki “Fiyatlar ve müsait daireler” başlığı altındadır.</div>
 </section>
 
@@ -1166,7 +1177,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="tkos"><div class="tb">Künye</div>
     <dl>
             <dt>Müsaitlik</dt><dd><b>3 daire</b> müsait (10 daire) · 1 rezerve · 6 satıldı</dd>
-      <dt>Alan</dt><dd>44,00 – 44,00 m² net</dd>
+      <dt>Alan</dt><dd>44,00 m² net</dd>
       <dt>Fiyat</dt><dd><b>€260.000 – €275.000</b></dd>
       <dt>Kira garantisi</dt><dd><span class='yok'>Yok</span></dd>
       <dt>Teslim</dt><dd>BULUNAMADI</dd>
@@ -1193,14 +1204,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <details class="rapor"><summary>Fiyatlar ve müsait daireler — 10 dairenin 3'ü</summary><div class="rbody">
     <div class="pmap" id="pmap-a0162" data-lat="38.01" data-lng="23.7" data-r="250" data-renk="#7a5a2a"></div>
     <div class="tblnot pmap-not">Konum <b>semt düzeyinde</b> gösterilmektedir — Peristeri · bati.</div>
+    <div class="dozet">Durum: <b>3 müsait</b> · 1 rezerve · 6 satıldı — son teyit <b>2 Eylül 2026</b>. Rezerve ve satılan daireler listede kalır; soluk ve etiketlidir.</div>
     <div class="tbl"><table>
       <thead><tr><th>Daire</th><th>Kat</th><th>Tip</th><th>Net m²</th><th>Balkon m²</th><th>Brüt m²</th><th>Fiyat</th><th>€ / m² net</th><th>€ / m² brüt</th><th>Plan</th></tr></thead>
       <tbody>
+      <tr class="dr-s"><td>I1 <span class="dur dur-s">Satıldı</span></td><td>Zemin (GF)</td><td>—</td><td>60,00</td><td>—</td><td>—</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
       <tr><td>I2</td><td>Zemin (GF)</td><td>—</td><td>44,00</td><td>—</td><td>44,00</td><td class="f">€260.000</td><td>€5.909</td><td>€5.909</td><td>—</td></tr>
+      <tr class="dr-s"><td>A1 <span class="dur dur-s">Satıldı</span></td><td>1. kat</td><td>—</td><td>44,00</td><td>—</td><td>—</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
       <tr><td>A2</td><td>1. kat</td><td>—</td><td>44,00</td><td>—</td><td>44,00</td><td class="f">€265.000</td><td>€6.023</td><td>€6.023</td><td>—</td></tr>
+      <tr class="dr-r"><td>B1 <span class="dur dur-r">Rezerve</span></td><td>2</td><td>—</td><td>44,00</td><td>—</td><td>—</td><td class="f">€270.000</td><td>€6.136</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>B2 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>—</td><td>44,00</td><td>—</td><td>—</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
       <tr><td>C1</td><td>3. kat</td><td>—</td><td>44,00</td><td>—</td><td>44,00</td><td class="f">€275.000</td><td>€6.250</td><td>€6.250</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>C2 <span class="dur dur-s">Satıldı</span></td><td>3. kat</td><td>—</td><td>44,00</td><td>—</td><td>—</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>D1 <span class="dur dur-s">Satıldı</span></td><td>4</td><td>—</td><td>44,00</td><td>—</td><td>—</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td>D2 <span class="dur dur-s">Satıldı</span></td><td>4</td><td>—</td><td>44,00</td><td>—</td><td>—</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
       </tbody>
     </table></div>
+    <button class="fdaha" onclick="fDaha(this)" data-cok="Kalan 4 daireyi göster  +" data-az="Daha az göster  −">Kalan 4 daireyi göster  +</button>
     <div class="tblnot">Kaynak: geliştiricinin fiyat listesi, <b>2026-08-16</b>. Brüt alan = net iç alan + balkon/bahçe; alanlarda ±%3 tolerans vardır. Müsaitlik teklif aşamasında yazılı teyit edilir.</div>
     <button class="dkapat" onclick="dKapat(this)" aria-label="Bölümü kapat"><i>−</i> Kapat</button>
   </div></details>
@@ -1228,7 +1248,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="tbl"><table>
     <thead><tr><th>#</th><th>Proje</th><th>Semt</th><th>Teslim</th><th>Müsait</th><th>Fiyat aralığı</th><th>Net m² aralığı</th><th>Brüt m² aralığı</th><th>€ / m² net (en düşük)</th><th>€ / m² brüt (en düşük)</th></tr></thead>
     <tbody>
-      <tr><td>1</td><td><b><a href="#a0162" style="color:inherit">Peristeri Court Residences</a></b></td><td>Peristeri</td><td>Teyitte</td><td>3 daire müsait</td><td class="f"><b>€260.000 – €275.000</b></td><td>44,00 – 44,00 m²</td><td>44,00 – 44,00 m²</td><td>€5.909</td><td>€5.909</td></tr>
+      <tr><td>1</td><td><b><a href="#a0162" style="color:inherit">Peristeri Court Residences</a></b></td><td>Peristeri</td><td>Teyitte</td><td>3 daire müsait</td><td class="f"><b>€260.000 – €275.000</b></td><td>44,00 m²</td><td>44,00 m²</td><td>€5.909</td><td>€5.909</td></tr>
     </tbody>
   </table></div>
   <div class="card" style="margin-top:22px">

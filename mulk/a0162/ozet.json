@@ -6,8 +6,8 @@
  "url": "https://peristeri-court-residences-a0162.avlarealestate.com/",
  "musait": 3,
  "fiyat": "€260.000 – €275.000",
- "net": "44,00 – 44,00",
- "brut": "44,00 – 44,00",
+ "net": "44,00",
+ "brut": "44,00",
  "emn": "€5.909",
  "tipler": [
   "—"
@@ -21,5 +21,10 @@
  "kapak": "img/kapak.jpg",
  "teyit": "2 Eylül 2026",
  "renk": "#7a5a2a",
- "rapor": []
+ "rapor": [],
+ "rezerve": 1,
+ "satildi": 6,
+ "teyitte": 0,
+ "toplam": 10,
+ "env_senkron": "2026-10-22"
 }
