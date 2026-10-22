@@ -902,7 +902,7 @@
       ],
       "status": 307,
       "headers": {
-        "Location": "https://perikleous-rodou-marousi-a0134.avlarealestate.com/"
+        "Location": "https://marousi-heritage-residences-a0134.avlarealestate.com/"
       }
     },
     {
@@ -1319,6 +1319,19 @@
       "status": 307,
       "headers": {
         "Location": "https://piraeus-metro-duplexes-a0277.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "perikleous-rodou-marousi-a0134.avlarealestate.com"
+        }
+      ],
+      "status": 308,
+      "headers": {
+        "Location": "https://marousi-heritage-residences-a0134.avlarealestate.com/$1"
       }
     },
     {
@@ -1996,7 +2009,7 @@
       "has": [
         {
           "type": "host",
-          "value": "perikleous-rodou-marousi-a0134.avlarealestate.com"
+          "value": "marousi-heritage-residences-a0134.avlarealestate.com"
         }
       ],
       "dest": "/mulk/a0134/$1"
