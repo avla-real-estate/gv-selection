@@ -1176,6 +1176,32 @@ details.rapor[open]>summary{background:#fff}
 .hstats>div.c-tuk .n{letter-spacing:.04em}
 .property-cover .tk-roz{position:absolute;top:.85rem;left:1rem;z-index:4;background:#1A2E4A;color:#fff;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:3px 11px;border-radius:999px;border:1px solid #D2BE99;line-height:1.5}
 </style>
+<style id="yuzen-tek-sistem">
+/* ── YÜZEN DÜĞMELER — tek sistem (Sami 24.10.2026) ──
+   Yukarı ok, WhatsApp ve Athena aynı kutu: 52×52, köşe 3px, lacivert #142A42, ince altın çerçeve, aynı gölge.
+   Sağ altta dikey yığın, aralar 12px: Athena 20px (widget) · WhatsApp 84px · ok 148px.
+   Athena ≤768px'te yüklenmez; orada WhatsApp en alta (20px), ok üstüne (84px) iner. Sağ boşluk 20px, telefonda 14px. */
+.wa-fab,#scroll-top{position:fixed;right:20px;width:52px;height:52px;padding:0;margin:0;box-sizing:border-box;
+ display:flex;align-items:center;justify-content:center;background:#142A42;
+ border:1px solid rgba(210,190,153,.45);border-radius:3px;box-shadow:0 8px 22px rgba(20,42,66,.28);
+ transition:opacity .25s,transform .2s,border-color .2s,box-shadow .2s}
+.wa-fab{bottom:84px;color:#fff}
+.wa-fab svg{width:26px;height:26px;fill:currentColor}
+#scroll-top{bottom:148px;color:#D2BE99;font:300 22px/1 'Inter',sans-serif}
+.wa-fab:hover,#scroll-top.on:hover{background:#142A42;border-color:#D2BE99;transform:translateY(-3px);
+ box-shadow:0 12px 28px rgba(20,42,66,.34)}
+#scroll-top:hover{background:#142A42}
+.wa-fab:focus-visible,#scroll-top:focus-visible{outline:2px solid #D2BE99;outline-offset:2px}
+@media(max-width:768px){
+ .wa-fab,#scroll-top{right:14px;width:52px;height:52px}
+ .wa-fab{bottom:20px}
+ .wa-fab svg{width:26px;height:26px}
+ #scroll-top{bottom:84px}
+}
+/* Athena yüklenmediyse (tablet, telefon ya da ağ) yığın en alta iner: WhatsApp 20px, ok 84px */
+.ath-yok .wa-fab{bottom:20px}
+.ath-yok #scroll-top{bottom:84px}
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4JQ2XVT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -2184,5 +2210,6 @@ function dKapat(b){var d=b.closest('details');if(!d)return;var once=d.getBoundin
     _aktif=_galeriler[gi];_ix=Math.max(0,Math.min(j||0,_aktif.length-1));_lbCiz();
     document.getElementById('lb').classList.add('on');document.body.style.overflow='hidden';};
 })();
-</script><!--SATIS:S:js--></body>
+</script><!--SATIS:S:js--><script id="yuzen-ath-yok-js">window.addEventListener('load',function(){setTimeout(function(){if(!document.getElementById('athena-host'))document.documentElement.classList.add('ath-yok')},300)});</script>
+</body>
 </html>

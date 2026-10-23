@@ -1297,6 +1297,11 @@ details[open]>summary .bant-arti{content:"−"}
  #scroll-top{bottom:84px}
 }
 </style>
+<style id="yuzen-ath-yok">
+/* Athena yüklenmediyse (tablet, telefon ya da ağ) yüzen yığın en alta iner: WhatsApp 20px, ok 84px (denetim 24.10) */
+.ath-yok .wa-fab{bottom:20px}
+.ath-yok #scroll-top{bottom:84px}
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4JQ2XVT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -2354,5 +2359,6 @@ if (typeof window.chip === 'function') {
   };
 }
 </script>
+<script id="yuzen-ath-yok-js">window.addEventListener('load',function(){setTimeout(function(){if(!document.getElementById('athena-host'))document.documentElement.classList.add('ath-yok')},300)});</script>
 </body>
 </html>

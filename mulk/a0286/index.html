@@ -1157,7 +1157,33 @@ details.rapor[open]>summary{background:#fff}
 }
 </style>
 <style id="satis-agirlik">html{font-synthesis:none}
-.eyebrow,.hstats .l,.lang-sw,.onnot a,.rozet,.adim .no,.tkos .tb,.tkos dt,.tkos .var,.tkos .bel,.tkos .uyr,.dm,.ust,.rapor>summary,.rapor>summary::after,th,td.f,tr.grp td,tr.gec td.f,.pbtn,.dz,.dr,.katlar figcaption,.b1,.b2,#lbs,.snav a,.kayit>summary::after,.kayit .sbaslik,.kayit label,.k-send,.k-msg,.pno,.tesl,.cno,.fdaha,.mzoom a,.dilsec a,.devam-liste .ok,.dkapat,.guv-imzalar span,.guv-adim .no,.a19 .meta-i .l,.a19 .btn,.a19 .shead .k,.a19 .spec .l,.a19 .gadim em,.a19 .fside .kv span,.a19 .fld label,.a19 .fbtn,.a19 .mfs-dug,.a19 .kacc-t .k,.a19 .uyari.turuncu a,.a19 .uyari.turuncu .et,.a19 .uyari.turuncu a.not,.a19 .rlink a,.a19 .pk-k,.a19 .pk-n .l,.a19 .pk-g,.a19 .hbr .et,.a19 .hbr .dn a,.a19 .zmap-bar .k,.a19 .hbr .dn span,.a19 .danrad span,.sm-head b,.sm-dt,.hd-etiket,.hd-btn,.hd-ust b,.sm-onay,.sm-f label,.kk-btn,.sm-imza .imz-b,.sm-imza .imz-c span,body.yaz .sm-yaz-bas .t{font-weight:500!important}</style><!--SATIS:S:css--></head>
+.eyebrow,.hstats .l,.lang-sw,.onnot a,.rozet,.adim .no,.tkos .tb,.tkos dt,.tkos .var,.tkos .bel,.tkos .uyr,.dm,.ust,.rapor>summary,.rapor>summary::after,th,td.f,tr.grp td,tr.gec td.f,.pbtn,.dz,.dr,.katlar figcaption,.b1,.b2,#lbs,.snav a,.kayit>summary::after,.kayit .sbaslik,.kayit label,.k-send,.k-msg,.pno,.tesl,.cno,.fdaha,.mzoom a,.dilsec a,.devam-liste .ok,.dkapat,.guv-imzalar span,.guv-adim .no,.a19 .meta-i .l,.a19 .btn,.a19 .shead .k,.a19 .spec .l,.a19 .gadim em,.a19 .fside .kv span,.a19 .fld label,.a19 .fbtn,.a19 .mfs-dug,.a19 .kacc-t .k,.a19 .uyari.turuncu a,.a19 .uyari.turuncu .et,.a19 .uyari.turuncu a.not,.a19 .rlink a,.a19 .pk-k,.a19 .pk-n .l,.a19 .pk-g,.a19 .hbr .et,.a19 .hbr .dn a,.a19 .zmap-bar .k,.a19 .hbr .dn span,.a19 .danrad span,.sm-head b,.sm-dt,.hd-etiket,.hd-btn,.hd-ust b,.sm-onay,.sm-f label,.kk-btn,.sm-imza .imz-b,.sm-imza .imz-c span,body.yaz .sm-yaz-bas .t{font-weight:500!important}</style><!--SATIS:S:css--><style id="yuzen-tek-sistem">
+/* ── YÜZEN DÜĞMELER — tek sistem (Sami 24.10.2026) ──
+   Yukarı ok, WhatsApp ve Athena aynı kutu: 52×52, köşe 3px, lacivert #142A42, ince altın çerçeve, aynı gölge.
+   Sağ altta dikey yığın, aralar 12px: Athena 20px (widget) · WhatsApp 84px · ok 148px.
+   Athena ≤768px'te yüklenmez; orada WhatsApp en alta (20px), ok üstüne (84px) iner. Sağ boşluk 20px, telefonda 14px. */
+.wa-fab,#scroll-top{position:fixed;right:20px;width:52px;height:52px;padding:0;margin:0;box-sizing:border-box;
+ display:flex;align-items:center;justify-content:center;background:#142A42;
+ border:1px solid rgba(210,190,153,.45);border-radius:3px;box-shadow:0 8px 22px rgba(20,42,66,.28);
+ transition:opacity .25s,transform .2s,border-color .2s,box-shadow .2s}
+.wa-fab{bottom:84px;color:#fff}
+.wa-fab svg{width:26px;height:26px;fill:currentColor}
+#scroll-top{bottom:148px;color:#D2BE99;font:300 22px/1 'Inter',sans-serif}
+.wa-fab:hover,#scroll-top.on:hover{background:#142A42;border-color:#D2BE99;transform:translateY(-3px);
+ box-shadow:0 12px 28px rgba(20,42,66,.34)}
+#scroll-top:hover{background:#142A42}
+.wa-fab:focus-visible,#scroll-top:focus-visible{outline:2px solid #D2BE99;outline-offset:2px}
+@media(max-width:768px){
+ .wa-fab,#scroll-top{right:14px;width:52px;height:52px}
+ .wa-fab{bottom:20px}
+ .wa-fab svg{width:26px;height:26px}
+ #scroll-top{bottom:84px}
+}
+/* Athena yüklenmediyse (tablet, telefon ya da ağ) yığın en alta iner: WhatsApp 20px, ok 84px */
+.ath-yok .wa-fab{bottom:20px}
+.ath-yok #scroll-top{bottom:84px}
+</style>
+</head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4JQ2XVT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="hero">
@@ -2169,5 +2195,6 @@ function dKapat(b){var d=b.closest('details');if(!d)return;var once=d.getBoundin
     _aktif=_galeriler[gi];_ix=Math.max(0,Math.min(j||0,_aktif.length-1));_lbCiz();
     document.getElementById('lb').classList.add('on');document.body.style.overflow='hidden';};
 })();
-</script><!--SATIS:S:js--></body>
+</script><!--SATIS:S:js--><script id="yuzen-ath-yok-js">window.addEventListener('load',function(){setTimeout(function(){if(!document.getElementById('athena-host'))document.documentElement.classList.add('ath-yok')},300)});</script>
+</body>
 </html>
