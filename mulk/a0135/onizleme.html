@@ -649,6 +649,22 @@ tr.dr-s td,tr.dr-s td.f{color:#B23A3A}
 /* Durum etiketleri aynı hizada (Sami 24.10) */
 #fiyatlar td .dad{display:inline-block;min-width:4.6em}
 @media(max-width:640px){#fiyatlar td .dad{min-width:0}}
+
+/* Açılır bantlar: siyah-beyaz fotoğraflı, %50 daha yüksek (Sami 24.10) */
+details.rapor>summary,details.ayr-grup>summary,details.ayr-band>summary{position:relative;isolation:isolate;overflow:hidden;min-height:104px;display:flex!important;align-items:center;gap:6px 16px;flex-wrap:wrap;padding:26px 72px 26px 30px!important;background:#142A42!important;color:#fff!important;border-radius:6px!important;border:0!important;cursor:pointer;list-style:none}
+details.rapor>summary::-webkit-details-marker,details.ayr-grup>summary::-webkit-details-marker,details.ayr-band>summary::-webkit-details-marker{display:none}
+details.rapor>summary::before,details.ayr-grup>summary::before,details.ayr-band>summary::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--bant-foto) center/cover no-repeat;filter:grayscale(1) contrast(1.08) brightness(.95);transform:scale(1.02);transition:transform .5s}
+details.rapor>summary::after,details.ayr-grup>summary::after,details.ayr-band>summary::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(12,22,36,.88) 0%,rgba(12,22,36,.70) 45%,rgba(12,22,36,.30) 100%)}
+details.rapor>summary:hover::before,details.ayr-grup>summary:hover::before,details.ayr-band>summary:hover::before{transform:scale(1.06)}
+details.rapor>summary,details.rapor>summary *,details.ayr-grup>summary *,details.ayr-band>summary *{color:#fff!important}
+details.rapor>summary{font-size:21px;font-weight:500;letter-spacing:.01em}
+details.ayr-grup>summary .ag-t{font-size:21px;font-weight:500}
+details.ayr-grup>summary .ag-a,details.ayr-band>summary .eyebrow{color:#E8D9AF!important;font-size:14px;font-weight:400}
+details.ayr-band>summary .eyebrow{display:block;width:100%;letter-spacing:.18em;font-size:11px;text-transform:uppercase}
+details.rapor>summary::marker{content:""}
+details.rapor>summary .bant-arti,details.ayr-grup>summary i,details.ayr-band>summary i{position:absolute;right:26px;top:50%;transform:translateY(-50%);font-style:normal;font-size:28px;line-height:1;color:#C9A961!important}
+details[open]>summary .bant-arti{content:"−"}
+@media(max-width:640px){details.rapor>summary,details.ayr-grup>summary,details.ayr-band>summary{min-height:96px;padding:20px 56px 20px 20px!important}details.rapor>summary,details.ayr-grup>summary .ag-t{font-size:18px}}
 </style>
 </head>
 <body>
@@ -840,7 +856,7 @@ tr.dr-s td,tr.dr-s td.f{color:#B23A3A}
     <h3 style="margin-top:26px">Kat ve daire tipi planları</h3>
     <div class="katlar"><figure onclick="ac('plan/kat-tipik.webp','Tipik kat planı')"><img src="plan/kat-tipik.webp" loading="lazy" alt="Tipik kat planı"><figcaption>Tipik kat planı</figcaption></figure><figure onclick="ac('plan/tip-1plus1.webp','Daire tipi · 1+1')"><img src="plan/tip-1plus1.webp" loading="lazy" alt="Daire tipi · 1+1"><figcaption>Daire tipi · 1+1</figcaption></figure><figure onclick="ac('plan/tip-2plus1.webp','Daire tipi · 2+1')"><img src="plan/tip-2plus1.webp" loading="lazy" alt="Daire tipi · 2+1"><figcaption>Daire tipi · 2+1</figcaption></figure></div>
   </div></div>
-  <details class="rapor" id="r-bolge"><summary>Bölge raporu · Neo Faliro</summary><div class="rbody"><div class="katlar"><figure onclick="ac('img/bolge.webp','Neo Faliro ve Faliro Koyu')" style="grid-column:1/-1"><img src="img/bolge.webp" alt="Neo Faliro ve Faliro Koyu" loading="lazy" style="aspect-ratio:16/7;object-fit:cover"><figcaption>Faliro Koyu sahil şeridi. Fotoğraf: George E. Koronaios · Wikimedia Commons · CC BY-SA 4.0</figcaption></figure></div>
+  <details class="rapor" id="r-bolge"><summary style="--bant-foto:url('img/bolge.webp')">Bölge raporu · Neo Faliro<i class="bant-arti">+</i></summary><div class="rbody"><div class="katlar"><figure onclick="ac('img/bolge.webp','Neo Faliro ve Faliro Koyu')" style="grid-column:1/-1"><img src="img/bolge.webp" alt="Neo Faliro ve Faliro Koyu" loading="lazy" style="aspect-ratio:16/7;object-fit:cover"><figcaption>Faliro Koyu sahil şeridi. Fotoğraf: George E. Koronaios · Wikimedia Commons · CC BY-SA 4.0</figcaption></figure></div>
 <p class="kucuk">Semt düzeyinde bir değerlendirmedir; belirli bir daire incelemesi içermez. Doğrulanabilir kaynağı olmayan bilgi yazılmamıştır.</p>
 <h4>Konum ve semt karakteri</h4>
 <p>Neo Faliro, Piraeus ile Palaio Faliro arasında uzanan ve Saronik Körfezi'ne bakan sahil mahallesidir; bu şerit Faliro Koyu olarak bilinir ve Athens Riviera'nın kuzey kapısı sayılır. Athens Riviera, Faliro Koyu'ndan Sounio Burnu'na kadar uzanan yaklaşık 70 kilometrelik güney sahil şeridinin adıdır; Neo Faliro – Elliniko – Glyfada koridoru bu şeridin en dinamik iç bölümüdür. Proje, yürüyüş ve bisiklet yollarıyla yeniden tasarlanan Mediterranean Park rejenerasyon alanının yakınındadır; park cepheli olup olmadığı ünite bazında teyit edilir.</p>
@@ -926,7 +942,7 @@ tr.dr-s td,tr.dr-s td.f{color:#B23A3A}
     <div class="adim"><div class="no">4</div><b>AFM, banka, noter, tapu</b><br>Vekâletle yürütülebilir; Yunanistan'da bulunmanız şart değildir.</div>
     <div class="adim"><div class="no">5</div><b>Oturum başvurusu</b><br>Biyometrik randevu, mavi kart, ardından oturum kartı ve 5 yılda bir yenileme.</div>
   </div>
-</section></div><details class="ayr-grup" id="ayrinti"><summary><span class="ag-t">Dijital Yer Gösterme Protokolü</span><span class="ag-a">Kesin adres ve daire bazlı konum, protokolün imzalanmasıyla paylaşılır</span><i>+</i></summary><section id="protokol">
+</section></div><details class="ayr-grup" id="ayrinti"><summary style="--bant-foto:url('img/g-02.webp')"><span class="ag-t">Dijital Yer Gösterme Protokolü</span><span class="ag-a">Kesin adres ve daire bazlı konum, protokolün imzalanmasıyla paylaşılır</span><i>+</i></summary><section id="protokol">
   <div class="eyebrow">Tanıtım kaydı</div>
   <h2>Dijital Yer Gösterme Protokolü</h2>
   <p class="kucuk" style="margin-top:8px">Bu protokol, PROPERTY VIEWING AND ADVISORY AGREEMENT'ın Türkçe sunumudur.</p>
