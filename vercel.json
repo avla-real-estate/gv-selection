@@ -1322,6 +1322,19 @@
       }
     },
     {
+      "src": "^/mulk/a0321/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://lykovrysi-kifisia-residences-a0321.avlarealestate.com/"
+      }
+    },
+    {
       "src": "^/(.*)$",
       "has": [
         {
@@ -2333,6 +2346,16 @@
         }
       ],
       "dest": "/mulk/a0277/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "lykovrysi-kifisia-residences-a0321.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0321/$1"
     }
   ]
 }
