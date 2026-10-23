@@ -1275,6 +1275,27 @@ details.rapor>summary::marker{content:""}
 details.rapor>summary .bant-arti,details.ayr-grup>summary i,details.ayr-band>summary i{position:absolute;right:26px;top:50%;transform:translateY(-50%);font-style:normal;font-size:28px;line-height:1;color:#C9A961!important}
 details[open]>summary .bant-arti{content:"−"}
 @media(max-width:640px){details.rapor>summary,details.ayr-grup>summary,details.ayr-band>summary{min-height:96px;padding:20px 56px 20px 20px!important}details.rapor>summary,details.ayr-grup>summary .ag-t{font-size:18px}}
+/* ── YÜZEN DÜĞMELER — tek sistem (Sami 24.10.2026) ──
+   Yukarı ok, WhatsApp ve Athena aynı kutu: 52×52, köşe 3px, lacivert #142A42, ince altın çerçeve, aynı gölge.
+   Sağ altta dikey yığın, aralar 12px: Athena 20px (widget) · WhatsApp 84px · ok 148px.
+   Athena ≤768px'te yüklenmez; orada WhatsApp en alta (20px), ok üstüne (84px) iner. Sağ boşluk 20px, telefonda 14px. */
+.wa-fab,#scroll-top{position:fixed;right:20px;width:52px;height:52px;padding:0;margin:0;box-sizing:border-box;
+ display:flex;align-items:center;justify-content:center;background:#142A42;
+ border:1px solid rgba(210,190,153,.45);border-radius:3px;box-shadow:0 8px 22px rgba(20,42,66,.28);
+ transition:opacity .25s,transform .2s,border-color .2s,box-shadow .2s}
+.wa-fab{bottom:84px;color:#fff}
+.wa-fab svg{width:26px;height:26px;fill:currentColor}
+#scroll-top{bottom:148px;color:#D2BE99;font:300 22px/1 'Inter',sans-serif}
+.wa-fab:hover,#scroll-top.on:hover{background:#142A42;border-color:#D2BE99;transform:translateY(-3px);
+ box-shadow:0 12px 28px rgba(20,42,66,.34)}
+#scroll-top:hover{background:#142A42}
+.wa-fab:focus-visible,#scroll-top:focus-visible{outline:2px solid #D2BE99;outline-offset:2px}
+@media(max-width:768px){
+ .wa-fab,#scroll-top{right:14px;width:52px;height:52px}
+ .wa-fab{bottom:20px}
+ .wa-fab svg{width:26px;height:26px}
+ #scroll-top{bottom:84px}
+}
 </style>
 </head>
 <body>
@@ -1988,7 +2009,7 @@ function dKapat(b){var d=b.closest('details');if(!d)return;var once=d.getBoundin
         
         
         <a class="kv kv-a" href="tel:+905322822657"><span>Telefon</span><div>+90 532 282 26 57</div></a>
-        <a class="kv kv-a" href="mailto:realestate@avla.com.tr"><span>E-posta</span><div>realestate@avla.com.tr</div></a>
+        <a class="kv kv-a" href="mailto:realestate@avla.com.tr"><span>E-posta</span><div>realestate@avla.com.tr</div></a> <div class="fs-marka"><img src="https://gv.selection.avlarealestate.com/marka/avla-dikey-buyuk-8-altin-512w.png" alt="Avla" width="112" loading="lazy"><p class="fs-hik">Logomuzdaki kuş bir <b>dokumacı kuşu</b>. Yuvasını ilmek ilmek, sabırla ve sağlam örer. Kuş, “Avla” sözcüğüne, yani yuvasını kuracağı yere döner. Logonun her çizgisi tek kalemle ve aynı kalınlıkta çizildi: her ayrıntıda aynı özen. Sizin için yuvayı da aynı sabır ve özenle kuruyoruz.</p><a class="fs-git" href="https://www.avlarealestate.com/" target="_blank" rel="noopener">avlarealestate.com →</a></div>
       </div>
       <div class="fmain">
         <form id="kf" novalidate>
@@ -2068,6 +2089,15 @@ function dKapat(b){var d=b.closest('details');if(!d)return;var once=d.getBoundin
 .oc-fy{font-size:16px;font-weight:500;color:#1A2E4A;margin-top:6px}
 .oc-mus{font-size:13px;color:#5f646b}
 .oc-git{margin-top:8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#9c7f4e}
+
+/* Kayıt paneli: logo + kısa hikâye + ana sayfa bağı (Sami 24.10) */
+.fside{display:flex;flex-direction:column}
+.fs-marka{margin-top:auto;padding-top:30px;border-top:1px solid rgba(210,190,153,.28)}
+.fs-marka img{display:block;width:112px;height:auto;margin:0 0 18px}
+.fs-hik{color:rgba(246,241,231,.82)!important;font-size:14.5px;line-height:1.65;margin:0 0 14px}
+.fs-hik b{color:#D2BE99;font-weight:500}
+.fs-git{display:inline-block;color:#D2BE99!important;font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(210,190,153,.5);padding-bottom:3px}
+.fs-git:hover{color:#C29358!important;border-color:#C29358}
 </style><section class="satis" id="one-cikan"><div class="eyebrow">Portföyümüzden</div><h2>Öne çıkan projeler</h2><p class="on-alt">Golden Visa kapsamında öne çıkardığımız projeler; her kart projenin kendi sayfasını açar.</p><div class="oc-sat"><a class="oc-k" href="https://lykovrysi-north-residences.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://lykovrysi-north-residences.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span></span><span class="oc-ad">Lykovrysi North Residences</span><span class="oc-yer">Kifisia</span><span class="oc-fy">€270.000</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://lykovrysi-kifisia-residences-a0321.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://lykovrysi-kifisia-residences-a0321.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et oc-sif">Sıfır bina</span></span><span class="oc-ad">Kifisia Suites</span><span class="oc-yer">Kifisia</span><span class="oc-fy">€380.000</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://kato-elliniko-riviera-suites-a0220.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://kato-elliniko-riviera-suites-a0220.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span></span><span class="oc-ad">Kato Elliniko Riviera Suites</span><span class="oc-yer">Elliniko</span><span class="oc-fy">€300.000 – €380.000</span><span class="oc-mus">15 müsait daire</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://kallithea-garden-residences-a0222.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://kallithea-garden-residences-a0222.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span><span class="oc-et oc-sif">Sıfır bina</span></span><span class="oc-ad">Kallithea Garden Residences</span><span class="oc-yer">Kallithea</span><span class="oc-fy">€282.000</span><span class="oc-mus">2 müsait daire</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://kallithea-south-residences-a0166.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://kallithea-south-residences-a0166.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span><span class="oc-et oc-sif">Sıfır bina</span></span><span class="oc-ad">Kallithea South Residences</span><span class="oc-yer">Kallithea</span><span class="oc-fy">€356.000 – €358.000</span><span class="oc-mus">Müsait daire teyitte</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://south-moschato-residences-a0145.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://south-moschato-residences-a0145.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et oc-tuk">Tükendi</span></span><span class="oc-ad">South Moschato Residences</span><span class="oc-yer">Moschato</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://monastiraki-residences-a0233.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://monastiraki-residences-a0233.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span></span><span class="oc-ad">Monastiraki Residences</span><span class="oc-yer">Psyrri</span><span class="oc-fy">€275.000 – €295.000</span><span class="oc-mus">3 müsait daire</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://south-glyfada-a0161.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://south-glyfada-a0161.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span><span class="oc-et oc-sif">Sıfır bina</span></span><span class="oc-ad">South Glyfada Residences</span><span class="oc-yer">Glyfada</span><span class="oc-fy">€261.000 – €316.000</span><span class="oc-mus">33 müsait daire</span><span class="oc-git">Sayfayı aç →</span></span></a></div></section><!--one-cikan:son--></div><section class="sec" id="portfoy-harita">
   <div class="wrap">
     <div class="shead">

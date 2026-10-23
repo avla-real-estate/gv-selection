@@ -1988,7 +1988,7 @@ function dKapat(b){var d=b.closest('details');if(!d)return;var once=d.getBoundin
         
         
         <a class="kv kv-a" href="tel:+905322822657"><span>Telefon</span><div>+90 532 282 26 57</div></a>
-        <a class="kv kv-a" href="mailto:realestate@avla.com.tr"><span>E-posta</span><div>realestate@avla.com.tr</div></a>
+        <a class="kv kv-a" href="mailto:realestate@avla.com.tr"><span>E-posta</span><div>realestate@avla.com.tr</div></a> <div class="fs-marka"><img src="https://gv.selection.avlarealestate.com/marka/avla-dikey-buyuk-8-altin-512w.png" alt="Avla" width="112" loading="lazy"><p class="fs-hik">Logomuzdaki kuş bir <b>dokumacı kuşu</b>. Yuvasını ilmek ilmek, sabırla ve sağlam örer. Kuş, “Avla” sözcüğüne, yani yuvasını kuracağı yere döner. Logonun her çizgisi tek kalemle ve aynı kalınlıkta çizildi: her ayrıntıda aynı özen. Sizin için yuvayı da aynı sabır ve özenle kuruyoruz.</p><a class="fs-git" href="https://www.avlarealestate.com/" target="_blank" rel="noopener">avlarealestate.com →</a></div>
       </div>
       <div class="fmain">
         <form id="kf" novalidate>
@@ -2503,6 +2503,38 @@ a.c1,a.c2,a.h1c,a.h2c,a.scta,a.b1,a.b2,.onk a.wa,.onk button.pl,.btn,.btn-o,.on-
 a.c1:hover,a.c2:hover,a.h1c:hover,a.h2c:hover,a.scta:hover,a.b1:hover,a.b2:hover,.onk a.wa:hover,.onk button.pl:hover,.btn:hover,.btn-o:hover{background:var(--bronz)!important;border-color:var(--bronz)!important;color:#142A42!important;transform:translateY(-1px)}
 a.c1:active,a.c2:active,a.h1c:active,a.h2c:active,.onk a.wa:active{background:var(--bronz-koyu)!important;border-color:var(--bronz-koyu)!important}
 .oc-k:hover .oc-git{color:var(--bronz-koyu)!important}
+</style>
+<style id="yuzen-dugmeler">
+/* ── YÜZEN DÜĞMELER — tek sistem (Sami 24.10.2026) ──
+   Yukarı ok, WhatsApp ve Athena aynı kutu: 52×52, köşe 3px, lacivert #142A42, ince altın çerçeve, aynı gölge.
+   Sağ altta dikey yığın, aralar 12px: Athena 20px (widget) · WhatsApp 84px · ok 148px.
+   Athena ≤768px'te yüklenmez; orada WhatsApp en alta (20px), ok üstüne (84px) iner. Sağ boşluk 20px, telefonda 14px. */
+.wa-fab,#scroll-top{position:fixed;right:20px;width:52px;height:52px;padding:0;margin:0;box-sizing:border-box;
+ display:flex;align-items:center;justify-content:center;background:#142A42;
+ border:1px solid rgba(210,190,153,.45);border-radius:3px;box-shadow:0 8px 22px rgba(20,42,66,.28);
+ transition:opacity .25s,transform .2s,border-color .2s,box-shadow .2s}
+.wa-fab{bottom:84px;color:#fff}
+.wa-fab svg{width:26px;height:26px;fill:currentColor}
+#scroll-top{bottom:148px;color:#D2BE99;font:300 22px/1 'Inter',sans-serif}
+.wa-fab:hover,#scroll-top.on:hover{background:#142A42;border-color:#D2BE99;transform:translateY(-3px);
+ box-shadow:0 12px 28px rgba(20,42,66,.34)}
+#scroll-top:hover{background:#142A42}
+.wa-fab:focus-visible,#scroll-top:focus-visible{outline:2px solid #D2BE99;outline-offset:2px}
+@media(max-width:768px){
+ .wa-fab,#scroll-top{right:14px;width:52px;height:52px}
+ .wa-fab{bottom:20px}
+ .wa-fab svg{width:26px;height:26px}
+ #scroll-top{bottom:84px}
+}
+
+/* Kayıt paneli: logo + kısa hikâye + ana sayfa bağı (Sami 24.10) */
+.fside{display:flex;flex-direction:column}
+.fs-marka{margin-top:auto;padding-top:30px;border-top:1px solid rgba(210,190,153,.28)}
+.fs-marka img{display:block;width:112px;height:auto;margin:0 0 18px}
+.fs-hik{color:rgba(246,241,231,.82)!important;font-size:14.5px;line-height:1.65;margin:0 0 14px}
+.fs-hik b{color:#D2BE99;font-weight:500}
+.fs-git{display:inline-block;color:#D2BE99!important;font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(210,190,153,.5);padding-bottom:3px}
+.fs-git:hover{color:#C29358!important;border-color:#C29358}
 </style>
 </body>
 </html>

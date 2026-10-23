@@ -665,6 +665,27 @@ details.rapor>summary::marker{content:""}
 details.rapor>summary .bant-arti,details.ayr-grup>summary i,details.ayr-band>summary i{position:absolute;right:26px;top:50%;transform:translateY(-50%);font-style:normal;font-size:28px;line-height:1;color:#C9A961!important}
 details[open]>summary .bant-arti{content:"−"}
 @media(max-width:640px){details.rapor>summary,details.ayr-grup>summary,details.ayr-band>summary{min-height:96px;padding:20px 56px 20px 20px!important}details.rapor>summary,details.ayr-grup>summary .ag-t{font-size:18px}}
+/* ── YÜZEN DÜĞMELER — tek sistem (Sami 24.10.2026) ──
+   Yukarı ok, WhatsApp ve Athena aynı kutu: 52×52, köşe 3px, lacivert #142A42, ince altın çerçeve, aynı gölge.
+   Sağ altta dikey yığın, aralar 12px: Athena 20px (widget) · WhatsApp 84px · ok 148px.
+   Athena ≤768px'te yüklenmez; orada WhatsApp en alta (20px), ok üstüne (84px) iner. Sağ boşluk 20px, telefonda 14px. */
+.wa-fab,#scroll-top{position:fixed;right:20px;width:52px;height:52px;padding:0;margin:0;box-sizing:border-box;
+ display:flex;align-items:center;justify-content:center;background:#142A42;
+ border:1px solid rgba(210,190,153,.45);border-radius:3px;box-shadow:0 8px 22px rgba(20,42,66,.28);
+ transition:opacity .25s,transform .2s,border-color .2s,box-shadow .2s}
+.wa-fab{bottom:84px;color:#fff}
+.wa-fab svg{width:26px;height:26px;fill:currentColor}
+#scroll-top{bottom:148px;color:#D2BE99;font:300 22px/1 'Inter',sans-serif}
+.wa-fab:hover,#scroll-top.on:hover{background:#142A42;border-color:#D2BE99;transform:translateY(-3px);
+ box-shadow:0 12px 28px rgba(20,42,66,.34)}
+#scroll-top:hover{background:#142A42}
+.wa-fab:focus-visible,#scroll-top:focus-visible{outline:2px solid #D2BE99;outline-offset:2px}
+@media(max-width:768px){
+ .wa-fab,#scroll-top{right:14px;width:52px;height:52px}
+ .wa-fab{bottom:20px}
+ .wa-fab svg{width:26px;height:26px}
+ #scroll-top{bottom:84px}
+}
 </style>
 </head>
 <body>
