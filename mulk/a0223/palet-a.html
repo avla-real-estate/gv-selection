@@ -2490,9 +2490,9 @@ tr.dr-r td,tr.dr-r td.f{color:rgba(95,91,82,.85)}
 
 /* Sami 24.10 deneme: Fiyat listesi renksiz, WhatsApp yazısı turuncu (seçiciler .sx-cta/.hcta kuralını geçecek özgüllükte) */
 .sx-cta a.c1.c1{background:transparent!important;color:#142A42!important;border:2px solid #142A42!important;box-shadow:none!important}
-.sx-cta a.c2.c2{color:#F08025!important;background:transparent!important;border:2px solid #142A42!important;box-shadow:none!important}
+.sx-cta a.c2.c2{color:#142A42!important;background:transparent!important;border:2px solid #142A42!important;box-shadow:none!important}
 .hcta a.h1c.h1c{background:transparent!important;color:#fff!important;border:1px solid #D2BE99!important;box-shadow:none!important}
-.hcta a.h2c.h2c{color:#F08025!important;border:1px solid #D2BE99!important;box-shadow:none!important}
+.hcta a.h2c.h2c{color:#fff!important;border:1px solid #D2BE99!important;box-shadow:none!important}
 
 /* Sami 24.10: düğmelerin üzerine gelince altın-bakır (bronz) */
 :root{--bronz:#C62828;--bronz-koyu:#A61F1F} /* Sami 24.10 deneme: hover tam kırmızı */
@@ -2502,6 +2502,8 @@ html body .sx-cta a.c1.c1:active,html body .sx-cta a.c2.c2:active,html body .hct
 .oc-k:hover .oc-git{color:var(--bronz-koyu)!important}
 /* Sami 24.10: üst bölümde bütün kutu ve düğme kenarları altın, ince (Sınıf kutusu örnek) */
 html body .hstats>div{border:1px solid #D2BE99!important}
+/* Sami 24.10: düğme yazılarında turuncu yok, tek renk */
+.hcta a.h2c.h2c svg{fill:currentColor!important;color:inherit!important}
 
 /* Sami 24.10: hover bütün düğmelerde aynı (bronz) */
 html body button.sx-tum.sx-tum,html body button.fdaha.fdaha,html body button.dkapat.dkapat,html body a.on-tum.on-tum,html body .kk-btn.kk-btn,html body button.fbtn.fbtn,html body button.pbtn.pbtn,html body button.pl.pl{transition:background-color .2s,color .2s,border-color .2s,transform .2s}
