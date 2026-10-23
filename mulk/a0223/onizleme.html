@@ -1251,6 +1251,10 @@ tr.dr-s td,tr.dr-s td.f{color:#B23A3A}
 
 /* Önerilenler fiyat listesinden sonra (Sami 24.10) */
 #oneri.oneri-sonra{padding-top:28px}
+
+/* GV bölümü ayrı, Ayrıntı = yalnız protokol (Sami 24.10) */
+.gv-dis{max-width:1000px;margin:0 auto;padding:36px 20px 8px}
+@media(min-width:1048px){.gv-dis{padding:36px 0 8px}}
 </style>
 </head>
 <body>
@@ -1278,7 +1282,7 @@ tr.dr-s td,tr.dr-s td.f{color:#B23A3A}
     <a href="#kunye">Künye</a>
     <a href="#konum">Konum</a>
     <a href="#fiyatlar">Fiyatlar</a><a href="#oneri">Önerilen</a>
-    <a href="#ayrinti">Ayrıntı</a>
+    <a href="#gv">Golden Visa</a><a href="#ayrinti">Protokol</a>
     <a href="#guvence">Güvence</a>
     <a class="scta" href="#kayit">Görüşme</a><!--SATIS:S:nav-->
   </div>
@@ -1412,30 +1416,7 @@ tr.dr-s td,tr.dr-s td.f{color:#B23A3A}
   </div></details><section id="oneri" class="satis oneri-sonra"><div class="eyebrow">Önerimiz</div><h2>Sizin için önerdiğimiz daireler</h2><p class="on-alt">45 dairenin 15'i müsait. Avla müşterilerine ayırdığımız daireyle birlikte fiyat, m² verimi ve dış alan açısından dört daireyi öne çıkarıyoruz.</p><div class="on3 on4"><article class="onk onk-avla"><span class="et">Avla'ya ayrıldı</span><div class="dno">Daire A 3.3</div><div class="dmeta">3. kat · 1+1</div><div class="fy">€286.000</div><div class="fm2">€5.663 / m² brüt · €7.241 / m² net</div><div class="ozl"><div><span>Net</span><i>39,50 m²</i></div><div><span>Dış alan</span><i>11,00 m²</i></div><div><span>Brüt</span><i>50,50 m²</i></div></div><p class="neden">Üst katta, Avla müşterileri için ayırdığımız daire; listede "Avla'ya rezerve" görünür; yalnız bizim üzerimizden alınabilir.</p><div class="dg"><button type="button" class="pl" onclick="ac(&#x27;plan/a-x3.webp&#x27;,&#x27;A 3.3 — daire planı&#x27;)">Planı aç</button><a class="wa" href="https://wa.me/905322822657?text=Merhaba%2C%20Chalandri%20Court%20Residences%20A%203.3%20numaral%C4%B1%20daire%20%28%E2%82%AC286.000%29%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Bu daireyi sorun</a></div></article><article class="onk"><span class="et">En uygun giriş</span><div class="dno">Daire A 1.4</div><div class="dmeta">1. kat · 1+1</div><div class="fy">€276.000</div><div class="fm2">€5.691 / m² brüt · €6.987 / m² net</div><div class="ozl"><div><span>Net</span><i>39,50 m²</i></div><div><span>Dış alan</span><i>9,00 m²</i></div><div><span>Brüt</span><i>48,50 m²</i></div></div><p class="neden">Müsait daireler içinde en düşük fiyat; aynı fiyatta bir daire daha var (A 1.5).</p><div class="dg"><button type="button" class="pl" onclick="ac(&#x27;plan/a-x4.webp&#x27;,&#x27;A 1.4 — daire planı&#x27;)">Planı aç</button><a class="wa" href="https://wa.me/905322822657?text=Merhaba%2C%20Chalandri%20Court%20Residences%20A%201.4%20numaral%C4%B1%20daire%20%28%E2%82%AC276.000%29%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Bu daireyi sorun</a></div></article><article class="onk"><span class="et">En iyi brüt m² fiyatı</span><div class="dno">Daire B GF.6</div><div class="dmeta">Zemin kat · 2+1</div><div class="fy">€400.000</div><div class="fm2">€3.763 / m² brüt · €6.981 / m² net</div><div class="ozl"><div><span>Net</span><i>57,30 m²</i></div><div><span>Dış alan</span><i>49,00 m²</i></div><div><span>Brüt</span><i>106,30 m²</i></div></div><p class="neden">Brüt m² başına projedeki en düşük fiyat (€3.763); 49 m² dış alan dahil.</p><div class="dg"><button type="button" class="pl" onclick="ac(&#x27;plan/b-gf6.webp&#x27;,&#x27;B GF.6 — daire planı&#x27;)">Planı aç</button><a class="wa" href="https://wa.me/905322822657?text=Merhaba%2C%20Chalandri%20Court%20Residences%20B%20GF.6%20numaral%C4%B1%20daire%20%28%E2%82%AC400.000%29%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Bu daireyi sorun</a></div></article><article class="onk"><span class="et">Geniş dış alan · üst kat</span><div class="dno">Daire A M.7</div><div class="dmeta">4–5. katlar · Dubleks</div><div class="fy">€383.000</div><div class="fm2">€4.799 / m² brüt · €7.254 / m² net</div><div class="ozl"><div><span>Net</span><i>52,80 m²</i></div><div><span>Dış alan</span><i>27,00 m²</i></div><div><span>Brüt</span><i>79,80 m²</i></div></div><p class="neden">En üst kattaki müsait daireler içinde en geniş dış alan (27 m²); iki katlı dubleks.</p><div class="dg"><button type="button" class="pl" onclick="ac(&#x27;plan/a-m7.webp&#x27;,&#x27;A M.7 — daire planı&#x27;)">Planı aç</button><a class="wa" href="https://wa.me/905322822657?text=Merhaba%2C%20Chalandri%20Court%20Residences%20A%20M.7%20numaral%C4%B1%20daire%20%28%E2%82%AC383.000%29%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Bu daireyi sorun</a></div></article></div><a class="on-tum" href="#fiyatlar">↑ Tüm fiyat listesi</a></section>
   
 </section>
-<!--SATIS:W1:ayr--><details class="ayr-grup" id="ayrinti"><summary><span class="eyebrow">Ayrıntı</span>Golden Visa çerçevesi, daire karşılaştırması, özet ve tanıtım protokolü<i>+</i></summary><!--/SATIS:W1:ayr-->
-<section id="giris">
-  <div class="eyebrow">Seçki Notu</div>
-  <h2>Chalandri Court Residences — tek sayfada</h2>
-  <div class="card">
-    <p>Bu sayfa, Chalandri · Kuzey Atina bölgesindeki <b>Chalandri Court Residences</b> için hazırlanmış Avla Özel Seçki'dir. Projeyle ilgili her şey tek sayfada: güncel fiyatlar ve <b>15 müsait dairenin</b> listesi, daire ve kat planları ve bölge raporu.</p>
-    <p><b>Sayfanın yapısı:</b> Önce Golden Visa çerçevesi ve haritada semt; ardından daire tiplerini yan yana koyan karşılaştırma ve proje bölümü — künye, görseller, fiyat tablosu ve raporlar. Her bölümde <b>kendi çekincelerimiz</b> de yazılı. İlan sayfası, bölge raporu ve yatırım fizibilitesi bağlantıları proje kartının altındadır.</p>
-    <div class="uyari"><b>Müsaitlik ve fiyat:</b> Rakamlar geliştiricilerden gelen en güncel listelere dayanır (envanter teyidi 20 Ekim 2026). Müsaitlik hızla değişir; bağlayıcı karardan önce ilgili dairenin durumu yazılı teyit edilir.</div>
-    <p style="margin-top:18px"><a class="b1" style="padding:11px 24px;font-size:13px" href="https://wa.me/905322822657?text=Merhaba%2C%20Chalandri%20Court%20Residences%20se%C3%A7kisini%20inceledim." target="_blank" rel="noopener">Bize WhatsApp'tan yazın</a> <a class="b2" style="padding:11px 24px;font-size:13px;color:var(--navy);border-color:var(--cizgi)" href="tel:+905322822657">+90 532 282 26 57</a></p>
-  <p class="kucuk" style="margin-top:14px"><a href="https://gv.selection.avlarealestate.com" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600">Master Seçki — tüm portföy</a> · <a href="https://www.avlarealestate.com/property-status/golden-visa" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600">Tüm ilanlarımız</a></p>
-  </div>
-  <div class="gv">
-    <b style="font-family:'Cormorant Garamond',serif;font-size:19px">Yunanistan Golden Visa — kısa hatırlatma</b>
-    <div class="madde">
-      <span>Eşik <b>tek bir rakam değildir</b>: €250.000 / €400.000 / €800.000</span>
-      <span>Eş + 21 yaş altı çocuklar + her iki eşin ebeveynleri</span>
-      <span>Oturma izni 5 yılda bir yenilenir</span>
-      <span>Asgari kalış şartı yoktur</span>
-      <span>Uzun dönem kiralamaya izin verilir; <b>kısa dönem (günlük) kiralama yasaktır</b></span>
-      <span>Bu bir <b>oturma iznidir</b>, vatandaşlık değildir</span>
-    </div>
-  </div>
-</section>
-<section id="gv">
+<!--SATIS:W1:ayr--><div class="gv-dis"><section data-gv-ayri="1" id="gv">
   <div class="eyebrow">Önce Çerçeve</div>
   <h2>Yatırım eşiği neden herkes için farklı çıkıyor?</h2>
   <div class="card">
@@ -1447,28 +1428,7 @@ tr.dr-s td,tr.dr-s td.f{color:#B23A3A}
     </div>
     <p style="margin-top:14px"><b>Sizin dosyanız için pratik anlamı:</b> Attika'da standart yeni yapıda eşik €800.000'dur. Bu dosyadaki mülklerin hangi eşiğe girdiği, <b>mülkün konumu ve hukuki statüsüne</b> göre belirlenir; bu, <b>mülk bazında</b> bağımsız Yunan avukat incelemesiyle yazılı olarak teyit edilir. Hiçbir bölümde "bu daire GV verir" yazmadık; teyidi belgeyle alıyoruz.</p>
   </div>
-</section>
-<section id="karsilastirma">
-  <div class="eyebrow">Karşılaştırma</div>
-  <h2>Daire tipleri — tek tabloda</h2>
-  <div class="tbl"><table><thead><tr><th>Daire</th><th>Tip</th><th>İç m²</th><th>Balkon / dış m²</th><th>Toplam m²</th><th>Fiyat</th><th>€ / iç m²</th><th>€ / toplam m²</th><th>Teslim</th></tr></thead><tbody> <tr><td><b><a href="#a0223" style="color:inherit">A 1.4</a></b></td><td>1+1</td><td>39,50</td><td>9,00</td><td>48,50</td><td class="f">€276.000</td><td>€6.987</td><td>€5.691</td><td>2. çeyrek 2028</td></tr> <tr><td><b><a href="#a0223" style="color:inherit">A GF.1</a></b></td><td>1+1</td><td>42,30</td><td>22,00</td><td>64,30</td><td class="f">€286.000</td><td>€6.761</td><td>€4.448</td><td>2. çeyrek 2028</td></tr> <tr><td><b><a href="#a0223" style="color:inherit">A M.3</a></b></td><td>Dubleks</td><td>44,80</td><td>25,00</td><td>69,80</td><td class="f">€319.000</td><td>€7.121</td><td>€4.570</td><td>2. çeyrek 2028</td></tr> <tr><td><b><a href="#a0223" style="color:inherit">A M.7</a></b></td><td>Dubleks</td><td>52,80</td><td>27,00</td><td>79,80</td><td class="f">€383.000</td><td>€7.254</td><td>€4.799</td><td>2. çeyrek 2028</td></tr> <tr><td><b><a href="#a0223" style="color:inherit">B GF.6</a></b></td><td>2+1</td><td>57,30</td><td>49,00</td><td>106,30</td><td class="f">€400.000</td><td>€6.981</td><td>€3.763</td><td>2. çeyrek 2028</td></tr> </tbody></table></div>
-  <div class="tblnot">Her daire tipinden en uygun fiyatlı ve en geniş müsait daire. Birim fiyatlar liste fiyatı üzerinden; bağlayıcı fiyat yazılı teyitle sabitlenir. Tablonun tamamı proje bölümündeki “Fiyatlar ve müsait daireler” başlığı altındadır.</div>
-</section>
-<section id="ozet">
-  <div class="eyebrow">Özet</div>
-  <h2>Proje bir bakışta</h2>
-  <div class="tbl"><table>
-    <thead><tr><th>#</th><th>Proje</th><th>Semt</th><th>Teslim</th><th>Müsait</th><th>Fiyat aralığı</th><th>Net m² aralığı</th><th>Brüt m² aralığı</th><th>€ / m² net (en düşük)</th><th>€ / m² brüt (en düşük)</th></tr></thead>
-    <tbody>
-      <tr><td>1</td><td><b><a href="#a0223" style="color:inherit">Chalandri Court Residences</a></b></td><td>Chalandri</td><td>2. çeyrek 2028</td><td>15 daire müsait</td><td class="f"><b>€276.000 – €400.000</b></td><td>39,50 – 57,30 m²</td><td>48,30 – 106,30 m²</td><td>€6.761</td><td>€3.763</td></tr>
-    </tbody>
-  </table></div>
-  <div class="card" style="margin-top:22px">
-    <p><b>Nasıl ilerleyelim:</b> ilginizi çeken daireleri işaretleyin; o daireler için güncel müsaitlik, bağlayıcı fiyat ve ödeme planını <b>yazılı</b> olarak getirelim. Atina'ya gelmek isterseniz yer gösterme programını birlikte kurarız; dilerseniz daireleri önce görüntülü görüşmede gösteririz.</p>
-    <p class="kucuk" style="margin-top:10px"><a href="#protokol" style="color:var(--navy);font-weight:600">Dijital Yer Gösterme Protokolü</a> · <a href="#" onclick="szAc(event)" style="color:var(--navy);font-weight:600">Şartlarımız ve çalışma biçimimiz</a></p>
-  </div>
-</section>
-<section id="protokol">
+</section></div><details class="ayr-grup" id="ayrinti"><summary><span class="ag-t">Dijital Yer Gösterme Protokolü</span><span class="ag-a">Kesin adres ve daire bazlı konum, protokolün imzalanmasıyla paylaşılır</span><i>+</i></summary><section id="protokol">
   <div class="eyebrow">Tanıtım kaydı</div>
   <h2>Dijital Yer Gösterme Protokolü</h2>
   <p class="kucuk" style="margin-top:8px">Bu protokol, PROPERTY VIEWING AND ADVISORY AGREEMENT'ın Türkçe sunumudur.</p>
@@ -1491,8 +1451,7 @@ tr.dr-s td,tr.dr-s td.f{color:#B23A3A}
       </dl>
   </div>
   <p style="margin-top:18px"><a class="b1" href="#" onclick="szAc(event)">Adres bilgilerine ulaş</a></p>
-</section>
-<!--SATIS:W2:ayr--></details><!--/SATIS:W2:ayr-->
+</section></details><!--/SATIS:W2:ayr-->
 </div><!-- /wrap -->
 
 
@@ -2126,11 +2085,11 @@ function dKapat(b){var d=b.closest('details');if(!d)return;var once=d.getBoundin
       <div>
         <h4>Sayfalar</h4>
         <ul>
-          <li><a href="#giris">Seçki notu</a></li>
+          <li></li>
           <li><a href="#harita">Seçki haritası</a></li>
-          <li><a href="#karsilastirma">Karşılaştırma</a></li>
+          <li></li>
           <li><a href="#a0223">Mülkler</a></li>
-          <li><a href="#ozet">Özet</a></li>
+          <li></li>
           <li><a href="#protokol">Dijital Yer Gösterme Protokolü</a></li>
           <li><a href="#guvence">Ödeme güvencesi</a></li>
           <li><a href="#kayit" class="vurgu">Kayıt olun</a></li>

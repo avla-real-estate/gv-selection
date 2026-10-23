@@ -641,6 +641,10 @@ tr.dr-s td,tr.dr-s td.f{color:#B23A3A}
 
 /* Önerilenler fiyat listesinden sonra (Sami 24.10) */
 #oneri.oneri-sonra{padding-top:28px}
+
+/* GV bölümü ayrı, Ayrıntı = yalnız protokol (Sami 24.10) */
+.gv-dis{max-width:1000px;margin:0 auto;padding:36px 20px 8px}
+@media(min-width:1048px){.gv-dis{padding:36px 0 8px}}
 </style>
 </head>
 <body>
@@ -666,7 +670,7 @@ tr.dr-s td,tr.dr-s td.f{color:#B23A3A}
     <a href="#kunye">Künye</a>
     <a href="#konum">Konum</a>
     <a href="#fiyatlar">Fiyatlar</a><a href="#oneri">Önerilen</a>
-    <a href="#ayrinti">Ayrıntı</a>
+    <a href="#gv">Golden Visa</a>
     <a class="scta" href="#kayit">Görüşme</a><!--SATIS:S:nav-->
   </div>
 </nav>
@@ -899,29 +903,7 @@ tr.dr-s td,tr.dr-s td.f{color:#B23A3A}
 <p><b>Yatırım Kararı: POZİTİF.</b> Neo Faliro Park Residences, Neo Faliro Metro ayağı + managed asset profili + park rejenerasyon halo etkisi üçlüsünün kesişiminde, Athens Riviera'nın kuzey kapısında defansif premium pozisyon sunmaktadır. €280K giriş bandı, %4 kira garantisi ve 5-10 yıllık ufukta %40-110 birikimli getiri varsayımıyla, Golden Visa motivasyonlu ve managed real estate tercih eden yatırımcı için düşük volatilite, yüksek likidite profilindedir. Kulüp operasyonu çıkış değerini ve kira sürekliliğini destekler.</p>
     <button class="dkapat" onclick="this.closest('details').open=false">Kapat</button></div></details>
 </section>
-<!--SATIS:W1:ayr--><details class="ayr-grup" id="ayrinti"><summary><span class="eyebrow">Ayrıntı</span>Golden Visa çerçevesi, daire karşılaştırması, özet ve tanıtım protokolü<i>+</i></summary><!--/SATIS:W1:ayr-->
-<section id="giris">
-  <div class="eyebrow">Dosya Notu</div>
-  <h2>Neden bu proje?</h2>
-  <div class="card">
-    <p>Bu dosya tek bir proje için hazırlandı ve üç ölçüt üzerine kuruldu: <b>Atina Rivierası hattı</b>, <b>yönetilen, mobilyalı teslim bir mülk</b> ve <b>uzun vadeli kira garantisi</b>. Neo Faliro, Riviera'nın şehir merkezine en yakın ve yenilenmekte olan kuzey kapısıdır; proje, kullanım dışı dönemlerde malikten bir şey beklemeyen bir yönetim modeli sunar.</p>
-<p>Proje üç binadan oluşur: <b>126 konut</b>, 1+1 ve 2+1 daireler, çatıda havuz ve bar, restore edilen tarihî konakta maliklere özel üye kulübü. Aşağıda önce Golden Visa çerçevesini, sonra konumu, ardından projenin künyesini bulacaksınız. Bölümün sonunda üç açılır bölüm var: <b>fiyatlı daire listesi</b>, <b>bölge raporu</b> ve <b>yatırım fizibilitesi</b>. Güçlü yanları kadar zayıf yanları da yazdık; bir başlıkta doğrulanmış verimiz yoksa bunu açıkça belirttik ve tahminle doldurmadık.</p>
-    <div class="uyari"><b>Müsaitlik ve fiyat sorumluluğu:</b> Bu sayfadaki fiyat ve müsaitlik bilgisi, geliştiricinin bize ulaşan <b>18 Ağustos 2026 tarihli listesine</b> dayanır. Müsaitlik kısa sürede değişebilir; Avla bu bilgilerin güncelliği konusunda sorumluluk üstlenmez. Ticari koşullar da aynı kaynağa dayanır ve <b>bağlayıcı teklif değildir</b>. Bağlayıcı karar öncesinde dairenin durumunu ve size sunulan ticari koşulları geliştiriciden yazılı olarak birlikte teyit ederiz.</div>
-    <div class="onnot"><b>Bu sayfa tek bir mülk için hazırlanmıştır.</b> Künyesi, fiyatlı daire listesi, bölge ve proje raporları burada bir arada verilmiştir. Mülkü gezmek ya da bağlayıcı bir adım atmak istediğinizde, tanıtımı kayda geçiren yer gösterme formunu birlikte doldururuz; <a href="#" onclick="szAc(event)"><b>şartlarımızı ve modelimizi buradan inceleyebilirsiniz</b></a>.</div>
-  </div>
-  <div class="gv">
-    <b style="font-family:'Cormorant Garamond',serif;font-size:19px">Yunanistan Golden Visa — kısa hatırlatma</b>
-    <div class="madde">
-      <span>Eşik <b>tek bir rakam değildir</b>: €250.000 / €400.000 / €800.000</span>
-      <span>Eş + 21 yaş altı çocuklar + her iki tarafın ebeveynleri</span>
-      <span>5 yılda bir yenilenen oturum</span>
-      <span>Asgari ikamet şartı yok</span>
-      <span>Uzun dönem kiralama serbest</span>
-      <span>Bu bir <b>oturma iznidir</b>, vatandaşlık değildir</span>
-    </div>
-  </div>
-</section>
-<section id="gv">
+<!--SATIS:W1:ayr--><div class="gv-dis"><section data-gv-ayri="1" id="gv">
   <div class="eyebrow">Önce Çerçeve</div>
   <h2>Golden Visa eşiği nasıl belirlenir?</h2>
   <div class="card">
@@ -940,8 +922,7 @@ tr.dr-s td,tr.dr-s td.f{color:#B23A3A}
     <div class="adim"><div class="no">4</div><b>AFM, banka, noter, tapu</b><br>Vekâletle yürütülebilir; Yunanistan'da bulunmanız şart değildir.</div>
     <div class="adim"><div class="no">5</div><b>Oturum başvurusu</b><br>Biyometrik randevu, mavi kart, ardından oturum kartı ve 5 yılda bir yenileme.</div>
   </div>
-</section>
-<!--SATIS:W2:ayr--></details><!--/SATIS:W2:ayr-->
+</section></div><!--/SATIS:W2:ayr-->
 <div class="oc-dis"><!--one-cikan:bas--><style id="one-cikan-css">
 #one-cikan{padding:56px 0 18px}
 .oc-dis{max-width:1000px;margin:0 auto;padding:0 20px}
