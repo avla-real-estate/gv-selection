@@ -37,7 +37,7 @@
   --civit:#2B4170;
   --altin:#D2BE99;
   --altin-koyu:#A88F5E;
-  --turuncu:#F08025;
+  --turuncu:#E30A17;
   --zeytin:#637A47;
   --murekkep:#22303F;
   --soluk:#5E6B78;
@@ -84,7 +84,7 @@ p{margin:0}
 .acilis h1 b{font-weight:400;color:var(--altin)}
 .acilis .alt{max-width:36rem;color:rgba(246,241,231,.86);font-size:1.05rem}
 .son-rozet{justify-self:start;background:rgba(20,42,66,.72);display:inline-flex;align-items:center;gap:10px;border:1px solid var(--altin);color:var(--altin);padding:7px 14px;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
-.son-rozet::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--turuncu);box-shadow:0 0 0 4px rgba(240,128,37,.25)}
+.son-rozet::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--turuncu);box-shadow:0 0 0 4px rgba(227,10,23,.25)}
 @media (max-width:640px){
   .acilis-foto{aspect-ratio:4/5;max-height:none}
   .acilis-metin{position:relative;margin-top:-38%}
@@ -575,5 +575,11 @@ window.avlaHarita = function () {
 </script>
 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCy1l7hG5Q95QbCZkFN2_yV41hnjIWqLB4&language=tr&region=GR&loading=async&callback=avlaHarita"></script>
 <script src="https://hub.avlarealestate.com/iz.js" data-sayfa="mulk-a0321" data-genel="1" data-arsiv="blob" data-kapak="parsomen" data-eyebrow="Avla Özel Seçki" data-baslik="Kifisia yanı · teraslı 1+1 ve bahçeli 2+1" data-foto="img/kapak.jpg" data-logo="img/avla-kare-lacivert-altin-buyuk-8-1080.png" data-kredi="Görseller temsilîdir" data-lang="tr" data-p2="Kifisia&#x27;nın yanı başında, Lykovrysi&#x27;de kalan &lt;b&gt;son iki daire&lt;/b&gt;: fiyatlar, 3 yıl %4 kira garantisi, planlar ve sözleşme şartları." defer></script>
+<style id="tasarim-v3">/* Tasarım dili v3 · 24.10.2026 (K-2026-10-24-01/02) — dolu kırmızı düğme hover'ı koyu kırmızı; çerçeveli/koyu düğme hover'ı kırmızı zemin + beyaz yazı; kırmızı yalnız eylemde */
+.dugme-ana:hover{background:#B8080F}
+.dugme-ikinci:hover,.dugme-harita:hover,.plan-dugme:hover{background:#E30A17;border-color:#E30A17;color:#fff}
+.son-rozet::before{background:var(--altin);box-shadow:0 0 0 4px rgba(210,190,153,.25)}
+.plan-dugme:focus-visible,.dugme:focus-visible,.galeri button:focus-visible,.lb-ust button:focus-visible{outline-color:#142A42}
+</style>
 </body>
 </html>
