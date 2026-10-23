@@ -2496,6 +2496,13 @@ a.c2:hover{background:#F08025!important;color:#fff!important;border-color:#F0802
 a.h1c{background:transparent!important;color:#fff!important;border:2px solid rgba(246,241,231,.85)!important;box-shadow:none!important}
 a.h1c:hover{background:rgba(246,241,231,.12)!important}
 a.h2c{color:#F08025!important}
+
+/* Sami 24.10: düğmelerin üzerine gelince altın-bakır (bronz) */
+:root{--bronz:#C29358;--bronz-koyu:#A9773E}
+a.c1,a.c2,a.h1c,a.h2c,a.scta,a.b1,a.b2,.onk a.wa,.onk button.pl,.btn,.btn-o,.on-tum,.oc-k .oc-git{transition:background-color .2s,color .2s,border-color .2s,transform .2s}
+a.c1:hover,a.c2:hover,a.h1c:hover,a.h2c:hover,a.scta:hover,a.b1:hover,a.b2:hover,.onk a.wa:hover,.onk button.pl:hover,.btn:hover,.btn-o:hover{background:var(--bronz)!important;border-color:var(--bronz)!important;color:#142A42!important;transform:translateY(-1px)}
+a.c1:active,a.c2:active,a.h1c:active,a.h2c:active,.onk a.wa:active{background:var(--bronz-koyu)!important;border-color:var(--bronz-koyu)!important}
+.oc-k:hover .oc-git{color:var(--bronz-koyu)!important}
 </style>
 </body>
 </html>
