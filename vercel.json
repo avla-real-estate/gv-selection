@@ -1335,6 +1335,45 @@
       }
     },
     {
+      "src": "^/mulk/a0189/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://akriton-residence-a0189.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0307/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://piraeus-zea-garden-suites-a0307.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0165/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://glyfada-garden-suites-a0165.avlarealestate.com/"
+      }
+    },
+    {
       "src": "^/(.*)$",
       "has": [
         {
@@ -2356,6 +2395,36 @@
         }
       ],
       "dest": "/mulk/a0321/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "akriton-residence-a0189.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0189/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "piraeus-zea-garden-suites-a0307.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0307/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "glyfada-garden-suites-a0165.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0165/$1"
     }
   ]
 }
