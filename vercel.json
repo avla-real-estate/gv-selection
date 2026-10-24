@@ -1374,6 +1374,422 @@
       }
     },
     {
+      "src": "^/mulk/a0190/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://ariston-residence-a0190.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0191/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://armonia-residence-a0191.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0192/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://aurora-residence-a0192.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0194/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://avra-residence-a0194.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0195/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://cosmos-residence-a0195.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0196/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://nikaia-metro-residences-a0196.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0198/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://elite-residence-a0198.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0199/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://futura-residence-a0199.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0200/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://ilissos-residence-a0200.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0201/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://troon-residences-a0201.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0203/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://modus-residence-a0203.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0204/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://monte-verde-residence-a0204.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0205/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://neonia-residence-a0205.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0206/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://new-era-residence-a0206.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0208/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://opale-residence-a0208.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0209/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://orion-residence-a0209.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0210/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://prime-residence-a0210.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0213/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://keratsini-marina-studio-a0213.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0214/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://skygarden-residence-a0214.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0216/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://solmar-residence-a0216.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0218/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://kallithea-metro-residences-a0218.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0221/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://voula-boutique-residences-a0221.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0306/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://nea-smyrni-duplex-suites-a0306.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0308/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://peristeri-metro-duplex-a0308.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0309/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://piraeus-courtyard-suite-a0309.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0310/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://nikaia-terrace-residence-a0310.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0311/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://ano-glyfada-sea-view-residences-a0311.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0312/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://peiraiki-seaside-suites-a0312.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0313/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://kifisia-pool-duplexes-a0313.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0314/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://piraeus-waterfront-suite-a0314.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0315/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://piraeus-balcony-suite-a0315.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0316/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://peristeri-rooftop-suite-a0316.avlarealestate.com/"
+      }
+    },
+    {
       "src": "^/(.*)$",
       "has": [
         {
@@ -2425,6 +2841,326 @@
         }
       ],
       "dest": "/mulk/a0165/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "ariston-residence-a0190.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0190/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "armonia-residence-a0191.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0191/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "aurora-residence-a0192.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0192/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "avra-residence-a0194.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0194/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "cosmos-residence-a0195.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0195/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "nikaia-metro-residences-a0196.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0196/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "elite-residence-a0198.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0198/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "futura-residence-a0199.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0199/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "ilissos-residence-a0200.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0200/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "troon-residences-a0201.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0201/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "modus-residence-a0203.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0203/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "monte-verde-residence-a0204.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0204/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "neonia-residence-a0205.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0205/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "new-era-residence-a0206.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0206/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "opale-residence-a0208.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0208/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "orion-residence-a0209.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0209/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "prime-residence-a0210.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0210/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "keratsini-marina-studio-a0213.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0213/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "skygarden-residence-a0214.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0214/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "solmar-residence-a0216.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0216/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "kallithea-metro-residences-a0218.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0218/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "voula-boutique-residences-a0221.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0221/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "nea-smyrni-duplex-suites-a0306.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0306/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "peristeri-metro-duplex-a0308.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0308/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "piraeus-courtyard-suite-a0309.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0309/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "nikaia-terrace-residence-a0310.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0310/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "ano-glyfada-sea-view-residences-a0311.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0311/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "peiraiki-seaside-suites-a0312.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0312/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "kifisia-pool-duplexes-a0313.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0313/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "piraeus-waterfront-suite-a0314.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0314/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "piraeus-balcony-suite-a0315.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0315/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "peristeri-rooftop-suite-a0316.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0316/$1"
     }
   ]
 }
