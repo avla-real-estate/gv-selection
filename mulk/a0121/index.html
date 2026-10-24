@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>The Hera Athens · Akademia Platonos · Avla Özel Seçki — Avla Real Estate</title>
-<meta name="description" content="Akademia Platonos: The Hera Athens — güncel fiyatlar, müsait daire listesi, planlar, bölge ve proje raporu.">
+<meta name="description" content="Akademia Platonos: The Hera Athens — güncel fiyatlar, müsait daire listesi, planlar, bölge raporu.">
 <link rel="canonical" href="https://the-hera-athens-a0121.avlarealestate.com/">
 <link rel="alternate" hreflang="tr" href="https://the-hera-athens-a0121.avlarealestate.com/">
 <link rel="alternate" hreflang="x-default" href="https://the-hera-athens-a0121.avlarealestate.com/">
 <meta property="og:title" content="The Hera Athens · Avla Özel Seçki">
-<meta property="og:description" content="Akademia Platonos: The Hera Athens — güncel fiyatlar, müsait daire listesi, planlar, bölge ve proje raporu.">
+<meta property="og:description" content="Akademia Platonos: The Hera Athens — güncel fiyatlar, müsait daire listesi, planlar, bölge raporu.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-hera-athens-a0121.avlarealestate.com/">
 <meta property="og:site_name" content="Avla Real Estate">
@@ -1196,6 +1196,122 @@ details.rapor[open]>summary{background:#fff}
 .ath-yok .wa-fab{bottom:20px}
 .ath-yok #scroll-top{bottom:84px}
 </style>
+<meta name="avla-tekil" content="v2">
+<style id="tekil-v2">
+/* Tekil sayfa v2 düzeni (K-2026-10-23-01) — Sami 23–24.10.2026: tek konum, künye hep açık, önerilen daireler, uzun liste açılır */
+.anc{display:block;position:relative;top:-70px;visibility:hidden}
+section.satis{scroll-margin-top:60px}
+/* önerilen daireler */
+.on-alt{font-size:15px;color:var(--mut);margin-top:6px;max-width:700px}
+.on3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px}
+.onk{display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid var(--cizgi);border-radius:0;padding:20px 20px 18px;box-shadow:0 3px 18px rgba(26,46,74,.06)}
+.onk .et{align-self:flex-start;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);background:var(--cream);border:1px solid var(--cizgi);border-radius:0;padding:4px 11px;font-weight:500}
+.onk .dno{margin-top:14px;font-size:20px;color:var(--navy);line-height:1.25;font-weight:400}
+.onk .dmeta{font-size:14px;color:var(--mut);margin-top:2px}
+.onk .fy{font-size:34px;line-height:1.1;color:var(--navy);margin-top:14px;letter-spacing:-.01em;font-weight:400}
+.onk .fm2{font-size:13px;color:var(--mut);margin-top:5px}
+.onk .ozl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:14px;padding:12px 0;border-top:1px solid #efe8da;border-bottom:1px solid #efe8da}
+.onk .ozl div{display:flex;flex-direction:column;gap:2px;min-width:0}
+.onk .ozl span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.onk .ozl i{font-size:15px;color:var(--ink);font-style:normal;white-space:nowrap}
+.onk .neden{font-size:14px;color:var(--ink);margin-top:12px;line-height:1.5;flex:1}
+.onk .dg{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.onk .dg button,.onk .dg a{display:inline-flex;align-items:center;justify-content:center;border-radius:0;padding:9px 16px;font-size:13.5px;line-height:1.2;text-decoration:none;cursor:pointer;font-weight:500}
+.onk .dg .pl{background:none;border:1px solid var(--civit);color:var(--civit)}
+.onk .dg .wa{background:transparent;color:#142A42;border:1px solid #142A42}
+/* Sami 24.10 palet A (palet-a-dik.html): yalnız Avla kartındaki "Bu daireyi sorun" dolu kırmızı; diğerleri çerçeveli lacivert, hover kırmızı */
+.onk-avla .dg .wa{background:var(--cta);color:#fff;border-color:var(--cta)}.onk .dg .wa:hover{background:var(--ctah);border-color:var(--ctah)}
+.on-tum{display:inline-block;margin-top:14px;color:var(--civit);font-size:14.5px;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)}
+/* künye: her zaman açık */
+.k-giris{font-size:16px;line-height:1.65;color:var(--ink);max-width:820px;margin-top:10px}
+.k-bag{margin-top:12px}
+.k-bag a{color:var(--navy);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)}
+.kx dd .kucuk{font-size:12.5px;color:var(--mut)}
+/* konum: tek harita + mesafeler */
+.kn-ust{font-size:14.5px;color:var(--mut);margin-top:6px;max-width:780px}
+.kn{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:18px;margin-top:16px;align-items:stretch}
+#konum-harita{width:100%;min-height:420px;height:100%;border-radius:0;border:1px solid var(--cizgi);background:#eef0f3;box-shadow:0 3px 18px rgba(26,46,74,.08);overflow:hidden}
+.kn .kx{grid-template-columns:1fr;margin-top:0;align-content:start}
+.kn .kx>div:last-child{border-bottom:0}
+#konum .kkart{margin-top:14px}
+/* fiyat listesi: açık blok, uzun liste düğmeyle */
+.fyt{margin-top:16px;background:#fff;border:1px solid var(--cizgi);border-radius:0}
+.fyt>.rbody{border-top:0;padding:6px 22px 22px}
+.tbl .fgiz{display:none}.tbl.acik .fgiz{display:table-row}
+.fdaha{display:block;width:100%;border:none;border-top:1px solid var(--cizgi);background:#FBF9F4;font-size:13.5px;color:var(--navy);padding:13px;cursor:pointer;border-radius:0;margin-top:-4px;font-weight:500}
+.fdaha:hover{background:#F4EFE3}
+tr.one td{background:#FBF4E4}
+.dur-o{background:#efe3c8;color:#7a5f2f}
+#fiyatlar{scroll-margin-top:64px}
+@media(max-width:900px){.on3{grid-template-columns:1fr}.kn{grid-template-columns:1fr}#konum-harita{height:320px;min-height:0}}
+@media(max-width:640px){#fiyatlar table{min-width:0}#fiyatlar th,#fiyatlar td{padding:9px 6px}#fiyatlar .dur{display:table;margin:3px 0 0;padding:0 6px;font-size:10px}#fiyatlar .pbtn{padding:5px 9px}.onk{padding:18px 16px 16px}.onk .fy{font-size:30px}.fyt>.rbody{padding:4px 12px 16px}.k-giris{font-size:15px}}
+
+/* Hizalama (Sami 23.10): alt bantlar sayfanın 1000 px içerik kolonuna hizalanır */
+@media (min-width:1048px){
+  #kayit>.wrap,#portfoy-harita>.wrap,#guvence>.wrap,section.sec-ink>.wrap{max-width:1000px;margin-left:auto;margin-right:auto;padding-left:0;padding-right:0}
+  #kayit .kacc-bar{padding-left:0;padding-right:0;border:0;background:transparent}
+}
+/* Hizalama mobil (Sami 23.10) */
+#kayit .kacc-bar{padding-left:0;padding-right:0;border:0;background:transparent}
+@media (max-width:1047px){#kayit>.wrap,#portfoy-harita>.wrap{padding-left:20px;padding-right:20px}}
+.on3.on4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:1100px){.on3.on4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.on3.on4{grid-template-columns:1fr}}
+.onk-avla{border-color:var(--gold,#C9A961)}
+.onk-avla .et{background:#1A2E4A;color:#E8D9AF}
+/* Avla rezervi + satıldı kırmızı (Sami 23.10) */
+.dur-avla{background:#1A2E4A;color:#E8D9AF}
+tr.dr-avla td,tr.dr-avla td.f{color:#1A2E4A}
+tr.dr-s{background:#f1f1f1}
+tr.dr-s td,tr.dr-s td.f{color:#B23A3A}
+.dur-s{background:#ebebeb;color:#B23A3A}
+
+/* Tasarım dili v2.1 (Sami 23.10): yuvarlak elips yok — keskin, ayrışık etiket ve düğmeler */
+.et,.dur,.yt-et,.sx-tum,.dkapat,.pl,.wa,.h1c,.h2c,.c1,.c2,.scta,.b1,.b2,.avz-btn,.btn,.btn-o{border-radius:0!important}
+.onk,.kx,.fyt,.card,.gv,.adim,.pk,.kt,details.rapor,summary,.tkos,.tbl,figure,.c-mus,.c-fiy,.c-tes,.c-kir,.c-gv,.c-en,#oneri li,#sunum li,.yt.yt-dikey{border-radius:0!important}
+.onk .et{display:inline-block;align-self:flex-start;white-space:nowrap;padding:5px 10px 4px;border:0;border-left:3px solid #C9A961;letter-spacing:.14em}
+.onk-avla .et{background:#f3ece0!important;color:#1A2E4A!important;border-left-color:#1A2E4A}
+.dur{border-left:2px solid currentColor;padding:1px 7px}
+.onk-avla{border-color:#d9c9a3}
+/* Durum etiketleri aynı hizada (Sami 24.10) */
+#fiyatlar td .dad{display:inline-block;min-width:4.6em}
+@media(max-width:640px){#fiyatlar td .dad{min-width:0}}
+
+/* Önerilenler fiyat listesinden sonra (Sami 24.10) */
+#oneri.oneri-sonra{padding-top:28px}
+.onk-avla{box-shadow:0 3px 18px rgba(201,169,97,.18)}
+/* GV bölümü ayrı, Ayrıntı = yalnız protokol (Sami 24.10) */
+.gv-dis{max-width:1000px;margin:0 auto;padding:36px 20px 8px}
+@media(min-width:1048px){.gv-dis{padding:36px 0 8px}}
+/* listesi gelmemiş projede fiyat bloğu (v2) */
+.fyt-cta{margin:16px 0 4px}
+.fyt-yok{font-size:15px;color:var(--ink);margin:14px 0 0;line-height:1.6}
+/* Açılır bantlar: siyah-beyaz fotoğraflı, %50 daha yüksek (Sami 24.10) */
+details.rapor>summary,details.ayr-grup>summary,details.ayr-band>summary{position:relative;isolation:isolate;overflow:hidden;min-height:104px;display:flex!important;align-items:center;gap:6px 16px;flex-wrap:wrap;padding:26px 72px 26px 30px!important;background:#142A42!important;color:#fff!important;border-radius:0!important;border:0!important;cursor:pointer;list-style:none}
+details.rapor>summary::-webkit-details-marker,details.ayr-grup>summary::-webkit-details-marker,details.ayr-band>summary::-webkit-details-marker{display:none}
+details.rapor>summary::before,details.ayr-grup>summary::before,details.ayr-band>summary::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--bant-foto) center/cover no-repeat;filter:grayscale(1) contrast(1.08) brightness(.95);transform:scale(1.02);transition:transform .5s}
+details.rapor>summary::after,details.ayr-grup>summary::after,details.ayr-band>summary::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(12,22,36,.88) 0%,rgba(12,22,36,.70) 45%,rgba(12,22,36,.30) 100%)}
+details.rapor>summary:hover::before,details.ayr-grup>summary:hover::before,details.ayr-band>summary:hover::before{transform:scale(1.06)}
+details.rapor>summary,details.rapor>summary *,details.ayr-grup>summary *,details.ayr-band>summary *{color:#fff!important}
+details.rapor>summary{font-size:21px;font-weight:500;letter-spacing:.01em}
+details.ayr-grup>summary .ag-t{font-size:21px;font-weight:500}
+details.ayr-grup>summary .ag-a,details.ayr-band>summary .eyebrow{color:#E8D9AF!important;font-size:14px;font-weight:400}
+details.ayr-band>summary .eyebrow{display:block;width:100%;letter-spacing:.18em;font-size:11px;text-transform:uppercase}
+details.rapor>summary::marker{content:""}
+details.rapor>summary .bant-arti,details.ayr-grup>summary i,details.ayr-band>summary i{position:absolute;right:26px;top:50%;transform:translateY(-50%);font-style:normal;font-size:28px;line-height:1;color:#C9A961!important}
+@media(max-width:640px){details.rapor>summary,details.ayr-grup>summary,details.ayr-band>summary{min-height:96px;padding:20px 56px 20px 20px!important}details.rapor>summary,details.ayr-grup>summary .ag-t{font-size:18px}}
+/* Kayıt paneli: logo + dokumacı kuşu hikâyesi + ana sayfa bağı (Sami 24.10) */
+.fs-marka{margin-top:auto;padding-top:30px;border-top:1px solid rgba(210,190,153,.28)}
+.fs-marka img{display:block;width:112px;height:auto;margin:0 0 18px}
+.fs-hik{color:rgba(246,241,231,.82)!important;font-size:14.5px;line-height:1.65;margin:0 0 14px}
+.fs-hik b{color:#D2BE99;font-weight:500}
+.fs-git{display:inline-block;color:#D2BE99!important;font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(210,190,153,.5);padding-bottom:3px}
+.fs-git:hover{color:#fff!important;border-color:#fff}
+.fs-marka.fs-yatay{display:flex;gap:22px;align-items:center;margin-top:28px;padding:20px 22px;background:#142A42;border:0;border-radius:0}
+.fs-marka.fs-yatay img{flex:0 0 auto;width:96px;margin:0}
+.fs-marka.fs-yatay .fs-hik{font-size:13.5px;margin:0 0 8px}
+@media(max-width:560px){.fs-marka.fs-yatay{flex-direction:column;text-align:center}}
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4JQ2XVT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -1219,34 +1335,21 @@ details.rapor[open]>summary{background:#fff}
     <a href="#sunum">Öne çıkanlar</a>
     <a href="#gorseller">Görseller</a>
     <a href="#kunye">Künye</a>
-    <a href="#fiyatlar">Fiyatlar</a>
-    <a href="#harita">Harita</a>
-    <a href="#ayrinti">Ayrıntı</a>
+    <a href="#konum">Konum</a>
+    <a href="#fiyatlar">Fiyatlar</a><a href="#oneri">Önerilen</a>
+    <a href="#gv">Golden Visa</a>
+    <a href="#ayrinti">Protokol</a>
     <a href="#guvence">Güvence</a>
     <a class="scta" href="#kayit">Görüşme</a><!--SATIS:S:nav-->
   </div>
 </nav>
 <div class="wrap">
-<!--SATIS:B:bolumler--><section id="sunum" class="satis"><div class="sx-grid sx-yatay"><div class="yt yt-yatay" data-id="uglrJzOxqZA" data-t="The Hera Athens" role="button" tabindex="0" aria-label="Filmi izle"><img src="img/c-platon-3.jpg" alt="The Hera Athens — Film" loading="lazy" decoding="async"><span class="yt-oy" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="yt-et">Film · 137 sn</span></div><div class="sx-metin"><div class="eyebrow">Öne çıkanlar</div><h2>Neden bu mülk?</h2><ul class="sx-neden"><li>Metroya 10 dakika yürüme mesafesi</li><li>Şehir merkezine yakın konum</li><li>Çatı havuzu, spor salonu ve otopark</li><li>%3 kira garantisi</li></ul><div class="sx-cta"><a class="c1" href="#fiyatlar">Fiyat listesi</a><a class="c2" href="https://wa.me/905322822657?text=Merhaba%2C%20The%20Hera%20Athens%20sayfas%C4%B1n%C4%B1%20inceledim.%20Bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp&#x27;tan yazın</a></div><p class="sx-not">Video tıklayınca YouTube&#x27;dan yüklenir.</p></div></div></section><section id="gorseller" class="satis"><div class="eyebrow">Görseller</div><h2>Bina ve daireler</h2><div class="vitrin v5"><button type="button" class="vt" onclick="vitrinAc(0)" aria-label="Akademia Platonos · dönüştürülmüş blok"><img src="img/c-platon-3.jpg" alt="Akademia Platonos · dönüştürülmüş blok" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(1)" aria-label="Akademia Platonos · dönüştürülmüş blok"><img src="img/c-platon-1.jpg" alt="Akademia Platonos · dönüştürülmüş blok" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(2)" aria-label="Akademia Platonos · dönüştürülmüş blok"><img src="img/c-platon-4.jpg" alt="Akademia Platonos · dönüştürülmüş blok" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(3)" aria-label="Akademia Platonos · dönüştürülmüş blok"><img src="img/c-platon-5.jpg" alt="Akademia Platonos · dönüştürülmüş blok" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(4)" aria-label="Akademia Platonos · dönüştürülmüş blok"><img src="img/c-platon-6.jpg" alt="Akademia Platonos · dönüştürülmüş blok" loading="lazy" decoding="async"><span class="vt-ust">+3</span></button></div><button type="button" class="sx-tum" onclick="vitrinAc(0)">Tüm görselleri aç (8)</button></section><section id="kunye" class="satis"><div class="eyebrow">Künye</div><h2>Kısaca</h2><dl class="kx"><div><dt>Yapım</dt><dd>Mevcut binanın konuta dönüşümü (bina yılı teyitte)</dd></div><div><dt>Otopark</dt><dd>Kapalı otopark</dd></div><div><dt>Enerji sınıfı</dt><dd><span class="ty">teyitte</span></dd></div><div><dt>Okullar</dt><dd>Lakoniki Scholi - Ekpaidevtiria Magklara (özel) 350 m · Dimotiko Scholeio Ekpaidevtiria &quot;I. Tsiamouli&quot; (özel) 1,9 km · devlet ilkokulu 300 m</dd></div><div><dt>Alışveriş</dt><dd>Empoli Outlet AVM 1,6 km · market 250 m</dd></div><div><dt>Ulaşım</dt><dd>Metro 800 m</dd></div><div><dt>Havalimanı</dt><dd>Atina Havalimanı ~30 dk (araçla)</dd></div></dl><p class="sx-not">Mesafeler semt merkezinden kuş uçuşu (OpenStreetMap); havalimanı süresi trafiksiz araç süresidir. Bilgiler teklif öncesinde yazılı teyit edilir.</p></section><!--SATIS:S:bolumler-->
+<!--SATIS:B:bolumler--><section id="sunum" class="satis"><div class="sx-grid sx-yatay"><div class="yt yt-yatay" data-id="uglrJzOxqZA" data-t="The Hera Athens" role="button" tabindex="0" aria-label="Filmi izle"><img src="img/c-platon-3.jpg" alt="The Hera Athens — Film" loading="lazy" decoding="async"><span class="yt-oy" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="yt-et">Film · 137 sn</span></div><div class="sx-metin"><div class="eyebrow">Öne çıkanlar</div><h2>Neden bu mülk?</h2><ul class="sx-neden"><li>Metroya 10 dakika yürüme mesafesi</li><li>Şehir merkezine yakın konum</li><li>Çatı havuzu, spor salonu ve otopark</li><li>%3 kira garantisi</li></ul><div class="sx-cta"><a class="c1" href="#fiyatlar">Fiyat listesi</a><a class="c2" href="https://wa.me/905322822657?text=Merhaba%2C%20The%20Hera%20Athens%20sayfas%C4%B1n%C4%B1%20inceledim.%20Bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp&#x27;tan yazın</a></div><p class="sx-not">Video tıklayınca YouTube&#x27;dan yüklenir.</p></div></div></section><section id="gorseller" class="satis"><div class="eyebrow">Görseller</div><h2>Bina ve daireler</h2><div class="vitrin v5"><button type="button" class="vt" onclick="vitrinAc(0)" aria-label="Akademia Platonos · dönüştürülmüş blok"><img src="img/c-platon-3.jpg" alt="Akademia Platonos · dönüştürülmüş blok" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(1)" aria-label="Akademia Platonos · dönüştürülmüş blok"><img src="img/c-platon-1.jpg" alt="Akademia Platonos · dönüştürülmüş blok" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(2)" aria-label="Akademia Platonos · dönüştürülmüş blok"><img src="img/c-platon-4.jpg" alt="Akademia Platonos · dönüştürülmüş blok" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(3)" aria-label="Akademia Platonos · dönüştürülmüş blok"><img src="img/c-platon-5.jpg" alt="Akademia Platonos · dönüştürülmüş blok" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(4)" aria-label="Akademia Platonos · dönüştürülmüş blok"><img src="img/c-platon-6.jpg" alt="Akademia Platonos · dönüştürülmüş blok" loading="lazy" decoding="async"><span class="vt-ust">+3</span></button></div><button type="button" class="sx-tum" onclick="vitrinAc(0)">Tüm görselleri aç (8)</button></section><section id="kunye" class="satis"><div class="eyebrow">Künye</div><h2>Proje künyesi</h2><p class="k-giris">Bu proje, <b>mevcut bir bloğun çatı havuzlu 57 daireye dönüştürülmesidir</b>; Akademia Platonos'ta — merkezî Atina'ya bitişik, karakteri turistik değil yerel olan bir iç semt: yıl boyu yaşanan bir konut dokusu ve görünür bir yenilenme ivmesi.</p><p class="k-giris">Karma, tek bir bina için alışılmadık ölçüde geniştir: <b>1+1, 2+1 ve 3+1 planlar yan yana</b>, net alanlar <b>40 – 92,29 m²</b>, balkonlar 4 – 30 m², son kat terasları 42 – 53 m² ve fiyatlar <b>€250.000 – €360.000</b>. 18 Eylül 2026 tarihli envanter mutabakatımızda <b>57 dairenin 35'i müsaittir</b> ve bunların çoğunluğu 2+1 planlardır — oda sayılarını pazarlama metninden değil geliştiricinin kat planlarından kontrol ederiz ve belirli bir daire için sayıyı yazılı olarak teyit ederiz.</p><p class="k-giris">Burada en çok önem taşıyan nokta teslimdir ve teslim <b>bina geneli değil kademelidir</b>. 10 Temmuz 2026 tarihli kendi saha ziyaretimizde bahçe katı ve birinci kat tamamlanmıştı, anahtar teslimi yapılıyordu; üst katlar ince işçilikteydi. İkinci ve üçüncü katlar 2026 içinde, bina bütün olarak — ortak alanlar ve çatı havuzu dâhil — <b>Mayıs 2027</b> olarak belirtildi. Belirli bir dairenin bugün bitmiş olup olmadığını, önünüze koymadan önce daire daire yazılı olarak teyit ederiz. Teslim <b>beyaz eşya dâhil tam mobilyalıdır</b>; ebeveyn banyoları, parke zeminler ve asansörler şartnamededir.</p><p class="k-giris">Ulaşım, semte hizmet veren metro istasyonu üzerinden çalışır; merkez istasyonlar birkaç durak ötededir — arabasız yaşanabilen bir semt. Arkeolojik park için planlanan yeraltı müzesi bölgedeki en somut kültür projesidir ve orta vadeli değer tablosunu destekler. Dürüst karşı ağırlık konum primidir: burası merkezî ama mütevazı bir adrestir, sahil marka değeri yoktur; dolayısıyla gerekçe prestij değil, metrekare ve yerleşik, yıl boyu süren kiracı tabanıdır.</p><p class="k-giris"><b>Bizim okumamız:</b> bu sayfada binanın bir bölümünün bugünden devralınabildiği adres burasıdır, ama bitmiş bir bina değildir ve öyle sunmayacağız. 2+1'e giriş <b>A3 — 58,38 m², €310.000</b>; fiilen müsait daireler içinde metrekare bazında en iyi rakam zemin seviyesindeki <b>G7 — 55,40 m², €265.000, yani net m² başına €4.783</b>. Tek açık kalem Mayıs 2027 ortak alan tarihidir: havuzsuz bir sezon geçecektir ve bunu baştan söylüyoruz. Bu tarihin sözleşmede nasıl güvenceye alındığını, ödeme planı ve tapu takvimiyle birlikte teklif aşamasında yazılı olarak veririz.
+  <p class="kucuk" style="margin-top:14px;padding-top:12px;border-top:1px solid var(--cizgi)"><a style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)" href="https://hera-sunum.avlarealestate.com/" target="_blank" rel="noopener">Proje sunum sayfası</a> &nbsp;·&nbsp; <a style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)" href="https://www.avlarealestate.com/properties/the-hera-athens-sepolia-golden-visa-yatirim-firsati" target="_blank" rel="noopener">İlan sayfası</a> &nbsp;·&nbsp; <a style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)" href="https://www.avlarealestate.com/en/post/athens-city-centre-golden-visa-region-report" target="_blank" rel="noopener">Bölge raporu</a> &nbsp;·&nbsp; <a style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)" href="https://www.avlarealestate.com/en/post/the-hera-a0121-feasibility-report" target="_blank" rel="noopener">Yatırım fizibilitesi</a> &nbsp;·&nbsp; <a style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)" href="#platon-video" onclick="var d=document.getElementById('platon-video').closest('details');if(d)d.open=true;">&#9654; Saha videosu</a></p><dl class="kx"><div><dt>Müsaitlik</dt><dd><b>26 daire</b> müsait · 11 rezerve · 20 satıldı · toplam 57 konut</dd></div><div><dt>Alan</dt><dd>teyitte</dd></div><div><dt>Teslim</dt><dd><b>Bazı daireler hazır</b> — müsait 35 dairenin 7'si (bahçe katında BS3, 1. katta 6 daire) tamamlanmış katlardadır: 10 Temmuz 2026 tarihli saha ziyaretimizde bahçe katı ve birinci kat teslim ediliyordu; üst katlar ince işçilikteydi. Bina bütün olarak, ortak alanlar ve çatı havuzu dâhil, <b>Mayıs 2027</b> tarihlidir; kesin tarih yalnız sözleşmeyle ve yazılı teyitle sabitlenir</dd></div><div><dt>Kira garantisi</dt><dd><span class="bel">Bu projede sunulmuyor</span> — sözleşmeye bağlanmış bir oran ya da süre yoktur. Bu bina için doğrulanmış bir kira rakamımız yoktur ve doğrulanmamış bir getiri yayımlamayız</dd></div><div><dt>Yapım</dt><dd>Mevcut binanın konuta dönüşümü (bina yılı teyitte)</dd></div><div><dt>Enerji sınıfı</dt><dd><span class="ty">teyitte</span></dd></div><div><dt>Otopark</dt><dd>Kapalı otopark</dd></div><div><dt>Hizmet bedeli</dt><dd><span class="var">%0</span> — bu projede Avla'ya ödeyeceğiniz bir aracılık bedeli yoktur</dd></div><div><dt>Şartname</dt><dd><b>Tam mobilyalı, beyaz eşya dâhil</b> — ek bir tefriş harcaması olmadan oturulabilir ya da kiraya verilebilir; ebeveyn banyoları, parke zeminler ve asansörler şartnamededir</dd></div><div><dt>Yapı</dt><dd>Mevcut binanın dönüşümü — çatı havuzlu 57 daire</dd></div><div><dt>Ödeme planı</dt><dd><span class="bel">Yazılı teyit bekliyor</span> — ödeme planı ve tapu devri takvimi teklif aşamasında geliştiriciyle sabitlenir</dd></div><div><dt>Golden Visa uygunluğu</dt><dd>Uygunluk ve geçerli eşik, <b>bağımsız Yunan hukuk müşaviri tarafından yazılı olarak, daire daire</b> teyit edilir. Açıkça söyleyelim: Attika genelinde standart yeni yapı eşiği €800.000'dur; bu fiyat bandındaki bir alımın Golden Visa konumu ancak o incelemeyle karara bağlanır — sözlü güvenceye dayanmayız.</dd></div><div><dt>Kaynak</dt><dd>Avla envanter kaydı, mutabakat <b>18 Eylül 2026</b>; fiyat ve müsaitlik teklif aşamasındaki yazılı teyitle sabitlenir</dd></div></dl></section><section id="konum" class="satis"><span id="harita" class="anc"></span><div class="eyebrow">Konum</div><h2>Akademia Platonos · Atina Bazı daireler hazır · Ortak alanlar 05/2027</h2><p class="kn-ust">Konum <b>semt düzeyinde bir çember ile</b> gösterilmektedir; kesin adres Dijital Yer Gösterme Protokolü'nün imzalanmasıyla paylaşılır.</p><div class="kn"><div id="konum-harita" role="region" aria-label="Akademia Platonos · Atina Bazı daireler hazır · ortak alanlar 05/2027 — semt haritası" data-ad="The Hera Athens" data-semt="Akademia Platonos · Atina Bazı daireler hazır · ortak alanlar 05/2027" data-lat="37.997" data-lng="23.708" data-r="300" data-renk="#7a6a9a"></div><dl class="kx"><div><dt>Okullar</dt><dd>Lakoniki Scholi - Ekpaidevtiria Magklara (özel) 350 m · Dimotiko Scholeio Ekpaidevtiria &quot;I. Tsiamouli&quot; (özel) 1,9 km · devlet ilkokulu 300 m</dd></div><div><dt>Alışveriş</dt><dd>Empoli Outlet AVM 1,6 km · market 250 m</dd></div><div><dt>Ulaşım</dt><dd>Metro 800 m</dd></div><div><dt>Havalimanı</dt><dd>Atina Havalimanı ~30 dk (araçla)</dd></div></dl></div><p class="sx-not">Mesafeler semt merkezinden kuş uçuşu (OpenStreetMap); havalimanı süresi trafiksiz araç süresidir. Bilgiler teklif öncesinde yazılı teyit edilir.</p></section><!--SATIS:S:bolumler-->
 <section id="a0121">
-  <div class="eyebrow">Proje 1 · Akademia Platonos · Atina<span class="tesl">Bazı daireler hazır · ortak alanlar 05/2027</span></div>
-  <h2><span class="pno" style="color:#7a6a9a">1</span>The Hera Athens</h2>
-  <!--SATIS:W1:proje--><details class="ayr"><summary>Proje ayrıntıları · tam künye ve bütün görseller (8)<i>+</i></summary>
-  <!--/SATIS:W1:proje--><div class="card"><p>Bu proje, <b>mevcut bir bloğun çatı havuzlu 57 daireye dönüştürülmesidir</b>; Akademia Platonos'ta — merkezî Atina'ya bitişik, karakteri turistik değil yerel olan bir iç semt: yıl boyu yaşanan bir konut dokusu ve görünür bir yenilenme ivmesi.</p><p>Karma, tek bir bina için alışılmadık ölçüde geniştir: <b>1+1, 2+1 ve 3+1 planlar yan yana</b>, net alanlar <b>40 – 92,29 m²</b>, balkonlar 4 – 30 m², son kat terasları 42 – 53 m² ve fiyatlar <b>€250.000 – €360.000</b>. 18 Eylül 2026 tarihli envanter mutabakatımızda <b>57 dairenin 35'i müsaittir</b> ve bunların çoğunluğu 2+1 planlardır — oda sayılarını pazarlama metninden değil geliştiricinin kat planlarından kontrol ederiz ve belirli bir daire için sayıyı yazılı olarak teyit ederiz.</p><p>Burada en çok önem taşıyan nokta teslimdir ve teslim <b>bina geneli değil kademelidir</b>. 10 Temmuz 2026 tarihli kendi saha ziyaretimizde bahçe katı ve birinci kat tamamlanmıştı, anahtar teslimi yapılıyordu; üst katlar ince işçilikteydi. İkinci ve üçüncü katlar 2026 içinde, bina bütün olarak — ortak alanlar ve çatı havuzu dâhil — <b>Mayıs 2027</b> olarak belirtildi. Belirli bir dairenin bugün bitmiş olup olmadığını, önünüze koymadan önce daire daire yazılı olarak teyit ederiz. Teslim <b>beyaz eşya dâhil tam mobilyalıdır</b>; ebeveyn banyoları, parke zeminler ve asansörler şartnamededir.</p><p>Ulaşım, semte hizmet veren metro istasyonu üzerinden çalışır; merkez istasyonlar birkaç durak ötededir — arabasız yaşanabilen bir semt. Arkeolojik park için planlanan yeraltı müzesi bölgedeki en somut kültür projesidir ve orta vadeli değer tablosunu destekler. Dürüst karşı ağırlık konum primidir: burası merkezî ama mütevazı bir adrestir, sahil marka değeri yoktur; dolayısıyla gerekçe prestij değil, metrekare ve yerleşik, yıl boyu süren kiracı tabanıdır.</p><p><b>Bizim okumamız:</b> bu sayfada binanın bir bölümünün bugünden devralınabildiği adres burasıdır, ama bitmiş bir bina değildir ve öyle sunmayacağız. 2+1'e giriş <b>A3 — 58,38 m², €310.000</b>; fiilen müsait daireler içinde metrekare bazında en iyi rakam zemin seviyesindeki <b>G7 — 55,40 m², €265.000, yani net m² başına €4.783</b>. Tek açık kalem Mayıs 2027 ortak alan tarihidir: havuzsuz bir sezon geçecektir ve bunu baştan söylüyoruz. Bu tarihin sözleşmede nasıl güvenceye alındığını, ödeme planı ve tapu takvimiyle birlikte teklif aşamasında yazılı olarak veririz.
-  <p class="kucuk" style="margin-top:14px;padding-top:12px;border-top:1px solid var(--cizgi)"><a style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)" href="https://hera-sunum.avlarealestate.com/" target="_blank" rel="noopener">Proje sunum sayfası</a> &nbsp;·&nbsp; <a style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)" href="https://www.avlarealestate.com/properties/the-hera-athens-sepolia-golden-visa-yatirim-firsati" target="_blank" rel="noopener">İlan sayfası</a> &nbsp;·&nbsp; <a style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)" href="https://www.avlarealestate.com/en/post/athens-city-centre-golden-visa-region-report" target="_blank" rel="noopener">Bölge raporu</a> &nbsp;·&nbsp; <a style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)" href="https://www.avlarealestate.com/en/post/the-hera-a0121-feasibility-report" target="_blank" rel="noopener">Yatırım fizibilitesi</a> &nbsp;·&nbsp; <a style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)" href="#platon-video" onclick="var d=document.getElementById('platon-video').closest('details');if(d)d.open=true;">&#9654; Saha videosu</a></p></div>
-  <div class="tkos"><div class="tb">Ticari koşullar</div><dl><dt>Hizmet bedeli</dt><dd><span class="var">%0</span> — bu projede Avla'ya ödeyeceğiniz bir aracılık bedeli yoktur</dd><dt>Teslim</dt><dd><b>Bazı daireler hazır</b> — müsait 35 dairenin 7'si (bahçe katında BS3, 1. katta 6 daire) tamamlanmış katlardadır: 10 Temmuz 2026 tarihli saha ziyaretimizde bahçe katı ve birinci kat teslim ediliyordu; üst katlar ince işçilikteydi. Bina bütün olarak, ortak alanlar ve çatı havuzu dâhil, <b>Mayıs 2027</b> tarihlidir; kesin tarih yalnız sözleşmeyle ve yazılı teyitle sabitlenir</dd><dt>Şartname</dt><dd><b>Tam mobilyalı, beyaz eşya dâhil</b> — ek bir tefriş harcaması olmadan oturulabilir ya da kiraya verilebilir; ebeveyn banyoları, parke zeminler ve asansörler şartnamededir</dd><dt>Yapı</dt><dd>Mevcut binanın dönüşümü — çatı havuzlu 57 daire</dd><dt>Kira garantisi</dt><dd><span class="bel">Bu projede sunulmuyor</span> — sözleşmeye bağlanmış bir oran ya da süre yoktur. Bu bina için doğrulanmış bir kira rakamımız yoktur ve doğrulanmamış bir getiri yayımlamayız</dd><dt>Otopark</dt><dd><span class="yok">Kayıtlarımızda belgelenmiş değil</span> — teklif öncesinde geliştiriciyle yazılı olarak teyit edilir</dd><dt>Ödeme planı</dt><dd><span class="bel">Yazılı teyit bekliyor</span> — ödeme planı ve tapu devri takvimi teklif aşamasında geliştiriciyle sabitlenir</dd><dt>Golden Visa uygunluğu</dt><dd>Uygunluk ve geçerli eşik, <b>bağımsız Yunan hukuk müşaviri tarafından yazılı olarak, daire daire</b> teyit edilir. Açıkça söyleyelim: Attika genelinde standart yeni yapı eşiği €800.000'dur; bu fiyat bandındaki bir alımın Golden Visa konumu ancak o incelemeyle karara bağlanır — sözlü güvenceye dayanmayız.</dd><dt>Müsaitlik</dt><dd><span class="var">57 dairenin 35'i</span> size sunuluyor · çoğunluğu 2+1 planlar</dd><dt>Kaynak</dt><dd>Avla envanter kaydı, mutabakat <b>18 Eylül 2026</b>; fiyat ve müsaitlik teklif aşamasındaki yazılı teyitle sabitlenir</dd></dl></div>
-  <div class="hd-kart">
-    <img class="hd-foto" src="img/c-platon-durum-00.jpg" alt="Akademia Platonos · saha, 10 Temmuz 2026" loading="lazy">
-    <div class="hd-yazi">
-      <span class="hd-etiket">Şantiyeden son durum · 10 Temmuz 2026</span>
-      <b>Aktif durum raporu — altı saha videosu</b>
-      <p>İnşaat sahasını kendimiz çektik: kat kat ilerleme, anahtar teslimi yapılan daireler ve ortak alan takvimi. Rapor bu sayfanın içinde açılır; videoları buradan izleyebilirsiniz.</p>
-      <div class="hd-dugmeler"><button type="button" class="hd-btn" onclick="hdAc()">&#9654; Durum raporunu açın</button>
-      <a class="hd-yeni" href="https://the-hera-athens-durum.avlarealestate.com/" target="_blank" rel="noopener">Yeni sekmede açın &#8599;</a></div>
-    </div>
-  </div>
-
-  <div class="gal">
+  <span id="daire" class="anc"></span><div class="eyebrow">Fiyat listesi · The Hera Athens</div>
+  <h2>Fiyatlar ve müsait daireler</h2>
+  <div hidden><div class="gal" data-satis-galeri>
     <img src="img/c-platon-3.jpg" alt="Akademia Platonos · dönüştürülmüş blok" loading="lazy" onclick="ac('img/c-platon-3.jpg','Akademia Platonos · dönüştürülmüş blok — görsel 3')">
     <img src="img/c-platon-1.jpg" alt="Akademia Platonos · dönüştürülmüş blok" loading="lazy" onclick="ac('img/c-platon-1.jpg','Akademia Platonos · dönüştürülmüş blok — görsel 1')">
     <img src="img/c-platon-4.jpg" alt="Akademia Platonos · dönüştürülmüş blok" loading="lazy" onclick="ac('img/c-platon-4.jpg','Akademia Platonos · dönüştürülmüş blok — görsel 4')">
@@ -1255,70 +1358,68 @@ details.rapor[open]>summary{background:#fff}
     <img src="img/c-platon-7.jpg" alt="Akademia Platonos · dönüştürülmüş blok" loading="lazy" onclick="ac('img/c-platon-7.jpg','Akademia Platonos · dönüştürülmüş blok — görsel 7')">
     <img src="img/c-platon-8.jpg" alt="Akademia Platonos · dönüştürülmüş blok" loading="lazy" onclick="ac('img/c-platon-8.jpg','Akademia Platonos · dönüştürülmüş blok — görsel 8')">
     <img src="img/c-platon-2.jpg" alt="Akademia Platonos · dönüştürülmüş blok" loading="lazy" onclick="ac('img/c-platon-2.jpg','Akademia Platonos · dönüştürülmüş blok — görsel 2')">
-  </div>
-  <!--SATIS:W2:proje--></details><!--/SATIS:W2:proje--><details class="rapor" id="fiyatlar" open data-satis-ac=""><summary>Fiyatlar ve müsait daireler — 57 dairenin 26'sı</summary><div class="rbody">
-    <div id="pmap-platon" class="pmap" data-lat="37.999" data-lng="23.706" data-r="420" data-renk="#7a6a9a" data-ad="Akademia Platonos · dönüştürülmüş blok" data-semt="Akademia Platonos · Atina"></div>
+  </div></div><div class="fyt" id="fiyatlar"><div class="rbody">
     <div class="dozet">Durum: <b>26 müsait</b> · 11 rezerve · 20 satıldı — son teyit <b>17 Ekim 2026</b>. Rezerve ve satılan daireler listede kalır; soluk ve etiketlidir.</div>
     <div class="tbl"><table><thead><tr><th>Daire</th><th>Kat</th><th>Tip</th><th>Net m²</th><th>Balkon m²</th><th>Brüt m²</th><th>Fiyat</th><th>€ / m² net</th><th>€ / m² brüt</th><th>Plan</th></tr></thead><tbody>
-      <tr><td>BS1</td><td>Bahçe katı</td><td>—</td><td>92,29</td><td>22,00</td><td>114,29</td><td class="f">€340.000</td><td>€3.684</td><td>€2.975</td><td>—</td></tr>
-      <tr class="dr-s fgiz"><td>BS2 <span class="dur dur-s">Satıldı</span></td><td>Bahçe katı</td><td>—</td><td>80,95</td><td>28,60</td><td>109,55</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
-      <tr class="dr-s fgiz"><td>BS4 <span class="dur dur-s">Satıldı</span></td><td>Bahçe katı</td><td>—</td><td>91,20</td><td>15,00</td><td>106,20</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
-      <tr><td>BS3 <span class="dm hz">Hazır</span></td><td>Bahçe katı</td><td>2+1</td><td>79,57</td><td>17,10</td><td>96,67</td><td class="f">€300.000</td><td>€3.770</td><td>€3.103</td><td><button class="pbtn" onclick="ac('plan/c-platon-bs.jpg','BS3 — bahçe katı planı')">Plan</button></td></tr>
-      <tr><td>G1</td><td>Zemin</td><td>2+1</td><td>65,33</td><td>11,80</td><td>77,13</td><td class="f">€330.000</td><td>€5.051</td><td>€4.278</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G1 — zemin kat planı')">Plan</button></td></tr>
-      <tr><td>G2</td><td>Zemin</td><td>2+1</td><td>61,03</td><td>5,05</td><td>66,08</td><td class="f">€320.000</td><td>€5.243</td><td>€4.843</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G2 — zemin kat planı')">Plan</button></td></tr>
-      <tr><td>G3</td><td>Zemin</td><td>1+1</td><td>47,50</td><td>5,87</td><td>53,37</td><td class="f">€260.000</td><td>€5.474</td><td>€4.872</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G3 — zemin kat planı')">Plan</button></td></tr>
-      <tr><td>G4</td><td>Zemin</td><td>2+1</td><td>53,40</td><td>6,80</td><td>60,20</td><td class="f">€300.000</td><td>€5.618</td><td>€4.983</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G4 — zemin kat planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>G5</td><td>Zemin</td><td>1+1</td><td>37,34</td><td>5,92</td><td>43,26</td><td class="f">€250.000</td><td>€6.695</td><td>€5.779</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G5 — zemin kat planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>G6</td><td>Zemin</td><td>2+1</td><td>60,44</td><td>7,67</td><td>68,11</td><td class="f">€315.000</td><td>€5.212</td><td>€4.625</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G6 — zemin kat planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>G7</td><td>Zemin</td><td>1+1</td><td>55,40</td><td>—</td><td>55,40</td><td class="f">€265.000</td><td>€4.783</td><td>€4.783</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G7 — zemin kat planı')">Plan</button></td></tr>
-      <tr class="dr-r fgiz"><td>G8 <span class="dur dur-r">Rezerve</span></td><td>Zemin</td><td>1+1</td><td>40,78</td><td>18,32</td><td>59,10</td><td class="f">€275.000</td><td>€6.744</td><td>€4.653</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G8 — zemin kat planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>G9</td><td>Zemin</td><td>2+1</td><td>52,30</td><td>18,80</td><td>71,10</td><td class="f">€320.000</td><td>€6.119</td><td>€4.501</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G9 — zemin kat planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>G10</td><td>Zemin</td><td>2+1</td><td>53,97</td><td>16,57</td><td>70,54</td><td class="f">€320.000</td><td>€5.929</td><td>€4.536</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G10 — zemin kat planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>G11</td><td>Zemin</td><td>1+1</td><td>40,00</td><td>17,85</td><td>57,85</td><td class="f">€275.000</td><td>€6.875</td><td>€4.754</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G11 — zemin kat planı')">Plan</button></td></tr>
-      <tr class="dr-r fgiz"><td>G12 <span class="dur dur-r">Rezerve</span></td><td>Zemin</td><td>1+1</td><td>44,20</td><td>21,94</td><td>66,14</td><td class="f">€295.000</td><td>€6.674</td><td>€4.460</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G12 — zemin kat planı')">Plan</button></td></tr>
-      <tr class="dr-s fgiz"><td>A4 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>1+1</td><td>41,22</td><td>4,80</td><td>46,02</td><td class="f">Satıldı</td><td>—</td><td>—</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A4 — daire planı')">Plan</button></td></tr>
-      <tr class="dr-s fgiz"><td>A5 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>1+1</td><td>42,34</td><td>9,40</td><td>51,74</td><td class="f">Satıldı</td><td>—</td><td>—</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A5 — daire planı')">Plan</button></td></tr>
-      <tr class="dr-s fgiz"><td>A6 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>1+1</td><td>47,13</td><td>3,80</td><td>50,93</td><td class="f">Satıldı</td><td>—</td><td>—</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A6 — daire planı')">Plan</button></td></tr>
-      <tr class="dr-s fgiz"><td>A7 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>2+1</td><td>65,18</td><td>12,14</td><td>77,32</td><td class="f">Satıldı</td><td>—</td><td>—</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A7 — daire planı')">Plan</button></td></tr>
-      <tr class="dr-s fgiz"><td>A11 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>1+1</td><td>40,00</td><td>7,85</td><td>47,85</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
-      <tr class="dr-s fgiz"><td>A12 <span class="dur dur-s">Satıldı</span></td><td>1</td><td>1+1</td><td>41,20</td><td>10,50</td><td>51,70</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
-      <tr class="fgiz"><td>A10 <span class="dm hz">Hazır</span></td><td>1</td><td>2+1</td><td>57,96</td><td>11,80</td><td>69,76</td><td class="f">€320.000</td><td>€5.521</td><td>€4.587</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A10 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>A1 <span class="dm hz">Hazır</span></td><td>1</td><td>2+1</td><td>70,81</td><td>11,80</td><td>82,61</td><td class="f">€340.000</td><td>€4.802</td><td>€4.116</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A1 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>A2 <span class="dm hz">Hazır</span></td><td>1</td><td>2+1</td><td>61,14</td><td>6,70</td><td>67,84</td><td class="f">€325.000</td><td>€5.316</td><td>€4.791</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A2 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>A3 <span class="dm hz">Hazır</span></td><td>1</td><td>2+1</td><td>58,38</td><td>7,60</td><td>65,98</td><td class="f">€310.000</td><td>€5.310</td><td>€4.698</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A3 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>A8 <span class="dm hz">Hazır</span></td><td>1</td><td>2+1</td><td>60,94</td><td>11,80</td><td>72,74</td><td class="f">€330.000</td><td>€5.415</td><td>€4.537</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A8 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="dr-r fgiz"><td>A9 <span class="dm hz">Hazır</span> <span class="dur dur-r">Rezerve</span></td><td>1</td><td>2+1</td><td>61,03</td><td>11,80</td><td>72,83</td><td class="f">€330.000</td><td>€5.407</td><td>€4.531</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A9 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>B1</td><td>2</td><td>2+1</td><td>70,81</td><td>11,80</td><td>82,61</td><td class="f">€350.000</td><td>€4.943</td><td>€4.237</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B1 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>B2</td><td>2</td><td>2+1</td><td>61,14</td><td>6,70</td><td>67,84</td><td class="f">€335.000</td><td>€5.479</td><td>€4.938</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B2 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>B3</td><td>2</td><td>2+1</td><td>58,38</td><td>7,60</td><td>65,98</td><td class="f">€320.000</td><td>€5.481</td><td>€4.850</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B3 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="dr-s fgiz"><td>B4 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>1+1</td><td>41,22</td><td>4,80</td><td>46,02</td><td class="f">Satıldı</td><td>—</td><td>—</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B4 — daire planı')">Plan</button></td></tr>
-      <tr class="dr-s fgiz"><td>B5 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>1+1</td><td>42,34</td><td>9,40</td><td>51,74</td><td class="f">Satıldı</td><td>—</td><td>—</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B5 — daire planı')">Plan</button></td></tr>
-      <tr class="dr-s fgiz"><td>B6 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>1+1</td><td>47,13</td><td>3,80</td><td>50,93</td><td class="f">Satıldı</td><td>—</td><td>—</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B6 — daire planı')">Plan</button></td></tr>
-      <tr class="dr-r fgiz"><td>B7 <span class="dur dur-r">Rezerve</span></td><td>2</td><td>2+1</td><td>65,18</td><td>12,14</td><td>77,32</td><td class="f">€350.000</td><td>€5.370</td><td>€4.527</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B7 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="dr-s fgiz"><td>B8 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>2+1</td><td>60,94</td><td>11,80</td><td>72,74</td><td class="f">Satıldı</td><td>—</td><td>—</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B8 — daire planı')">Plan</button></td></tr>
-      <tr class="dr-r fgiz"><td>B9 <span class="dur dur-r">Rezerve</span></td><td>2</td><td>2+1</td><td>61,03</td><td>11,80</td><td>72,83</td><td class="f">€340.000</td><td>€5.571</td><td>€4.668</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B9 — daire planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>B10</td><td>2</td><td>2+1</td><td>57,96</td><td>11,80</td><td>69,76</td><td class="f">€330.000</td><td>€5.694</td><td>€4.731</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B10 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="dr-s fgiz"><td>B11 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>1+1</td><td>40,00</td><td>7,85</td><td>47,85</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
-      <tr class="dr-s fgiz"><td>B12 <span class="dur dur-s">Satıldı</span></td><td>2</td><td>1+1</td><td>41,20</td><td>10,50</td><td>51,70</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
-      <tr class="dr-s fgiz"><td>C1 <span class="dur dur-s">Satıldı</span></td><td>3</td><td>2+1</td><td>70,81</td><td>11,80</td><td>82,61</td><td class="f">Satıldı</td><td>—</td><td>—</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C1 — daire planı')">Plan</button></td></tr>
-      <tr class="dr-r fgiz"><td>C2 <span class="dur dur-r">Rezerve</span></td><td>3</td><td>2+1</td><td>61,14</td><td>6,70</td><td>67,84</td><td class="f">€345.000</td><td>€5.643</td><td>€5.085</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C2 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>C3</td><td>3</td><td>2+1</td><td>58,38</td><td>7,60</td><td>65,98</td><td class="f">€330.000</td><td>€5.653</td><td>€5.002</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C3 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>C4</td><td>3</td><td>1+1</td><td>41,22</td><td>4,80</td><td>46,02</td><td class="f">€270.000</td><td>€6.550</td><td>€5.867</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C4 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="dr-r fgiz"><td>C5 <span class="dur dur-r">Rezerve</span></td><td>3</td><td>1+1</td><td>42,34</td><td>9,40</td><td>51,74</td><td class="f">€270.000</td><td>€6.377</td><td>€5.218</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C5 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="dr-r fgiz"><td>C6 <span class="dur dur-r">Rezerve</span></td><td>3</td><td>1+1</td><td>47,13</td><td>3,80</td><td>50,93</td><td class="f">€290.000</td><td>€6.153</td><td>€5.694</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C6 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="dr-r fgiz"><td>C7 <span class="dur dur-r">Rezerve</span></td><td>3</td><td>2+1</td><td>65,18</td><td>12,14</td><td>77,32</td><td class="f">€360.000</td><td>€5.523</td><td>€4.656</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C7 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>C8</td><td>3</td><td>2+1</td><td>60,94</td><td>11,80</td><td>72,74</td><td class="f">€350.000</td><td>€5.743</td><td>€4.812</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C8 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>C9</td><td>3</td><td>2+1</td><td>61,03</td><td>11,80</td><td>72,83</td><td class="f">€350.000</td><td>€5.735</td><td>€4.806</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C9 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="fgiz"><td>C10</td><td>3</td><td>2+1</td><td>57,96</td><td>11,80</td><td>69,76</td><td class="f">€340.000</td><td>€5.866</td><td>€4.874</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C10 — A–B–C kat planı')">Plan</button></td></tr>
-      <tr class="dr-s fgiz"><td>C11 <span class="dur dur-s">Satıldı</span></td><td>3</td><td>1+1</td><td>40,00</td><td>7,85</td><td>47,85</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
-      <tr class="dr-s fgiz"><td>C12 <span class="dur dur-s">Satıldı</span></td><td>3</td><td>1+1</td><td>41,20</td><td>10,50</td><td>51,70</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
-      <tr class="dr-r fgiz"><td>D1 <span class="dur dur-r">Rezerve</span></td><td>4</td><td>2+1</td><td>60,18</td><td>53,65</td><td>113,83</td><td class="f">€360.000</td><td>€5.982</td><td>€3.163</td><td><button class="pbtn" onclick="ac('plan/c-platon-d.jpg','D1 — D kat planı')">Plan</button></td></tr>
-      <tr class="dr-r fgiz"><td>D2 <span class="dur dur-r">Rezerve</span></td><td>4</td><td>2+1</td><td>60,95</td><td>30,72</td><td>91,67</td><td class="f">€360.000</td><td>€5.906</td><td>€3.927</td><td><button class="pbtn" onclick="ac('plan/c-platon-d.jpg','D2 — D kat planı')">Plan</button></td></tr>
-      <tr class="dr-s fgiz"><td>D3 <span class="dur dur-s">Satıldı</span></td><td>4</td><td>—</td><td>60,76</td><td>24,35</td><td>85,11</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
-      <tr class="dr-s fgiz"><td>D4 <span class="dur dur-s">Satıldı</span></td><td>4</td><td>—</td><td>62,56</td><td>22,62</td><td>85,18</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
-      <tr class="dr-s fgiz"><td>D5 <span class="dur dur-s">Satıldı</span></td><td>4</td><td>2+1</td><td>70,84</td><td>42,42</td><td>113,26</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="one"><td><span class="dad">BS1</span> <span class="dur dur-o">Önerimiz</span></td><td>Bahçe katı</td><td>—</td><td>92,29</td><td>22,00</td><td>114,29</td><td class="f">€340.000</td><td>€3.684</td><td>€2.975</td><td>—</td></tr>
+      <tr class="dr-s"><td><span class="dad">BS2</span> <span class="dur dur-s">Satıldı</span></td><td>Bahçe katı</td><td>—</td><td>80,95</td><td>28,60</td><td>109,55</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s"><td><span class="dad">BS4</span> <span class="dur dur-s">Satıldı</span></td><td>Bahçe katı</td><td>—</td><td>91,20</td><td>15,00</td><td>106,20</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr><td><span class="dad">BS3 <span class="dm hz">Hazır</span></span></td><td>Bahçe katı</td><td>2+1</td><td>79,57</td><td>17,10</td><td>96,67</td><td class="f">€300.000</td><td>€3.770</td><td>€3.103</td><td><button class="pbtn" onclick="ac('plan/c-platon-bs.jpg','BS3 — bahçe katı planı')">Plan</button></td></tr>
+      <tr><td><span class="dad">G1</span></td><td>Zemin</td><td>2+1</td><td>65,33</td><td>11,80</td><td>77,13</td><td class="f">€330.000</td><td>€5.051</td><td>€4.278</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G1 — zemin kat planı')">Plan</button></td></tr>
+      <tr><td><span class="dad">G2</span></td><td>Zemin</td><td>2+1</td><td>61,03</td><td>5,05</td><td>66,08</td><td class="f">€320.000</td><td>€5.243</td><td>€4.843</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G2 — zemin kat planı')">Plan</button></td></tr>
+      <tr><td><span class="dad">G3</span></td><td>Zemin</td><td>1+1</td><td>47,50</td><td>5,87</td><td>53,37</td><td class="f">€260.000</td><td>€5.474</td><td>€4.872</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G3 — zemin kat planı')">Plan</button></td></tr>
+      <tr><td><span class="dad">G4</span></td><td>Zemin</td><td>2+1</td><td>53,40</td><td>6,80</td><td>60,20</td><td class="f">€300.000</td><td>€5.618</td><td>€4.983</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G4 — zemin kat planı')">Plan</button></td></tr>
+      <tr class="one fgiz"><td><span class="dad">G5</span> <span class="dur dur-o">Önerimiz</span></td><td>Zemin</td><td>1+1</td><td>37,34</td><td>5,92</td><td>43,26</td><td class="f">€250.000</td><td>€6.695</td><td>€5.779</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G5 — zemin kat planı')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">G6</span></td><td>Zemin</td><td>2+1</td><td>60,44</td><td>7,67</td><td>68,11</td><td class="f">€315.000</td><td>€5.212</td><td>€4.625</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G6 — zemin kat planı')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">G7</span></td><td>Zemin</td><td>1+1</td><td>55,40</td><td>—</td><td>55,40</td><td class="f">€265.000</td><td>€4.783</td><td>€4.783</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G7 — zemin kat planı')">Plan</button></td></tr>
+      <tr class="dr-r fgiz"><td><span class="dad">G8</span> <span class="dur dur-r">Rezerve</span></td><td>Zemin</td><td>1+1</td><td>40,78</td><td>18,32</td><td>59,10</td><td class="f">€275.000</td><td>€6.744</td><td>€4.653</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G8 — zemin kat planı')">Plan</button></td></tr>
+      <tr class="one fgiz"><td><span class="dad">G9</span> <span class="dur dur-o">Önerimiz</span></td><td>Zemin</td><td>2+1</td><td>52,30</td><td>18,80</td><td>71,10</td><td class="f">€320.000</td><td>€6.119</td><td>€4.501</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G9 — zemin kat planı')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">G10</span></td><td>Zemin</td><td>2+1</td><td>53,97</td><td>16,57</td><td>70,54</td><td class="f">€320.000</td><td>€5.929</td><td>€4.536</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G10 — zemin kat planı')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">G11</span></td><td>Zemin</td><td>1+1</td><td>40,00</td><td>17,85</td><td>57,85</td><td class="f">€275.000</td><td>€6.875</td><td>€4.754</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G11 — zemin kat planı')">Plan</button></td></tr>
+      <tr class="dr-r fgiz"><td><span class="dad">G12</span> <span class="dur dur-r">Rezerve</span></td><td>Zemin</td><td>1+1</td><td>44,20</td><td>21,94</td><td>66,14</td><td class="f">€295.000</td><td>€6.674</td><td>€4.460</td><td><button class="pbtn" onclick="ac('plan/c-platon-g.jpg','G12 — zemin kat planı')">Plan</button></td></tr>
+      <tr class="dr-s fgiz"><td><span class="dad">A4</span> <span class="dur dur-s">Satıldı</span></td><td>1</td><td>1+1</td><td>41,22</td><td>4,80</td><td>46,02</td><td class="f">Satıldı</td><td>—</td><td>—</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A4 — daire planı')">Plan</button></td></tr>
+      <tr class="dr-s fgiz"><td><span class="dad">A5</span> <span class="dur dur-s">Satıldı</span></td><td>1</td><td>1+1</td><td>42,34</td><td>9,40</td><td>51,74</td><td class="f">Satıldı</td><td>—</td><td>—</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A5 — daire planı')">Plan</button></td></tr>
+      <tr class="dr-s fgiz"><td><span class="dad">A6</span> <span class="dur dur-s">Satıldı</span></td><td>1</td><td>1+1</td><td>47,13</td><td>3,80</td><td>50,93</td><td class="f">Satıldı</td><td>—</td><td>—</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A6 — daire planı')">Plan</button></td></tr>
+      <tr class="dr-s fgiz"><td><span class="dad">A7</span> <span class="dur dur-s">Satıldı</span></td><td>1</td><td>2+1</td><td>65,18</td><td>12,14</td><td>77,32</td><td class="f">Satıldı</td><td>—</td><td>—</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A7 — daire planı')">Plan</button></td></tr>
+      <tr class="dr-s fgiz"><td><span class="dad">A11</span> <span class="dur dur-s">Satıldı</span></td><td>1</td><td>1+1</td><td>40,00</td><td>7,85</td><td>47,85</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td><span class="dad">A12</span> <span class="dur dur-s">Satıldı</span></td><td>1</td><td>1+1</td><td>41,20</td><td>10,50</td><td>51,70</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="fgiz"><td><span class="dad">A10 <span class="dm hz">Hazır</span></span></td><td>1</td><td>2+1</td><td>57,96</td><td>11,80</td><td>69,76</td><td class="f">€320.000</td><td>€5.521</td><td>€4.587</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A10 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">A1 <span class="dm hz">Hazır</span></span></td><td>1</td><td>2+1</td><td>70,81</td><td>11,80</td><td>82,61</td><td class="f">€340.000</td><td>€4.802</td><td>€4.116</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A1 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">A2 <span class="dm hz">Hazır</span></span></td><td>1</td><td>2+1</td><td>61,14</td><td>6,70</td><td>67,84</td><td class="f">€325.000</td><td>€5.316</td><td>€4.791</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A2 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">A3 <span class="dm hz">Hazır</span></span></td><td>1</td><td>2+1</td><td>58,38</td><td>7,60</td><td>65,98</td><td class="f">€310.000</td><td>€5.310</td><td>€4.698</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A3 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">A8 <span class="dm hz">Hazır</span></span></td><td>1</td><td>2+1</td><td>60,94</td><td>11,80</td><td>72,74</td><td class="f">€330.000</td><td>€5.415</td><td>€4.537</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A8 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="dr-r fgiz"><td><span class="dad">A9 <span class="dm hz">Hazır</span></span> <span class="dur dur-r">Rezerve</span></td><td>1</td><td>2+1</td><td>61,03</td><td>11,80</td><td>72,83</td><td class="f">€330.000</td><td>€5.407</td><td>€4.531</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','A9 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">B1</span></td><td>2</td><td>2+1</td><td>70,81</td><td>11,80</td><td>82,61</td><td class="f">€350.000</td><td>€4.943</td><td>€4.237</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B1 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">B2</span></td><td>2</td><td>2+1</td><td>61,14</td><td>6,70</td><td>67,84</td><td class="f">€335.000</td><td>€5.479</td><td>€4.938</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B2 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">B3</span></td><td>2</td><td>2+1</td><td>58,38</td><td>7,60</td><td>65,98</td><td class="f">€320.000</td><td>€5.481</td><td>€4.850</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B3 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="dr-s fgiz"><td><span class="dad">B4</span> <span class="dur dur-s">Satıldı</span></td><td>2</td><td>1+1</td><td>41,22</td><td>4,80</td><td>46,02</td><td class="f">Satıldı</td><td>—</td><td>—</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B4 — daire planı')">Plan</button></td></tr>
+      <tr class="dr-s fgiz"><td><span class="dad">B5</span> <span class="dur dur-s">Satıldı</span></td><td>2</td><td>1+1</td><td>42,34</td><td>9,40</td><td>51,74</td><td class="f">Satıldı</td><td>—</td><td>—</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B5 — daire planı')">Plan</button></td></tr>
+      <tr class="dr-s fgiz"><td><span class="dad">B6</span> <span class="dur dur-s">Satıldı</span></td><td>2</td><td>1+1</td><td>47,13</td><td>3,80</td><td>50,93</td><td class="f">Satıldı</td><td>—</td><td>—</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B6 — daire planı')">Plan</button></td></tr>
+      <tr class="dr-r fgiz"><td><span class="dad">B7</span> <span class="dur dur-r">Rezerve</span></td><td>2</td><td>2+1</td><td>65,18</td><td>12,14</td><td>77,32</td><td class="f">€350.000</td><td>€5.370</td><td>€4.527</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B7 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="dr-s fgiz"><td><span class="dad">B8</span> <span class="dur dur-s">Satıldı</span></td><td>2</td><td>2+1</td><td>60,94</td><td>11,80</td><td>72,74</td><td class="f">Satıldı</td><td>—</td><td>—</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B8 — daire planı')">Plan</button></td></tr>
+      <tr class="dr-r fgiz"><td><span class="dad">B9</span> <span class="dur dur-r">Rezerve</span></td><td>2</td><td>2+1</td><td>61,03</td><td>11,80</td><td>72,83</td><td class="f">€340.000</td><td>€5.571</td><td>€4.668</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B9 — daire planı')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">B10</span></td><td>2</td><td>2+1</td><td>57,96</td><td>11,80</td><td>69,76</td><td class="f">€330.000</td><td>€5.694</td><td>€4.731</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','B10 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="dr-s fgiz"><td><span class="dad">B11</span> <span class="dur dur-s">Satıldı</span></td><td>2</td><td>1+1</td><td>40,00</td><td>7,85</td><td>47,85</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td><span class="dad">B12</span> <span class="dur dur-s">Satıldı</span></td><td>2</td><td>1+1</td><td>41,20</td><td>10,50</td><td>51,70</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td><span class="dad">C1</span> <span class="dur dur-s">Satıldı</span></td><td>3</td><td>2+1</td><td>70,81</td><td>11,80</td><td>82,61</td><td class="f">Satıldı</td><td>—</td><td>—</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C1 — daire planı')">Plan</button></td></tr>
+      <tr class="dr-r fgiz"><td><span class="dad">C2</span> <span class="dur dur-r">Rezerve</span></td><td>3</td><td>2+1</td><td>61,14</td><td>6,70</td><td>67,84</td><td class="f">€345.000</td><td>€5.643</td><td>€5.085</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C2 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">C3</span></td><td>3</td><td>2+1</td><td>58,38</td><td>7,60</td><td>65,98</td><td class="f">€330.000</td><td>€5.653</td><td>€5.002</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C3 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">C4</span></td><td>3</td><td>1+1</td><td>41,22</td><td>4,80</td><td>46,02</td><td class="f">€270.000</td><td>€6.550</td><td>€5.867</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C4 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="dr-r fgiz"><td><span class="dad">C5</span> <span class="dur dur-r">Rezerve</span></td><td>3</td><td>1+1</td><td>42,34</td><td>9,40</td><td>51,74</td><td class="f">€270.000</td><td>€6.377</td><td>€5.218</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C5 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="dr-r fgiz"><td><span class="dad">C6</span> <span class="dur dur-r">Rezerve</span></td><td>3</td><td>1+1</td><td>47,13</td><td>3,80</td><td>50,93</td><td class="f">€290.000</td><td>€6.153</td><td>€5.694</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C6 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="dr-r fgiz"><td><span class="dad">C7</span> <span class="dur dur-r">Rezerve</span></td><td>3</td><td>2+1</td><td>65,18</td><td>12,14</td><td>77,32</td><td class="f">€360.000</td><td>€5.523</td><td>€4.656</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C7 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">C8</span></td><td>3</td><td>2+1</td><td>60,94</td><td>11,80</td><td>72,74</td><td class="f">€350.000</td><td>€5.743</td><td>€4.812</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C8 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">C9</span></td><td>3</td><td>2+1</td><td>61,03</td><td>11,80</td><td>72,83</td><td class="f">€350.000</td><td>€5.735</td><td>€4.806</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C9 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">C10</span></td><td>3</td><td>2+1</td><td>57,96</td><td>11,80</td><td>69,76</td><td class="f">€340.000</td><td>€5.866</td><td>€4.874</td><td><button class="pbtn" onclick="ac('plan/c-platon-abc.jpg','C10 — A–B–C kat planı')">Plan</button></td></tr>
+      <tr class="dr-s fgiz"><td><span class="dad">C11</span> <span class="dur dur-s">Satıldı</span></td><td>3</td><td>1+1</td><td>40,00</td><td>7,85</td><td>47,85</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td><span class="dad">C12</span> <span class="dur dur-s">Satıldı</span></td><td>3</td><td>1+1</td><td>41,20</td><td>10,50</td><td>51,70</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-r fgiz"><td><span class="dad">D1</span> <span class="dur dur-r">Rezerve</span></td><td>4</td><td>2+1</td><td>60,18</td><td>53,65</td><td>113,83</td><td class="f">€360.000</td><td>€5.982</td><td>€3.163</td><td><button class="pbtn" onclick="ac('plan/c-platon-d.jpg','D1 — D kat planı')">Plan</button></td></tr>
+      <tr class="dr-r fgiz"><td><span class="dad">D2</span> <span class="dur dur-r">Rezerve</span></td><td>4</td><td>2+1</td><td>60,95</td><td>30,72</td><td>91,67</td><td class="f">€360.000</td><td>€5.906</td><td>€3.927</td><td><button class="pbtn" onclick="ac('plan/c-platon-d.jpg','D2 — D kat planı')">Plan</button></td></tr>
+      <tr class="dr-s fgiz"><td><span class="dad">D3</span> <span class="dur dur-s">Satıldı</span></td><td>4</td><td>—</td><td>60,76</td><td>24,35</td><td>85,11</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td><span class="dad">D4</span> <span class="dur dur-s">Satıldı</span></td><td>4</td><td>—</td><td>62,56</td><td>22,62</td><td>85,18</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr class="dr-s fgiz"><td><span class="dad">D5</span> <span class="dur dur-s">Satıldı</span></td><td>4</td><td>2+1</td><td>70,84</td><td>42,42</td><td>113,26</td><td class="f">Satıldı</td><td>—</td><td>—</td><td>—</td></tr>
       </tbody></table></div>
-    <button class="fdaha" onclick="fDaha(this)" data-cok="Kalan 51 daireyi göster  +" data-az="Daha az göster  −">Kalan 51 daireyi göster  +</button>
+    <button class="fdaha" type="button" onclick="fDaha(this)" data-cok="Tüm 57 daireyi göster (26 müsait · 11 rezerve · 20 satıldı)  +" data-az="Daha az göster  −">Tüm 57 daireyi göster (26 müsait · 11 rezerve · 20 satıldı)  +</button>
     <div class="tblnot">Brüt alan = net iç alan + balkon/teras (bahçe katında bahçe). € / m² net = fiyat ÷ net alan; € / m² brüt = fiyat ÷ brüt alan. <span class="dm hz" style="margin-left:0">Hazır</span> etiketli 7 daire, 10 Temmuz 2026 saha ziyaretimizde tamamlanmış ve anahtar teslimi yapılan katlardadır: bahçe katı ve 1. kat. 2. ve 3. kat 2026 içinde bekleniyor; bina bütün olarak, ortak alanlar ve çatı havuzu dâhil <b>Mayıs 2027</b>. Daire bazındaki kesin teslim tarihi sözleşmeyle sabitlenir. Kat planları kat grubu bazındadır; dolayısıyla gösterilen plan, o dairenin bulunduğu katın planıdır.</div>
     <div class="tblnot">Alan, fiyat ve müsaitlik geliştiricinin <b>18 Eylül 2026</b> tarihli listesiyle mutabıktır. Bağlayıcı fiyat, teklif aşamasındaki yazılı teyitle sabitlenir.</div>
     <h3 style="margin-top:30px">Kat planları</h3>
@@ -1326,64 +1427,65 @@ details.rapor[open]>summary{background:#fff}
     <h3 id="platon-video" style="margin-top:30px;scroll-margin-top:90px">Sahada — güncel durum</h3>
     <p class="kucuk" style="margin:6px 0 12px">Bu bir render değildir: <b>kendi saha görüntümüzdür</b>. Daha fazla görüntü içeren proje sunum sayfası bu bölümün başındaki bağlantı satırındadır.</p>
     <video controls preload="metadata" playsinline style="display:block;width:100%;max-width:560px;max-height:420px;object-fit:contain;margin:0 auto;border-radius:0;border:1px solid var(--cizgi);background:#000"><source src="video/c-platon-saha-turu.mp4" type="video/mp4">Tarayıcınız video etiketini desteklemiyor.</video>
-    <button class="dkapat" onclick="this.closest('details').open=false">Kapat</button>
-  </div></details>
-  <details class="rapor"><summary>Bölge raporu · Akademia Platonos</summary><div class="rbody">
+  </div></div><!--/fyt-->
+  <details class="rapor" id="r-bolge"><summary style="--bant-foto:url('img/bolge-akademia-platonos.webp')">Bölge raporu · Akademia Platonos<i class="bant-arti">+</i></summary><div class="rbody">
+    <div class="katlar"><figure onclick="ac('img/bolge-akademia-platonos.webp','Akademia Platonos · Atina')" style="grid-column:1/-1"><img src="img/bolge-akademia-platonos.webp" alt="Akademia Platonos · Atina" loading="lazy" style="aspect-ratio:16/7;object-fit:cover"><figcaption>Foto: Tomisti · CC BY-SA 3.0 · Wikimedia Commons</figcaption></figure></div>
+    <p class="kucuk">Avla Gayrimenkul A.Ş. Bölge Raporu · Akademia Platonos · Atina 4. belediye topluluğu · 23 – 24 Ekim 2026. Semt düzeyinde bir değerlendirmedir; belirli bir daire incelemesi içermez.</p>
     <h4>Konum</h4>
-    <p>Akademia Platonos, merkezî Atina'ya bitişik, kuzeybatıdaki bir iç semttir; adını Platon&#x27;un antik Akademi&#x27;sinden alan mahalledir. Karakteri turistik değil yereldir: orta yükseklikte bloklardan, gündelik perakendeden ve görünür ama dalgalı bir yenilenmeden oluşan, yıl boyu yaşanan bir konut dokusu. Akademi&#x27;nin arkeolojik parkı semtin belirleyici açık alanıdır ve onun için planlanan yeraltı müzesi bölgenin ufkundaki en somut kültür projesidir. Burası prestijli değil merkezî bir adrestir ve bunu baştan böyle okumanızı tercih ederiz.</p>
+    <p>Akademia Platonos, Atina Belediyesi'nin 4. belediye topluluğunda, tarihî merkezin kuzeybatısında bir iç semttir. Semt merkezi Omonia'ya kuş uçuşu ~1,8 km, Sintagma'ya ~2,9 km'dir. Adını, Platon'un antik Akademisi'nin kalıntılarını taşıyan arkeolojik parktan alır; park semtin belirleyici açık alanıdır. Yunanca kaynaklar yaklaşık 1 km²'de 15 bin dolayında nüfus verir; 4. belediye topluluğunun 2021 nüfusu 87.069'dur. Doku beş–yedi katlı konut bloklarından, gündelik perakendeden ve yavaş ama görünür bir yenilenmeden oluşur. Burası prestijli değil merkezî bir adrestir ve bunu baştan böyle okumanızı öneririz.</p>
+    <p>Talep kaynakları üç tanedir: merkezin ulaşım düğümüne yakınlık (Larissa Garı ve Kifisos şehirlerarası otobüs terminali ~1 – 1,1 km), Votanikos'taki Tarım Üniversitesi (~1 km) ile merkez üniversitelere kısa erişim ve iç semtlerin fiyatlarından kaçan haneler. Yeni projeler tarafında en somut başlık arkeolojik parktır: Kültür Bakanlığı'nın planı kalıntıların görünür kılınmasını, yürüyüş yollarını, aydınlatmayı, oyun alanlarını ve sel–yangın korumasını kapsıyor; 2025'te park yenilemesi ve park içinde bir müze için iş birliği anlaşması duyuruldu. 2026 tarihli haberler ise finansman ve kurumlar arası eşgüdüm nedeniyle uygulamanın ağır ilerlediğini yazıyor; takvimi henüz kesin saymıyoruz. Semtin güneyindeki Elaionas–Votanikos aksında 500 hektarlık dönüşüm için uluslararası tasarım yarışması Temmuz 2026'da duyuruldu.</p>
+    <h4>Okullar</h4>
+    <p>İngilizce eğitim veren okullar ve semt merkezinden kuş uçuşu mesafeleri:</p>
+    <ul><li><a href="https://moraitis.edu.gr/" target="_blank" rel="noopener" style="color:var(--navy);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)">Moraitis School</a> — Yunan müfredatı + IB Diploma · Psychiko · ≈6.240 m</li><li><a href="https://www.athenscollege.edu.gr/" target="_blank" rel="noopener" style="color:var(--navy);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)">Athens College – Psychico College</a> — Yunan müfredatı + İngilizce IB Diploma (1996'dan beri IB okulu) · Psychiko · ≈6.750 m</li><li><a href="https://www.acs.gr/" target="_blank" rel="noopener" style="color:var(--navy);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)">ACS Athens</a> — Amerikan müfredatı + IB Diploma ve AP · İngilizce · Anaokulundan liseye · Chalandri · ≈9.640 m</li><li><a href="https://www.pierce.gr/" target="_blank" rel="noopener" style="color:var(--navy);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)">Pierce – American College of Greece</a> — Yunan müfredatı + İngilizce IB Diploma · Lise ve IB: Agia Paraskevi · ≈10.530 m</li><li><a href="https://www.doukas.edu.gr/" target="_blank" rel="noopener" style="color:var(--navy);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)">Doukas School</a> — Yunan müfredatı + İngilizce IB Diploma, International A-Level · Anaokulundan liseye · Marousi · ≈11.050 m</li><li><a href="https://www.stcatherines.gr/" target="_blank" rel="noopener" style="color:var(--navy);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)">St Catherine's British School</a> — İngiliz müfredatı, IGCSE + IB Diploma · 3 – 18 yaş · Lykovrysi · ≈11.700 m</li><li><a href="https://www.byroncollege.gr/" target="_blank" rel="noopener" style="color:var(--navy);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)">Byron College</a> — İngiliz müfredatı · IGCSE ve A-Level · Anaokulundan liseye · Pallini – Gerakas · ≈13.250 m</li></ul>
+    <p class="kucuk">Mesafe Akademia Platonos semt merkezinden (arkeolojik park çevresi) okul kampüsüne kuş uçuşu ölçüdür (OpenStreetMap); yol mesafesi daha uzundur. Merkezde tamamen İngilizce eğitim veren uluslararası okul tespit etmedik; seçenekler kuzey banliyölerindedir. Kayıt koşulları okulla teyit edilir.</p>
     <h4>Ulaşım</h4>
-    <p>Metro bağlantısı semtin başlıca avantajıdır: semte hizmet veren metro istasyonu merkez istasyonları birkaç durak ötesine taşır ve geliştiricinin kendi materyali o istasyonu binadan yaklaşık on dakika uzakta gösterir. Burada arabasız yaşamak hem malik hem kiracı için gerçekçidir; bağlantının pratik anlamı da budur. Atina&#x27;nın bu kesiminde yürüme mesafesi sokaktan sokağa değişir; bu yüzden semt ortalaması vermek yerine belirli bina için ölçer ve o ölçümü yazılı olarak veririz.</p>
+    <p>Semtin içinde metro istasyonu yoktur; erişim yürüme mesafesindeki istasyonlara dayanır. En yakın raylı nokta ~1 km'deki Larissa Garı'dır: burada Metro Hattı 2, havalimanına ve Pire'ye giden banliyö treni (Proastiakos) ve şehirlerarası trenler buluşur. Metaxourgeio (Hat 2) ~1,2 km, Attiki (Hat 1 ve 2) ~1,4 km, Kerameikos (Hat 3) ~1,5 km'dir. Semtten Kifisos otobüs terminali ile Omonia arasında çalışan 051 hattı ve Larissa Garı'na bağlanan A15 ve B15 hatları geçer.</p>
+    <div class="tkos" style="margin-top:14px"><div class="tb">Mesafeler</div>
+    <dl>
+      <dt>Larissa Garı (metro · banliyö · şehirlerarası)</dt><dd>~1 km</dd>
+      <dt>Kifisos otobüs terminali</dt><dd>~1,1 km</dd>
+      <dt>Omonia</dt><dd>~1,8 km · Larissa'dan metroyla 2 durak</dd>
+      <dt>Atina merkezi (Sintagma)</dt><dd>Larissa'dan Hat 2 ile 4 durak, yaklaşık 7 dakika</dd>
+      <dt>Technopolis · Gazi</dt><dd>~1,6 km</dd>
+      <dt>Atina Havalimanı</dt><dd>Larissa Garı'ndan banliyö treniyle aktarmasız, yaklaşık 40 – 50 dakika</dd>
+    </dl>
+  </div>
+    <p class="kucuk" style="margin-top:10px">Mesafeler semt merkezinden kuş uçuşu (OpenStreetMap); süreler yaklaşıktır, trafik ve sefer sıklığına göre değişir.</p>
     <h4>Kiracı profili</h4>
-    <p>Talep yerleşiktir ve yıl boyu sürer: merkezde çalışan profesyoneller, öğrenciler ve iç semtlerin fiyatlarının dışına itilmiş aileler. Bu kiracı tabanının gücü manşet kirası değil istikrarıdır; yerel istihdama kiralanan bir semt sezon dışında boşalmaz. Geliştiricinin materyali bir kira projeksiyonu ve garantili kira başlığı taşır, ancak elimizdeki hiçbir belgede ikisi için de süre ya da sözleşmesel dayanak görünmez. Bu binadaki hiçbir daire için doğrulanmış kira rakamımız yoktur ve onun yerine tahmin yayımlamayız.</p>
+    <p>Talep yerleşiktir ve yıl boyu sürer: yerel istihdama kiralanan bir semt sezon dışında boşalmaz. Akademia Platonos 4. belediye topluluğunda olduğu için merkez semtlerdeki kısa dönem kiralama kayıt dondurmasının kapsamı dışındadır; yine de Golden Visa konutunda günlük kiralama yasaktır ve hesap <b>uzun dönem kira</b> üzerinden kurulmalıdır.</p>
+    <ul>
+      <li><b>Merkezde çalışanlar</b> — Omonia–Sintagma aksına kısa metro yolculuğu; 1+1 birincil ürün tipidir.</li>
+      <li><b>Öğrenciler</b> — Tarım Üniversitesi ~1 km, Politeknik ve Ekonomi Üniversitesi ~2 km; akademik yıl ritminde.</li>
+      <li><b>Ulaşım düğümünü kullananlar</b> — gar ve otobüs terminali çevresinde çalışanlar ve sık seyahat edenler; orta süreli.</li>
+      <li><b>İç semtlerden taşınan aileler</b> — fiyat farkı; uzun süreli, düşük devir.</li>
+    </ul>
+    <div class="tkos" style="margin-top:14px"><div class="tb">Piyasa göstergeleri</div>
+    <dl>
+      <dt>Satış ilanı ortalaması</dt><dd>1.966 €/m² (+%2,6 yıllık) · Eylül 2026 · Indomio</dd>
+      <dt>Kira ilanı ortalaması</dt><dd>9,36 €/m²/ay (+%4,8 yıllık) · Eylül 2026 · Indomio</dd>
+      <dt>Komşu Kolonos · Larissa Garı çevresi</dt><dd>2.151 · 2.149 €/m² · Eylül 2026 · Indomio</dd>
+      <dt>Kolonos–Kolokynthous bölgesi, 5 yıl</dt><dd>satış +%48,2 · kira +%44,4 · Indomio</dd>
+      <dt>Atina daire fiyatları</dt><dd>+%5,0 yıllık · 2. çeyrek 2026 · Yunanistan Merkez Bankası</dd>
+    </dl>
+  </div>
+    <p class="kucuk" style="margin-top:10px">Rakamlar ilan (istenen) fiyatlarıdır; gerçek devir bedelleri genellikle bunun bir miktar altındadır. Belirli bir daire için doğrulanmamış kira ya da getiri rakamı vermiyoruz; kira sözleşmesi ve kira garantisinin metni teklif aşamasında yazılı alınır.</p>
     <h4>Riskler</h4>
-    <p>Prestij ve konum primi düşüktür. Akademia Platonos, deniz manzarası primi ve adrese bağlı marka değeri olmayan, çalışan ve merkezî bir semttir; bu bir prestij değil bölge ve kullanım gerekçesidir ve bunu açıkça söylüyoruz. Tamamlama bina geneli değil kademelidir: aralarında çatı havuzu da olan ortak alanlar Mayıs 2027 tarihlidir, dolayısıyla bugün alan bir alıcı en az bir sezonu onlarsız geçirmeyi planlamalıdır. Müsait stokun önemli bir bölümü zemin ve bahçe seviyesindedir; bu da mahremiyeti ve manzarayı etkiler ve plan üzerinden değil yerinde değerlendirilmelidir. Son olarak Golden Visa eşiği mülk bazında değerlendirilir: burada da, Attika&#x27;nın her yerinde olduğu gibi, uygunluk ve geçerli kademe herhangi bir adımdan önce bağımsız bir Yunan avukat tarafından yazılı olarak teyit edilir ve bu adım atlanmaz.</p>
-    <button class="dkapat" onclick="this.closest('details').open=false">Kapat</button>
+    <ul>
+      <li><b>Golden Visa kısıtı:</b> GV ile alınan konutta kısa dönem (günlük) kiralama yasaktır; eşik ve uygunluk daire bazında, bağımsız Yunan avukat incelemesiyle yazılı teyit edilir — bu sayfadaki hiçbir ifade o teyit değildir.</li>
+      <li><b>Yavaş değer artışı:</b> satış ilanları bir yılda %2,6 arttı; Atina geneli %5,0. Semt hızlı prim üreten bir adres değildir, kısa vadeli çıkışa uygun değildir.</li>
+      <li><b>Prestij primi düşük:</b> deniz manzarası ve adres markası yoktur; değer, kullanım ve ulaşım üzerinden oluşur. Bu, yeniden satışta alıcı havuzunu daraltabilir.</li>
+      <li><b>Sokak sokak değişen doku:</b> bakımlı bloklarla eski stok yan yana durur; bina ve sokak seçimi plan üzerinden değil yerinde değerlendirilmelidir.</li>
+      <li><b>Proje takvimi:</b> park ve müze yatırımı açıklanmış ama uygulama yavaştır; fiyat beklentisini bu projeye bağlamayın.</li>
+      <li><b>Erişim:</b> semt içinde istasyon yoktur; en yakın raylı noktaya ~1 km yürünür.</li>
+      <li><b>Vergi takvimi:</b> AB/AEA dışı alıcılar için tapu devir vergisinin 1 Temmuz 2027'den itibaren %3'ten %15'e çıkarılması planı bildirildi; henüz yasalaşmadı, alım öncesinde teyit edilir.</li>
+    </ul>
+    <p><b>Avla'nın semt görüşü:</b> Nötr – pozitif, değer odaklı. Akademia Platonos, merkezin ana ulaşım düğümüne yürüme mesafesinde ve merkeze bitişik semtler içinde metrekare fiyatı en düşüklerden biridir; kira talebi yerleşiktir. Ancak değer artışı yavaş, yenilenme kademelidir: burası hızlı prim değil, <b>düşük giriş fiyatı ve uzun dönem kira</b> için alınan bir semttir.</p>
+    <p class="kucuk">Kaynaklar: Indomio · ELSTAT 2021 sayımı · Kültür Bakanlığı · Kathimerini · GTP · Atina Metrosu (STASY) · Moovit hat bilgisi · Yunanistan Merkez Bankası · OpenStreetMap (mesafe ölçümü) · okulların resmî siteleri ve IB kayıtları.</p>
+    <button class="dkapat" onclick="dKapat(this)" aria-label="Bölümü kapat"><i>−</i> Kapat</button>
   </div></details>
-  <details class="rapor"><summary>Proje raporu · Akademia Platonos'ta dönüştürülmüş blok</summary><div class="rbody">
-    <h4>Bina</h4>
-    <p>Bina beş seviyede 57 daire barındırır ve mevcut bir yapının tümüyle rezidansa dönüştürülmesidir. Geliştiricinin materyalinde kayıtlı şartname çatı havuzu, yaklaşık 60 m²lik bir spor salonu, asansörler, çatıda güneş panelleri ve depolu bir garaj taşır; teslim beyaz eşya dâhil tam mobilyalıdır, dolayısıyla tamamlanmış bir daire ek tefriş harcaması olmadan kullanılabilir ya da kiraya verilebilir. 18 Eylül 2026 tarihli envanter mutabakatımızda 57 dairenin 35'i müsaittir. Tamamlama bütün değil kademelidir: 10 Temmuz 2026'da sahada çekilen kendi güncel saha durum raporumuz bahçe katı ile birinci katı bitmiş ve alıcılara anahtar teslim edilirken gösterir; ikinci ve üçüncü katlar 2026 içinde, bina bütün olarak ortak alanlarıyla birlikte Mayıs 2027 olarak belirtilmiştir. Tamamlanmış bir dairenin ve bahçe katının kendi fotoğraf ve videosu elimizdedir; teslim standardını alıntılamak yerine tarif edebilmemizin nedeni de budur.</p>
-    <h4>Daire kurgusu</h4>
-    <p>1+1, 2+1 ve 3+1 planlar aynı binada yan yanadır: net alanlar 40 – 92,29 m², balkonlar 4 – 30 m², son kat terasları 42 – 53 m² ve fiyatlar €250.000 ile €360.000 arasındadır. Müsait 35 dairenin yirmi ikisi gerçek 2+1, iki banyolu planlardır; hepsi 52,30 m² net ve üzeridir, girişi A3, 58,38 m² için €310.000. Oda sayıları pazarlama metninden alınmak yerine geliştiricinin kat planlarına karşı tek tek doğrulanmıştır. Net metrekare fiyatında fiilen müsait daireler içinde en iyi rakam G7'dir: 55,40 m², €265.000, yani net metrekare başına €4.783; 2+1'ler içinde ise A1: 70,81 m², €4.802. 1+1 stok €250.000 – €275.000'dan açılır ve 40 ile 55,40 m² net arasında seyreder.</p>
-    <h4>Avla değerlendirmesi</h4>
-    <p>Bu sayfadaki euro başına en iyi metrekare buradadır ve tamamlanmış katlarda aynı zamanda en somut olan da budur: bahçe katı ile birinci kat fiziksel olarak bitmiştir, ikisini de yürüdük ve oradaki bir alıcı bir render'a değil şeyin kendisine bakar. Mobilyalı teslim kulağa geldiğinden daha çok önem taşır — tamamlanma ile ilk kiracı arasındaki tefriş bütçesini ve tefriş gecikmesini ortadan kaldırır. Dürüst karşı ağırlık adrestir: kimseyi etkilemeyecek, çalışan ve merkezî bir semt; zarfın üzerindeki isim için değil alan, ulaşım ve kullanım için alınır. İkinci çekince, buradaki hazır olma durumunun bina geneli değil daire bazlı bir soru olmasıdır: üst harf katlarındaki daireler son saha ziyaretimizde aynı durumda değildi ve tamamlanmış katlar bitti diye onlar da hazır sayılmamalıdır. Çatı havuzu ve spor salonu dâhil ortak alanlar 2027 kalemidir ve bu beklentiyi tapu devrinden sonra sürpriz olarak yaşamaktansa şimdiden koymayı tercih ederiz.</p>
-    <h4>Emin olmadığımız noktalar</h4>
-    <p>İnşaat aşaması. 10 Temmuz 2026 tarihli kendi saha ziyaretimizde bahçe katı ve birinci kat tamamlanmıştı ve anahtar teslimi yapılıyordu; üst katlardaki daireler ise ince işçilikteydi: mutfak ve gardırop montajı sürüyor, zeminler koruma altında, boya ve son kontroller devam ediyor, teras zeminleri döşenmiş, korkuluk hattı hâlâ hazırlanıyor ve cephe iskelesi kademeli olarak iniyordu. İkinci ve üçüncü katlar 2026 içinde, projenin tamamı ortak alanlarıyla birlikte Mayıs 2027 olarak belirtilmişti; 10 Temmuz 2026&#x27;dan daha yeni bir saha doğrulamamız yoktur ve bugünkü durumu iki ay öncesine ait bir rapordan anlatmayız. Rapor, fiyat tablosunda kullanılan harf katlarını bu aşamalarla eşleştirmez ve dördüncü kattan hiç söz etmez; bu yüzden müsait bir dairenin bugün bitmiş olup olmadığı, önünüze konmadan önce daire daire, yazılı olarak yanıtladığımız bir sorudur. Daha eski bir materyalimiz daireleri kayıtsız şartsız anahtar teslim hazır diye tanımlıyordu; tamamlanmış katların üzerindeki her şey için bu, durumu olduğundan iyi gösterir ve burada tekrarlamak yerine düzeltiyoruz. Ticari konum. Kendi dosyamız bu projeyi kapsayan düzenlemeyi imzalanmış ancak taraflar arasında açık bir nokta bulunan şeklinde kaydeder; bu yüzden güncel müsaitlik, fiyat ve rezervasyon mekaniği, herhangi bir kapora yatırılmadan önce yazılı olarak yeniden teyit edilir. Şartname ve evrak. Ödeme planı ile tapu devri takvimi geliştiriciden yazılı teyit beklemektedir; geliştiricinin materyali depolu bir garajdan söz eder, ancak veritabanımız daire daire otopark ya da depo tahsisini belgelemez ve enerji sınıfı dosyamızda kayıtlı değildir. Gelir. Garantili kira başlığı için belgelenmiş bir süre ya da sözleşmesel dayanak yoktur ve buradaki hiçbir daire için doğrulanmış kira rakamımız bulunmamaktadır; bu yüzden getiri yayımlamayız. Oturum. Uygunluk ve geçerli eşik yalnız bağımsız Yunan hukuk incelemesiyle, yazılı olarak ve daire daire belirlenir: buradaki hiçbir müsait daire, €800.000 ve €400.000 kademelerinin gerektirdiği 120 m² asgarisine ulaşmaz ve €250.000 kademesi, başvurudan önce tamamlanmış ve belgelenmiş bir kullanım değişikliğine bağlıdır; bu yüzden o çıktıyı görmeden hiçbir daire hakkında görüş vermeyiz.</p>
-    <button class="dkapat" onclick="this.closest('details').open=false">Kapat</button>
-  </div></details>
-</section>
-<section id="harita">
-  <div class="eyebrow">Coğrafya</div>
-  <h2>Akademia Platonos harita üzerinde</h2>
-  <p class="kucuk" style="margin-top:8px">Konum <b>semt düzeyinde bir daire halinde</b> gösterilmektedir; kesin adres Dijital Yer Gösterme Protokolü'nün imzalanmasıyla paylaşılır.</p>
-  <div id="avla-map"></div>
-  <div class="mlegend">
-    <span><i style="background:#7a6a9a"></i>The Hera Athens</span>
-  </div>
-</section>
-<!--SATIS:W1:ayr--><details class="ayr-grup" id="ayrinti"><summary><span class="eyebrow">Ayrıntı</span>Golden Visa çerçevesi, daire karşılaştırması, özet ve tanıtım protokolü<i>+</i></summary><!--/SATIS:W1:ayr-->
-<section id="giris">
-  <div class="eyebrow">Seçki Notu</div>
-  <h2>The Hera Athens — tek sayfada</h2>
-  <div class="card">
-    <p>Bu sayfa, Akademia Platonos · Atina Bazı daireler hazır · ortak alanlar 05/2027 bölgesindeki <b>The Hera Athens</b> için hazırlanmış Avla Özel Seçki'dir. Projeyle ilgili her şey tek sayfada: güncel fiyatlar ve <b>26 müsait dairenin</b> listesi, daire ve kat planları, bölge raporu ve proje raporu.</p>
-    <p><b>Sayfanın yapısı:</b> Önce Golden Visa çerçevesi ve haritada semt; ardından daire tiplerini yan yana koyan karşılaştırma ve proje bölümü — künye, görseller, fiyat tablosu ve raporlar. Her bölümde <b>kendi çekincelerimiz</b> de yazılı. İlan sayfası, bölge raporu ve yatırım fizibilitesi bağlantıları proje kartının altındadır.</p>
-    <div class="uyari"><b>Müsaitlik ve fiyat:</b> Rakamlar geliştiricilerden gelen en güncel listelere dayanır (envanter teyidi 17 Ekim 2026). Müsaitlik hızla değişir; bağlayıcı karardan önce ilgili dairenin durumu yazılı teyit edilir.</div>
-    <p style="margin-top:18px"><a class="b1" style="padding:11px 24px;font-size:13px" href="https://wa.me/905322822657?text=Merhaba%2C%20The%20Hera%20Athens%20se%C3%A7kisini%20inceledim." target="_blank" rel="noopener">Bize WhatsApp'tan yazın</a> <a class="b2" style="padding:11px 24px;font-size:13px;color:var(--navy);border-color:var(--cizgi)" href="tel:+905322822657">+90 532 282 26 57</a></p>
-  <p class="kucuk" style="margin-top:14px"><a href="https://gv.selection.avlarealestate.com" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600">Master Seçki — tüm portföy</a> · <a href="https://www.avlarealestate.com/property-status/golden-visa" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600">Tüm ilanlarımız</a></p>
-  </div>
-  <div class="gv">
-    <b style="font-family:'Cormorant Garamond',serif;font-size:19px">Yunanistan Golden Visa — kısa hatırlatma</b>
-    <div class="madde">
-      <span>Eşik <b>tek bir rakam değildir</b>: €250.000 / €400.000 / €800.000</span>
-      <span>Eş + 21 yaş altı çocuklar + her iki eşin ebeveynleri</span>
-      <span>Oturma izni 5 yılda bir yenilenir</span>
-      <span>Asgari kalış şartı yoktur</span>
-      <span>Uzun dönem kiralamaya izin verilir; <b>kısa dönem (günlük) kiralama yasaktır</b></span>
-      <span>Bu bir <b>oturma iznidir</b>, vatandaşlık değildir</span>
-    </div>
-  </div>
-</section>
-<section id="gv">
+  <!--v2:oneri--><section id="oneri" class="satis oneri-sonra"><div class="eyebrow">Önerimiz</div><h2>Sizin için önerdiğimiz daireler</h2><p class="on-alt">57 dairenin 26'sı müsait. Bunların içinden fiyat, m² verimi ve dış alan açısından üç daireyi öne çıkarıyoruz.</p><div class="on3"><article class="onk"><span class="et">En uygun giriş</span><div class="dno">Daire G5</div><div class="dmeta">Zemin kat · 1+1</div><div class="fy">€250.000</div><div class="fm2">€5.779 / m² brüt · €6.695 / m² net</div><div class="ozl"><div><span>Net</span><i>37,34 m²</i></div><div><span>Dış alan</span><i>5,92 m²</i></div><div><span>Brüt</span><i>43,26 m²</i></div></div><p class="neden">Müsait daireler içinde en düşük fiyat.</p><div class="dg"><button type="button" class="pl" onclick="ac(&#x27;plan/c-platon-g.jpg&#x27;,&#x27;G5 — zemin kat planı&#x27;)">Planı aç</button><a class="wa" href="https://wa.me/905322822657?text=Merhaba%2C%20The%20Hera%20Athens%20G5%20numaral%C4%B1%20daire%20%28%E2%82%AC250.000%29%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Bu daireyi sorun</a></div></article><article class="onk"><span class="et">En iyi brüt m² fiyatı</span><div class="dno">Daire BS1</div><div class="dmeta">Bahçe katı</div><div class="fy">€340.000</div><div class="fm2">€2.975 / m² brüt · €3.684 / m² net</div><div class="ozl"><div><span>Net</span><i>92,29 m²</i></div><div><span>Dış alan</span><i>22,00 m²</i></div><div><span>Brüt</span><i>114,29 m²</i></div></div><p class="neden">Brüt m² başına projedeki en düşük fiyat (€2.975); 22 m² dış alan dahil.</p><div class="dg"><a class="wa" href="https://wa.me/905322822657?text=Merhaba%2C%20The%20Hera%20Athens%20BS1%20numaral%C4%B1%20daire%20%28%E2%82%AC340.000%29%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Bu daireyi sorun</a></div></article><article class="onk"><span class="et">Geniş dış alan</span><div class="dno">Daire G9</div><div class="dmeta">Zemin kat · 2+1</div><div class="fy">€320.000</div><div class="fm2">€4.501 / m² brüt · €6.119 / m² net</div><div class="ozl"><div><span>Net</span><i>52,30 m²</i></div><div><span>Dış alan</span><i>18,80 m²</i></div><div><span>Brüt</span><i>71,10 m²</i></div></div><p class="neden">Önerdiğimiz diğer dairelerden sonra en geniş dış alan (18,80 m²).</p><div class="dg"><button type="button" class="pl" onclick="ac(&#x27;plan/c-platon-g.jpg&#x27;,&#x27;G9 — zemin kat planı&#x27;)">Planı aç</button><a class="wa" href="https://wa.me/905322822657?text=Merhaba%2C%20The%20Hera%20Athens%20G9%20numaral%C4%B1%20daire%20%28%E2%82%AC320.000%29%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Bu daireyi sorun</a></div></article></div><a class="on-tum" href="#fiyatlar">↑ Tüm fiyat listesi</a></section><!--/v2:oneri-->
+  </section>
+<!--SATIS:W1:ayr--><div class="gv-dis"><section data-gv-ayri="1" id="gv">
   <div class="eyebrow">Önce Çerçeve</div>
   <h2>Yatırım eşiği neden herkes için farklı çıkıyor?</h2>
   <div class="card">
@@ -1395,28 +1497,7 @@ details.rapor[open]>summary{background:#fff}
     </div>
     <p style="margin-top:14px"><b>Sizin dosyanız için pratik anlamı:</b> Attika'da standart yeni yapıda eşik €800.000'dur. Bu dosyadaki mülklerin hangi eşiğe girdiği, <b>mülkün konumu ve hukuki statüsüne</b> göre belirlenir; bu, <b>mülk bazında</b> bağımsız Yunan avukat incelemesiyle yazılı olarak teyit edilir. Hiçbir bölümde "bu daire GV verir" yazmadık; teyidi belgeyle alıyoruz.</p>
   </div>
-</section>
-<section id="karsilastirma">
-  <div class="eyebrow">Karşılaştırma</div>
-  <h2>Daire tipleri — tek tabloda</h2>
-  <div class="tbl"><table><thead><tr><th>Daire</th><th>Tip</th><th>İç m²</th><th>Balkon / dış m²</th><th>Toplam m²</th><th>Fiyat</th><th>€ / iç m²</th><th>€ / toplam m²</th><th>Teslim</th></tr></thead><tbody> <tr><td><b><a href="#a0121" style="color:inherit">G5</a></b></td><td>1+1</td><td>37,34</td><td>5,92</td><td>43,26</td><td class="f">€250.000</td><td>€6.695</td><td>€5.779</td><td>10 Temmuz 2026</td></tr> <tr><td><b><a href="#a0121" style="color:inherit">G7</a></b></td><td>1+1</td><td>55,40</td><td>—</td><td>55,40</td><td class="f">€265.000</td><td>€4.783</td><td>€4.783</td><td>10 Temmuz 2026</td></tr> <tr><td><b><a href="#a0121" style="color:inherit">BS3 Hazır</a></b></td><td>2+1</td><td>79,57</td><td>17,10</td><td>96,67</td><td class="f">€300.000</td><td>€3.770</td><td>€3.103</td><td>10 Temmuz 2026</td></tr> </tbody></table></div>
-  <div class="tblnot">Her daire tipinden en uygun fiyatlı ve en geniş müsait daire. Birim fiyatlar liste fiyatı üzerinden; bağlayıcı fiyat yazılı teyitle sabitlenir. Tablonun tamamı proje bölümündeki “Fiyatlar ve müsait daireler” başlığı altındadır.</div>
-</section>
-<section id="ozet">
-  <div class="eyebrow">Özet</div>
-  <h2>Proje bir bakışta</h2>
-  <div class="tbl"><table>
-    <thead><tr><th>#</th><th>Proje</th><th>Semt</th><th>Teslim</th><th>Müsait</th><th>Fiyat aralığı</th><th>Net m² aralığı</th><th>Brüt m² aralığı</th><th>€ / m² net (en düşük)</th><th>€ / m² brüt (en düşük)</th></tr></thead>
-    <tbody>
-      <tr><td>1</td><td><b><a href="#a0121" style="color:inherit">The Hera Athens</a></b></td><td>Akademia Platonos</td><td>10 Temmuz 2026</td><td>26 daire müsait</td><td class="f"><b>€250.000 – €350.000</b></td><td>37,34 – 92,29 m²</td><td>43,26 – 114,29 m²</td><td>€3.684</td><td>€2.975</td></tr>
-    </tbody>
-  </table></div>
-  <div class="card" style="margin-top:22px">
-    <p><b>Nasıl ilerleyelim:</b> ilginizi çeken daireleri işaretleyin; o daireler için güncel müsaitlik, bağlayıcı fiyat ve ödeme planını <b>yazılı</b> olarak getirelim. Atina'ya gelmek isterseniz yer gösterme programını birlikte kurarız; dilerseniz daireleri önce görüntülü görüşmede gösteririz.</p>
-    <p class="kucuk" style="margin-top:10px"><a href="#protokol" style="color:var(--navy);font-weight:600">Dijital Yer Gösterme Protokolü</a> · <a href="#" onclick="szAc(event)" style="color:var(--navy);font-weight:600">Şartlarımız ve çalışma biçimimiz</a></p>
-  </div>
-</section>
-<section id="protokol">
+</section></div><details class="ayr-grup" id="ayrinti"><summary style="--bant-foto:url('img/c-platon-4.jpg')"><span class="ag-t">Dijital Yer Gösterme Protokolü</span><span class="ag-a">Kesin adres ve daire bazlı konum, protokolün imzalanmasıyla paylaşılır</span><i>+</i></summary><section id="protokol">
   <div class="eyebrow">Tanıtım kaydı</div>
   <h2>Dijital Yer Gösterme Protokolü</h2>
   <p class="kucuk" style="margin-top:8px">Bu protokol, PROPERTY VIEWING AND ADVISORY AGREEMENT'ın Türkçe sunumudur.</p>
@@ -1439,8 +1520,7 @@ details.rapor[open]>summary{background:#fff}
       </dl>
   </div>
   <p style="margin-top:18px"><a class="b1" href="#" onclick="szAc(event)">Adres bilgilerine ulaş</a></p>
-</section>
-<!--SATIS:W2:ayr--></details><!--/SATIS:W2:ayr-->
+</section></details><!--/SATIS:W2:ayr-->
 </div><!-- /wrap -->
 
 
@@ -1696,7 +1776,7 @@ function fDaha(b){var k=b.previousElementSibling;
   k.classList.toggle('acik');
   b.textContent=k.classList.contains('acik')?b.dataset.az:b.dataset.cok;}
 </script>
-<script src="https://hub.avlarealestate.com/iz.js" data-sayfa="mulk-a0121" data-genel="1" data-arsiv="blob" data-kapak="parsomen" data-eyebrow="Avla Özel Seçki" data-baslik="The Hera Athens" data-foto="img/kapak.jpg" data-logo="img/avla-kare-lacivert-altin-buyuk-8-1080.png" data-kredi="Akademia Platonos · Görsel: proje tanıtım çalışması" data-lang="tr" data-p2="Akademia Platonos · Atina Bazı daireler hazır · ortak alanlar 05/2027 — güncel fiyatlar, &lt;b&gt;müsait daire listesi&lt;/b&gt;, planlar, bölge ve proje raporu; çekincelerimiz saklanmadan." defer></script>
+<script src="https://hub.avlarealestate.com/iz.js" data-sayfa="mulk-a0121" data-genel="1" data-arsiv="blob" data-kapak="parsomen" data-eyebrow="Avla Özel Seçki" data-baslik="The Hera Athens" data-foto="img/kapak.jpg" data-logo="img/avla-kare-lacivert-altin-buyuk-8-1080.png" data-kredi="Akademia Platonos · Görsel: proje tanıtım çalışması" data-lang="tr" data-p2="Akademia Platonos · Atina Bazı daireler hazır · ortak alanlar 05/2027 — güncel fiyatlar, &lt;b&gt;müsait daire listesi&lt;/b&gt;, planlar, bölge raporu; çekincelerimiz saklanmadan." defer></script>
 <script>
 
 </script>
@@ -1875,7 +1955,7 @@ function dKapat(b){var d=b.closest('details');if(!d)return;var once=d.getBoundin
     </a>
   </div>
 </section>
-<!--SATIS:W1:guv--><details class="ayr-band"><summary><span class="eyebrow">Güvence ve Golden Visa 2026</span>Paranız çift imzalı hesapta — adım adım nasıl korunur, 2026 kuralları<i>+</i></summary><!--/SATIS:W1:guv--><section class="sec sec-ink" id="guvence">
+<!--SATIS:W1:guv--><details class="ayr-band"><summary style="--bant-foto:url('img/c-platon-2.jpg')"><span class="eyebrow">Güvence ve Golden Visa 2026</span>Paranız çift imzalı hesapta — adım adım nasıl korunur, 2026 kuralları<i>+</i></summary><!--/SATIS:W1:guv--><section class="sec sec-ink" id="guvence">
   <div class="wrap">
     <div class="shead">
       <div class="k">Finansal koruma kalkanı</div>
@@ -1957,7 +2037,7 @@ function dKapat(b){var d=b.closest('details');if(!d)return;var once=d.getBoundin
         
         
         <a class="kv kv-a" href="tel:+905322822657"><span>Telefon</span><div>+90 532 282 26 57</div></a>
-        <a class="kv kv-a" href="mailto:realestate@avla.com.tr"><span>E-posta</span><div>realestate@avla.com.tr</div></a>
+        <a class="kv kv-a" href="mailto:realestate@avla.com.tr"><span>E-posta</span><div>realestate@avla.com.tr</div></a> <div class="fs-marka"><img src="https://gv.selection.avlarealestate.com/marka/avla-dikey-buyuk-8-altin-512w.png" alt="Avla" width="112" loading="lazy"><p class="fs-hik">Logomuzdaki kuş bir <b>dokumacı kuşu</b>. Yuvasını ilmek ilmek, sabırla ve sağlam örer. Kuş, “Avla” sözcüğüne, yani yuvasını kuracağı yere döner. Logonun her çizgisi tek kalemle ve aynı kalınlıkta çizildi: her ayrıntıda aynı özen. Sizin için yuvayı da aynı sabır ve özenle kuruyoruz.</p><a class="fs-git" href="https://www.avlarealestate.com/" target="_blank" rel="noopener">avlarealestate.com →</a></div>
       </div>
       <div class="fmain">
         <form id="kf" novalidate>
@@ -2017,15 +2097,32 @@ function dKapat(b){var d=b.closest('details');if(!d)return;var once=d.getBoundin
   </div>
 </div>
 </section>
-<section class="sec" id="portfoy-harita">
+<div class="oc-dis"><!--one-cikan:bas--><style id="one-cikan-css">
+#one-cikan{padding:56px 0 18px}
+.oc-dis{max-width:1000px;margin:0 auto;padding:0 20px}
+@media(min-width:1048px){.oc-dis{padding:0}}
+#one-cikan .oc-sat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:22px}
+@media(max-width:1100px){#one-cikan .oc-sat{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){#one-cikan .oc-sat{grid-template-columns:1fr}}
+.oc-k{display:flex;flex-direction:column;background:#fff;border:1px solid var(--cizgi,#e6dfd1);border-radius:0;overflow:hidden;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
+.oc-k:hover{border-color:#C9A961;transform:translateY(-2px)}
+.oc-img{display:block;aspect-ratio:4/3;background:#eef0f3 center/cover no-repeat}
+.oc-g{display:flex;flex-direction:column;gap:4px;padding:14px 16px 16px}
+.oc-ets{display:flex;flex-wrap:wrap;gap:6px;min-height:22px}
+.oc-et{display:inline-block;padding:3px 8px 2px;border-radius:0;border-left:3px solid #C9A961;background:#f6f1e7;color:#9c7f4e;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.oc-sif{border-left-color:#1A2E4A;color:#1A2E4A}
+.oc-tuk{border-left-color:#B23A3A;color:#B23A3A;background:#f1f1f1}
+.oc-ad{font-size:18px;font-weight:500;color:#1A2E4A;line-height:1.25;margin-top:4px}
+.oc-yer{font-size:13px;color:#7a7f87}
+.oc-fy{font-size:16px;font-weight:500;color:#1A2E4A;margin-top:6px}
+.oc-mus{font-size:13px;color:#5f646b}
+.oc-git{margin-top:8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#9c7f4e}
+</style><section class="satis" id="one-cikan"><div class="eyebrow">Portföyümüzden</div><h2>Öne çıkan projeler</h2><p class="on-alt">Golden Visa kapsamında öne çıkardığımız projeler; her kart projenin kendi sayfasını açar.</p><div class="oc-sat"><a class="oc-k" href="https://chalandri-court-residences-a0223.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://chalandri-court-residences-a0223.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span><span class="oc-et oc-sif">Sıfır bina</span></span><span class="oc-ad">Chalandri Court Residences</span><span class="oc-yer">Chalandri</span><span class="oc-fy">€267.000 – €400.000</span><span class="oc-mus">15 müsait daire</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://lykovrysi-north-residences.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://lykovrysi-north-residences.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span></span><span class="oc-ad">Lykovrysi North Residences</span><span class="oc-yer">Kifisia</span><span class="oc-fy">€270.000</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://lykovrysi-kifisia-residences-a0321.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://lykovrysi-kifisia-residences-a0321.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et oc-sif">Sıfır bina</span></span><span class="oc-ad">Kifisia Suites</span><span class="oc-yer">Kifisia</span><span class="oc-fy">€380.000</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://kato-elliniko-riviera-suites-a0220.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://kato-elliniko-riviera-suites-a0220.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span></span><span class="oc-ad">Kato Elliniko Riviera Suites</span><span class="oc-yer">Elliniko</span><span class="oc-fy">€300.000 – €380.000</span><span class="oc-mus">15 müsait daire</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://kallithea-garden-residences-a0222.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://kallithea-garden-residences-a0222.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span><span class="oc-et oc-sif">Sıfır bina</span></span><span class="oc-ad">Kallithea Garden Residences</span><span class="oc-yer">Kallithea</span><span class="oc-fy">€282.000</span><span class="oc-mus">2 müsait daire</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://kallithea-south-residences-a0166.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://kallithea-south-residences-a0166.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span><span class="oc-et oc-sif">Sıfır bina</span></span><span class="oc-ad">Kallithea South Residences</span><span class="oc-yer">Kallithea</span><span class="oc-fy">€356.000 – €358.000</span><span class="oc-mus">Müsait daire teyitte</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://south-moschato-residences-a0145.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://south-moschato-residences-a0145.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et oc-tuk">Tükendi</span></span><span class="oc-ad">South Moschato Residences</span><span class="oc-yer">Moschato</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://monastiraki-residences-a0233.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://monastiraki-residences-a0233.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span></span><span class="oc-ad">Monastiraki Residences</span><span class="oc-yer">Psyrri</span><span class="oc-fy">€275.000 – €295.000</span><span class="oc-mus">3 müsait daire</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://south-glyfada-a0161.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://south-glyfada-a0161.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span><span class="oc-et oc-sif">Sıfır bina</span></span><span class="oc-ad">South Glyfada Residences</span><span class="oc-yer">Glyfada</span><span class="oc-fy">€261.000 – €316.000</span><span class="oc-mus">33 müsait daire</span><span class="oc-git">Sayfayı aç →</span></span></a></div></section><!--one-cikan:son--></div><section class="sec" id="portfoy-harita">
   <div class="wrap">
     <div class="shead">
       <div class="k">Portföy haritası</div>
       <h2>Atina'nın <em>neresinde</em> ne var?</h2>
       <p>Haritadaki ilanlar portföyümüzün güncel hâlidir; liste ilan sitemizle her gün iki kez eşitlenir. Fiyat, bölge, ilçe ve hazır filtrelerle daraltabilir, her ilanın fotoğraflarını ve künyesini açabilirsiniz.</p>
-    </div>
-    <div class="hbox">
-      <div class="mfs"><iframe src="https://19-eylul.avlarealestate.com/harita.html?gomulu=2&geri=https%3A%2F%2Fthe-hera-athens-a0121.avlarealestate.com%2F&geriad=Se%C3%A7kiye%20d%C3%B6n" title="Avla portföy haritası" loading="lazy"></iframe><button class="mfs-dug" type="button"></button></div>
     </div>
     <div class="hnot">
       <p><b>Çemberler semt gösterir, bina değil.</b> Mülklerin nokta adresini yayımlamıyoruz; konumu semt çemberiyle veriyoruz. Daire bazlı liste ve tam konum, görüşmede dosyanızla birlikte açılır.</p>
@@ -2057,11 +2154,8 @@ function dKapat(b){var d=b.closest('details');if(!d)return;var once=d.getBoundin
       <div>
         <h4>Sayfalar</h4>
         <ul>
-          <li><a href="#giris">Seçki notu</a></li>
           <li><a href="#harita">Seçki haritası</a></li>
-          <li><a href="#karsilastirma">Karşılaştırma</a></li>
           <li><a href="#a0121">Mülkler</a></li>
-          <li><a href="#ozet">Özet</a></li>
           <li><a href="#protokol">Dijital Yer Gösterme Protokolü</a></li>
           <li><a href="#guvence">Ödeme güvencesi</a></li>
           <li><a href="#kayit" class="vurgu">Kayıt olun</a></li>
@@ -2198,6 +2292,85 @@ function dKapat(b){var d=b.closest('details');if(!d)return;var once=d.getBoundin
     document.getElementById('lb').classList.add('on');document.body.style.overflow='hidden';};
 })();
 </script><!--SATIS:S:js--><script id="yuzen-ath-yok-js">window.addEventListener('load',function(){setTimeout(function(){if(!document.getElementById('athena-host'))document.documentElement.classList.add('ath-yok')},300)});</script>
+<script id="tekil-v2-js">
+/* Tekil sayfa v2 (K-2026-10-23-01) — tek konum haritası (Google Maps, semt çemberi, pin yok) + liste düğmesi */
+(function(){
+  var el = document.getElementById('konum-harita'); if (!el) return;
+  var b = {ad: el.dataset.ad, semt: el.dataset.semt, lat: +el.dataset.lat, lng: +el.dataset.lng, r: +el.dataset.r, renk: el.dataset.renk};
+  var STIL = [
+    {featureType:'poi.business', stylers:[{visibility:'off'}]},
+    {featureType:'transit', elementType:'labels.icon', stylers:[{visibility:'off'}]},
+    {featureType:'water', elementType:'geometry', stylers:[{color:'#cfd9e0'}]},
+    {featureType:'landscape', elementType:'geometry', stylers:[{color:'#f4f1ea'}]},
+    {elementType:'geometry', stylers:[{saturation:-55},{lightness:18}]},
+    {elementType:'labels.text.fill', stylers:[{color:'#8a8f98'}]},
+    {featureType:'road.highway', elementType:'labels.icon', stylers:[{saturation:-100}]}
+  ];
+  function yukle(cb){
+    if (window.google && google.maps && google.maps.Circle) { cb(); return; }
+    window.__knAcildi = function(){ cb(); };
+    var s = document.createElement('script');
+    s.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCy1l7hG5Q95QbCZkFN2_yV41hnjIWqLB4&language=tr&region=GR&loading=async&callback=__knAcildi';
+    s.async = true; document.head.appendChild(s);
+  }
+  /* çember balonu → mülk künyesi (Sami 21.10.2026: "haritada tıklayınca çıkan bilgi mülkün bilgisine geri dönmeli") */
+  window.konumGit = function(){
+    var git = function(){ var k = document.getElementById('kunye'); if (k) k.scrollIntoView({behavior:'smooth', block:'start'}); try { history.replaceState(null, '', '#kunye'); } catch(e){} };
+    if (document.fullscreenElement && document.exitFullscreen) { document.exitFullscreen().then(function(){ setTimeout(git, 200); }).catch(git); } else git();
+    return false;
+  };
+  function kur(){
+    yukle(function(){
+      var m = new google.maps.Map(el, {
+        center: {lat: b.lat, lng: b.lng}, zoom: 14, mapTypeId: 'roadmap', styles: STIL,
+        fullscreenControl: true, zoomControl: true, streetViewControl: false,
+        mapTypeControl: false, scrollwheel: false, gestureHandling: 'cooperative'
+      });
+      var c = new google.maps.Circle({map: m, center: {lat: b.lat, lng: b.lng}, radius: b.r,
+        strokeColor: b.renk, strokeOpacity: 1, strokeWeight: 3, fillColor: b.renk, fillOpacity: .25, clickable: true, zIndex: 10});
+      var iw = new google.maps.InfoWindow({
+        content: '<div style="font:500 13px Jost,sans-serif;color:#142A42;padding:2px 4px;line-height:1.5">' + b.ad
+          + '<br><span style="font-weight:400;color:#5a6472">' + b.semt + '</span>'
+          + '<br><span style="font-weight:400;font-size:11.5px;color:#8a929e">Konum semt düzeyinde gösterilmektedir.</span>'
+          + '<br><a href="#kunye" onclick="return konumGit()" style="display:inline-block;margin-top:7px;font-weight:400;font-size:12.5px;color:#142A42;text-decoration:underline;text-decoration-color:#D2BE99;text-underline-offset:3px">Mülk künyesine git ↑</a></div>'
+      });
+      c.addListener('click', function(e){ iw.setPosition(e.latLng || c.getCenter()); iw.open(m); });
+    });
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(g){ if (g[0].isIntersecting) { io.disconnect(); kur(); } }, {rootMargin: '600px 0px'});
+    io.observe(el);
+  } else kur();
+})();
+if (typeof window.fDaha !== 'function') {
+  window.fDaha = function(b){ var k = b.previousElementSibling; k.classList.toggle('acik'); b.textContent = k.classList.contains('acik') ? b.dataset.az : b.dataset.cok; };
+}
+
+/* Denetim 23.10: liste daraltılınca (1) tip süzgeci açıksa Tümü'ye dön — yoksa tablo boş kalıyordu, (2) tablo görünür alana geri gelsin */
+(function(){
+  var eski = window.fDaha; if (typeof eski !== 'function') return;
+  window.fDaha = function(b){
+    eski(b);
+    var k = b.previousElementSibling; if (!k || k.classList.contains('acik')) return;
+    var on = document.querySelector('#fiyatlar .chip.on');
+    if (on && on.textContent.trim() !== 'Tümü') {
+      var t = [].slice.call(document.querySelectorAll('#fiyatlar .chip')).filter(function(c){ return c.textContent.trim() === 'Tümü'; })[0];
+      if (t) t.click();
+    }
+    var f = document.getElementById('fiyatlar');
+    if (f && f.getBoundingClientRect().top < 0) f.scrollIntoView({block: 'start'});
+  };
+})();
+/* tip süzgeci (1+1 / 2+1) seçilince uzun liste kendiliğinden açılır */
+if (typeof window.chip === 'function') {
+  window.chip = function(b, t){
+    document.querySelectorAll('.chip').forEach(function(c){ c.classList.remove('on'); }); b.classList.add('on');
+    document.querySelectorAll('#ftab tbody tr').forEach(function(r){ r.style.display = (t === '*' || r.getAttribute('data-t') === t) ? '' : 'none'; });
+    var tb = document.querySelector('#fiyatlar .tbl'), d = tb && tb.nextElementSibling;
+    if (t !== '*' && tb && !tb.classList.contains('acik') && d && d.classList.contains('fdaha')) window.fDaha(d);
+  };
+}
+</script>
 <style id="tasarim-v3">/* Tasarım dili v3 · 24.10.2026 (K-2026-10-24-01/02; örnek palet-a-dik.html) — yalnız renk ve biçim.
    Çerçeveli düğme hover'ı: kırmızı zemin + beyaz yazı. Dolu kırmızı düğme hover'ı: koyu kırmızı. Düğmede ikinci renk yok. */
 /* Kenar 1 px: koyu zeminde altın #D2BE99, açık zeminde lacivert #142A42; düğme yazısı tek renk */
