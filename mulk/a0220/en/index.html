@@ -1189,6 +1189,122 @@ details.rapor[open]>summary{background:#fff}
 .ath-yok .wa-fab{bottom:20px}
 .ath-yok #scroll-top{bottom:84px}
 </style>
+<meta name="avla-tekil" content="v2">
+<style id="tekil-v2">
+/* Tekil sayfa v2 düzeni (K-2026-10-23-01) — Sami 23–24.10.2026: tek konum, künye hep açık, önerilen daireler, uzun liste açılır */
+.anc{display:block;position:relative;top:-70px;visibility:hidden}
+section.satis{scroll-margin-top:60px}
+/* önerilen daireler */
+.on-alt{font-size:15px;color:var(--mut);margin-top:6px;max-width:700px}
+.on3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px}
+.onk{display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid var(--cizgi);border-radius:0;padding:20px 20px 18px;box-shadow:0 3px 18px rgba(26,46,74,.06)}
+.onk .et{align-self:flex-start;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);background:var(--cream);border:1px solid var(--cizgi);border-radius:0;padding:4px 11px;font-weight:500}
+.onk .dno{margin-top:14px;font-size:20px;color:var(--navy);line-height:1.25;font-weight:400}
+.onk .dmeta{font-size:14px;color:var(--mut);margin-top:2px}
+.onk .fy{font-size:34px;line-height:1.1;color:var(--navy);margin-top:14px;letter-spacing:-.01em;font-weight:400}
+.onk .fm2{font-size:13px;color:var(--mut);margin-top:5px}
+.onk .ozl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:14px;padding:12px 0;border-top:1px solid #efe8da;border-bottom:1px solid #efe8da}
+.onk .ozl div{display:flex;flex-direction:column;gap:2px;min-width:0}
+.onk .ozl span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.onk .ozl i{font-size:15px;color:var(--ink);font-style:normal;white-space:nowrap}
+.onk .neden{font-size:14px;color:var(--ink);margin-top:12px;line-height:1.5;flex:1}
+.onk .dg{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.onk .dg button,.onk .dg a{display:inline-flex;align-items:center;justify-content:center;border-radius:0;padding:9px 16px;font-size:13.5px;line-height:1.2;text-decoration:none;cursor:pointer;font-weight:500}
+.onk .dg .pl{background:none;border:1px solid var(--civit);color:var(--civit)}
+.onk .dg .wa{background:transparent;color:#142A42;border:1px solid #142A42}
+/* Sami 24.10 palet A (palet-a-dik.html): yalnız Avla kartındaki "Bu daireyi sorun" dolu kırmızı; diğerleri çerçeveli lacivert, hover kırmızı */
+.onk-avla .dg .wa{background:var(--cta);color:#fff;border-color:var(--cta)}.onk .dg .wa:hover{background:var(--ctah);border-color:var(--ctah)}
+.on-tum{display:inline-block;margin-top:14px;color:var(--civit);font-size:14.5px;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)}
+/* künye: her zaman açık */
+.k-giris{font-size:16px;line-height:1.65;color:var(--ink);max-width:820px;margin-top:10px}
+.k-bag{margin-top:12px}
+.k-bag a{color:var(--navy);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)}
+.kx dd .kucuk{font-size:12.5px;color:var(--mut)}
+/* konum: tek harita + mesafeler */
+.kn-ust{font-size:14.5px;color:var(--mut);margin-top:6px;max-width:780px}
+.kn{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:18px;margin-top:16px;align-items:stretch}
+#konum-harita{width:100%;min-height:420px;height:100%;border-radius:0;border:1px solid var(--cizgi);background:#eef0f3;box-shadow:0 3px 18px rgba(26,46,74,.08);overflow:hidden}
+.kn .kx{grid-template-columns:1fr;margin-top:0;align-content:start}
+.kn .kx>div:last-child{border-bottom:0}
+#konum .kkart{margin-top:14px}
+/* fiyat listesi: açık blok, uzun liste düğmeyle */
+.fyt{margin-top:16px;background:#fff;border:1px solid var(--cizgi);border-radius:0}
+.fyt>.rbody{border-top:0;padding:6px 22px 22px}
+.tbl .fgiz{display:none}.tbl.acik .fgiz{display:table-row}
+.fdaha{display:block;width:100%;border:none;border-top:1px solid var(--cizgi);background:#FBF9F4;font-size:13.5px;color:var(--navy);padding:13px;cursor:pointer;border-radius:0;margin-top:-4px;font-weight:500}
+.fdaha:hover{background:#F4EFE3}
+tr.one td{background:#FBF4E4}
+.dur-o{background:#efe3c8;color:#7a5f2f}
+#fiyatlar{scroll-margin-top:64px}
+@media(max-width:900px){.on3{grid-template-columns:1fr}.kn{grid-template-columns:1fr}#konum-harita{height:320px;min-height:0}}
+@media(max-width:640px){#fiyatlar table{min-width:0}#fiyatlar th,#fiyatlar td{padding:9px 6px}#fiyatlar .dur{display:table;margin:3px 0 0;padding:0 6px;font-size:10px}#fiyatlar .pbtn{padding:5px 9px}.onk{padding:18px 16px 16px}.onk .fy{font-size:30px}.fyt>.rbody{padding:4px 12px 16px}.k-giris{font-size:15px}}
+
+/* Hizalama (Sami 23.10): alt bantlar sayfanın 1000 px içerik kolonuna hizalanır */
+@media (min-width:1048px){
+  #kayit>.wrap,#portfoy-harita>.wrap,#guvence>.wrap,section.sec-ink>.wrap{max-width:1000px;margin-left:auto;margin-right:auto;padding-left:0;padding-right:0}
+  #kayit .kacc-bar{padding-left:0;padding-right:0;border:0;background:transparent}
+}
+/* Hizalama mobil (Sami 23.10) */
+#kayit .kacc-bar{padding-left:0;padding-right:0;border:0;background:transparent}
+@media (max-width:1047px){#kayit>.wrap,#portfoy-harita>.wrap{padding-left:20px;padding-right:20px}}
+.on3.on4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:1100px){.on3.on4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.on3.on4{grid-template-columns:1fr}}
+.onk-avla{border-color:var(--gold,#C9A961)}
+.onk-avla .et{background:#1A2E4A;color:#E8D9AF}
+/* Avla rezervi + satıldı kırmızı (Sami 23.10) */
+.dur-avla{background:#1A2E4A;color:#E8D9AF}
+tr.dr-avla td,tr.dr-avla td.f{color:#1A2E4A}
+tr.dr-s{background:#f1f1f1}
+tr.dr-s td,tr.dr-s td.f{color:#B23A3A}
+.dur-s{background:#ebebeb;color:#B23A3A}
+
+/* Tasarım dili v2.1 (Sami 23.10): yuvarlak elips yok — keskin, ayrışık etiket ve düğmeler */
+.et,.dur,.yt-et,.sx-tum,.dkapat,.pl,.wa,.h1c,.h2c,.c1,.c2,.scta,.b1,.b2,.avz-btn,.btn,.btn-o{border-radius:0!important}
+.onk,.kx,.fyt,.card,.gv,.adim,.pk,.kt,details.rapor,summary,.tkos,.tbl,figure,.c-mus,.c-fiy,.c-tes,.c-kir,.c-gv,.c-en,#oneri li,#sunum li,.yt.yt-dikey{border-radius:0!important}
+.onk .et{display:inline-block;align-self:flex-start;white-space:nowrap;padding:5px 10px 4px;border:0;border-left:3px solid #C9A961;letter-spacing:.14em}
+.onk-avla .et{background:#f3ece0!important;color:#1A2E4A!important;border-left-color:#1A2E4A}
+.dur{border-left:2px solid currentColor;padding:1px 7px}
+.onk-avla{border-color:#d9c9a3}
+/* Durum etiketleri aynı hizada (Sami 24.10) */
+#fiyatlar td .dad{display:inline-block;min-width:4.6em}
+@media(max-width:640px){#fiyatlar td .dad{min-width:0}}
+
+/* Önerilenler fiyat listesinden sonra (Sami 24.10) */
+#oneri.oneri-sonra{padding-top:28px}
+.onk-avla{box-shadow:0 3px 18px rgba(201,169,97,.18)}
+/* GV bölümü ayrı, Ayrıntı = yalnız protokol (Sami 24.10) */
+.gv-dis{max-width:1000px;margin:0 auto;padding:36px 20px 8px}
+@media(min-width:1048px){.gv-dis{padding:36px 0 8px}}
+/* listesi gelmemiş projede fiyat bloğu (v2) */
+.fyt-cta{margin:16px 0 4px}
+.fyt-yok{font-size:15px;color:var(--ink);margin:14px 0 0;line-height:1.6}
+/* Açılır bantlar: siyah-beyaz fotoğraflı, %50 daha yüksek (Sami 24.10) */
+details.rapor>summary,details.ayr-grup>summary,details.ayr-band>summary{position:relative;isolation:isolate;overflow:hidden;min-height:104px;display:flex!important;align-items:center;gap:6px 16px;flex-wrap:wrap;padding:26px 72px 26px 30px!important;background:#142A42!important;color:#fff!important;border-radius:0!important;border:0!important;cursor:pointer;list-style:none}
+details.rapor>summary::-webkit-details-marker,details.ayr-grup>summary::-webkit-details-marker,details.ayr-band>summary::-webkit-details-marker{display:none}
+details.rapor>summary::before,details.ayr-grup>summary::before,details.ayr-band>summary::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--bant-foto) center/cover no-repeat;filter:grayscale(1) contrast(1.08) brightness(.95);transform:scale(1.02);transition:transform .5s}
+details.rapor>summary::after,details.ayr-grup>summary::after,details.ayr-band>summary::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(12,22,36,.88) 0%,rgba(12,22,36,.70) 45%,rgba(12,22,36,.30) 100%)}
+details.rapor>summary:hover::before,details.ayr-grup>summary:hover::before,details.ayr-band>summary:hover::before{transform:scale(1.06)}
+details.rapor>summary,details.rapor>summary *,details.ayr-grup>summary *,details.ayr-band>summary *{color:#fff!important}
+details.rapor>summary{font-size:21px;font-weight:500;letter-spacing:.01em}
+details.ayr-grup>summary .ag-t{font-size:21px;font-weight:500}
+details.ayr-grup>summary .ag-a,details.ayr-band>summary .eyebrow{color:#E8D9AF!important;font-size:14px;font-weight:400}
+details.ayr-band>summary .eyebrow{display:block;width:100%;letter-spacing:.18em;font-size:11px;text-transform:uppercase}
+details.rapor>summary::marker{content:""}
+details.rapor>summary .bant-arti,details.ayr-grup>summary i,details.ayr-band>summary i{position:absolute;right:26px;top:50%;transform:translateY(-50%);font-style:normal;font-size:28px;line-height:1;color:#C9A961!important}
+@media(max-width:640px){details.rapor>summary,details.ayr-grup>summary,details.ayr-band>summary{min-height:96px;padding:20px 56px 20px 20px!important}details.rapor>summary,details.ayr-grup>summary .ag-t{font-size:18px}}
+/* Kayıt paneli: logo + dokumacı kuşu hikâyesi + ana sayfa bağı (Sami 24.10) */
+.fs-marka{margin-top:auto;padding-top:30px;border-top:1px solid rgba(210,190,153,.28)}
+.fs-marka img{display:block;width:112px;height:auto;margin:0 0 18px}
+.fs-hik{color:rgba(246,241,231,.82)!important;font-size:14.5px;line-height:1.65;margin:0 0 14px}
+.fs-hik b{color:#D2BE99;font-weight:500}
+.fs-git{display:inline-block;color:#D2BE99!important;font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(210,190,153,.5);padding-bottom:3px}
+.fs-git:hover{color:#fff!important;border-color:#fff}
+.fs-marka.fs-yatay{display:flex;gap:22px;align-items:center;margin-top:28px;padding:20px 22px;background:#142A42;border:0;border-radius:0}
+.fs-marka.fs-yatay img{flex:0 0 auto;width:96px;margin:0}
+.fs-marka.fs-yatay .fs-hik{font-size:13.5px;margin:0 0 8px}
+@media(max-width:560px){.fs-marka.fs-yatay{flex-direction:column;text-align:center}}
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4JQ2XVT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -1211,39 +1327,22 @@ details.rapor[open]>summary{background:#fff}
   <div class="snav-in"><!--SATIS:B:nav-->
     <a href="#sunum">Highlights</a>
     <a href="#gorseller">Gallery</a>
-    <a href="#kunye">Key facts</a>
-    <a href="#fiyatlar">Prices</a>
-    <a href="#harita">Map</a>
-    <a href="#ayrinti">Details</a>
+    <a href="#kunye">Fact sheet</a>
+    <a href="#konum">Location</a>
+    <a href="#fiyatlar">Prices</a><a href="#oneri">Recommended</a>
+    <a href="#gv">Golden Visa</a>
+    <a href="#ayrinti">Protocol</a>
     <a href="#guvence">Security</a>
     <a class="scta" href="#kayit">Call</a><!--SATIS:S:nav-->
     <a class="scta lang" href="/" hreflang="tr" lang="tr" title="Türkçe sürüm"><span>TR</span><i>/</i><span class="on">EN</span></a>
   </div>
 </nav>
 <div class="wrap">
-<!--SATIS:B:bolumler--><section id="sunum" class="satis"><div class="sx-grid sx-yok"><div class="sx-gorsel"><img src="../img/a0220-2.webp" alt="Kato Elliniko Riviera Suites" loading="lazy" decoding="async"></div><div class="sx-metin"><div class="eyebrow">Highlights</div><h2>Why this home?</h2><ul class="sx-neden"><li>3 minutes to Riviera beaches</li><li>5-minute drive to Glyfada centre</li><li>Metro Line 2 nearby</li><li>Fully furnished and equipped delivery</li><li>Open-plan living area with natural wood and stone finishes</li></ul><div class="sx-cta"><a class="c1" href="#fiyatlar">Price list</a><a class="c2" href="https://wa.me/905322822657?text=Hello%2C%20I%20have%20viewed%20the%20Kato%20Elliniko%20Riviera%20Suites%20page%20and%20would%20like%20more%20information." target="_blank" rel="noopener">Message us on WhatsApp</a></div></div></div></section><section id="gorseller" class="satis"><div class="eyebrow">Gallery</div><h2>The building and the homes</h2><div class="vitrin v5"><button type="button" class="vt" onclick="vitrinAc(0)" aria-label="Kato Elliniko Riviera Suites — Exterior — curved balconies and timber cladding"><img src="../img/a0220-1.webp" alt="Kato Elliniko Riviera Suites — Exterior — curved balconies and timber cladding" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(1)" aria-label="Kato Elliniko Riviera Suites — Exterior — corner perspective"><img src="../img/a0220-2.webp" alt="Kato Elliniko Riviera Suites — Exterior — corner perspective" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(2)" aria-label="Kato Elliniko Riviera Suites — Curved signature balconies — view from below"><img src="../img/a0220-3.webp" alt="Kato Elliniko Riviera Suites — Curved signature balconies — view from below" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(3)" aria-label="Kato Elliniko Riviera Suites — Terraces and pergola — façade detail"><img src="../img/a0220-4.webp" alt="Kato Elliniko Riviera Suites — Terraces and pergola — façade detail" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(4)" aria-label="Kato Elliniko Riviera Suites — Pool and landscaped garden, sun terrace"><img src="../img/a0220-5.webp" alt="Kato Elliniko Riviera Suites — Pool and landscaped garden, sun terrace" loading="lazy" decoding="async"><span class="vt-ust">+6</span></button></div><button type="button" class="sx-tum" onclick="vitrinAc(0)">Open all images (11)</button></section><section id="kunye" class="satis"><div class="eyebrow">Key facts</div><h2>At a glance</h2><dl class="kx"><div><dt>Building</dt><dd>Built 2004 · residential conversion</dd></div><div><dt>Parking</dt><dd><span class="ty">to be confirmed</span></dd></div><div><dt>Energy class</dt><dd><span class="ty">to be confirmed</span></dd></div><div><dt>Schools</dt><dd>Ekpaidevtiria Koutsomali &quot;Anagennisi&quot; (private) 500 m · Ekpaidevtiria &quot;Paschali&quot; (private) 600 m · school (public) 150 m</dd></div><div><dt>Shopping</dt><dd>Athens Metro Mall mall 3.6 km · supermarket 450 m</dd></div><div><dt>Transport</dt><dd>Metro Argyroupoli 450 m</dd></div><div><dt>Airport</dt><dd>Athens Airport ~35 min by car</dd></div></dl><p class="sx-not">Distances are straight-line from the neighbourhood centre (OpenStreetMap); airport time is a no-traffic driving estimate. All details are confirmed in writing before an offer.</p></section><!--SATIS:S:bolumler-->
+<!--SATIS:B:bolumler--><section id="sunum" class="satis"><div class="sx-grid sx-yok"><div class="sx-gorsel"><img src="../img/a0220-2.webp" alt="Kato Elliniko Riviera Suites" loading="lazy" decoding="async"></div><div class="sx-metin"><div class="eyebrow">Highlights</div><h2>Why this home?</h2><ul class="sx-neden"><li>3 minutes to Riviera beaches</li><li>5-minute drive to Glyfada centre</li><li>Metro Line 2 nearby</li><li>Fully furnished and equipped delivery</li><li>Open-plan living area with natural wood and stone finishes</li></ul><div class="sx-cta"><a class="c1" href="#fiyatlar">Price list</a><a class="c2" href="https://wa.me/905322822657?text=Hello%2C%20I%20have%20viewed%20the%20Kato%20Elliniko%20Riviera%20Suites%20page%20and%20would%20like%20more%20information." target="_blank" rel="noopener">Message us on WhatsApp</a></div></div></div></section><section id="gorseller" class="satis"><div class="eyebrow">Gallery</div><h2>The building and the homes</h2><div class="vitrin v5"><button type="button" class="vt" onclick="vitrinAc(0)" aria-label="Kato Elliniko Riviera Suites — Exterior — curved balconies and timber cladding"><img src="../img/a0220-1.webp" alt="Kato Elliniko Riviera Suites — Exterior — curved balconies and timber cladding" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(1)" aria-label="Kato Elliniko Riviera Suites — Exterior — corner perspective"><img src="../img/a0220-2.webp" alt="Kato Elliniko Riviera Suites — Exterior — corner perspective" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(2)" aria-label="Kato Elliniko Riviera Suites — Curved signature balconies — view from below"><img src="../img/a0220-3.webp" alt="Kato Elliniko Riviera Suites — Curved signature balconies — view from below" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(3)" aria-label="Kato Elliniko Riviera Suites — Terraces and pergola — façade detail"><img src="../img/a0220-4.webp" alt="Kato Elliniko Riviera Suites — Terraces and pergola — façade detail" loading="lazy" decoding="async"></button><button type="button" class="vt" onclick="vitrinAc(4)" aria-label="Kato Elliniko Riviera Suites — Pool and landscaped garden, sun terrace"><img src="../img/a0220-5.webp" alt="Kato Elliniko Riviera Suites — Pool and landscaped garden, sun terrace" loading="lazy" decoding="async"><span class="vt-ust">+6</span></button></div><button type="button" class="sx-tum" onclick="vitrinAc(0)">Open all images (11)</button><p class="sx-not">All images are computer-generated representations; fittings and façade details may differ in the finished building.</p></section><section id="kunye" class="satis"><div class="eyebrow">Fact sheet</div><h2>Fact sheet</h2><p class="k-giris">On the Athens Riviera, <b>right next to the Ellinikon regeneration project</b>, a 23-residence building with a pool and rooftop lounge. An existing building is being redeveloped from the ground up; the apartments are delivered <b>fully furnished and equipped</b> . The beaches are about 3 minutes away and central Glyfada about 5 minutes by car.</p><p class="k-giris">Of the 23 apartments, <b>15 are available</b>: fourteen 1-bed units (40.19 – 42.97 m², €300,000 – €319,000) and one 2-bed (G5, 63.52 m², €380,000). Four units are reserved (soft reservation) and four are sold. The building permit is in process; the handover period starts once the permit is issued.</p><dl class="kx"><div><dt>Availability</dt><dd><b>15 units</b> available · total 15 homes<br><span class="kucuk">Available by type: 9 × 1+1 · 5 × 1-bed · garden access · 1 × 2-bed · garden access</span></dd></div><div><dt>Price</dt><dd><b>€300,000 – €380,000</b></dd></div><div><dt>Area</dt><dd>40.19 – 63.52 m² net</dd></div><div><dt>Handover</dt><dd><span class='bel'>Building permit in process</span> — handover 18 months after the permit (+3 months)</dd></div><div><dt>Rental guarantee</dt><dd>None — optional 3-year property management programme (fee: 20% of rent)</dd></div><div><dt>Building</dt><dd>Built 2004 · residential conversion</dd></div><div><dt>Energy class</dt><dd><span class="ty">to be confirmed</span></dd></div><div><dt>Parking</dt><dd><span class="ty">to be confirmed</span></dd></div><div><dt>Specification</dt><dd>Fully furnished and equipped · pool · rooftop lounge · controlled entry · lift</dd></div><div><dt>Service fee</dt><dd>0%</dd></div><div><dt>Golden Visa</dt><dd>The €250,000 conversion route <b>depends on the permit being issued</b>; eligibility and the applicable threshold are confirmed <b>unit by unit</b>, through an independent Greek lawyer's review, <b>in writing</b> .</dd></div></dl><p class="k-bag kucuk" style="margin-top:14px;padding-top:12px;border-top:1px solid var(--cizgi)"><a style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)" target="_blank" rel="noopener" href="https://www.avlarealestate.com/properties/kato-elliniko-furnished-apartments-pool-rooftop-lounge-beside-ellinikon">Listing page</a> &nbsp;·&nbsp; <a style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)" target="_blank" rel="noopener" href="https://www.avlarealestate.com/en/post/athens-riviera-golden-visa-region-report">Area report</a> &nbsp;·&nbsp; <a style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)" target="_blank" rel="noopener" href="../fiz/a0220-fizibilite.pdf">Investment feasibility</a></p></section><section id="konum" class="satis"><span id="harita" class="anc"></span><div class="eyebrow">Location</div><h2>Kato Elliniko · Athens Riviera</h2><p class="kn-ust">The location is <b>shown as a district-level circle</b> ; the exact address is shared once the Digital Viewing Protocol is signed.</p><div class="kn"><div id="konum-harita" role="region" aria-label="Kato Elliniko · Athens Riviera — semt haritası" data-ad="Kato Elliniko Riviera Suites" data-semt="Kato Elliniko · Athens Riviera" data-lat="37.907" data-lng="23.745" data-r="300" data-renk="#5a7a8a"></div><dl class="kx"><div><dt>Schools</dt><dd>Ekpaidevtiria Koutsomali &quot;Anagennisi&quot; (private) 500 m · Ekpaidevtiria &quot;Paschali&quot; (private) 600 m · school (public) 150 m</dd></div><div><dt>Shopping</dt><dd>Athens Metro Mall mall 3.6 km · supermarket 450 m</dd></div><div><dt>Transport</dt><dd>Metro Argyroupoli 450 m</dd></div><div><dt>Airport</dt><dd>Athens Airport ~35 min by car</dd></div></dl></div><p class="sx-not">Distances are straight-line from the neighbourhood centre (OpenStreetMap); airport time is a no-traffic driving estimate. All details are confirmed in writing before an offer.</p></section><!--SATIS:S:bolumler-->
 <section id="a0220">
-  <div class="eyebrow">Project 1 · Kato Elliniko · Athens Riviera</div>
-  <h2><span class="pno" style="color:#5a7a8a">1</span>Kato Elliniko Riviera Suites</h2>
-  <!--SATIS:W1:proje--><details class="ayr"><summary>Project details · full fact sheet and all images (11)<i>+</i></summary>
-  <!--/SATIS:W1:proje--><div class="card">
-    <p>On the Athens Riviera, <b>right next to the Ellinikon regeneration project</b>, a 23-residence building with a pool and rooftop lounge. An existing building is being redeveloped from the ground up; the apartments are delivered <b>fully furnished and equipped</b> . The beaches are about 3 minutes away and central Glyfada about 5 minutes by car.</p>
-    <p>Of the 23 apartments, <b>15 are available</b>: fourteen 1-bed units (40.19 – 42.97 m², €300,000 – €319,000) and one 2-bed (G5, 63.52 m², €380,000). Four units are reserved (soft reservation) and four are sold. The building permit is in process; the handover period starts once the permit is issued.</p>
-    <p class="kucuk" style="margin-top:14px;padding-top:12px;border-top:1px solid var(--cizgi)"><a style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)" target="_blank" rel="noopener" href="https://www.avlarealestate.com/properties/kato-elliniko-furnished-apartments-pool-rooftop-lounge-beside-ellinikon">Listing page</a> &nbsp;·&nbsp; <a style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)" target="_blank" rel="noopener" href="https://www.avlarealestate.com/en/post/athens-riviera-golden-visa-region-report">Area report</a> &nbsp;·&nbsp; <a style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)" target="_blank" rel="noopener" href="../fiz/a0220-fizibilite.pdf">Investment feasibility</a></p>
-  </div>
-  <div class="tkos"><div class="tb">Key facts</div>
-    <dl>
-      <dt>Availability</dt><dd><b>15 units</b> available (23 units) · 4 reserved (soft reservation) · 4 sold</dd>
-      <dt>Area</dt><dd>40.19 – 63.52 m² net</dd>
-      <dt>Price</dt><dd><b>€300,000 – €380,000</b></dd>
-      <dt>Rental guarantee</dt><dd>None — optional 3-year property management programme (fee: 20% of rent)</dd>
-      <dt>Handover</dt><dd><span class='bel'>Building permit in process</span> — handover 18 months after the permit (+3 months)</dd>
-      <dt>Specification</dt><dd>Fully furnished and equipped · pool · rooftop lounge · controlled entry · lift</dd>
-      <dt>Service fee</dt><dd><span class='var'>0%</span></dd>
-      <dt>Golden Visa</dt><dd>The €250,000 conversion route <b>depends on the permit being issued</b>; eligibility and the applicable threshold are confirmed <b>unit by unit</b>, through an independent Greek lawyer's review, <b>in writing</b> .</dd>
-    </dl>
-  </div>
-  <div class="gal">
+  <span id="daire" class="anc"></span><div class="eyebrow">Price list · Kato Elliniko Riviera Suites</div>
+  <h2>Prices and available units</h2>
+  <div hidden><div class="gal" data-satis-galeri>
     <img src="../img/a0220-1.webp" alt="Kato Elliniko Riviera Suites — Exterior — curved balconies and timber cladding" loading="lazy" onclick="ac('../img/a0220-1.webp','Kato Elliniko Riviera Suites — Exterior — curved balconies and timber cladding')">
     <img src="../img/a0220-2.webp" alt="Kato Elliniko Riviera Suites — Exterior — corner perspective" loading="lazy" onclick="ac('../img/a0220-2.webp','Kato Elliniko Riviera Suites — Exterior — corner perspective')">
     <img src="../img/a0220-3.webp" alt="Kato Elliniko Riviera Suites — Curved signature balconies — view from below" loading="lazy" onclick="ac('../img/a0220-3.webp','Kato Elliniko Riviera Suites — Curved signature balconies — view from below')">
@@ -1255,34 +1354,30 @@ details.rapor[open]>summary{background:#fff}
     <img src="../img/a0220-9.webp" alt="Kato Elliniko Riviera Suites — Bedroom" loading="lazy" onclick="ac('../img/a0220-9.webp','Kato Elliniko Riviera Suites — Bedroom')">
     <img src="../img/a0220-10.webp" alt="Kato Elliniko Riviera Suites — Bathroom — walk-in shower" loading="lazy" onclick="ac('../img/a0220-10.webp','Kato Elliniko Riviera Suites — Bathroom — walk-in shower')">
     <img src="../img/a0220-11.webp" alt="Kato Elliniko Riviera Suites — Interior details — kitchen, bedroom, stone worktop, bathroom" loading="lazy" onclick="ac('../img/a0220-11.webp','Kato Elliniko Riviera Suites — Interior details — kitchen, bedroom, stone worktop, bathroom')">
-  </div>
-  <div class="tblnot">All images are computer-generated representations; fittings and façade details may differ in the finished building.</div>
-  <!--SATIS:W2:proje--></details><!--/SATIS:W2:proje--><details class="rapor" id="fiyatlar" open data-satis-ac=""><summary>Prices and available units — 15 of 23</summary><div class="rbody">
-    <div class="pmap" id="pmap-a0220" data-lat="37.907" data-lng="23.745" data-r="250" data-renk="#5a7a8a"></div>
-    <div class="tblnot pmap-not">The location is <b>shown at district level</b>  — Kato Elliniko · Athens Riviera.</div>
+  </div></div><div class="fyt" id="fiyatlar"><div class="rbody">
     <div class="tbl"><table>
       <thead><tr><th>Unit</th><th>Floor</th><th>Type</th><th>Net m²</th><th>Balcony m²</th><th>Gross m²</th><th>Price</th><th>€ / m² net</th><th>€ / m² gross</th><th>Plan</th></tr></thead>
       <tbody>
       
-      <tr><td>G2</td><td>Ground</td><td>1-bed · garden access</td><td>40.32</td><td>5.78</td><td>46.10</td><td class="f">€300,000</td><td>€7,440</td><td>€6,508</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-zemin.webp','A0220 — G2 plan')">Plan</button></td></tr>
-      <tr><td>G3</td><td>Ground</td><td>1-bed · garden access</td><td>40.75</td><td>7.98</td><td>48.73</td><td class="f">€302,000</td><td>€7,411</td><td>€6,197</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-zemin.webp','A0220 — G3 plan')">Plan</button></td></tr>
-      <tr><td>G1</td><td>Ground</td><td>1-bed · garden access</td><td>41.09</td><td>8.54</td><td>49.63</td><td class="f">€304,000</td><td>€7,398</td><td>€6,125</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-zemin.webp','A0220 — G1 plan')">Plan</button></td></tr>
-      <tr><td>A9</td><td>1st floor</td><td>1+1</td><td>40.19</td><td>8.81</td><td>49.00</td><td class="f">€305,000</td><td>€7,589</td><td>€6,224</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-1.webp','A0220 — A9 plan')">Plan</button></td></tr>
-      <tr><td>G11</td><td>Ground</td><td>1-bed · garden access</td><td>41.40</td><td>13.46</td><td>54.86</td><td class="f">€305,000</td><td>€7,367</td><td>€5,560</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-zemin.webp','A0220 — G11 plan')">Plan</button></td></tr>
-      <tr><td>A5</td><td>1st floor</td><td>1+1</td><td>40.40</td><td>7.10</td><td>47.50</td><td class="f">€306,000</td><td>€7,574</td><td>€6,442</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-1.webp','A0220 — A5 plan')">Plan</button></td></tr>
-      <tr class="fgiz"><td>A8</td><td>1st floor</td><td>1+1</td><td>40.42</td><td>6.39</td><td>46.81</td><td class="f">€306,000</td><td>€7,571</td><td>€6,537</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-1.webp','A0220 — A8 plan')">Plan</button></td></tr>
-      <tr class="fgiz"><td>A1</td><td>1st floor</td><td>1+1</td><td>41.20</td><td>6.27</td><td>47.47</td><td class="f">€309,000</td><td>€7,500</td><td>€6,509</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-1.webp','A0220 — A1 plan')">Plan</button></td></tr>
-      <tr class="fgiz"><td>G4</td><td>Ground</td><td>1-bed · garden access</td><td>42.13</td><td>12.82</td><td>54.95</td><td class="f">€309,000</td><td>€7,334</td><td>€5,623</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-zemin.webp','A0220 — G4 plan')">Plan</button></td></tr>
-      <tr class="fgiz"><td>A3</td><td>1st floor</td><td>1+1</td><td>41.38</td><td>7.35</td><td>48.73</td><td class="f">€310,000</td><td>€7,492</td><td>€6,362</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-1.webp','A0220 — A3 plan')">Plan</button></td></tr>
-      <tr class="fgiz"><td>A2</td><td>1st floor</td><td>1+1</td><td>41.53</td><td>6.62</td><td>48.15</td><td class="f">€311,000</td><td>€7,489</td><td>€6,459</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-1.webp','A0220 — A2 plan')">Plan</button></td></tr>
-      <tr class="fgiz"><td>A4</td><td>1st floor</td><td>1+1</td><td>41.90</td><td>4.25</td><td>46.15</td><td class="f">€313,000</td><td>€7,470</td><td>€6,782</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-1.webp','A0220 — A4 plan')">Plan</button></td></tr>
-      <tr class="fgiz"><td>A10</td><td>1st floor</td><td>1+1</td><td>41.95</td><td>8.10</td><td>50.05</td><td class="f">€313,000</td><td>€7,461</td><td>€6,254</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-1.webp','A0220 — A10 plan')">Plan</button></td></tr>
-      <tr class="fgiz"><td>A6</td><td>1st floor</td><td>1+1</td><td>42.97</td><td>7.54</td><td>50.51</td><td class="f">€319,000</td><td>€7,424</td><td>€6,316</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-1.webp','A0220 — A6 plan')">Plan</button></td></tr>
-      <tr class="fgiz"><td>G5</td><td>Ground</td><td>2-bed · garden access</td><td>63.52</td><td>7.85</td><td>71.37</td><td class="f">€380,000</td><td>€5,982</td><td>€5,324</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-zemin.webp','A0220 — G5 plan')">Plan</button></td></tr>
+      <tr class="one"><td><span class="dad">G2</span> <span class="dur dur-o">Our pick</span></td><td>Ground</td><td>1-bed · garden access</td><td>40.32</td><td>5.78</td><td>46.10</td><td class="f">€300,000</td><td>€7,440</td><td>€6,508</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-zemin.webp','A0220 — G2 plan')">Plan</button></td></tr>
+      <tr><td><span class="dad">G3</span></td><td>Ground</td><td>1-bed · garden access</td><td>40.75</td><td>7.98</td><td>48.73</td><td class="f">€302,000</td><td>€7,411</td><td>€6,197</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-zemin.webp','A0220 — G3 plan')">Plan</button></td></tr>
+      <tr><td><span class="dad">G1</span></td><td>Ground</td><td>1-bed · garden access</td><td>41.09</td><td>8.54</td><td>49.63</td><td class="f">€304,000</td><td>€7,398</td><td>€6,125</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-zemin.webp','A0220 — G1 plan')">Plan</button></td></tr>
+      <tr><td><span class="dad">A9</span></td><td>1st floor</td><td>1+1</td><td>40.19</td><td>8.81</td><td>49.00</td><td class="f">€305,000</td><td>€7,589</td><td>€6,224</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-1.webp','A0220 — A9 plan')">Plan</button></td></tr>
+      <tr class="one"><td><span class="dad">G11</span> <span class="dur dur-o">Our pick</span></td><td>Ground</td><td>1-bed · garden access</td><td>41.40</td><td>13.46</td><td>54.86</td><td class="f">€305,000</td><td>€7,367</td><td>€5,560</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-zemin.webp','A0220 — G11 plan')">Plan</button></td></tr>
+      <tr><td><span class="dad">A5</span></td><td>1st floor</td><td>1+1</td><td>40.40</td><td>7.10</td><td>47.50</td><td class="f">€306,000</td><td>€7,574</td><td>€6,442</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-1.webp','A0220 — A5 plan')">Plan</button></td></tr>
+      <tr><td><span class="dad">A8</span></td><td>1st floor</td><td>1+1</td><td>40.42</td><td>6.39</td><td>46.81</td><td class="f">€306,000</td><td>€7,571</td><td>€6,537</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-1.webp','A0220 — A8 plan')">Plan</button></td></tr>
+      <tr><td><span class="dad">A1</span></td><td>1st floor</td><td>1+1</td><td>41.20</td><td>6.27</td><td>47.47</td><td class="f">€309,000</td><td>€7,500</td><td>€6,509</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-1.webp','A0220 — A1 plan')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">G4</span></td><td>Ground</td><td>1-bed · garden access</td><td>42.13</td><td>12.82</td><td>54.95</td><td class="f">€309,000</td><td>€7,334</td><td>€5,623</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-zemin.webp','A0220 — G4 plan')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">A3</span></td><td>1st floor</td><td>1+1</td><td>41.38</td><td>7.35</td><td>48.73</td><td class="f">€310,000</td><td>€7,492</td><td>€6,362</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-1.webp','A0220 — A3 plan')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">A2</span></td><td>1st floor</td><td>1+1</td><td>41.53</td><td>6.62</td><td>48.15</td><td class="f">€311,000</td><td>€7,489</td><td>€6,459</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-1.webp','A0220 — A2 plan')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">A4</span></td><td>1st floor</td><td>1+1</td><td>41.90</td><td>4.25</td><td>46.15</td><td class="f">€313,000</td><td>€7,470</td><td>€6,782</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-1.webp','A0220 — A4 plan')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">A10</span></td><td>1st floor</td><td>1+1</td><td>41.95</td><td>8.10</td><td>50.05</td><td class="f">€313,000</td><td>€7,461</td><td>€6,254</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-1.webp','A0220 — A10 plan')">Plan</button></td></tr>
+      <tr class="fgiz"><td><span class="dad">A6</span></td><td>1st floor</td><td>1+1</td><td>42.97</td><td>7.54</td><td>50.51</td><td class="f">€319,000</td><td>€7,424</td><td>€6,316</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-1.webp','A0220 — A6 plan')">Plan</button></td></tr>
+      <tr class="one fgiz"><td><span class="dad">G5</span> <span class="dur dur-o">Our pick</span></td><td>Ground</td><td>2-bed · garden access</td><td>63.52</td><td>7.85</td><td>71.37</td><td class="f">€380,000</td><td>€5,982</td><td>€5,324</td><td><button class="pbtn" onclick="ac('../plan/a0220-plan-zemin.webp','A0220 — G5 plan')">Plan</button></td></tr>
 
       </tbody>
     </table></div>
-    <button class="fdaha" onclick="fDaha(this)" data-cok="Show the remaining 9 units  +" data-az="Show fewer  −">Show the remaining 9 units  +</button>
+    <button class="fdaha" type="button" onclick="fDaha(this)" data-cok="Show all 15 units (15 available)  +" data-az="Show fewer  −">Show all 15 units (15 available)  +</button>
     <div class="tblnot">Gross area = net interior + balcony. € / m² net = price ÷ net area; € / m² gross = price ÷ gross area. Prices and availability are taken from the developer's official list dated <b>24 September 2026</b> ; the list reached us on 30 September 2026. Only available units are shown in this table; four other units are reserved (soft reservation) and four are sold. For ground-floor units the balcony column shows the private outdoor space given in the list (garden, courtyard, terrace). The m² labels on the plan drawings may differ slightly from the list (e.g. G5); the contractual area is confirmed from the approved plans. The binding price is fixed by written confirmation at offer stage.</div>
     <h3 style="margin-top:26px">Floor plans</h3>
     <div class="katlar">
@@ -1290,90 +1385,59 @@ details.rapor[open]>summary{background:#fff}
       <figure onclick="ac('../plan/a0220-plan-1.webp','A0220 — 1st floor plan')"><img src="../plan/a0220-plan-1.webp" loading="lazy" alt="1st floor plan"><figcaption>1st floor · A1 – A10</figcaption></figure>
       <figure onclick="ac('../plan/a0220-plan-2.webp','A0220 — 2nd floor and rooftop lounge plan')"><img src="../plan/a0220-plan-2.webp" loading="lazy" alt="2nd floor and rooftop lounge plan"><figcaption>2nd floor and rooftop lounge</figcaption></figure>
     </div>
-    <button class="dkapat" onclick="dKapat(this)" aria-label="Close section"><i>−</i> Close</button>
-  </div></details>
-  <details class="rapor"><summary>Area report · Elliniko · Athens Riviera</summary><div class="rbody">
-    <div class="katlar"><figure onclick="ac('../img/a0220-bolge.webp','Ellinikon experience park')"><img src="../img/a0220-bolge.webp" alt="Ellinikon experience park" loading="lazy"><figcaption>Photo: StrangeTraveler · CC BY-SA 4.0 · Wikimedia Commons</figcaption></figure></div>
-    <h4>Location and transport</h4>
-    <p>Kato Elliniko lies on the Athens Riviera, right next to the Ellinikon regeneration project rising on the former airport site, about 10 – 12 km from central Athens. The beaches are about 3 minutes away and central Glyfada about 5 minutes by car.</p>
-    <p>There is direct access to Vouliagmenis Avenue; metro Line 2 is nearby and the airport is about 25 – 30 minutes away. Ellinikon's value effect is spreading to Glyfada, Voula and Alimos, and Kato Elliniko sits right next to the regeneration area. Investment here therefore rests on long-term capital growth rather than current rental yield.</p>
-    <div class="tkos" style="margin-top:14px"><div class="tb">Area data</div>
+  </div></div><!--/fyt-->
+  <details class="rapor" id="r-bolge"><summary style="--bant-foto:url('../img/bolge-elliniko.webp')">Area report · Elliniko<i class="bant-arti">+</i></summary><div class="rbody">
+    <div class="katlar"><figure onclick="ac('../img/bolge-elliniko.webp','Ellinikon Experience Park · water maze')" style="grid-column:1/-1"><img src="../img/bolge-elliniko.webp" alt="Ellinikon Experience Park · water maze" loading="lazy" style="aspect-ratio:16/7;object-fit:cover"><figcaption>Photo: StrangeTraveler · CC BY-SA 4.0 · Wikimedia Commons</figcaption></figure></div>
+    <p class="kucuk">Avla Real Estate Area Report · Elliniko · Athens Riviera · October 2026. This is a district-level assessment; it does not include a specific apartment inspection. Includes Kato Elliniko.</p><h4>Location</h4>
+    <p>Elliniko is the district situated right next to the former airport site on the Athens Riviera: approximately 9.3 km as the crow flies from Syntagma. The local unit of Elliniko houses 16,715 people in 7.1 km² (2021 census); the population of the Elliniko–Argyroupoli municipality to which it belongs is 50,027. The district is divided into two parts: Ano Elliniko, the built-up area east of Vouliagmenis Avenue near the metro; and Kato Elliniko, which slopes westwards towards the coast and Agios Kosmas. There is a significant difference in price and character between the two parts.</p>
+    <p>The district's value proposition is defined by <b>The Ellinikon transformation project</b>: an area on the site of the former airport comprising a coastal park, marina, residences, offices, retail, and hotel components, which is considered one of the largest urban regeneration projects in Europe. Status as of October 2026 on the project site: the 50-storey Riviera Tower and the Poseidonos Avenue underpass are under construction, the shopping centre and Riviera Galleria are in the development stage; the Experience Park, opened as the first phase, is open to visitors. The Riviera Tower is scheduled for completion in the first half of 2027. Mediterraneo Hospital is ~770 m away, Agios Kosmas marina is ~2.5 km away, and the Glyfada golf course is ~2.2 km away.</p><h4>Schools</h4>
+    <p>English-medium schools and straight-line distances from the district centre:</p>
+    <ul><li><a href="https://ims.edu.gr/" target="_blank" rel="noopener" style="color:var(--navy);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)">International Metropolitan School (IMS)</a> — IB PYP, MYP and Diploma · English–Greek · primary school: Argyroupoli · kindergarten and secondary–high school: Alimos · primary school ≈800 m · secondary–high school ≈1,950 m</li><li><a href="https://veritaschool.gr/" target="_blank" rel="noopener" style="color:var(--navy);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)">Verita International School</a> — British curriculum · IGCSE and A-Level · kindergarten and primary school: Glyfada · secondary–high school: Alimos · kindergarten ≈950 m · primary school ≈1,650 m · secondary–high school ≈2,070 m</li><li><a href="https://www.deschool.eu/" target="_blank" rel="noopener" style="color:var(--navy);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)">DES – Interactive European School</a> — IB (PYP and MYP) · English–Greek · Vari · ≈7,400 m</li><li><a href="https://www.slc.gr/" target="_blank" rel="noopener" style="color:var(--navy);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)">St Lawrence College</a> — British curriculum · IGCSE and A-Level · Koropi · ≈7,750 m</li></ul>
+    <p class="kucuk">Distances are measured in a straight line from the district centre (not the building; measurement point is Elliniko metro station) to the school campus; distances may vary by ±300 m as some campuses are situated at street level, and road distances are longer. Enrolment conditions and availability should be confirmed directly with the school.</p><h4>Transport</h4>
+    <p>Elliniko is the southern terminus of the M2 metro line; it is 10 stops direct from the station to Syntagma. Argyroupoli station is ~1.1 km away. The nearest stops for the coastal tram (Agios Alexandros, Agios Kosmas) are ~2 km from the metro station; Kato Elliniko is closer to the tram, while Ano Elliniko is closer to the metro. Vouliagmenis Avenue is the main vehicular artery.</p>
+    <div class="tkos" style="margin-top:14px"><div class="tb">Distances</div>
     <dl>
-      <dt>Ellinikon regeneration</dt><dd>Directly adjacent · about 1 minute</dd>
-      <dt>Beach</dt><dd>Riviera beaches about 3 minutes</dd>
-      <dt>Central Glyfada</dt><dd>About 5 minutes by car</dd>
-      <dt>Transport</dt><dd>Direct access to Vouliagmenis Avenue · metro Line 2 nearby <span class='kucuk'>(walking distance to be confirmed in writing)</span></dd>
-      <dt>Central Athens · airport</dt><dd>Centre about 10 – 12 km · airport about 25 – 30 minutes</dd>
-      <dt>New-build supply</dt><dd>Limited supply of furnished new homes with shared amenities</dd>
+      <dt>Metro (M2 Elliniko)</dt><dd>In the district centre · 10 stops to Syntagma</dd>
+      <dt>Tram (Agios Alexandros)</dt><dd>~2.0 km</dd>
+      <dt>Mediterraneo Hospital</dt><dd>~770 m</dd>
+      <dt>Glyfada centre</dt><dd>~3.5 km</dd>
+      <dt>Athens centre (Syntagma)</dt><dd>9.3 km as the crow flies · ~15 minutes by car in clear traffic</dd>
+      <dt>Athens Airport</dt><dd>18.9 km as the crow flies · ~35 minutes by car in clear traffic</dd>
     </dl>
   </div>
-    <p class="kucuk" style="margin-top:12px">Source: Avla area report — for the full text, see the <b>Area report</b>  link above the card. Distances and times are as stated by the developer. We do not give rent figures for specific units.</p>
-    <button class="dkapat" onclick="dKapat(this)" aria-label="Close section"><i>−</i> Close</button>
-  </div></details>
-  <details class="rapor"><summary>Project report · Kato Elliniko Riviera Suites</summary><div class="rbody">
-    <h4>Building and unit layout</h4>
-    <p>A three-level building with a lift: ground floor, first floor and a second floor opening onto the rooftop lounge. An existing building redeveloped from the ground up; previous permit 2004, new building permit in process. Ground-floor units open onto a private garden or courtyard, upper floors onto balconies.</p>
-    <div class="tkos" style="margin-top:14px"><div class="tb">Project key facts</div>
-    <dl>
-      <dt>Building</dt><dd>Ground + 2 floors + rooftop lounge · lift · 23 residences · floor heights 2.90 / 2.85 / 2.80 m</dd>
-      <dt>Unit mix</dt><dd>19 × 1-bed · 3 × 2-bed (G5 and two Signature residences) · ground-floor residence G6 sold (83.38 m²)</dd>
-      <dt>Available</dt><dd>14 × 1-bed (40.19 – 42.97 m²) · 1 × 2-bed (63.52 m²)</dd>
-      <dt>List price</dt><dd>€300,000 – €380,000 (list of 24 September 2026)</dd>
-      <dt>Status</dt><dd>15 units available, 4 reserved (soft reservation), 4 sold</dd>
-      <dt>Payment</dt><dd>10% deposit, balance at the final contract · or 30% deposit, instalments until handover</dd>
-      <dt>Property management</dt><dd>Optional 3-year programme · fee 20% of rent</dd>
-      <dt>Golden Visa</dt><dd>Conversion route — permit in process · short-term (Airbnb-type) letting not permitted, long-term letting allowed</dd>
-    </dl>
-  </div>
-    <h4>Avla's assessment</h4>
-    <p>The project's strength is its location: adjacent to Ellinikon, about 3 minutes from the beach. Fully furnished handover, together with the pool, roof garden and rooftop lounge, speeds up letting.</p>
-    <p>The price ladder is narrow: 1-bed units range from €300,000 to €319,000, € / m² net 7,334 – 7,589. Within this band the choice is driven more by floor and outdoor space than by price; the ground floor offers garden or courtyard access and more outdoor space. The 1-bed units are small (40.19 – 42.97 m²). G5, the only available 2-bed, has the project's lowest price per square metre at € / m² net 5,982 — about 20% below the 1-bed average.</p>
-    <p>The investment profile is long-term: capital growth outweighs current rental yield. Indicative rent and yield calculations are in the feasibility study; the figures are not commitments.</p>
-    <h4>Points we are not sure about</h4>
+    <p class="kucuk" style="margin-top:10px">Distances are measured from the district centre using OpenStreetMap data. Driving times are based on route calculations without traffic (OSRM); times increase significantly during peak hours.</p><h4>Tenant profile</h4>
+    <p>Demand in Elliniko is twofold: current established demand and the new employment that will follow as The Ellinikon progresses. According to Spitogatos data, the southern suburbs were the second most searched region in the country for rental properties in 2025; in the same data, Elliniko's average advertised rent was 11 €/m². The Indomio rental average for September 2026 is 15.31 €/m²; the two platforms use different metrics, and both are based on listing data.</p>
     <ul>
-      <li>The building permit has not yet been issued. The 18-month handover period starts once the permit is issued, so the handover date is not yet known.</li>
-      <li>The Golden Visa conversion route depends on the permit; eligibility is confirmed in writing for each unit.</li>
-      <li>Energy class, heating and cooling system, parking, storage and service charges are to be obtained in writing from the developer.</li>
-      <li>Areas are to be confirmed against the approved plans; there are small differences between the plan labels and the list (e.g. G5).</li>
-      <li>There is no rental guarantee; the scope and terms of the property management programme are to be obtained in writing.</li>
+      <li><b>Professionals working around The Ellinikon</b> — construction management, new office and retail spaces; medium-to-long-term demand that grows as the project progresses.</li>
+      <li><b>Healthcare professionals</b> — Mediterraneo Hospital (~770 m); regular payment.</li>
+      <li><b>Families with students</b> — kindergarten and primary school campuses of two international schools within 1 km; long-term.</li>
+      <li><b>Professionals commuting to the centre via Metro</b> — M2 terminal station; 1-bedroom and 2-bedroom flats are the primary product types.</li>
     </ul>
-    <p class="kucuk" style="margin-top:12px">Source: the developer's official price and availability list (24 September 2026), general information form (30 September 2026) and Avla's investment feasibility — for the full text, see the <b>Investment feasibility</b>  link above the card.</p>
+    <div class="tkos" style="margin-top:14px"><div class="tb">Market indicators</div>
+    <dl>
+      <dt>Average sales listing</dt><dd>5,745 €/m² (+7.30% y/y) · September 2026 · Indomio</dd>
+      <dt>Average rental listing</dt><dd>15.31 €/m²/month (+0.53% y/y) · September 2026 · Indomio</dd>
+      <dt>Neighbourhood range (sales)</dt><dd>4,055 (Agia Paraskevi) – 7,381 €/m² (Kato Elliniko) · September 2026 · Indomio</dd>
+      <dt>Sales listings · 3-year / 5-year</dt><dd>+19.7% / +50.8% · Indomio</dd>
+      <dt>Athens apartment prices</dt><dd>+5.0% y/y · Q2 2026 (provisional) · Bank of Greece</dd>
+    </dl>
+  </div>
+    <p class="kucuk" style="margin-top:10px">Figures represent advertised (asking) prices; actual transaction prices are generally somewhat lower. The ratio of listing averages represents a gross yield of approximately 3.2%; this is a district indicator, not a specific apartment yield. We do not provide unverified rental or yield figures for specific properties.</p><h4>Risks</h4>
+    <ul>
+      <li><b>Golden Visa restriction:</b> Short-term (daily) letting is prohibited for properties acquired via Golden Visa; eligibility and thresholds are confirmed on a unit-by-unit basis via independent Greek legal counsel — no statement on this page constitutes such confirmation.</li>
+      <li><b>Priced-in expectations:</b> While sales listings have increased by 7.3% over the last year, rental listings have risen by only 0.5%. Prices are outpacing rents; yields are tightening.</li>
+      <li><b>Extended construction period:</b> The Ellinikon is a multi-year project; the risk of construction traffic, noise, and scheduling shifts along the Vouliagmenis and Poseidonos axes will persist for years.</li>
+      <li><b>New supply competition:</b> As The Ellinikon’s own residential stock is delivered, competition for the same pool of high-end tenants and buyers will emerge.</li>
+      <li><b>Micro-location:</b> The price gap between neighbourhoods exceeds 80%; Ano Elliniko is not within walking distance of the coast (~2 km). Street selection is decisive.</li>
+      <li><b>Tax calendar:</b> It has been reported that the property transfer tax for non-EU/EEA individuals is proposed to increase from 3% to 15% effective 1 July 2027; legislation, scope, and exemptions must be confirmed prior to purchase.</li>
+    </ul>
+    <p><b>Avla's view of the district:</b> Positive — growth-oriented, selective. Elliniko is the only district on the Riviera that carries the <b>impact of both the metro and The Ellinikon project</b>; it has seen the strongest growth over the last three and five years. Prices already factor in a significant portion of expectations; entry is meaningful when the neighbourhood and delivery timeline are carefully selected.</p>
+    <p class="kucuk">Sources: Indomio (September 2026) · Bank of Greece · Spitogatos (reported via Kathimerini, 2025) · ELSTAT 2021 census · The Ellinikon project site, construction progress page (October 2026) · OpenStreetMap and OSRM (distances and times) · official school websites and IB registrations.</p>
     <button class="dkapat" onclick="dKapat(this)" aria-label="Close section"><i>−</i> Close</button>
   </div></details>
-</section>
-<section id="harita">
-  <div class="eyebrow">Geography</div>
-  <h2>Kato Elliniko on the map</h2>
-  <p class="kucuk" style="margin-top:8px">The location is <b>shown as a district-level circle</b> ; the exact address is shared once the Digital Viewing Protocol is signed.</p>
-  <div id="avla-map"></div>
-  <div class="mlegend">
-    <span><i style="background:#5a7a8a"></i>Kato Elliniko Riviera Suites</span>
-  </div>
-</section>
-<!--SATIS:W1:ayr--><details class="ayr-grup" id="ayrinti"><summary><span class="eyebrow">Details</span>Golden Visa framework, unit comparison, summary and introduction protocol<i>+</i></summary><!--/SATIS:W1:ayr-->
-<section id="giris">
-  <div class="eyebrow">Selection Note</div>
-  <h2>Kato Elliniko Riviera Suites — on one page</h2>
-  <div class="card">
-    <p>This page is the Avla Exclusive Selection prepared for <b>Kato Elliniko Riviera Suites</b>  in Kato Elliniko · Athens Riviera. Everything about the project is on one page: current prices and the list of <b>15 available apartments</b> , unit and floor plans, the area report and the project report.</p>
-    <p><b>How this page is organised:</b> First the Golden Visa framework and the district on the map; then a side-by-side comparison of the unit types and the project section — key facts, images, price table and reports. Each section also states <b>our own reservations</b> . Links to the listing page, area report and investment feasibility are below the project card.</p>
-    <div class="uyari"><b>Availability and prices:</b> Figures are based on the latest lists from the developers (inventory confirmed 30 September 2026). Availability changes quickly; the status of the relevant unit is confirmed in writing before any binding decision.</div>
-    <p style="margin-top:18px"><a class="b1" style="padding:11px 24px;font-size:13px" href="https://wa.me/905322822657?text=Hello%2C%20I%20am%20looking%20at%20the%20Kato%20Elliniko%20Riviera%20Suites%20selection%20and%20would%20like%20more%20information." target="_blank" rel="noopener">Message us on WhatsApp</a> <a class="b2" style="padding:11px 24px;font-size:13px;color:var(--navy);border-color:var(--cizgi)" href="tel:+905322822657">+90 532 282 26 57</a></p>
-  <p class="kucuk" style="margin-top:14px"><a href="https://gv.selection.avlarealestate.com" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600">Master Selection — full portfolio</a> · <a href="https://www.avlarealestate.com/property-status/golden-visa" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600">All our listings</a></p>
-  </div>
-  <div class="gv">
-    <b style="font-family:'Cormorant Garamond',serif;font-size:19px">Greece Golden Visa — a short reminder</b>
-    <div class="madde">
-      <span>The threshold <b>is not a single figure</b>: €250,000 / €400,000 / €800,000</span>
-      <span>Spouse + children under 21 + parents of both spouses</span>
-      <span>The residence permit is renewed every 5 years</span>
-      <span>No minimum stay requirement</span>
-      <span>Long-term letting is permitted; <b>short-term (daily) letting is prohibited</b></span>
-      <span>This is a <b>residence permit</b>, not citizenship</span>
-    </div>
-  </div>
-</section>
-<section id="gv">
+  <!--v2:oneri--><section id="oneri" class="satis oneri-sonra"><div class="eyebrow">Our pick</div><h2>Units we recommend</h2><p class="on-alt">15 of 15 units are available. Of these, we highlight three units for price, value per m² and outdoor space.</p><div class="on3"><article class="onk"><span class="et">Best entry price</span><div class="dno">Unit G2</div><div class="dmeta">Ground · 1-bed · garden access</div><div class="fy">€300,000</div><div class="fm2">€6,508 / m² gross · €7,440 / m² net</div><div class="ozl"><div><span>Net</span><i>40.32 m²</i></div><div><span>Outdoor</span><i>5.78 m²</i></div><div><span>Gross</span><i>46.10 m²</i></div></div><p class="neden">Lowest price among available units.</p><div class="dg"><button type="button" class="pl" onclick="ac(&#x27;../plan/a0220-plan-zemin.webp&#x27;,&#x27;A0220 — G2 plan&#x27;)">Open plan</button><a class="wa" href="https://wa.me/905322822657?text=Merhaba%2C%20Kato%20Elliniko%20Riviera%20Suites%20G2%20numaral%C4%B1%20daire%20%28%E2%82%AC300%2C000%29%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Ask about this unit</a></div></article><article class="onk"><span class="et">Best price per gross m²</span><div class="dno">Unit G5</div><div class="dmeta">Ground · 2-bed · garden access</div><div class="fy">€380,000</div><div class="fm2">€5,324 / m² gross · €5,982 / m² net</div><div class="ozl"><div><span>Net</span><i>63.52 m²</i></div><div><span>Outdoor</span><i>7.85 m²</i></div><div><span>Gross</span><i>71.37 m²</i></div></div><p class="neden">Lowest price per gross m² in the project (€5,324); including 7.85 m² of outdoor space.</p><div class="dg"><button type="button" class="pl" onclick="ac(&#x27;../plan/a0220-plan-zemin.webp&#x27;,&#x27;A0220 — G5 plan&#x27;)">Open plan</button><a class="wa" href="https://wa.me/905322822657?text=Merhaba%2C%20Kato%20Elliniko%20Riviera%20Suites%20G5%20numaral%C4%B1%20daire%20%28%E2%82%AC380%2C000%29%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Ask about this unit</a></div></article><article class="onk"><span class="et">Large outdoor space</span><div class="dno">Unit G11</div><div class="dmeta">Ground · 1-bed · garden access</div><div class="fy">€305,000</div><div class="fm2">€5,560 / m² gross · €7,367 / m² net</div><div class="ozl"><div><span>Net</span><i>41.40 m²</i></div><div><span>Outdoor</span><i>13.46 m²</i></div><div><span>Gross</span><i>54.86 m²</i></div></div><p class="neden">Largest outdoor space among available units (13.46 m²).</p><div class="dg"><button type="button" class="pl" onclick="ac(&#x27;../plan/a0220-plan-zemin.webp&#x27;,&#x27;A0220 — G11 plan&#x27;)">Open plan</button><a class="wa" href="https://wa.me/905322822657?text=Merhaba%2C%20Kato%20Elliniko%20Riviera%20Suites%20G11%20numaral%C4%B1%20daire%20%28%E2%82%AC305%2C000%29%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Ask about this unit</a></div></article></div><a class="on-tum" href="#fiyatlar">↑ Full price list</a></section><!--/v2:oneri-->
+  </section>
+<!--SATIS:W1:ayr--><div class="gv-dis"><section data-gv-ayri="1" id="gv">
   <div class="eyebrow">The Framework First</div>
   <h2>Why does the investment threshold differ from one buyer to the next?</h2>
   <div class="card">
@@ -1385,34 +1449,7 @@ details.rapor[open]>summary{background:#fff}
     </div>
     <p style="margin-top:14px"><b>What this means for your file:</b> In Attica the threshold for a standard new build is €800,000. Which threshold the properties in this file fall under is determined by <b>the property's location and legal status</b> ; this is confirmed in writing, <b>property by property</b> , through an independent Greek lawyer's review. Nowhere have we written "this apartment qualifies for the GV"; we obtain the confirmation in writing.</p>
   </div>
-</section>
-<section id="karsilastirma">
-  <div class="eyebrow">Comparison</div>
-  <h2>Unit types — in one table</h2>
-  <div class="tbl"><table><thead><tr><th>Unit</th><th>Type</th><th>Interior m²</th><th>Balcony / outdoor m²</th><th>Total m²</th><th>Price</th><th>€ / interior m²</th><th>€ / total m²</th><th>Handover</th></tr></thead><tbody>
-<tr><td><b><a href="#a0220" style="color:inherit">G2</a></b></td><td>1-bed · garden access</td><td>40.32</td><td>5.78</td><td>46.10</td><td class="f">€300,000</td><td>€7,440</td><td>€6,508</td><td>Pending confirmation</td></tr>
-<tr><td><b><a href="#a0220" style="color:inherit">G4</a></b></td><td>1-bed · garden access</td><td>42.13</td><td>12.82</td><td>54.95</td><td class="f">€309,000</td><td>€7,334</td><td>€5,623</td><td>Pending confirmation</td></tr>
-<tr><td><b><a href="#a0220" style="color:inherit">A9</a></b></td><td>1+1</td><td>40.19</td><td>8.81</td><td>49.00</td><td class="f">€305,000</td><td>€7,589</td><td>€6,224</td><td>Pending confirmation</td></tr>
-<tr><td><b><a href="#a0220" style="color:inherit">A6</a></b></td><td>1+1</td><td>42.97</td><td>7.54</td><td>50.51</td><td class="f">€319,000</td><td>€7,424</td><td>€6,316</td><td>Pending confirmation</td></tr>
-<tr><td><b><a href="#a0220" style="color:inherit">G5</a></b></td><td>2-bed · garden access</td><td>63.52</td><td>7.85</td><td>71.37</td><td class="f">€380,000</td><td>€5,982</td><td>€5,324</td><td>Pending confirmation</td></tr>
-  </tbody></table></div>
-  <div class="tblnot">The best-priced and the largest available unit of each type. Unit prices are based on the list price; the binding price is fixed by written confirmation. The full table is under “Prices and available units” in the project section.</div>
-</section>
-<section id="ozet">
-  <div class="eyebrow">Summary</div>
-  <h2>The project at a glance</h2>
-  <div class="tbl"><table>
-    <thead><tr><th>#</th><th>Project</th><th>District</th><th>Handover</th><th>Available</th><th>Price range</th><th>Net m² range</th><th>Gross m² range</th><th>€ / m² net (lowest)</th><th>€ / m² gross (lowest)</th></tr></thead>
-    <tbody>
-      <tr><td>1</td><td><b><a href="#a0220" style="color:inherit">Kato Elliniko Riviera Suites</a></b></td><td>Kato Elliniko</td><td>Pending confirmation</td><td>15 units available</td><td class="f"><b>€300,000 – €380,000</b></td><td>40.19 – 63.52 m²</td><td>46.10 – 71.37 m²</td><td>€5,982</td><td>€5,324</td></tr>
-    </tbody>
-  </table></div>
-  <div class="card" style="margin-top:22px">
-    <p><b>How to proceed:</b>  mark the units that interest you; for those units we will bring current availability, the binding price and the payment plan <b>in writing</b> . If you would like to come to Athens, we will plan the viewing programme together; if you prefer, we can first show you the units on a video call.</p>
-    <p class="kucuk" style="margin-top:10px"><a href="#protokol" style="color:var(--navy);font-weight:600">Digital Viewing Protocol</a> · <a href="#" onclick="szAc(event)" style="color:var(--navy);font-weight:600">Our terms and how we work</a></p>
-  </div>
-</section>
-<section id="protokol">
+</section></div><details class="ayr-grup" id="ayrinti"><summary style="--bant-foto:url('../img/a0220-3.webp')"><span class="ag-t">Digital Viewing Protocol</span><span class="ag-a">The exact address and unit location are shared once the protocol is signed</span><i>+</i></summary><section id="protokol">
   <div class="eyebrow">Introduction record</div>
   <h2>Digital Viewing Protocol</h2>
   <p class="kucuk" style="margin-top:8px">This protocol is the PROPERTY VIEWING AND ADVISORY AGREEMENT.</p>
@@ -1435,8 +1472,7 @@ details.rapor[open]>summary{background:#fff}
       </dl>
   </div>
   <p style="margin-top:18px"><a class="b1" href="#" onclick="szAc(event)">Get the address details</a></p>
-</section>
-<!--SATIS:W2:ayr--></details><!--/SATIS:W2:ayr-->
+</section></details><!--/SATIS:W2:ayr-->
 </div><!-- /wrap -->
 
 
@@ -1862,7 +1898,7 @@ function dKapat(b){var d=b.closest('details');if(!d)return;var once=d.getBoundin
     </a>
   </div>
 </section>
-<!--SATIS:W1:guv--><details class="ayr-band"><summary><span class="eyebrow">Payment security and Golden Visa 2026</span>Your money sits in a dual-signature account — how it is protected, step by step; 2026 rules<i>+</i></summary><!--/SATIS:W1:guv--><section class="sec sec-ink" id="guvence">
+<!--SATIS:W1:guv--><details class="ayr-band"><summary style="--bant-foto:url('../img/a0220-11.webp')"><span class="eyebrow">Payment security and Golden Visa 2026</span>Your money sits in a dual-signature account — how it is protected, step by step; 2026 rules<i>+</i></summary><!--/SATIS:W1:guv--><section class="sec sec-ink" id="guvence">
   <div class="wrap">
     <div class="shead">
       <div class="k">Financial protection shield</div>
@@ -1940,7 +1976,7 @@ function dKapat(b){var d=b.closest('details');if(!d)return;var once=d.getBoundin
         
         
         <a class="kv kv-a" href="tel:+905322822657"><span>Phone</span><div>+90 532 282 26 57</div></a>
-        <a class="kv kv-a" href="mailto:realestate@avla.com.tr"><span>Email</span><div>realestate@avla.com.tr</div></a>
+        <a class="kv kv-a" href="mailto:realestate@avla.com.tr"><span>Email</span><div>realestate@avla.com.tr</div></a> <div class="fs-marka"><img src="https://gv.selection.avlarealestate.com/marka/avla-dikey-buyuk-8-altin-512w.png" alt="Avla" width="112" loading="lazy"><p class="fs-hik">The bird in our logo is a <b>weaver bird</b>. It builds its nest stitch by stitch, patiently and soundly. The bird turns towards the word “Avla” — the place where it will build its nest. Every line of the logo is drawn in a single stroke and in the same weight: the same care in every detail. We build your home with the same patience and care.</p><a class="fs-git" href="https://www.avlarealestate.com/" target="_blank" rel="noopener">avlarealestate.com →</a></div>
       </div>
       <div class="fmain">
         <form id="kf" novalidate>
@@ -2000,15 +2036,32 @@ function dKapat(b){var d=b.closest('details');if(!d)return;var once=d.getBoundin
   </div>
 </div>
 </section>
-<section class="sec" id="portfoy-harita">
+<div class="oc-dis"><!--one-cikan:bas--><style id="one-cikan-css">
+#one-cikan{padding:56px 0 18px}
+.oc-dis{max-width:1000px;margin:0 auto;padding:0 20px}
+@media(min-width:1048px){.oc-dis{padding:0}}
+#one-cikan .oc-sat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:22px}
+@media(max-width:1100px){#one-cikan .oc-sat{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){#one-cikan .oc-sat{grid-template-columns:1fr}}
+.oc-k{display:flex;flex-direction:column;background:#fff;border:1px solid var(--cizgi,#e6dfd1);border-radius:0;overflow:hidden;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
+.oc-k:hover{border-color:#C9A961;transform:translateY(-2px)}
+.oc-img{display:block;aspect-ratio:4/3;background:#eef0f3 center/cover no-repeat}
+.oc-g{display:flex;flex-direction:column;gap:4px;padding:14px 16px 16px}
+.oc-ets{display:flex;flex-wrap:wrap;gap:6px;min-height:22px}
+.oc-et{display:inline-block;padding:3px 8px 2px;border-radius:0;border-left:3px solid #C9A961;background:#f6f1e7;color:#9c7f4e;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.oc-sif{border-left-color:#1A2E4A;color:#1A2E4A}
+.oc-tuk{border-left-color:#B23A3A;color:#B23A3A;background:#f1f1f1}
+.oc-ad{font-size:18px;font-weight:500;color:#1A2E4A;line-height:1.25;margin-top:4px}
+.oc-yer{font-size:13px;color:#7a7f87}
+.oc-fy{font-size:16px;font-weight:500;color:#1A2E4A;margin-top:6px}
+.oc-mus{font-size:13px;color:#5f646b}
+.oc-git{margin-top:8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#9c7f4e}
+</style><section class="satis" id="one-cikan"><div class="eyebrow">From our portfolio</div><h2>Featured projects</h2><p class="on-alt">Projects we feature within the Golden Visa scope; each card opens the project’s own page.</p><div class="oc-sat"><a class="oc-k" href="https://chalandri-court-residences-a0223.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://chalandri-court-residences-a0223.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span><span class="oc-et oc-sif">Brand new</span></span><span class="oc-ad">Chalandri Court Residences</span><span class="oc-yer">Chalandri</span><span class="oc-fy">€267.000 – €400.000</span><span class="oc-mus">15 units available</span><span class="oc-git">Open page →</span></span></a><a class="oc-k" href="https://lykovrysi-north-residences.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://lykovrysi-north-residences.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span></span><span class="oc-ad">Lykovrysi North Residences</span><span class="oc-yer">Kifisia</span><span class="oc-fy">€270.000</span><span class="oc-git">Open page →</span></span></a><a class="oc-k" href="https://lykovrysi-kifisia-residences-a0321.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://lykovrysi-kifisia-residences-a0321.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et oc-sif">Brand new</span></span><span class="oc-ad">Kifisia Suites</span><span class="oc-yer">Kifisia</span><span class="oc-fy">€380.000</span><span class="oc-git">Open page →</span></span></a><a class="oc-k" href="https://kallithea-garden-residences-a0222.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://kallithea-garden-residences-a0222.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span><span class="oc-et oc-sif">Brand new</span></span><span class="oc-ad">Kallithea Garden Residences</span><span class="oc-yer">Kallithea</span><span class="oc-fy">€282.000</span><span class="oc-mus">2 units available</span><span class="oc-git">Open page →</span></span></a><a class="oc-k" href="https://kallithea-south-residences-a0166.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://kallithea-south-residences-a0166.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span><span class="oc-et oc-sif">Brand new</span></span><span class="oc-ad">Kallithea South Residences</span><span class="oc-yer">Kallithea</span><span class="oc-fy">€356.000 – €358.000</span><span class="oc-mus">Availability to be confirmed</span><span class="oc-git">Open page →</span></span></a><a class="oc-k" href="https://south-moschato-residences-a0145.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://south-moschato-residences-a0145.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et oc-tuk">Sold out</span></span><span class="oc-ad">South Moschato Residences</span><span class="oc-yer">Moschato</span><span class="oc-git">Open page →</span></span></a><a class="oc-k" href="https://monastiraki-residences-a0233.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://monastiraki-residences-a0233.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span></span><span class="oc-ad">Monastiraki Residences</span><span class="oc-yer">Psyrri</span><span class="oc-fy">€275.000 – €295.000</span><span class="oc-mus">3 units available</span><span class="oc-git">Open page →</span></span></a><a class="oc-k" href="https://south-glyfada-a0161.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://south-glyfada-a0161.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span><span class="oc-et oc-sif">Brand new</span></span><span class="oc-ad">South Glyfada Residences</span><span class="oc-yer">Glyfada</span><span class="oc-fy">€261.000 – €316.000</span><span class="oc-mus">33 units available</span><span class="oc-git">Open page →</span></span></a></div></section><!--one-cikan:son--></div><section class="sec" id="portfoy-harita">
   <div class="wrap">
     <div class="shead">
       <div class="k">Portfolio map</div>
       <h2>What is <em>where</em> in Athens?</h2>
       <p>The listings on the map are our current portfolio; the list is synchronised with our listings site twice a day. You can narrow it down by price, region, district and preset filters, and open each listing's photos and fact sheet.</p>
-    </div>
-    <div class="hbox">
-      <div class="mfs"><iframe src="https://19-eylul.avlarealestate.com/harita.html?gomulu=2&geri=https%3A%2F%2Fkato-elliniko-riviera-suites-a0220.avlarealestate.com%2F&geriad=Se%C3%A7kiye%20d%C3%B6n" title="Avla portfolio map" loading="lazy"></iframe><button class="mfs-dug" type="button"></button></div>
     </div>
     <div class="hnot">
       <p><b>Circles show districts, not buildings.</b> We do not publish exact property addresses; we give the location as a district circle. The unit-level list and the exact location are opened at the meeting along with your file.</p>
@@ -2041,11 +2094,8 @@ function dKapat(b){var d=b.closest('details');if(!d)return;var once=d.getBoundin
       <div>
         <h4>Pages</h4>
         <ul>
-          <li><a href="#giris">Selection note</a></li>
           <li><a href="#harita">Selection map</a></li>
-          <li><a href="#karsilastirma">Comparison</a></li>
           <li><a href="#a0220">Properties</a></li>
-          <li><a href="#ozet">Summary</a></li>
           <li><a href="#protokol">Digital Viewing Protocol</a></li>
           <li><a href="#guvence">Payment security</a></li>
           <li><a href="#kayit" class="vurgu">Register</a></li>
@@ -2182,6 +2232,85 @@ function dKapat(b){var d=b.closest('details');if(!d)return;var once=d.getBoundin
     document.getElementById('lb').classList.add('on');document.body.style.overflow='hidden';};
 })();
 </script><!--SATIS:S:js--><script id="yuzen-ath-yok-js">window.addEventListener('load',function(){setTimeout(function(){if(!document.getElementById('athena-host'))document.documentElement.classList.add('ath-yok')},300)});</script>
+<script id="tekil-v2-js">
+/* Tekil sayfa v2 (K-2026-10-23-01) — tek konum haritası (Google Maps, semt çemberi, pin yok) + liste düğmesi */
+(function(){
+  var el = document.getElementById('konum-harita'); if (!el) return;
+  var b = {ad: el.dataset.ad, semt: el.dataset.semt, lat: +el.dataset.lat, lng: +el.dataset.lng, r: +el.dataset.r, renk: el.dataset.renk};
+  var STIL = [
+    {featureType:'poi.business', stylers:[{visibility:'off'}]},
+    {featureType:'transit', elementType:'labels.icon', stylers:[{visibility:'off'}]},
+    {featureType:'water', elementType:'geometry', stylers:[{color:'#cfd9e0'}]},
+    {featureType:'landscape', elementType:'geometry', stylers:[{color:'#f4f1ea'}]},
+    {elementType:'geometry', stylers:[{saturation:-55},{lightness:18}]},
+    {elementType:'labels.text.fill', stylers:[{color:'#8a8f98'}]},
+    {featureType:'road.highway', elementType:'labels.icon', stylers:[{saturation:-100}]}
+  ];
+  function yukle(cb){
+    if (window.google && google.maps && google.maps.Circle) { cb(); return; }
+    window.__knAcildi = function(){ cb(); };
+    var s = document.createElement('script');
+    s.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCy1l7hG5Q95QbCZkFN2_yV41hnjIWqLB4&language=tr&region=GR&loading=async&callback=__knAcildi';
+    s.async = true; document.head.appendChild(s);
+  }
+  /* çember balonu → mülk künyesi (Sami 21.10.2026: "haritada tıklayınca çıkan bilgi mülkün bilgisine geri dönmeli") */
+  window.konumGit = function(){
+    var git = function(){ var k = document.getElementById('kunye'); if (k) k.scrollIntoView({behavior:'smooth', block:'start'}); try { history.replaceState(null, '', '#kunye'); } catch(e){} };
+    if (document.fullscreenElement && document.exitFullscreen) { document.exitFullscreen().then(function(){ setTimeout(git, 200); }).catch(git); } else git();
+    return false;
+  };
+  function kur(){
+    yukle(function(){
+      var m = new google.maps.Map(el, {
+        center: {lat: b.lat, lng: b.lng}, zoom: 14, mapTypeId: 'roadmap', styles: STIL,
+        fullscreenControl: true, zoomControl: true, streetViewControl: false,
+        mapTypeControl: false, scrollwheel: false, gestureHandling: 'cooperative'
+      });
+      var c = new google.maps.Circle({map: m, center: {lat: b.lat, lng: b.lng}, radius: b.r,
+        strokeColor: b.renk, strokeOpacity: 1, strokeWeight: 3, fillColor: b.renk, fillOpacity: .25, clickable: true, zIndex: 10});
+      var iw = new google.maps.InfoWindow({
+        content: '<div style="font:500 13px Jost,sans-serif;color:#142A42;padding:2px 4px;line-height:1.5">' + b.ad
+          + '<br><span style="font-weight:400;color:#5a6472">' + b.semt + '</span>'
+          + '<br><span style="font-weight:400;font-size:11.5px;color:#8a929e">Konum semt düzeyinde gösterilmektedir.</span>'
+          + '<br><a href="#kunye" onclick="return konumGit()" style="display:inline-block;margin-top:7px;font-weight:400;font-size:12.5px;color:#142A42;text-decoration:underline;text-decoration-color:#D2BE99;text-underline-offset:3px">Mülk künyesine git ↑</a></div>'
+      });
+      c.addListener('click', function(e){ iw.setPosition(e.latLng || c.getCenter()); iw.open(m); });
+    });
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(g){ if (g[0].isIntersecting) { io.disconnect(); kur(); } }, {rootMargin: '600px 0px'});
+    io.observe(el);
+  } else kur();
+})();
+if (typeof window.fDaha !== 'function') {
+  window.fDaha = function(b){ var k = b.previousElementSibling; k.classList.toggle('acik'); b.textContent = k.classList.contains('acik') ? b.dataset.az : b.dataset.cok; };
+}
+
+/* Denetim 23.10: liste daraltılınca (1) tip süzgeci açıksa Tümü'ye dön — yoksa tablo boş kalıyordu, (2) tablo görünür alana geri gelsin */
+(function(){
+  var eski = window.fDaha; if (typeof eski !== 'function') return;
+  window.fDaha = function(b){
+    eski(b);
+    var k = b.previousElementSibling; if (!k || k.classList.contains('acik')) return;
+    var on = document.querySelector('#fiyatlar .chip.on');
+    if (on && on.textContent.trim() !== 'Tümü') {
+      var t = [].slice.call(document.querySelectorAll('#fiyatlar .chip')).filter(function(c){ return c.textContent.trim() === 'Tümü'; })[0];
+      if (t) t.click();
+    }
+    var f = document.getElementById('fiyatlar');
+    if (f && f.getBoundingClientRect().top < 0) f.scrollIntoView({block: 'start'});
+  };
+})();
+/* tip süzgeci (1+1 / 2+1) seçilince uzun liste kendiliğinden açılır */
+if (typeof window.chip === 'function') {
+  window.chip = function(b, t){
+    document.querySelectorAll('.chip').forEach(function(c){ c.classList.remove('on'); }); b.classList.add('on');
+    document.querySelectorAll('#ftab tbody tr').forEach(function(r){ r.style.display = (t === '*' || r.getAttribute('data-t') === t) ? '' : 'none'; });
+    var tb = document.querySelector('#fiyatlar .tbl'), d = tb && tb.nextElementSibling;
+    if (t !== '*' && tb && !tb.classList.contains('acik') && d && d.classList.contains('fdaha')) window.fDaha(d);
+  };
+}
+</script>
 <style id="tasarim-v3">/* Tasarım dili v3 · 24.10.2026 (K-2026-10-24-01/02; örnek palet-a-dik.html) — yalnız renk ve biçim.
    Çerçeveli düğme hover'ı: kırmızı zemin + beyaz yazı. Dolu kırmızı düğme hover'ı: koyu kırmızı. Düğmede ikinci renk yok. */
 /* Kenar 1 px: koyu zeminde altın #D2BE99, açık zeminde lacivert #142A42; düğme yazısı tek renk */
