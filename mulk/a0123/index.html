@@ -1837,7 +1837,7 @@ function gmCember(map, b, i){
       map.fitBounds(sinir, 28);
       var dg = document.createElement('button');
       dg.textContent = 'Tümü'; dg.type = 'button';
-      dg.style.cssText = 'margin:10px;padding:7px 13px;border:1px solid #dcdcdc;border-radius:3px;background:#fff;'
+      dg.style.cssText = 'margin:10px;padding:7px 13px;border:1px solid #dcdcdc;border-radius:0;background:#fff;'
         + 'font:600 12px Inter,sans-serif;color:#1A2E4A;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.25)';
       dg.onclick = function(){ map.fitBounds(sinir, 28); };
       map.controls[google.maps.ControlPosition.TOP_LEFT].push(dg);
