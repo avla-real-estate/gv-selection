@@ -558,7 +558,7 @@ window.avlaHarita = function () {
   var P = {lat: 38.0648, lng: 23.7808};
   var m = new google.maps.Map(el, {center: {lat: 38.0625, lng: 23.792}, zoom: 14, fullscreenControl: true, zoomControl: true,
     mapTypeControl: true, streetViewControl: true, gestureHandling: 'cooperative', scrollwheel: false});
-  var c = new google.maps.Circle({map: m, center: P, radius: 520, strokeColor: '#F08025', strokeOpacity: 1, strokeWeight: 3, fillColor: '#F08025', fillOpacity: 0.30});
+  var c = new google.maps.Circle({map: m, center: P, radius: 520, strokeColor: '#142A42', strokeOpacity: 1, strokeWeight: 2, fillColor: '#142A42', fillOpacity: 0.18});
   var iw = new google.maps.InfoWindow();
   var kutu = function (t) { return '<div style="font-family:Jost,Arial,sans-serif;font-size:14px;color:#142A42">' + t + '</div>'; };
   c.addListener('click', function (e) { iw.setContent(kutu('<b>Proje bölgesi</b><br>Lykovrysi · Kifisia yanı<br>Konum semt düzeyinde gösterilir')); iw.setPosition(e.latLng); iw.open(m); });
