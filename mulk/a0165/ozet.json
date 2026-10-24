@@ -17,15 +17,9 @@
  "gv": "Yatırım sınıfı (GV dışı) — kira ve ikinci konut yatırımı olarak sunulur; Golden Visa eşikleri aşağıdaki bölümde",
  "ozet": "Ano Glyfada'da sakin bir sokakta 5 katlı yeni proje — on bir 1+1 daire ve üç 2+1 maisonette, bir kısmı deniz manzaralı.",
  "kapak": "img/kapak.jpg",
- "teyit": "5 Ekim 2026",
+ "teyit": null,
  "renk": "#4a6a8a",
  "rapor": [
   "envanter eşleşmedi (0/0) — tablo kaynak seçkideki gibi kaldı"
- ],
- "rezerve": 0,
- "satildi": 1,
- "teyitte": 0,
- "toplam": 1,
- "tukendi": true,
- "env_senkron": "2026-10-24"
+ ]
 }
