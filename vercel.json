@@ -1790,6 +1790,188 @@
       }
     },
     {
+      "src": "^/mulk/a0183/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://gerakas-contemporary-residences-a0183.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0184/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://agios-nikolaos-metro-residence-a0184.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0185/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://agios-nikolaos-renovated-residence-a0185.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0186/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://agios-panteleimonas-city-suite-a0186.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0187/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://agios-panteleimonas-renovated-residence-a0187.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0188/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://agios-panteleimonas-family-residence-a0188.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0193/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://avenue-residence-a0193.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0197/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://domus-residence-a0197.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0202/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://downtown-residences-a0202.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0207/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://northstar-residence-a0207.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0211/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://acharnes-central-residences-a0211.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0212/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://seascape-residence-a0212.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0215/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://skyline-residence-a0215.avlarealestate.com/"
+      }
+    },
+    {
+      "src": "^/mulk/a0217/?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gv.selection.avlarealestate.com"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "https://vista-residence-a0217.avlarealestate.com/"
+      }
+    },
+    {
       "src": "^/(.*)$",
       "has": [
         {
@@ -3161,6 +3343,146 @@
         }
       ],
       "dest": "/mulk/a0316/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "gerakas-contemporary-residences-a0183.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0183/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "agios-nikolaos-metro-residence-a0184.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0184/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "agios-nikolaos-renovated-residence-a0185.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0185/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "agios-panteleimonas-city-suite-a0186.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0186/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "agios-panteleimonas-renovated-residence-a0187.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0187/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "agios-panteleimonas-family-residence-a0188.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0188/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "avenue-residence-a0193.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0193/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "domus-residence-a0197.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0197/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "downtown-residences-a0202.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0202/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "northstar-residence-a0207.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0207/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "acharnes-central-residences-a0211.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0211/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "seascape-residence-a0212.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0212/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "skyline-residence-a0215.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0215/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "vista-residence-a0217.avlarealestate.com"
+        }
+      ],
+      "dest": "/mulk/a0217/$1"
     }
   ]
 }
