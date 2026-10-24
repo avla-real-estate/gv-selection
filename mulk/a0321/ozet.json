@@ -1,28 +1,28 @@
 {
  "ref": "A0321",
- "ad": "Kifisia yanı · teraslı 1+1 ve bahçeli 2+1",
+ "ad": "Kifisia Suites",
  "semt": "Lykovrysi",
- "bolge": "Lykovrysi · Kuzey Atina (Kifisia yanı)",
+ "bolge": "Lykovrysi · Kuzey Atina",
  "url": "https://lykovrysi-kifisia-residences-a0321.avlarealestate.com/",
  "musait": 2,
  "fiyat": "€278.000 – €380.000",
- "net": "46 – 80,55",
- "brut": "80 – 101,55",
+ "net": "46,00 – 80,55",
+ "brut": "80,00 – 101,55",
  "emn": "€4.718",
  "tipler": [
-  "1+1 · en üst kat teraslı",
-  "2+1 · zemin kat bahçeli"
+  "1+1",
+  "2+1"
  ],
- "teslim": "Aralık 2027 — geliştirici bildirimi",
+ "teslim": "Aralık 2027 (+6 ay ek süre)",
  "teslim_k": "Aralık 2027",
- "kira": "3 yıl · %4",
+ "kira": "Var · 3 yıl · yıllık %4",
  "hizmet": "%0",
- "gv": "Dayanak teyit bekliyor; uygunluk daire bazında bağımsız Yunan avukat incelemesiyle yazılı teyit edilir",
- "ozet": "Kifisia'nın hemen batısında, Lykovrysi'nin sakin sokaklarında 44 dairelik yeni bina; kalan iki daire: D04 teraslı 1+1 ve GF12 bahçeli 2+1.",
+ "gv": "Yatırım sınıfı (GV dışı) — kira ve ikinci konut yatırımı olarak sunulur; Golden Visa eşikleri aşağıdaki bölümde",
+ "ozet": "Kifisia'nın yanı başında, Lykovrysi'nin sakin bir köşesinde yükselen 44 daireli yeni binada son iki daire: en üst katta 34 m² teraslı 1+1 (D04) ve zemin katta 21 m² bahçeli 2+1 (GF12).",
  "kapak": "img/kapak.jpg",
  "teyit": null,
- "renk": "#637A47",
+ "renk": "#1A2E4A",
  "rapor": [
-  "fiyat kaynağı: geliştirici fiyat listesi 22.10.2026 · D04 opsiyonda"
+  "envanter eşleşmedi (0/2) — tablo kaynak seçkideki gibi kaldı"
  ]
 }
