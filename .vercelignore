@@ -1,0 +1,8 @@
+# Yedek ve kırık kopyalar yayına çıkmaz (gizlilik: geliştirici adı içeriyor; 24.10.2026 denetimi). Dosyalar depoda kalır, silinmez.
+*.bak
+*.bak_*
+*.bak-*
+*.broken_*
+*.yedek*
+*.orj
+*.old
