@@ -1198,7 +1198,8 @@ details.rapor[open]>summary{background:#fff}
 </style>
 <meta name="avla-tekil" content="v2">
 <style id="tekil-v2">
-/* Tekil sayfa v2 düzeni (K-2026-10-23-01) — Sami 23–24.10.2026: tek konum, künye hep açık, önerilen daireler, uzun liste açılır */
+/* Tekil sayfa v2 düzeni (K-2026-10-23-01) — Sami 23–24.10.2026: tek konum, künye hep açık, önerilen daireler, uzun liste açılır.
+   Yazı renkleri K-2026-10-24-05: son katman tasarim_v3_yazi.css (tasarim_v3.py); bu dosyada krem/sarımtırak ve çivit yazı yok. */
 .anc{display:block;position:relative;top:-70px;visibility:hidden}
 section.satis{scroll-margin-top:60px}
 /* önerilen daireler */
@@ -1206,7 +1207,7 @@ section.satis{scroll-margin-top:60px}
 .on3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px}
 .onk{display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid var(--cizgi);border-radius:0;padding:20px 20px 18px;box-shadow:0 3px 18px rgba(26,46,74,.06)}
 .onk .et{align-self:flex-start;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);background:var(--cream);border:1px solid var(--cizgi);border-radius:0;padding:4px 11px;font-weight:500}
-.onk .dno{margin-top:14px;font-size:20px;color:var(--navy);line-height:1.25;font-weight:400}
+.onk .dno{margin-top:14px;font-size:20px;color:rgba(20,42,66,.8);line-height:1.25;font-weight:400}
 .onk .dmeta{font-size:14px;color:var(--mut);margin-top:2px}
 .onk .fy{font-size:34px;line-height:1.1;color:var(--navy);margin-top:14px;letter-spacing:-.01em;font-weight:400}
 .onk .fm2{font-size:13px;color:var(--mut);margin-top:5px}
@@ -1217,11 +1218,11 @@ section.satis{scroll-margin-top:60px}
 .onk .neden{font-size:14px;color:var(--ink);margin-top:12px;line-height:1.5;flex:1}
 .onk .dg{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
 .onk .dg button,.onk .dg a{display:inline-flex;align-items:center;justify-content:center;border-radius:0;padding:9px 16px;font-size:13.5px;line-height:1.2;text-decoration:none;cursor:pointer;font-weight:500}
-.onk .dg .pl{background:none;border:1px solid var(--civit);color:var(--civit)}
+.onk .dg .pl{background:none;border:1px solid #142A42;color:#142A42}
 .onk .dg .wa{background:transparent;color:#142A42;border:1px solid #142A42}
 /* Sami 24.10 palet A (palet-a-dik.html): yalnız Avla kartındaki "Bu daireyi sorun" dolu kırmızı; diğerleri çerçeveli lacivert, hover kırmızı */
 .onk-avla .dg .wa{background:var(--cta);color:#fff;border-color:var(--cta)}.onk .dg .wa:hover{background:var(--ctah);border-color:var(--ctah)}
-.on-tum{display:inline-block;margin-top:14px;color:var(--civit);font-size:14.5px;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)}
+.on-tum{display:inline-block;margin-top:14px;color:#142A42;font-size:14.5px;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)}
 /* künye: her zaman açık */
 .k-giris{font-size:16px;line-height:1.65;color:var(--ink);max-width:820px;margin-top:10px}
 .k-bag{margin-top:12px}
@@ -1294,17 +1295,19 @@ details.rapor>summary::after,details.ayr-grup>summary::after,details.ayr-band>su
 details.rapor>summary:hover::before,details.ayr-grup>summary:hover::before,details.ayr-band>summary:hover::before{transform:scale(1.06)}
 details.rapor>summary,details.rapor>summary *,details.ayr-grup>summary *,details.ayr-band>summary *{color:#fff!important}
 details.rapor>summary{font-size:21px;font-weight:500;letter-spacing:.01em}
+details.ayr-band>summary{font-size:21px;font-weight:500}
 details.ayr-grup>summary .ag-t{font-size:21px;font-weight:500}
-details.ayr-grup>summary .ag-a,details.ayr-band>summary .eyebrow{color:#E8D9AF!important;font-size:14px;font-weight:400}
+details.ayr-grup>summary .ag-a{color:rgba(255,255,255,.85)!important;font-size:14px;font-weight:400}
+details.ayr-band>summary .eyebrow{color:#D2BE99!important;font-size:14px;font-weight:400}
 details.ayr-band>summary .eyebrow{display:block;width:100%;letter-spacing:.18em;font-size:11px;text-transform:uppercase}
 details.rapor>summary::marker{content:""}
-details.rapor>summary .bant-arti,details.ayr-grup>summary i,details.ayr-band>summary i{position:absolute;right:26px;top:50%;transform:translateY(-50%);font-style:normal;font-size:28px;line-height:1;color:#C9A961!important}
-@media(max-width:640px){details.rapor>summary,details.ayr-grup>summary,details.ayr-band>summary{min-height:96px;padding:20px 56px 20px 20px!important}details.rapor>summary,details.ayr-grup>summary .ag-t{font-size:18px}}
+details.rapor>summary .bant-arti,details.ayr-grup>summary i,details.ayr-band>summary i{position:absolute;right:26px;top:50%;transform:translateY(-50%);font-style:normal;font-size:28px;line-height:1;color:#D2BE99!important}
+@media(max-width:640px){details.rapor>summary,details.ayr-grup>summary,details.ayr-band>summary{min-height:96px;padding:20px 56px 20px 20px!important}details.rapor>summary,details.ayr-grup>summary .ag-t,details.ayr-band>summary{font-size:18px}}
 /* Kayıt paneli: logo + dokumacı kuşu hikâyesi + ana sayfa bağı (Sami 24.10) */
 .fs-marka{margin-top:auto;padding-top:30px;border-top:1px solid rgba(210,190,153,.28)}
 .fs-marka img{display:block;width:112px;height:auto;margin:0 0 18px}
-.fs-hik{color:rgba(246,241,231,.82)!important;font-size:14.5px;line-height:1.65;margin:0 0 14px}
-.fs-hik b{color:#D2BE99;font-weight:500}
+.fs-hik{color:rgba(255,255,255,.85)!important;font-size:14.5px;line-height:1.65;margin:0 0 14px}
+.fs-hik b{color:inherit;font-weight:500}
 .fs-git{display:inline-block;color:#D2BE99!important;font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(210,190,153,.5);padding-bottom:3px}
 .fs-git:hover{color:#fff!important;border-color:#fff}
 .fs-marka.fs-yatay{display:flex;gap:22px;align-items:center;margin-top:28px;padding:20px 22px;background:#142A42;border:0;border-radius:0}
@@ -2057,18 +2060,18 @@ function dKapat(b){var d=b.closest('details');if(!d)return;var once=d.getBoundin
 @media(max-width:1100px){#one-cikan .oc-sat{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){#one-cikan .oc-sat{grid-template-columns:1fr}}
 .oc-k{display:flex;flex-direction:column;background:#fff;border:1px solid var(--cizgi,#e6dfd1);border-radius:0;overflow:hidden;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
-.oc-k:hover{border-color:#C9A961;transform:translateY(-2px)}
+.oc-k:hover{border-color:#D2BE99;transform:translateY(-2px)}
 .oc-img{display:block;aspect-ratio:4/3;background:#eef0f3 center/cover no-repeat}
 .oc-g{display:flex;flex-direction:column;gap:4px;padding:14px 16px 16px}
 .oc-ets{display:flex;flex-wrap:wrap;gap:6px;min-height:22px}
-.oc-et{display:inline-block;padding:3px 8px 2px;border-radius:0;border-left:3px solid #C9A961;background:#f6f1e7;color:#9c7f4e;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
-.oc-sif{border-left-color:#1A2E4A;color:#1A2E4A}
+.oc-et{display:inline-block;padding:3px 8px 2px;border-radius:0;border-left:3px solid #D2BE99;background:#f6f1e7;color:#9C7F4E;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.oc-sif{border-left-color:#142A42;color:#9C7F4E}
 .oc-tuk{border-left-color:#B23A3A;color:#B23A3A;background:#f1f1f1}
-.oc-ad{font-size:18px;font-weight:500;color:#1A2E4A;line-height:1.25;margin-top:4px}
-.oc-yer{font-size:13px;color:#7a7f87}
-.oc-fy{font-size:16px;font-weight:500;color:#1A2E4A;margin-top:6px}
-.oc-mus{font-size:13px;color:#5f646b}
-.oc-git{margin-top:8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#9c7f4e}
+.oc-ad{font-size:18px;font-weight:500;color:#142A42;line-height:1.25;margin-top:4px}
+.oc-yer{font-size:13px;color:rgba(20,42,66,.8)}
+.oc-fy{font-size:16px;font-weight:500;color:rgba(20,42,66,.8);margin-top:6px}
+.oc-mus{font-size:13px;color:rgba(20,42,66,.8)}
+.oc-git{margin-top:8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#9C7F4E}
 </style><section class="satis" id="one-cikan"><div class="eyebrow">Portföyümüzden</div><h2>Öne çıkan projeler</h2><p class="on-alt">Golden Visa kapsamında öne çıkardığımız projeler; her kart projenin kendi sayfasını açar.</p><div class="oc-sat"><a class="oc-k" href="https://chalandri-court-residences-a0223.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://chalandri-court-residences-a0223.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span><span class="oc-et oc-sif">Sıfır bina</span></span><span class="oc-ad">Chalandri Court Residences</span><span class="oc-yer">Chalandri</span><span class="oc-fy">€267.000 – €400.000</span><span class="oc-mus">15 müsait daire</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://lykovrysi-north-residences.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://lykovrysi-north-residences.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span></span><span class="oc-ad">Lykovrysi North Residences</span><span class="oc-yer">Kifisia</span><span class="oc-fy">€270.000</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://lykovrysi-kifisia-residences-a0321.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://lykovrysi-kifisia-residences-a0321.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et oc-sif">Sıfır bina</span></span><span class="oc-ad">Kifisia Suites</span><span class="oc-yer">Kifisia</span><span class="oc-fy">€380.000</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://kato-elliniko-riviera-suites-a0220.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://kato-elliniko-riviera-suites-a0220.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span></span><span class="oc-ad">Kato Elliniko Riviera Suites</span><span class="oc-yer">Elliniko</span><span class="oc-fy">€300.000 – €380.000</span><span class="oc-mus">15 müsait daire</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://kallithea-garden-residences-a0222.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://kallithea-garden-residences-a0222.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span><span class="oc-et oc-sif">Sıfır bina</span></span><span class="oc-ad">Kallithea Garden Residences</span><span class="oc-yer">Kallithea</span><span class="oc-fy">€282.000</span><span class="oc-mus">2 müsait daire</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://kallithea-south-residences-a0166.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://kallithea-south-residences-a0166.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span><span class="oc-et oc-sif">Sıfır bina</span></span><span class="oc-ad">Kallithea South Residences</span><span class="oc-yer">Kallithea</span><span class="oc-fy">€356.000 – €358.000</span><span class="oc-mus">Müsait daire teyitte</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://south-moschato-residences-a0145.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://south-moschato-residences-a0145.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et oc-tuk">Tükendi</span></span><span class="oc-ad">South Moschato Residences</span><span class="oc-yer">Moschato</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://monastiraki-residences-a0233.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://monastiraki-residences-a0233.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span></span><span class="oc-ad">Monastiraki Residences</span><span class="oc-yer">Psyrri</span><span class="oc-fy">€275.000 – €295.000</span><span class="oc-mus">3 müsait daire</span><span class="oc-git">Sayfayı aç →</span></span></a><a class="oc-k" href="https://south-glyfada-a0161.avlarealestate.com/" target="_blank" rel="noopener"><span class="oc-img" style="background-image:url('https://south-glyfada-a0161.avlarealestate.com/img/kapak.jpg')"></span><span class="oc-g"><span class="oc-ets"><span class="oc-et">Golden Visa</span><span class="oc-et oc-sif">Sıfır bina</span></span><span class="oc-ad">South Glyfada Residences</span><span class="oc-yer">Glyfada</span><span class="oc-fy">€261.000 – €316.000</span><span class="oc-mus">33 müsait daire</span><span class="oc-git">Sayfayı aç →</span></span></a></div></section><!--one-cikan:son--></div><section class="sec" id="portfoy-harita">
   <div class="wrap">
     <div class="shead">
@@ -2361,6 +2364,94 @@ b,strong,h1,h2,h3,h4,h2 em,.eyebrow,.k,th,dt,summary,.b1,.b2,.btn,.scta,button,.
 html{font-synthesis:none}
 .eyebrow,.hstats .l,.lang-sw,.onnot a,.rozet,.adim .no,.tkos .tb,.tkos dt,.tkos .var,.tkos .bel,.tkos .uyr,.dm,.ust,.rapor>summary,.rapor>summary::after,th,td.f,tr.grp td,tr.gec td.f,.pbtn,.dz,.dr,.katlar figcaption,.b1,.b2,#lbs,.snav a,.kayit>summary::after,.kayit .sbaslik,.kayit label,.k-send,.k-msg,.pno,.tesl,.cno,.fdaha,.mzoom a,.dilsec a,.devam-liste .ok,.dkapat,.guv-imzalar span,.guv-adim .no,.a19 .meta-i .l,.a19 .btn,.a19 .shead .k,.a19 .spec .l,.a19 .gadim em,.a19 .fside .kv span,.a19 .fld label,.a19 .fbtn,.a19 .mfs-dug,.a19 .kacc-t .k,.a19 .uyari.turuncu a,.a19 .uyari.turuncu .et,.a19 .uyari.turuncu a.not,.a19 .rlink a,.a19 .pk-k,.a19 .pk-n .l,.a19 .pk-g,.a19 .hbr .et,.a19 .hbr .dn a,.a19 .zmap-bar .k,.a19 .hbr .dn span,.a19 .danrad span,.sm-head b,.sm-dt,.hd-etiket,.hd-btn,.hd-ust b,.sm-onay,.sm-f label,.kk-btn,.sm-imza .imz-b,.sm-imza .imz-c span,body.yaz .sm-yaz-bas .t{font-weight:500!important}
 p a:not([class]),td b a,.tblnot a,.kucuk a,.onnot a:not([class]){font-weight:400!important}
+</style>
+<style id="yazi-renk">
+/* ══ Yazı renkleri · K-2026-10-24-05 (Sami 24.10: "ana yazı bazen beyaz bazen sarımtırak, tutarlı değil") ══
+   Açık zemin: başlık #142A42 · üst etiket #9C7F4E · gövde rgba(20,42,66,.80)
+   Koyu zemin: başlık #FFFFFF · üst etiket #D2BE99 · gövde rgba(255,255,255,.85)
+   Krem/sarımtırak, mor ve çivit başlık yok. Ayrı kural: bağlantı, düğme, durum (satıldı/rezerve satırı, Avla'ya rezerve), harita. */
+/* Üretici: Landing Pages/_ARACLAR/tekil_mulk/tasarim_v3.py → <style id="yazi-renk"> (son katman, tasarim-v3 bloğundan sonra).
+   Denetim: python3 ~/.config/avla/scripts/yazi-renk-denetle-tekil.py <sayfa> → TOPLAM 0. */
+html:root{--ink:rgba(20,42,66,.8);--mut:rgba(20,42,66,.8)}
+html body .a19{--ink-55:rgba(20,42,66,.8);--hook:#D2BE99}
+html body{color:rgba(20,42,66,.8)}
+/* — açık zemin · gövde — */
+html body .kx dd,html body .kx dd span:not(.dur),html body .kx .ty,html body .tkos dd,html body .tkos dd span,html body .k-giris,html body .k-giris b,
+html body .kn-ust,html body .kn-ust b,html body .sx-not,html body .sx-not b,html body .on-alt,html body .rbody p,html body .rbody li,html body .rbody h5,
+html body .rbody .kucuk,html body .kucuk,html body .tblnot,html body .tblnot b,html body .dozet,html body .dozet b,html body figure figcaption,
+html body .onk .dno,html body .onk .dmeta,html body .onk .fm2,html body .onk .neden,html body .onk .ozl i,html body .sx-neden li,html body .sx-neden li b,
+html body .card p,html body .adim,html body .adim b,html body .notlar,html body .notlar b,html body .tesl,html body .env-durum,html body .env-durum b,
+html body .uyari:not(.turuncu),html body .uyari:not(.turuncu) b,html body .a19 .shead p,html body .a19 .shead p b,html body .a19 .hnot p,html body .a19 .kvkk,html body .a19 .falt,
+html body .sm-terms,html body .sm-model p,html body .sm-imza,html body .sm-meta,html body .onnot,html body .devam .alt,html body .devam-liste span{color:rgba(20,42,66,.8)!important}
+html body #fiyatlar tr:not(.dr-s):not(.dr-r):not(.dr-avla):not(.gec) td,html body #fiyatlar tr:not(.dr-s):not(.dr-r):not(.dr-avla):not(.gec) td.f,
+html body #fiyatlar tr:not(.dr-s):not(.dr-r):not(.dr-avla):not(.gec) td small,html body #fiyatlar tr:not(.dr-s):not(.dr-r):not(.dr-avla):not(.gec) td .dad,
+html body #fiyatlar tr:not(.dr-s):not(.dr-r):not(.dr-avla):not(.gec) td .dad b{color:rgba(20,42,66,.8)!important}
+/* — açık zemin · üst etiket — */
+html body .kx dt,html body .tkos dt,html body #fiyatlar th,html body .tbl th,html body .onk .ozl span,html body .onk:not(.onk-avla) .et,html body .rbody h4,
+html body .a19 .shead .k,html body .a19 .kacc-t .k,html body .a19 .spec .l,html body .rozet,html body .ust,html body .zmap-bar .k{color:#9C7F4E!important}
+/* — açık zemin · başlık (vurgulu em dahil tek renk) — */
+html body .a19 .shead h2,html body .a19 .shead h2 em,html body .a19 .kacc-t h3,html body .a19 .kacc-t h3 em,html body .adim .no,html body .onk .fy{color:#142A42!important}
+/* — Güvence bölümü (açık bej): mor yok — */
+html body .a19 #guvence .shead .k,html body .a19 #guvence .gok span{color:#9C7F4E!important}
+html body .a19 #guvence .shead h2,html body .a19 #guvence .shead h2 em,html body .a19 #guvence .gnotlar h3,html body .a19 #guvence .gadim b{color:#142A42!important}
+html body .a19 #guvence .shead p,html body .a19 #guvence .shead p b,html body .a19 #guvence .gozel,html body .a19 #guvence .gozel b,html body .a19 #guvence .gozel span,
+html body .a19 #guvence .gadim em,html body .a19 #guvence .gadim s,html body .a19 #guvence .gadim li,html body .a19 #guvence .gnotlar p,html body .a19 #guvence .gnot{color:rgba(20,42,66,.8)!important}
+html body .a19 #guvence .gok i{background:linear-gradient(90deg,rgba(156,127,78,.15),#9C7F4E)!important}
+html body .a19 #guvence .gok i::after{border-left-color:#9C7F4E!important}
+html body .a19 .gkutu,html body .a19 #guvence .gkutu,html body .a19 #guvence .gkutu.gmerkez{background:#142A42!important}
+html body .a19 #guvence .gkutu.gmerkez{box-shadow:inset 0 0 0 1px #D2BE99!important}
+html body .a19 .gkutu .gk,html body .a19 #guvence .gkutu.gmerkez .gk{color:#FFFFFF!important}
+html body .a19 .gkutu .gb,html body .a19 #guvence .gkutu .gb,html body .a19 .gimza span,html body .a19 #guvence .gimza span{color:rgba(255,255,255,.85)!important}
+html body .a19 .gimza span i,html body .a19 #guvence .gimza span i{color:#D2BE99!important}
+html body .guv-hesap svg,html body .guv-ok svg{color:#142A42!important;fill:currentColor}
+html body .guv-adim .no{color:#142A42!important}
+/* — koyu zemin: kahraman — */
+html body .hero .eyebrow{color:#D2BE99!important}
+html body .hero h1,html body .hero h1 em{color:#FFFFFF!important}
+html body .hero .sub{color:rgba(255,255,255,.85)!important}
+html body .hstats .n,html body .hstats .c-gv .n{color:rgba(255,255,255,.85)!important}
+html body .hstats .l,html body .hstats .c-gv .l{color:#D2BE99!important}
+/* — koyu zemin: Golden Visa (sec-ink), CTA, slogan — */
+html body .a19 .sec-ink:not(#guvence) .shead .k,html body .a19 .sec-ink:not(#guvence) .k{color:#D2BE99!important}
+html body .a19 .sec-ink:not(#guvence) .shead h2,html body .a19 .sec-ink:not(#guvence) .shead h2 em,html body .a19 .gvi .v,html body .cta h2,html body .slogan,html body .slogan b{color:#FFFFFF!important}
+html body .a19 .sec-ink:not(#guvence) .shead p,html body .a19 .sec-ink:not(#guvence) .shead p b,html body .a19 .gvi .l,html body .a19 .uyari,html body .a19 .uyari b,html body .a19 .prow .b p,
+html body .gv,html body .gv b,html body .cta p,html body #lbt{color:rgba(255,255,255,.85)!important}
+html body .a19 .uyari.turuncu .et{color:#D2BE99!important}
+/* — koyu zemin: kayıt paneli — */
+html body .a19 .fside h3,html body .a19 .fside h3 em{color:#FFFFFF!important}
+html body .a19 .fside p,html body .fs-hik,html body .fs-hik b{color:rgba(255,255,255,.85)!important}
+/* — koyu zemin: portföy kartları — */
+html body .a19 .pk-k,html body .a19 .pk-n .l,html body .a19 .zmap-bar .k{color:#D2BE99!important}
+html body .a19 .pk-s,html body .a19 .pk-s i,html body .a19 .hbr p,html body .a19 .hbr .alt{color:rgba(255,255,255,.85)!important}
+html body .a19 .hbr h4{color:#FFFFFF!important}
+/* — koyu zemin: açılır bantlar — */
+html body details.rapor>summary,html body details.ayr-band>summary,html body details.ayr-grup>summary .ag-t{color:#FFFFFF!important}
+html body details.ayr-grup>summary .ag-a{color:rgba(255,255,255,.85)!important}
+html body details.ayr-band>summary .eyebrow{color:#D2BE99!important}
+/* — koyu zemin: video etiketi — */
+html body .yt .yt-et,html body span.yt-et{color:#D2BE99!important}
+/* — koyu zemin: alt bilgi — */
+html body .a19 .ftr,html body .a19 .ftr .ofis .a,html body .a19 .ftr .ofis .a i,html body .a19 .ftr .ofis .a i.kny,html body .a19 .ftr .ofis .a i.tel,html body .a19 .ftr .ofis .c,
+html body .a19 .ftr .bot,html body .a19 .ftr .bot span,html body .a19 .ftr .kucuk,html body .a19 .ftr .fsoc,html body .a19 .ftr b,html body footer b{color:rgba(255,255,255,.85)!important}
+html body .a19 .ftr h4{color:#D2BE99!important}
+/* — ek: alt bilgi ofis adları (başlık), konum kilidi, fizibilite künyesi — */
+html body .a19 .ftr .ofis .c{color:#FFFFFF!important}
+html body #konum-kilit .kk-govde,html body #konum-kilit .kk-govde b,html body #konum-kilit .kk-govde p,html body #konum-kilit .kk-govde p b{color:rgba(20,42,66,.8)!important}
+html body .rbody dl dt{color:#9C7F4E!important}
+/* — eski şablon (keşif bandı, CTA, alt bilgi) — */
+html body #kesif .kesif-head .k,html body .cta .eyebrow,html body>footer>b{color:#D2BE99!important}
+html body #kesif .kesif-head h2,html body #kesif .kesif-head h2 em{color:#FFFFFF!important}
+html body .cta p b,html body>footer,html body>footer span{color:rgba(255,255,255,.85)!important}
+/* — teslim durumu çipleri (Hazır vb.): üst etiket biçimi, palet dışı yeşil/mavi yok — */
+html body .dm,html body .dz,html body .dr{color:#9C7F4E!important;background:#F6F1E7!important;letter-spacing:.12em!important}
+/* — koyu bilgi kartı (hd-kart) — */
+html body .hd-kart .hd-etiket{color:#D2BE99!important;border-color:#D2BE99!important}
+html body .hd-kart .hd-yazi b,html body .hd-kart .hd-yazi p{color:rgba(255,255,255,.85)!important}
+/* — Güvence kutuları ve seçim kartı: mor ton yok (lacivert/altın) — */
+html body .a19 #guvence .gozel{background:rgba(210,190,153,.16)!important;border-color:rgba(20,42,66,.25)!important;border-left-color:#142A42!important}
+html body .a19 #guvence .gozel b{border-right-color:rgba(20,42,66,.25)!important}
+html body .a19 .danrad label:has(input:checked){border-color:#142A42!important;background:rgba(210,190,153,.14)!important;box-shadow:0 0 0 1px rgba(20,42,66,.25)!important}
+html body .guv-hesap{border-color:#142A42!important;box-shadow:0 0 0 4px rgba(210,190,153,.25)!important}
 </style>
 </body>
 </html>

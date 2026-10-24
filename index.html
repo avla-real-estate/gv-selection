@@ -4503,5 +4503,118 @@ html body .footer-wa a:hover{box-shadow:0 12px 28px rgba(20,42,66,.25)!important
 .yt-oy svg{fill:#D2BE99!important}
 .glifada-cta-label{color:#D2BE99!important}
 </style>
+<style id="yazi-renk">
+/* ══ Yazı renkleri · K-2026-10-24-05 (Sami 24.10: "ana yazı bazen beyaz bazen sarımtırak, tutarlı değil") ══
+   Açık zemin: başlık #142A42 · üst etiket #9C7F4E · gövde rgba(20,42,66,.80)
+   Koyu zemin: başlık #FFFFFF · üst etiket #D2BE99 · gövde rgba(255,255,255,.85)
+   Krem/sarımtırak, mor ve çivit başlık yok. Ayrı kural: bağlantı, düğme, durum (satıldı/rezerve satırı, Avla'ya rezerve), harita. */
+/* Üretici: Landing Pages/_ARACLAR/tekil_mulk/tasarim_v3.py → <style id="yazi-renk"> (son katman, tasarim-v3 bloğundan sonra).
+   Denetim: python3 ~/.config/avla/scripts/yazi-renk-denetle-tekil.py <sayfa> → TOPLAM 0. */
+html:root{--ink:rgba(20,42,66,.8);--mut:rgba(20,42,66,.8)}
+html body .a19{--ink-55:rgba(20,42,66,.8);--hook:#D2BE99}
+html body{color:rgba(20,42,66,.8)}
+/* — açık zemin · gövde — */
+html body .kx dd,html body .kx dd span:not(.dur),html body .kx .ty,html body .tkos dd,html body .tkos dd span,html body .k-giris,html body .k-giris b,
+html body .kn-ust,html body .kn-ust b,html body .sx-not,html body .sx-not b,html body .on-alt,html body .rbody p,html body .rbody li,html body .rbody h5,
+html body .rbody .kucuk,html body .kucuk,html body .tblnot,html body .tblnot b,html body .dozet,html body .dozet b,html body figure figcaption,
+html body .onk .dno,html body .onk .dmeta,html body .onk .fm2,html body .onk .neden,html body .onk .ozl i,html body .sx-neden li,html body .sx-neden li b,
+html body .card p,html body .adim,html body .adim b,html body .notlar,html body .notlar b,html body .tesl,html body .env-durum,html body .env-durum b,
+html body .uyari:not(.turuncu),html body .uyari:not(.turuncu) b,html body .a19 .shead p,html body .a19 .shead p b,html body .a19 .hnot p,html body .a19 .kvkk,html body .a19 .falt,
+html body .sm-terms,html body .sm-model p,html body .sm-imza,html body .sm-meta,html body .onnot,html body .devam .alt,html body .devam-liste span{color:rgba(20,42,66,.8)!important}
+html body #fiyatlar tr:not(.dr-s):not(.dr-r):not(.dr-avla):not(.gec) td,html body #fiyatlar tr:not(.dr-s):not(.dr-r):not(.dr-avla):not(.gec) td.f,
+html body #fiyatlar tr:not(.dr-s):not(.dr-r):not(.dr-avla):not(.gec) td small,html body #fiyatlar tr:not(.dr-s):not(.dr-r):not(.dr-avla):not(.gec) td .dad,
+html body #fiyatlar tr:not(.dr-s):not(.dr-r):not(.dr-avla):not(.gec) td .dad b{color:rgba(20,42,66,.8)!important}
+/* — açık zemin · üst etiket — */
+html body .kx dt,html body .tkos dt,html body #fiyatlar th,html body .tbl th,html body .onk .ozl span,html body .onk:not(.onk-avla) .et,html body .rbody h4,
+html body .a19 .shead .k,html body .a19 .kacc-t .k,html body .a19 .spec .l,html body .rozet,html body .ust,html body .zmap-bar .k{color:#9C7F4E!important}
+/* — açık zemin · başlık (vurgulu em dahil tek renk) — */
+html body .a19 .shead h2,html body .a19 .shead h2 em,html body .a19 .kacc-t h3,html body .a19 .kacc-t h3 em,html body .adim .no,html body .onk .fy{color:#142A42!important}
+/* — Güvence bölümü (açık bej): mor yok — */
+html body .a19 #guvence .shead .k,html body .a19 #guvence .gok span{color:#9C7F4E!important}
+html body .a19 #guvence .shead h2,html body .a19 #guvence .shead h2 em,html body .a19 #guvence .gnotlar h3,html body .a19 #guvence .gadim b{color:#142A42!important}
+html body .a19 #guvence .shead p,html body .a19 #guvence .shead p b,html body .a19 #guvence .gozel,html body .a19 #guvence .gozel b,html body .a19 #guvence .gozel span,
+html body .a19 #guvence .gadim em,html body .a19 #guvence .gadim s,html body .a19 #guvence .gadim li,html body .a19 #guvence .gnotlar p,html body .a19 #guvence .gnot{color:rgba(20,42,66,.8)!important}
+html body .a19 #guvence .gok i{background:linear-gradient(90deg,rgba(156,127,78,.15),#9C7F4E)!important}
+html body .a19 #guvence .gok i::after{border-left-color:#9C7F4E!important}
+html body .a19 .gkutu,html body .a19 #guvence .gkutu,html body .a19 #guvence .gkutu.gmerkez{background:#142A42!important}
+html body .a19 #guvence .gkutu.gmerkez{box-shadow:inset 0 0 0 1px #D2BE99!important}
+html body .a19 .gkutu .gk,html body .a19 #guvence .gkutu.gmerkez .gk{color:#FFFFFF!important}
+html body .a19 .gkutu .gb,html body .a19 #guvence .gkutu .gb,html body .a19 .gimza span,html body .a19 #guvence .gimza span{color:rgba(255,255,255,.85)!important}
+html body .a19 .gimza span i,html body .a19 #guvence .gimza span i{color:#D2BE99!important}
+html body .guv-hesap svg,html body .guv-ok svg{color:#142A42!important;fill:currentColor}
+html body .guv-adim .no{color:#142A42!important}
+/* — koyu zemin: kahraman — */
+html body .hero .eyebrow{color:#D2BE99!important}
+html body .hero h1,html body .hero h1 em{color:#FFFFFF!important}
+html body .hero .sub{color:rgba(255,255,255,.85)!important}
+html body .hstats .n,html body .hstats .c-gv .n{color:rgba(255,255,255,.85)!important}
+html body .hstats .l,html body .hstats .c-gv .l{color:#D2BE99!important}
+/* — koyu zemin: Golden Visa (sec-ink), CTA, slogan — */
+html body .a19 .sec-ink:not(#guvence) .shead .k,html body .a19 .sec-ink:not(#guvence) .k{color:#D2BE99!important}
+html body .a19 .sec-ink:not(#guvence) .shead h2,html body .a19 .sec-ink:not(#guvence) .shead h2 em,html body .a19 .gvi .v,html body .cta h2,html body .slogan,html body .slogan b{color:#FFFFFF!important}
+html body .a19 .sec-ink:not(#guvence) .shead p,html body .a19 .sec-ink:not(#guvence) .shead p b,html body .a19 .gvi .l,html body .a19 .uyari,html body .a19 .uyari b,html body .a19 .prow .b p,
+html body .gv,html body .gv b,html body .cta p,html body #lbt{color:rgba(255,255,255,.85)!important}
+html body .a19 .uyari.turuncu .et{color:#D2BE99!important}
+/* — koyu zemin: kayıt paneli — */
+html body .a19 .fside h3,html body .a19 .fside h3 em{color:#FFFFFF!important}
+html body .a19 .fside p,html body .fs-hik,html body .fs-hik b{color:rgba(255,255,255,.85)!important}
+/* — koyu zemin: portföy kartları — */
+html body .a19 .pk-k,html body .a19 .pk-n .l,html body .a19 .zmap-bar .k{color:#D2BE99!important}
+html body .a19 .pk-s,html body .a19 .pk-s i,html body .a19 .hbr p,html body .a19 .hbr .alt{color:rgba(255,255,255,.85)!important}
+html body .a19 .hbr h4{color:#FFFFFF!important}
+/* — koyu zemin: açılır bantlar — */
+html body details.rapor>summary,html body details.ayr-band>summary,html body details.ayr-grup>summary .ag-t{color:#FFFFFF!important}
+html body details.ayr-grup>summary .ag-a{color:rgba(255,255,255,.85)!important}
+html body details.ayr-band>summary .eyebrow{color:#D2BE99!important}
+/* — koyu zemin: video etiketi — */
+html body .yt .yt-et,html body span.yt-et{color:#D2BE99!important}
+/* — koyu zemin: alt bilgi — */
+html body .a19 .ftr,html body .a19 .ftr .ofis .a,html body .a19 .ftr .ofis .a i,html body .a19 .ftr .ofis .a i.kny,html body .a19 .ftr .ofis .a i.tel,html body .a19 .ftr .ofis .c,
+html body .a19 .ftr .bot,html body .a19 .ftr .bot span,html body .a19 .ftr .kucuk,html body .a19 .ftr .fsoc,html body .a19 .ftr b,html body footer b{color:rgba(255,255,255,.85)!important}
+html body .a19 .ftr h4{color:#D2BE99!important}
+/* — ek: alt bilgi ofis adları (başlık), konum kilidi, fizibilite künyesi — */
+html body .a19 .ftr .ofis .c{color:#FFFFFF!important}
+html body #konum-kilit .kk-govde,html body #konum-kilit .kk-govde b,html body #konum-kilit .kk-govde p,html body #konum-kilit .kk-govde p b{color:rgba(20,42,66,.8)!important}
+html body .rbody dl dt{color:#9C7F4E!important}
+/* — eski şablon (keşif bandı, CTA, alt bilgi) — */
+html body #kesif .kesif-head .k,html body .cta .eyebrow,html body>footer>b{color:#D2BE99!important}
+html body #kesif .kesif-head h2,html body #kesif .kesif-head h2 em{color:#FFFFFF!important}
+html body .cta p b,html body>footer,html body>footer span{color:rgba(255,255,255,.85)!important}
+/* — teslim durumu çipleri (Hazır vb.): üst etiket biçimi, palet dışı yeşil/mavi yok — */
+html body .dm,html body .dz,html body .dr{color:#9C7F4E!important;background:#F6F1E7!important;letter-spacing:.12em!important}
+/* — koyu bilgi kartı (hd-kart) — */
+html body .hd-kart .hd-etiket{color:#D2BE99!important;border-color:#D2BE99!important}
+html body .hd-kart .hd-yazi b,html body .hd-kart .hd-yazi p{color:rgba(255,255,255,.85)!important}
+/* — Güvence kutuları ve seçim kartı: mor ton yok (lacivert/altın) — */
+html body .a19 #guvence .gozel{background:rgba(210,190,153,.16)!important;border-color:rgba(20,42,66,.25)!important;border-left-color:#142A42!important}
+html body .a19 #guvence .gozel b{border-right-color:rgba(20,42,66,.25)!important}
+html body .a19 .danrad label:has(input:checked){border-color:#142A42!important;background:rgba(210,190,153,.14)!important;box-shadow:0 0 0 1px rgba(20,42,66,.25)!important}
+html body .guv-hesap{border-color:#142A42!important;box-shadow:0 0 0 4px rgba(210,190,153,.25)!important}
+/* Master seçki (gv.selection kök TR + en/) ek yazı renkleri — K-2026-10-24-05. tasarim_v3_yazi.css'ten SONRA gelir. */
+/* — master seçki (ana liste) · açık zemin gövde — */
+html body .spec .val,html body .rating-row .rating-lbl,html body .property-location,html body .kart-kisa p,html body .property-body .note,
+html body details.not-ayr>summary,html body details.not-ayr .note,html body details.not-ayr .note b,html body details.not-ayr .note strong,html body .note b,html body .note strong,
+html body .property-body .env-durum,html body .property-body .env-durum b,html body .sa-body p,html body .sa-body li,html body .sa-body .sa-tier,
+html body .sa-tier strong,html body .sa-tier b,html body .sa-tier em,html body .sartlar-lead p,html body .sartlar-lead p strong,html body .sartlar-lead p em,
+html body .sartlar-warn,html body .sartlar-warn strong,html body .sartlar-note,html body .sartlar li,html body .sartlar li em,html body .sartlar li strong,
+html body .sartlar p strong,html body .sartlar p em,html body .map-legend .legend-item,html body .map-sub,html body .map-sub span,html body .cog-not,html body .cog-not b,
+html body .header-meta,html body .header-meta strong,html body .property-body li,html body .property-body p,html body .property-body p strong,html body .property-body li strong{color:rgba(20,42,66,.8)!important}
+/* — master · açık zemin başlık — */
+html body .property-title,html body .group-head h3,html body .sartlar details>summary,html body .sartlar h2,html body .sartlar h2 em,
+html body .map-head h2,html body .map-head h2 em,html body .map-head h2 span,html body .map-head h2 span em,html body .map-head-cog h2,html body .container>h2,html body .container>h2 em{color:#142A42!important}
+/* — master · açık zemin üst etiket — */
+html body .spec .lbl,html body .group-head h3 small,html body .sartlar-eyebrow,html body .cog-eb,html body .map-head .hero-eyebrow,html body .map-head .hero-eyebrow span{color:#9C7F4E!important}
+/* — master · durum: satıldı bandı tek kırmızı — */
+html body .sold-band,html body .sold-band b{color:#B23A3A!important}
+/* — master · koyu zemin (kahraman, kapak, grup çipi, alt bilgi, GV çağrısı) — */
+html body .hero .hero-eyebrow,html body .hero-stat .lbl,html body .hero-stat .lbl span,html body footer .footer-tag{color:#D2BE99!important}
+html body .hero h1,html body .hero h1 em,html body .hero-stat .num,html body .hero-stat .num span,html body .cover-name,html body .gv-cta-text h3,html body footer .footer-logo{color:#FFFFFF!important}
+html body .hero p.lead,html body .hero p.lead strong,html body .hero p.lead span,html body .hero .gv-hero-cta-sub,html body .cover-name-block .gv-foto,html body .group-head .group-tag,
+html body .gv-cta-text p,html body footer .footer-meta,html body footer .footer-meta strong,html body footer .footer-cta,html body footer .footer-legal,
+html body footer .footer-legal p,html body footer .footer-legal p strong,html body footer .footer-legal details>summary,html body .fl-body p,html body .fl-body p strong{color:rgba(255,255,255,.85)!important}
+/* kapak ilan kodu: üst etiket biçimi (her kodda aynı) */
+html body .property-cover .ilan-no{color:#D2BE99!important;text-transform:uppercase;letter-spacing:.12em}
+html body .a19 .ftr h4,html body .a19 footer h4{color:#D2BE99!important}
+</style>
 </body>
 </html>
